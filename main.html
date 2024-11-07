@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gRPC Client Functions Database</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px;
+            background-color: #192A80;
+            color: white;
+            text-align: center;
+        }
+
+        /* Layout styling */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 230px;
+            height: 100vh;
+            padding: 20px;
+            background-color: #e9ecf7;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 18px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #192A80;
+            padding: 1px;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            background-color: #192A80;
+            color: white;
+        }
+
+        /* Collapsible tree styling */
+        .collapsible {
+            cursor: pointer;
+            font-weight: bold;
+            color: #192A80;
+            margin-left: 0;
+        }
+        
+        .content {
+            display: block;
+            padding-left: 20px;
+        }
+        
+        /* Main content styling */
+        #functionList {
+            width: calc(100% - 220px); /* Adjusts width to account for the sidebar */
+            margin-left: 220px;
+            padding: 20px;
+        }
+        
+        /* Styling for the table */
+        #functionTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        
+        #functionTable th, #functionTable td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        #functionTable th {
+            background-color: #192A80;
+            color: white;
+        }
+
+        #functionTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Section header row styling */
+        .section-header {
+            background-color: #e9ecf7;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Detailed function section styling */
+        .function-detail {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+
+        .function-detail h2 {
+            font-size: 24px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+
+        .function-detail h3 {
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .function-detail code {
+            display: block;
+            background-color: #f4f4f9;
+            padding: 10px;
+            border-radius: 4px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* Parameters table styling */
+        .parameters-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .parameters-table td {
+            padding: 5px;
+            vertical-align: top;
+            border: none;
+        }
+
+        .parameters-table .param-name {
+            font-weight: bold;
+            color: #333;
+            width: 150px;
+        }
+
+        .parameters-table .param-detail div {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>gRPC Client Functions Database (prototype)</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible">List of Functions</div>
+            <div class="content">
+                <!-- Application Functions Links -->
+                <a href="#create_new_model_section">create_new_model</a>
+                <a href="#begin_session_section">begin_session</a>
+                <a href="#finish_session_section">finish_session</a>
+                <a href="#close_all_models">close_all_models</a>
+                <a href="#close">close</a>
+
+                <!-- Model Functions Links -->
+                <a href="#create_object_section">create_object</a>
+                <a href="#create_objects">create_objects</a>
+                <a href="#update_object">update_object</a>
+                <a href="#update_objects">update_objects</a>
+                <a href="#get_object">get_object</a>
+                <a href="#get_objects">get_objects</a>
+                <a href="#delete_object">delete_object</a>
+                <a href="#delete_objects">delete_objects</a>
+            </div>
+            <div class="collapsible"><a href="objects.html">Objects</a></div>
+        </nav>
+
+<!-- Main content section -->
+<main id="functionList">
+    <h2>List of Functions</h2>
+    <table id="functionTable">
+        <thead>
+            <tr>
+                <th>Function Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Application Functions section -->
+            <tr class="section-header">
+                <td colspan="2">Application Functions</td>
+            </tr>
+            <tr id="create_new_model">
+                <td><a href="#create_new_model_section"><strong>create_new_model</strong></a>(name)</td>
+                <td>Creates a new model in RFEM.</td>
+            </tr>
+            <tr id="begin_session">
+                <td><a href="#begin_session_section"><strong>begin_session</strong></a>()</td>
+                <td>Begins a session for model modifications.</td>
+            </tr>
+            <tr id="finish_session">
+                <td><a href="#finish_session_section"><strong>finish_session</strong></a>()</td>
+                <td>Finishes a session for model modifications.</td>
+            </tr>
+            <tr id="close_all_models">
+                <td><a href="#close_all_models"><strong>close_all_models</strong></a>()</td>
+                <td>Closes all open models in RFEM.</td>
+            </tr>
+            <tr id="close">
+                <td><a href="#close"><strong>close</strong></a>()</td>
+                <td>Closes the gRPC channel.</td>
+            </tr>
+
+            <!-- Model Functions section -->
+            <tr class="section-header">
+                <td colspan="2">Model Functions</td>
+            </tr>
+            <tr id="create_object">
+                <td><a href="#create_object_section"><strong>create_object</strong></a>(obj)</td>
+                <td>Creates a single object in the model.</td>
+            </tr>
+            <tr id="create_objects">
+                <td><a href="#create_objects"><strong>create_objects</strong></a>(obj_list)</td>
+                <td>Creates a list of objects in the model.</td>
+            </tr>
+            <tr id="update_object">
+                <td><a href="#update_object"><strong>update_object</strong></a>(obj)</td>
+                <td>Updates a single object in the model.</td>
+            </tr>
+            <tr id="update_objects">
+                <td><a href="#update_objects"><strong>update_objects</strong></a>(obj_list)</td>
+                <td>Updates a list of objects in the model.</td>
+            </tr>
+            <tr id="get_object">
+                <td><a href="#get_object"><strong>get_object</strong></a>(obj)</td>
+                <td>Retrieves a single object from the model.</td>
+            </tr>
+            <tr id="get_objects">
+                <td><a href="#get_objects"><strong>get_objects</strong></a>(obj_list)</td>
+                <td>Retrieves a list of objects from the model.</td>
+            </tr>
+            <tr id="delete_object">
+                <td><a href="#delete_object"><strong>delete_object</strong></a>(obj)</td>
+                <td>Deletes a single object from the model.</td>
+            </tr>
+            <tr id="delete_objects">
+                <td><a href="#delete_objects"><strong>delete_objects</strong></a>(obj_list)</td>
+                <td>Deletes a list of objects from the model.</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+            <!-- Detailed function sections -->
+            <div id="create_new_model_section" class="function-detail">
+                <h2>create_new_model</h2>
+                <code>def create_new_model(name)</code>
+		<br>
+
+                <h3>Description</h3>
+                <p>Creates a new model in the RFEM system with the specified name.</p>
+                
+                <!-- Parameters Table -->
+                <table class="parameters-table">
+                    <tr>
+                        <td class="param-name">Parameters:</td>
+                        <td class="param-detail">
+                            <div>name: <em>string</em> - Name of the new model.</div>
+                            <div>another_param: <em>type</em> - Description of another parameter.</div>
+                            <div>another_param_2: <em>type</em> - Description of another parameter.</div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Returns Table -->
+                <table class="parameters-table">
+                    <tr>
+                        <td class="param-name">Returns</td>
+                        <td class="param-detail">
+                            <div>None - function without a return statement.</div>
+                        </td>
+                    </tr>
+                </table>
+                
+		<br> 
+                <h3>Example of usage:</h3>
+                <code>
+                    create_new_model('hall')
+                </code>
+            </div>
+
+            <!-- Repeat similar blocks for other functions -->
+
+            <div id="begin_session_section" class="function-detail">
+                <h2>begin_session()</h2>
+                <code>def begin_session()</code>
+		<br>
+
+                <h3>Description</h3>
+                <p>Begins a session for model modifications.</p>
+                                
+            </div>
+
+            <div id="finish_session_section" class="function-detail">
+                <h2>finish_session()</h2>
+                <code>def finish_session()</code>
+		<br>
+
+                <h3>Description</h3>
+                <p>Finishes a session for model modifications.</p>
+                                
+            </div>
+
+
+            <div id="create_object_section" class="function-detail">
+                <h2>create_object</h2>
+                <code>def create_object(obj)</code>
+		<br>
+
+                <h3>Description</h3>
+                <p>Creates a single object in the model. Any object from the object type table can be used.</p>
+                
+                <!-- Parameters Table -->
+                <table class="parameters-table">
+                    <tr>
+                        <td class="param-name">Parameters:</td>
+                        <td class="param-detail">
+                            <div><a href="objects.html">obj</a> - Object to be created.</div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Returns Table -->
+                <table class="parameters-table">
+                    <tr>
+                        <td class="param-name">Returns</td>
+                        <td class="param-detail">
+                            <div>None - function without a return statement.</div>
+                        </td>
+                    </tr>
+                </table>
+                
+		<br> 
+                <h3>Example of usage:</h3>
+                <code>
+                    model.create_object(rfem.structure_core.Node(no=1, coordinate_1=0.0, coordinate_2=0.0, coordinate_3=0.0))
+                </code>
+            </div>
+
+
+            <div id="get_object_section" class="function-detail">
+                <h2>get_object</h2>
+                <code>def get_object(obj)</code>
+		<br>
+
+                <h3>Description</h3>
+                <p> Retrieves a single object from the model. Any object from the object type table can be used. The only needed parameter is object type with object number.</p>
+                
+                <!-- Parameters Table -->
+                <table class="parameters-table">
+                    <tr>
+                        <td class="param-name">Parameters:</td>
+                        <td class="param-detail">
+                            <div><a href="objects.html">obj</a> - Object to be returned.</div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Returns Table -->
+                <table class="parameters-table">
+                    <tr>
+                        <td class="param-name">Returns</td>
+                        <td class="param-detail">
+                            <div><a href="objects.html">Object</a></div>
+                        </td>
+                    </tr>
+                </table>
+                
+		<br> 
+                <h3>Example of usage:</h3>
+                <code>
+                    returned_node: Node = model.GetObject(Node(no=1))
+                </code>
+            </div>
+
+
+            <div id="and_another" class="function-detail">
+                <h2>... rest of functions</h2>
+                                
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <script>
+        // JavaScript to handle collapsible sidebar items
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

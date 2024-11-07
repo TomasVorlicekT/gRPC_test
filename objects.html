@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Types</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px;
+            background-color: #192A80;
+            color: white;
+            text-align: center;
+        }
+
+        /* Layout styling */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 230px;
+            height: 100vh;
+            padding: 20px;
+            background-color: #e9ecf7;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 18px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #192A80;
+            padding: 1px;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            background-color: #192A80;
+            color: white;
+        }
+
+        /* Collapsible tree styling */
+        .collapsible {
+            cursor: pointer;
+            font-weight: bold;
+            color: #192A80;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .content {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .sub-item {
+            margin-left: 10px;
+        }
+
+        /* Main content styling */
+        #objectList {
+            width: calc(100% - 230px); /* Adjusts width to account for the sidebar */
+            margin-left: 230px; /* Offset to align with the fixed sidebar */
+            padding: 20px;
+        }
+        
+        /* Styling for the table */
+        #objectTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        
+        #objectTable th, #objectTable td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        #objectTable th {
+            background-color: #192A80;
+            color: white;
+        }
+
+        #objectTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Section header styling */
+        .section-header {
+            background-color: #e9ecf7;
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>gRPC Client Functions Database (prototype)</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <a href="main.html">List of Functions</a>
+
+            <!-- Collapsible Objects section -->
+            <div class="collapsible">Objects</div>
+            <div class="content">
+                <!-- Structure Core Links -->
+                <div class="collapsible">Structure Core</div>
+                <div class="content">
+                    <a href="#material" class="sub-item">Material</a>
+                    <a href="#section" class="sub-item">Section</a>
+                    <a href="#thickness" class="sub-item">Thickness</a>
+                    <a href="#node" class="sub-item">Node</a>
+                    <a href="#line" class="sub-item">Line</a>
+                    <a href="#member" class="sub-item">Member</a>
+                    <a href="#surface" class="sub-item">Surface</a>
+                    <a href="#opening" class="sub-item">Opening</a>
+                    <a href="#solid" class="sub-item">Solid</a>
+                    <a href="#lineset" class="sub-item">LineSet</a>
+                    <a href="#memberset" class="sub-item">MemberSet</a>
+                    <a href="#surfaceset" class="sub-item">SurfaceSet</a>
+                    <a href="#solidset" class="sub-item">SolidSet</a>
+                </div>
+
+                <!-- Structure Advanced Links -->
+                <div class="collapsible">Structure Advanced</div>
+                <div class="content">
+                    <a href="#block" class="sub-item">Block</a>
+                    <a href="#intersection" class="sub-item">Intersection</a>
+                    <a href="#linerelease" class="sub-item">LineRelease</a>
+                    <a href="#nodalrelease" class="sub-item">NodalRelease</a>
+                    <a href="#resultsection" class="sub-item">ResultSection</a>
+                    <a href="#rigidlink" class="sub-item">RigidLink</a>
+                    <a href="#structuremodification" class="sub-item">StructureModification</a>
+                    <a href="#surfacerelease" class="sub-item">SurfaceRelease</a>
+                    <a href="#surfaceresultsadjustment" class="sub-item">SurfaceResultsAdjustment</a>
+                    <a href="#surfacescontact" class="sub-item">SurfacesContact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectList">
+            <h2>Object Types</h2>
+            <table id="objectTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Structure Core section -->
+                    <tr class="section-header" id="structure_core">
+                        <td colspan="2">Structure Core</td>
+                    </tr>
+                    <tr id="material">
+                        <td><strong>Material</strong></td>
+                        <td>Defines the material properties used in structural elements.</td>
+                    </tr>
+                    <tr id="section">
+                        <td><strong>Section</strong></td>
+                        <td>Specifies the cross-sectional profile for elements like members.</td>
+                    </tr>
+                    <tr id="thickness">
+                        <td><strong>Thickness</strong></td>
+                        <td>Defines the thickness of 2D elements, such as surfaces.</td>
+                    </tr>
+                    <tr id="node">
+                        <td><strong><a href="node.html">Node</a></strong></td>
+                        <td>Represents a point in space, typically defined by coordinates (e.g., x, y, z).</td>
+                    </tr>
+                    <tr id="line">
+                        <td><strong>Line</strong></td>
+                        <td>Represents a linear element, defined by a start and end point.</td>
+                    </tr>
+                    <tr id="member">
+                        <td><strong>Member</strong></td>
+                        <td>A structural element, typically 1D, used to model beams, columns, etc.</td>
+                    </tr>
+                    <tr id="surface">
+                        <td><strong>Surface</strong></td>
+                        <td>Represents a 2D plane or area, often bounded by lines.</td>
+                    </tr>
+                    <tr id="opening">
+                        <td><strong>Opening</strong></td>
+                        <td>Defines an opening within a surface, like a window or door in a wall.</td>
+                    </tr>
+                    <tr id="solid">
+                        <td><strong>Solid</strong></td>
+                        <td>Represents a 3D volume element.</td>
+                    </tr>
+                    <tr id="lineset">
+                        <td><strong>LineSet</strong></td>
+                        <td>A collection of lines that can be grouped and manipulated as a unit.</td>
+                    </tr>
+                    <tr id="memberset">
+                        <td><strong>MemberSet</strong></td>
+                        <td>A collection of members grouped together.</td>
+                    </tr>
+                    <tr id="surfaceset">
+                        <td><strong>SurfaceSet</strong></td>
+                        <td>A collection of surfaces grouped together.</td>
+                    </tr>
+                    <tr id="solidset">
+                        <td><strong>SolidSet</strong></td>
+                        <td>A collection of solids grouped together.</td>
+                    </tr>
+                    
+                    <!-- Structure Advanced section -->
+                    <tr class="section-header" id="structure_advanced">
+                        <td colspan="2">Structure Advanced</td>
+                    </tr>
+                    <tr id="block">
+                        <td><strong>Block</strong></td>
+                        <td>Represents a volumetric element, such as a cuboid or other 3D block shape.</td>
+                    </tr>
+                    <tr id="intersection">
+                        <td><strong>Intersection</strong></td>
+                        <td>Defines the intersection between structural elements.</td>
+                    </tr>
+                    <tr id="linerelease">
+                        <td><strong>LineRelease</strong></td>
+                        <td>Allows a line to separate from connected elements under certain conditions.</td>
+                    </tr>
+                    <tr id="nodalrelease">
+                        <td><strong>NodalRelease</strong></td>
+                        <td>Defines specific conditions where nodes can release forces or moments.</td>
+                    </tr>
+                    <tr id="resultsection">
+                        <td><strong>ResultSection</strong></td>
+                        <td>Defines sections where results can be evaluated.</td>
+                    </tr>
+                    <tr id="rigidlink">
+                        <td><strong>RigidLink</strong></td>
+                        <td>Connects structural elements with a rigid link that transmits forces and moments.</td>
+                    </tr>
+                    <tr id="structuremodification">
+                        <td><strong>StructureModification</strong></td>
+                        <td>Applies modifications to structural elements, such as stiffness adjustments.</td>
+                    </tr>
+                    <tr id="surfacerelease">
+                        <td><strong>SurfaceRelease</strong></td>
+                        <td>Defines conditions for surface separation from other elements.</td>
+                    </tr>
+                    <tr id="surfaceresultsadjustment">
+                        <td><strong>SurfaceResultsAdjustment</strong></td>
+                        <td>Adjusts the results for surfaces under specific conditions.</td>
+                    </tr>
+                    <tr id="surfacescontact">
+                        <td><strong>SurfacesContact</strong></td>
+                        <td>Defines contact interactions between surfaces, such as friction or gap conditions.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript to handle collapsible sidebar items
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

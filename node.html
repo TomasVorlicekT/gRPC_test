@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node - Object Details</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px;
+            background-color: #192A80;
+            color: white;
+            text-align: center;
+        }
+
+        /* Layout styling */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 230px;
+            height: 100vh;
+            padding: 20px;
+            background-color: #e9ecf7;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        
+        .sidebar h2 {
+            font-size: 18px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #192A80;
+            padding: 1px;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            background-color: #192A80;
+            color: white;
+        }
+
+        /* Collapsible tree styling */
+        .collapsible {
+            cursor: pointer;
+            font-weight: bold;
+            color: #192A80;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .content {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .sub-item {
+            margin-left: 10px;
+        }
+
+        /* Main content styling */
+        #objectDetails {
+            width: calc(100% - 230px); /* Adjusts width to account for the sidebar */
+            margin-left: 230px; /* Offset to align with the fixed sidebar */
+            padding: 20px;
+        }
+        
+        /* Styling for the table */
+        #attributeTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        
+        #attributeTable th, #attributeTable td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        #attributeTable th {
+            background-color: #192A80;
+            color: white;
+        }
+
+        #attributeTable tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Node - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <a href="main.html">List of Functions</a>
+
+            <!-- Collapsible Objects section -->
+            <div class="collapsible">Objects</div>
+            <div class="content">
+                <!-- Structure Core Links -->
+                <div class="collapsible">Structure Core</div>
+                <div class="content">
+                    <a href="node.html" class="sub-item">Node</a>
+                    <a href="#material" class="sub-item">Material</a>
+                    <a href="#section" class="sub-item">Section</a>
+                    <a href="#thickness" class="sub-item">Thickness</a>
+                    <a href="#line" class="sub-item">Line</a>
+                    <a href="#member" class="sub-item">Member</a>
+                    <a href="#surface" class="sub-item">Surface</a>
+                    <a href="#opening" class="sub-item">Opening</a>
+                    <a href="#solid" class="sub-item">Solid</a>
+                    <a href="#lineset" class="sub-item">LineSet</a>
+                    <a href="#memberset" class="sub-item">MemberSet</a>
+                    <a href="#surfaceset" class="sub-item">SurfaceSet</a>
+                    <a href="#solidset" class="sub-item">SolidSet</a>
+                </div>
+
+                <!-- Structure Advanced Links -->
+                <div class="collapsible">Structure Advanced</div>
+                <div class="content">
+                    <a href="#block" class="sub-item">Block</a>
+                    <a href="#intersection" class="sub-item">Intersection</a>
+                    <a href="#linerelease" class="sub-item">LineRelease</a>
+                    <a href="#nodalrelease" class="sub-item">NodalRelease</a>
+                    <a href="#resultsection" class="sub-item">ResultSection</a>
+                    <a href="#rigidlink" class="sub-item">RigidLink</a>
+                    <a href="#structuremodification" class="sub-item">StructureModification</a>
+                    <a href="#surfacerelease" class="sub-item">SurfaceRelease</a>
+                    <a href="#surfaceresultsadjustment" class="sub-item">SurfaceResultsAdjustment</a>
+                    <a href="#surfacescontact" class="sub-item">SurfacesContact</a>
+                </div>
+            </div>
+        </nav>
+
+<!-- Main content section -->
+<main id="objectDetails">
+    <h2>Node</h2>
+    <table id="attributeTable">
+        <thead>
+            <tr>
+                <th>Attribute Name</th>
+                <th>Data Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>no</strong></td>
+                <td>int</td>
+                <td>Object number</td>
+            </tr>
+            <tr>
+                <td><strong>type</strong></td>
+                <td>NodeType</td>
+                <td>Type of the node</td>
+            </tr>
+            <tr>
+                <td><strong>reference_node</strong></td>
+                <td>int</td>
+                <td>Reference node number (node type must be Standard)</td>
+            </tr>
+            <tr>
+                <td><strong>coordinate_system</strong></td>
+                <td>int</td>
+                <td>Coordinate system identifier</td>
+            </tr>
+            <tr>
+                <td><strong>coordinate_system_type</strong></td>
+                <td>NodeCoordinateSystemType</td>
+                <td>Type of the coordinate system</td>
+            </tr>
+            <tr>
+                <td><strong>coordinates</strong></td>
+                <td>vector_3d</td>
+                <td>Coordinates of the node</td>
+            </tr>
+            <tr>
+                <td><strong>coordinate_1</strong></td>
+                <td>float</td>
+                <td>X coordinate (depends on coordinate system type)</td>
+            </tr>
+            <tr>
+                <td><strong>coordinate_2</strong></td>
+                <td>float</td>
+                <td>Y coordinate (depends on coordinate system type)</td>
+            </tr>
+            <tr>
+                <td><strong>coordinate_3</strong></td>
+                <td>float</td>
+                <td>Z coordinate (depends on coordinate system type)</td>
+            </tr>
+            <tr>
+                <td><strong>global_coordinates</strong></td>
+                <td>vector_3d</td>
+                <td>Global coordinates of the node</td>
+            </tr>
+            <tr>
+                <td><strong>global_coordinate_1</strong></td>
+                <td>float</td>
+                <td>Global X coordinate</td>
+            </tr>
+            <tr>
+                <td><strong>global_coordinate_2</strong></td>
+                <td>float</td>
+                <td>Global Y coordinate</td>
+            </tr>
+            <tr>
+                <td><strong>global_coordinate_3</strong></td>
+                <td>float</td>
+                <td>Global Z coordinate</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_nodes_start_node</strong></td>
+                <td>int</td>
+                <td>Number of start node (node type must be Between Two Nodes)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_start_point_coordinates</strong></td>
+                <td>vector_3d</td>
+                <td>Coordinates of start point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_start_point_coordinate_1</strong></td>
+                <td>float</td>
+                <td>First coordinate of start point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_start_point_coordinate_2</strong></td>
+                <td>float</td>
+                <td>Second coordinate of start point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_start_point_coordinate_3</strong></td>
+                <td>float</td>
+                <td>Third coordinate of start point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_nodes_end_node</strong></td>
+                <td>int</td>
+                <td>Number of end node (node type must be Between Two Nodes)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_end_point_coordinates</strong></td>
+                <td>vector_3d</td>
+                <td>Coordinates of end point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_end_point_coordinate_1</strong></td>
+                <td>float</td>
+                <td>First coordinate of end point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_end_point_coordinate_2</strong></td>
+                <td>float</td>
+                <td>Second coordinate of end point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>between_two_points_end_point_coordinate_3</strong></td>
+                <td>float</td>
+                <td>Third coordinate of end point (node type must be Between Two Points)</td>
+            </tr>
+            <tr>
+                <td><strong>on_line_reference_line</strong></td>
+                <td>int</td>
+                <td>Number of reference line (node type must be On Line)</td>
+            </tr>
+            <tr>
+                <td><strong>on_member_reference_member</strong></td>
+                <td>int</td>
+                <td>Number of reference member (node type must be On Member)</td>
+            </tr>
+            <tr>
+                <td><strong>reference_type</strong></td>
+                <td>NodeReferenceType</td>
+                <td>Reference type</td>
+            </tr>
+            <tr>
+                <td><strong>reference_object_projected_length</strong></td>
+                <td>float</td>
+                <td>Projected length of reference object</td>
+            </tr>
+            <tr>
+                <td><strong>distance_from_start_is_defined_as_relative</strong></td>
+                <td>bool</td>
+                <td>Whether distance from start is defined as relative</td>
+            </tr>
+            <tr>
+                <td><strong>distance_from_start_relative</strong></td>
+                <td>float</td>
+                <td>Relative distance from start</td>
+            </tr>
+            <tr>
+                <td><strong>distance_from_start_absolute</strong></td>
+                <td>float</td>
+                <td>Absolute distance from start</td>
+            </tr>
+            <tr>
+                <td><strong>offset_in_local_direction_y</strong></td>
+                <td>float</td>
+                <td>Offset in local Y direction</td>
+            </tr>
+            <tr>
+                <td><strong>offset_in_local_direction_z</strong></td>
+                <td>float</td>
+                <td>Offset in local Z direction</td>
+            </tr>
+            <tr>
+                <td><strong>offset_in_global_direction_x</strong></td>
+                <td>float</td>
+                <td>Offset in global X direction</td>
+            </tr>
+            <tr>
+                <td><strong>offset_in_global_direction_y</strong></td>
+                <td>float</td>
+                <td>Offset in global Y direction</td>
+            </tr>
+            <tr>
+                <td><strong>offset_in_global_direction_z</strong></td>
+                <td>float</td>
+                <td>Offset in global Z direction</td>
+            </tr>
+            <tr>
+                <td><strong>support</strong></td>
+                <td>int</td>
+                <td>Support number of the node</td>
+            </tr>
+            <tr>
+                <td><strong>mesh_refinement</strong></td>
+                <td>int</td>
+                <td>Nodal mesh refinement identifier</td>
+            </tr>
+            <tr>
+                <td><strong>concrete_design_ultimate_configuration</strong></td>
+                <td>int</td>
+                <td>Concrete Design - Ultimate configuration</td>
+            </tr>
+            <tr>
+                <td><strong>concrete_design_fire_configuration</strong></td>
+                <td>int</td>
+                <td>Concrete Design - Fire configuration</td>
+            </tr>
+            <tr>
+                <td><strong>concrete_design_seismicity_configuration</strong></td>
+                <td>int</td>
+                <td>Concrete Design - Seismic configuration</td>
+            </tr>
+            <tr>
+                <td><strong>punching_design</strong></td>
+                <td>bool</td>
+                <td>Indicates if the node is considered in Punching Design</td>
+            </tr>
+            <tr>
+                <td><strong>punching_reinforcement</strong></td>
+                <td>int</td>
+                <td>Punching reinforcement setting</td>
+            </tr>
+            <tr>
+                <td><strong>comment</strong></td>
+                <td>str</td>
+                <td>Comment value for the node</td>
+            </tr>
+            <tr>
+                <td><strong>is_generated</strong></td>
+                <td>bool</td>
+                <td>Indicates if the node was generated automatically</td>
+            </tr>
+            <tr>
+                <td><strong>generating_object_info</strong></td>
+                <td>str</td>
+                <td>Information about the generating object</td>
+            </tr>
+            <tr>
+                <td><strong>id_for_export_import</strong></td>
+                <td>str</td>
+                <td>ID used for export/import purposes</td>
+            </tr>
+            <tr>
+                <td><strong>metadata_for_export_import</strong></td>
+                <td>str</td>
+                <td>Metadata used for export/import purposes</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+    </div>
+
+    <script>
+        // JavaScript to handle collapsible sidebar items
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+
+                    // Automatically expand nested content on first click
+                    if (this.innerText === 'Objects' && content.style.display === "block") {
+                        const nestedCollapsibles = content.querySelectorAll('.collapsible');
+                        nestedCollapsibles.forEach(nested => {
+                            nested.classList.add('active');
+                            nested.nextElementSibling.style.display = "block";
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
