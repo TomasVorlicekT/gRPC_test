@@ -88,28 +88,31 @@
             padding: 20px;
         }
         
-        /* Styling for the table */
-        #attributeTable {
+
+        /* Styling for all tables (applies to attributeTable and enum tables) */
+        .styled-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             background-color: white;
         }
-        
-        #attributeTable th, #attributeTable td {
+
+        .styled-table th, .styled-table td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
         }
-        
-        #attributeTable th {
+
+        .styled-table th {
             background-color: #192A80;
             color: white;
         }
 
-        #attributeTable tr:hover {
+        .styled-table tr:hover {
             background-color: #f1f1f1;
         }
+
+
     </style>
 </head>
 <body>
@@ -162,8 +165,8 @@
 
 <!-- Main content section -->
 <main id="objectDetails">
-    <h2>Node</h2>
-    <table id="attributeTable">
+    <h2>Node - Object attributes</h2>
+    <table id="attributeTable" class="styled-table">
         <thead>
             <tr>
                 <th>Attribute Name</th>
@@ -406,6 +409,109 @@
                 <td><strong>metadata_for_export_import</strong></td>
                 <td>str</td>
                 <td>Metadata used for export/import purposes</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <br>
+    <!-- Enum tables with matching styling -->
+
+    <!-- Table for NodeType Enum -->
+    <h3>NodeType Enum</h3>
+    <table class="styled-table"">
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>NODE_TYPE_UNKNOWN</strong></td>
+                <td>Unknown node type</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_TYPE_STANDARD</strong></td>
+                <td>Standard node</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_TYPE_BETWEEN_TWO_NODES</strong></td>
+                <td>Node between two other nodes</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_TYPE_BETWEEN_TWO_POINTS</strong></td>
+                <td>Node between two points</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_TYPE_ON_LINE</strong></td>
+                <td>Node on a line</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_TYPE_ON_MEMBER</strong></td>
+                <td>Node on a member</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for NodeCoordinateSystemType Enum -->
+    <h3>NodeCoordinateSystemType Enum</h3>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_CARTESIAN</strong></td>
+                <td>Cartesian coordinate system</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_POLAR</strong></td>
+                <td>Polar coordinate system</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_X_CYLINDRICAL</strong></td>
+                <td>X-Cylindrical coordinate system</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_Y_CYLINDRICAL</strong></td>
+                <td>Y-Cylindrical coordinate system</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_Z_CYLINDRICAL</strong></td>
+                <td>Z-Cylindrical coordinate system</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Table for NodeReferenceType Enum -->
+    <h3>NodeReferenceType Enum</h3>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>NODE_REFERENCE_TYPE_L</strong></td>
+                <td>Reference along the length (L)</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_REFERENCE_TYPE_XY</strong></td>
+                <td>Reference in the XY plane</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_REFERENCE_TYPE_XZ</strong></td>
+                <td>Reference in the XZ plane</td>
+            </tr>
+            <tr>
+                <td><strong>NODE_REFERENCE_TYPE_YZ</strong></td>
+                <td>Reference in the YZ plane</td>
             </tr>
         </tbody>
     </table>
