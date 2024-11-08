@@ -43,6 +43,9 @@
             border-right: 1px solid #ddd;
             box-sizing: border-box;
             overflow-y: auto;
+
+            display: flex;
+            flex-direction: column;
         }
         
         .sidebar h2 {
@@ -61,6 +64,10 @@
         .sidebar a:hover {
             background-color: #192A80;
             color: white;
+        }
+
+        .version-select-container {
+            margin-top: auto;
         }
 
         /* Collapsible tree styling */
@@ -127,7 +134,7 @@
         <!-- Sidebar navigation -->
         <nav class="sidebar">
             <h2>Contents</h2>
-            <a href="main.html">List of Functions</a>
+            <div class="collapsible"><a href="main.html">List of Functions</a></div>
 
             <!-- Collapsible Objects section -->
             <div class="collapsible">Objects</div>
@@ -165,6 +172,12 @@
                     <a href="#surfacescontact" class="sub-item">SurfacesContact</a>
                 </div>
             </div>
+            <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 35%; padding: 8px; font-size: 12px;">
+                    <option value="1.0">1.0</option>
+                    <option value="1.1">1.1</option>
+                </select>
         </nav>
 
         <!-- Main content section -->
@@ -192,7 +205,7 @@
                     </tr>
                     <tr id="thickness">
                         <td><strong>Thickness</strong></td>
-                        <td>Defines the thickness of 2D elements, such as surfaces.</td>
+                        <td>Defines the thickness of surfaces.</td>
                     </tr>
                     <tr id="node">
                         <td><strong><a href="node.html">Node</a></strong></td>
@@ -200,15 +213,15 @@
                     </tr>
                     <tr id="line">
                         <td><strong>Line</strong></td>
-                        <td>Represents a linear element, defined by a start and end point.</td>
+                        <td>Represents a linear element.</td>
                     </tr>
                     <tr id="member">
                         <td><strong>Member</strong></td>
-                        <td>A structural element, typically 1D, used to model beams, columns, etc.</td>
+                        <td>A structural element, used to model beams, columns, etc.</td>
                     </tr>
                     <tr id="surface">
                         <td><strong>Surface</strong></td>
-                        <td>Represents a 2D plane or area, often bounded by lines.</td>
+                        <td>Represents a plane bounded by lines.</td>
                     </tr>
                     <tr id="opening">
                         <td><strong>Opening</strong></td>
@@ -241,7 +254,7 @@
                     </tr>
                     <tr id="block">
                         <td><strong>Block</strong></td>
-                        <td>Represents a volumetric element, such as a cuboid or other 3D block shape.</td>
+                        <td>A block represents a model component with typified properties.</td>
                     </tr>
                     <tr id="intersection">
                         <td><strong>Intersection</strong></td>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gRPC Client Functions Database</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px;
+            background-color: #192A80;
+            color: white;
+            text-align: center;
+        }
+
+        /* Layout styling */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 230px;
+            height: 100vh;
+            padding: 20px;
+            background-color: #e9ecf7;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+            overflow-y: auto;
+
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar h2 {
+            font-size: 18px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #192A80;
+            padding: 1px;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            background-color: #192A80;
+            color: white;
+        }
+
+        .version-select-container {
+            margin-top: auto;
+        }
+        
+
+        /* Collapsible tree styling */
+        .collapsible {
+            cursor: pointer;
+            font-weight: bold;
+            color: #192A80;
+            margin-left: 0;
+        }
+        
+        .content {
+            display: block;
+            padding-left: 20px;
+        }
+        
+        /* Main content styling */
+        #functionList {
+            width: calc(100% - 220px); /* Adjusts width to account for the sidebar */
+            margin-left: 220px;
+            padding: 20px;
+        }
+        
+        /* Styling for the table */
+        #functionTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        
+        #functionTable th, #functionTable td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        #functionTable td:nth-child(2),
+        #functionTable td:nth-child(3),
+        #functionTable td:nth-child(4) {
+            text-align: center;
+        }
+        
+        #functionTable th {
+            background-color: #192A80;
+            color: white;
+        }
+
+        #functionTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Section header row styling */
+        .section-header {
+            background-color: #e9ecf7;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Detailed function section styling */
+        .function-detail {
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+
+        .function-detail h2 {
+            font-size: 24px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+
+        .function-detail h3 {
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .function-detail code {
+            display: block;
+            background-color: #f4f4f9;
+            padding: 10px;
+            border-radius: 4px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* Parameters table styling */
+        .parameters-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .parameters-table td {
+            padding: 5px;
+            vertical-align: top;
+            border: none;
+        }
+
+        .parameters-table .param-name {
+            font-weight: bold;
+            color: #333;
+            width: 150px;
+        }
+
+        .parameters-table .param-detail div {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>gRPC Client Functions Database (prototype)</h1>
+    </header>
+    <div class="container">
+        <!-- Combo box for version selection -->
+        <nav class="sidebar">
+
+            <!-- Sidebar navigation -->
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="objects.html">Objects</a></div>
+            <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 35%; padding: 8px; font-size: 12px;">
+                    <option value="1.0">1.0</option>
+                    <option value="1.1">1.1</option>
+                </select>
+        </nav>
+
+<!-- Main content section -->
+<main id="functionList">
+    <h2>API - Credit Cost per Function</h2>
+    <table id="functionTable">
+        <thead>
+            <tr>
+                <th>Function Name</th>
+                <th>API Credits (up to 1000 objects)</th>
+                <th>API Credits (up to 5000 objects)</th>
+                <th>API Credits (10000+ objects)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Application Functions section -->
+            <tr class="section-header">
+                <td colspan="4">Application Functions</td>
+            </tr>
+            <tr id="save_model">
+                <td><strong><a href="main.html">save_model</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+
+            <!-- Model Functions section -->
+            <tr class="section-header">
+                <td colspan="4">Model Functions</td>
+            </tr>
+            <tr id="calculate_all">
+                <td><a href="main.html"><strong>calculate_all</strong></a></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr id="filler_func">
+                <td><a href="main.html"><strong>some_func_1</strong></a></td>
+                <td>-</td>
+                <td>-</td>
+                <td>1</td>
+            </tr>
+            <tr id="filler_func_2">
+                <td><a href="main.html"><strong>some_func_2</strong></a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+</main>
+
+    <script>
+        // JavaScript to handle collapsible sidebar items
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

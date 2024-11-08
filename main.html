@@ -43,6 +43,9 @@
             border-right: 1px solid #ddd;
             box-sizing: border-box;
             overflow-y: auto;
+
+            display: flex;
+            flex-direction: column;
         }
         
         .sidebar h2 {
@@ -61,6 +64,10 @@
         .sidebar a:hover {
             background-color: #192A80;
             color: white;
+        }
+
+        .version-select-container {
+            margin-top: auto;
         }
 
         /* Collapsible tree styling */
@@ -179,8 +186,7 @@
             <div class="content">
                 <!-- Application Functions Links -->
                 <a href="#create_new_model_section">create_new_model</a>
-                <a href="#begin_session_section">begin_session</a>
-                <a href="#finish_session_section">finish_session</a>
+                <a href="#save_model">save_model</a>
                 <a href="#close_all_models">close_all_models</a>
                 <a href="#close">close</a>
 
@@ -195,6 +201,12 @@
                 <a href="#delete_objects">delete_objects</a>
             </div>
             <div class="collapsible"><a href="objects.html">Objects</a></div>
+            <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 35%; padding: 8px; font-size: 12px;">
+                    <option value="1.0">1.0</option>
+                    <option value="1.1">1.1</option>
+                </select>
         </nav>
 
 <!-- Main content section -->
@@ -205,69 +217,79 @@
             <tr>
                 <th>Function Name</th>
                 <th>Description</th>
+                <th>Subjected to charge</th> <!-- New column header for the API Call Costs (Yes/No) -->
             </tr>
         </thead>
         <tbody>
             <!-- Application Functions section -->
             <tr class="section-header">
-                <td colspan="2">Application Functions</td>
+                <td colspan="3">Application Functions</td>
             </tr>
             <tr id="create_new_model">
                 <td><a href="#create_new_model_section"><strong>create_new_model</strong></a>(name)</td>
                 <td>Creates a new model in RFEM.</td>
-            </tr>
-            <tr id="begin_session">
-                <td><a href="#begin_session_section"><strong>begin_session</strong></a>()</td>
-                <td>Begins a session for model modifications.</td>
-            </tr>
-            <tr id="finish_session">
-                <td><a href="#finish_session_section"><strong>finish_session</strong></a>()</td>
-                <td>Finishes a session for model modifications.</td>
+                <td>-</td>
             </tr>
             <tr id="close_all_models">
                 <td><a href="#close_all_models"><strong>close_all_models</strong></a>()</td>
                 <td>Closes all open models in RFEM.</td>
+                <td>-</td>
+            </tr>
+            <tr id="save_model">
+                <td><a href="#save_model"><strong>save_model</strong></a>()</td>
+                <td>Saves a model.</td>
+                <td><a href="api_pricing.html">Yes</a></td> <!-- Value set to "Yes" for "save_model" no other function in this list is chargeable -->
+
             </tr>
             <tr id="close">
                 <td><a href="#close"><strong>close</strong></a>()</td>
                 <td>Closes the gRPC channel.</td>
+                <td>-</td> 
             </tr>
 
             <!-- Model Functions section -->
             <tr class="section-header">
-                <td colspan="2">Model Functions</td>
+                <td colspan="3">Model Functions</td>
             </tr>
             <tr id="create_object">
                 <td><a href="#create_object_section"><strong>create_object</strong></a>(obj)</td>
                 <td>Creates a single object in the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="create_objects">
                 <td><a href="#create_objects"><strong>create_objects</strong></a>(obj_list)</td>
                 <td>Creates a list of objects in the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="update_object">
                 <td><a href="#update_object"><strong>update_object</strong></a>(obj)</td>
                 <td>Updates a single object in the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="update_objects">
                 <td><a href="#update_objects"><strong>update_objects</strong></a>(obj_list)</td>
                 <td>Updates a list of objects in the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="get_object">
-                <td><a href="#get_object"><strong>get_object</strong></a>(obj)</td>
+                <td><a href="#get_object_section"><strong>get_object</strong></a>(obj)</td>
                 <td>Retrieves a single object from the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="get_objects">
                 <td><a href="#get_objects"><strong>get_objects</strong></a>(obj_list)</td>
                 <td>Retrieves a list of objects from the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="delete_object">
                 <td><a href="#delete_object"><strong>delete_object</strong></a>(obj)</td>
                 <td>Deletes a single object from the model.</td>
+                <td>-</td> 
             </tr>
             <tr id="delete_objects">
                 <td><a href="#delete_objects"><strong>delete_objects</strong></a>(obj_list)</td>
                 <td>Deletes a list of objects from the model.</td>
+                <td>-</td> 
             </tr>
         </tbody>
     </table>
@@ -310,28 +332,6 @@
                 <code>
                     create_new_model('hall')
                 </code>
-            </div>
-
-            <!-- Repeat similar blocks for other functions -->
-
-            <div id="begin_session_section" class="function-detail">
-                <h2>begin_session()</h2>
-                <code>def begin_session()</code>
-		<br>
-
-                <h3>Description</h3>
-                <p>Begins a session for model modifications.</p>
-                                
-            </div>
-
-            <div id="finish_session_section" class="function-detail">
-                <h2>finish_session()</h2>
-                <code>def finish_session()</code>
-		<br>
-
-                <h3>Description</h3>
-                <p>Finishes a session for model modifications.</p>
-                                
             </div>
 
 

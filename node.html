@@ -43,6 +43,9 @@
             border-right: 1px solid #ddd;
             box-sizing: border-box;
             overflow-y: auto;
+
+            display: flex;
+            flex-direction: column;
         }
         
         .sidebar h2 {
@@ -61,6 +64,10 @@
         .sidebar a:hover {
             background-color: #192A80;
             color: white;
+        }
+
+        .version-select-container {
+            margin-top: auto;
         }
 
         /* Collapsible tree styling */
@@ -123,7 +130,7 @@
         <!-- Sidebar navigation -->
         <nav class="sidebar">
             <h2>Contents</h2>
-            <a href="main.html">List of Functions</a>
+            <div class="collapsible"><a href="main.html">List of Functions</a></div>
 
             <!-- Collapsible Objects section -->
             <div class="collapsible">Objects</div>
@@ -161,6 +168,12 @@
                     <a href="#surfacescontact" class="sub-item">SurfacesContact</a>
                 </div>
             </div>
+            <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 35%; padding: 8px; font-size: 12px;">
+                    <option value="1.0">1.0</option>
+                    <option value="1.1">1.1</option>
+                </select>
         </nav>
 
 <!-- Main content section -->
