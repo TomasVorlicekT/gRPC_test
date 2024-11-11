@@ -202,10 +202,11 @@
             </div>
             <div class="collapsible"><a href="objects.html">Objects</a></div>
             <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="version_control.html">Client Versions</a></div>
             <div class="version-select-container">
-                <select id="versionSelect" style="width: 35%; padding: 8px; font-size: 12px;">
-                    <option value="1.0">1.0</option>
-                    <option value="1.1">1.1</option>
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
                 </select>
         </nav>
 
@@ -299,11 +300,11 @@
             <!-- Detailed function sections -->
             <div id="create_new_model_section" class="function-detail">
                 <h2>create_new_model</h2>
-                <code>def create_new_model(name)</code>
+                <code>create_new_model(name)</code>
 		<br>
 
                 <h3>Description</h3>
-                <p>Creates a new model in the RFEM system with the specified name.</p>
+                <p>Creates a new model in the RFEM application with the specified name.</p>
                 
                 <!-- Parameters Table -->
                 <table class="parameters-table">
@@ -329,15 +330,18 @@
                 
 		<br> 
                 <h3>Example of usage:</h3>
-                <code>
-                    create_new_model('hall')
-                </code>
+                <pre><code>import rfem 
+from rfem.client import RFEM
+
+with RFEM(api_key_name='cantilever_project') as client:
+
+    client.create_new_model('cantilever')</code></pre>
             </div>
 
 
             <div id="create_object_section" class="function-detail">
                 <h2>create_object</h2>
-                <code>def create_object(obj)</code>
+                <code>create_object(obj)</code>
 		<br>
 
                 <h3>Description</h3>
@@ -368,12 +372,18 @@
                 <code>
                     model.create_object(rfem.structure_core.Node(no=1, coordinate_1=0.0, coordinate_2=0.0, coordinate_3=0.0))
                 </code>
+
+        <br>
+                <h3>Download Example Script:</h3>
+                <a href="create_object_example.py" download="create_object_example.py">
+                    <button type="button">create_object_example.py</button>
+                </a>
             </div>
 
 
             <div id="get_object_section" class="function-detail">
                 <h2>get_object</h2>
-                <code>def get_object(obj)</code>
+                <code>get_object(obj)</code>
 		<br>
 
                 <h3>Description</h3>

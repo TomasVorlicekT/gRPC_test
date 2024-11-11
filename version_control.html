@@ -104,12 +104,6 @@
             padding: 12px;
             text-align: left;
         }
-
-        #functionTable td:nth-child(2),
-        #functionTable td:nth-child(3),
-        #functionTable td:nth-child(4) {
-            text-align: center;
-        }
         
         #functionTable th {
             background-color: #192A80;
@@ -204,49 +198,27 @@
 
 <!-- Main content section -->
 <main id="functionList">
-    <h2>API - Credit Cost per Function</h2>
+    <h2>Application Version Compatibility</h2>
     <table id="functionTable">
         <thead>
             <tr>
-                <th>Function Name</th>
-                <th>API Credits (up to 1000 objects)</th>
-                <th>API Credits (up to 5000 objects)</th>
-                <th>API Credits (10000+ objects)</th>
+                <th>Python Client Version</th>
+                <th>Supported Application Versions</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Application Functions section -->
-            <tr class="section-header">
-                <td colspan="4">Application Functions</td>
-            </tr>
-            <tr id="save_model">
-                <td><strong><a href="main.html">save_model</a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+            <tr id="version1">
+                <td><strong>6.01.0019</td>
+                <td>6.01.0019 to 6.06.0013</td>
+                <td>Deprecated</td>
             </tr>
 
-            <!-- Model Functions section -->
-            <tr class="section-header">
-                <td colspan="4">Model Functions</td>
             </tr>
-            <tr id="calculate_all">
-                <td><a href="main.html"><strong>calculate_all</strong></a></td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-            </tr>
-            <tr id="filler_func">
-                <td><a href="main.html"><strong>some_func_1</strong></a></td>
-                <td>-</td>
-                <td>-</td>
-                <td>1</td>
-            </tr>
-            <tr id="filler_func_2">
-                <td><a href="main.html"><strong>some_func_2</strong></a></td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+            <tr id="version2">
+                <td><strong>6.07.0014</strong></td>
+                <td>6.07.0014 to Latest Application Version</td>
+                <td><font color="#EB9C00">Current</font></td>
             </tr>
         </tbody>
     </table>
