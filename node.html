@@ -5,121 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node - Object Details</title>
     <style>
-        /* Basic styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        header {
-            padding: 20px;
-            background-color: #192A80;
-            color: white;
-            text-align: center;
-        }
-
-        /* Layout styling */
-        .container {
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Sidebar styling */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 270px;
-            height: 100vh;
-            padding: 20px;
-            background-color: #e9ecf7;
-            border-right: 1px solid #ddd;
-            box-sizing: border-box;
-            overflow-y: auto;
-
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .sidebar h2 {
-            font-size: 18px;
-            color: #192A80;
-            margin-bottom: 10px;
-        }
-        
-        .sidebar a {
-            display: block;
-            color: #192A80;
-            padding: 1px;
-            text-decoration: none;
-        }
-        
-        .sidebar a:hover {
-            background-color: #192A80;
-            color: white;
-        }
-
-        .version-select-container {
-            margin-top: auto;
-        }
-
-        /* Collapsible tree styling */
-        .collapsible {
-            cursor: pointer;
-            font-weight: bold;
-            color: #192A80;
-            margin-left: 0;
-            padding-left: 0;
-        }
-        
-        .content {
-            display: none;
-            padding-left: 20px;
-        }
-
-        .sub-item {
-            margin-left: 10px;
-        }
-
-        /* Main content styling */
-        #objectDetails {
-            width: calc(100% - 230px); /* Adjusts width to account for the sidebar */
-            margin-left: 230px; /* Offset to align with the fixed sidebar */
-            padding: 20px;
-        }
-        
-
-        /* Styling for all tables (applies to attributeTable and enum tables) */
-        .styled-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: white;
-        }
-
-        .styled-table th, .styled-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        .styled-table th {
-            background-color: #192A80;
-            color: white;
-        }
-
-        .styled-table tr:hover {
-            background-color: #f1f1f1;
-        }
-
-
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; }
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .sidebar { position: fixed; top: 0; left: 0; width: 270px; height: 100vh; padding: 20px; background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; margin-left: 0; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - 230px); margin-left: 230px; padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
     </style>
 </head>
 <body>
@@ -167,6 +68,11 @@
                     <a href="#surfaceresultsadjustment" class="sub-item">SurfaceResultsAdjustment</a>
                     <a href="#surfacescontact" class="sub-item">SurfacesContact</a>
                 </div>
+                <div class="collapsible">rfem.common</div>
+                <div class="content">
+                    <a href="#<a href="vector_3d.html">vector_3d</a>" class="sub-item"><a href="vector_3d.html">vector_3d</a></a>
+                    <a href="#Color" class="sub-item">Color</a>
+                </div>
             </div>
             <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
             <div class="collapsible"><a href="version_control.html">Client Versions</a></div>
@@ -179,7 +85,7 @@
 
 <!-- Main content section -->
 <main id="objectDetails">
-    <h2>rfem.structure_core.Node - Object attributes</h2>
+    <h2>rfem.structure_core.Node</h2>
     <table id="attributeTable" class="styled-table">
         <thead>
             <tr>
@@ -196,7 +102,7 @@
             </tr>
             <tr>
                 <td><strong>type</strong></td>
-                <td>NodeType</td>
+                <td><a href="#NodeType Enum">NodeType</a></td>
                 <td>Type of the node</td>
             </tr>
             <tr>
@@ -211,12 +117,12 @@
             </tr>
             <tr>
                 <td><strong>coordinate_system_type</strong></td>
-                <td>NodeCoordinateSystemType</td>
+                <td><a href="#NodeCoordinateSystemType Enum">NodeCoordinateSystemType</a></td>
                 <td>Type of the coordinate system</td>
             </tr>
             <tr>
                 <td><strong>coordinates</strong></td>
-                <td>vector_3d</td>
+                <td><a href="vector_3d.html">vector_3d</a></td>
                 <td>Coordinates of the node</td>
             </tr>
             <tr>
@@ -236,7 +142,7 @@
             </tr>
             <tr>
                 <td><strong>global_coordinates</strong></td>
-                <td>vector_3d</td>
+                <td><a href="vector_3d.html">vector_3d</a></td>
                 <td>Global coordinates of the node</td>
             </tr>
             <tr>
@@ -261,7 +167,7 @@
             </tr>
             <tr>
                 <td><strong>between_two_points_start_point_coordinates</strong></td>
-                <td>vector_3d</td>
+                <td><a href="vector_3d.html">vector_3d</a></td>
                 <td>Coordinates of start point (node type must be Between Two Points)</td>
             </tr>
             <tr>
@@ -286,7 +192,7 @@
             </tr>
             <tr>
                 <td><strong>between_two_points_end_point_coordinates</strong></td>
-                <td>vector_3d</td>
+                <td><a href="vector_3d.html">vector_3d</a></td>
                 <td>Coordinates of end point (node type must be Between Two Points)</td>
             </tr>
             <tr>
@@ -316,7 +222,7 @@
             </tr>
             <tr>
                 <td><strong>reference_type</strong></td>
-                <td>NodeReferenceType</td>
+                <td><a href="#NodeReferenceType Enum">NodeReferenceType</a></td>
                 <td>Reference type</td>
             </tr>
             <tr>
@@ -429,14 +335,17 @@
 
 
     <br>
+    <hr>
+    <h2>Associated Enums</h2>
     <!-- Enum tables with matching styling -->
 
     <!-- Table for NodeType Enum -->
+    <div id="NodeType Enum">
     <h3>NodeType Enum</h3>
     <table class="styled-table"">
         <thead>
             <tr>
-                <th>Value</th>
+                <th>Name</th>
                 <th>Description</th>
             </tr>
         </thead>
@@ -467,13 +376,15 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
     <!-- Table for NodeCoordinateSystemType Enum -->
+    <div id="NodeCoordinateSystemType Enum">
     <h3>NodeCoordinateSystemType Enum</h3>
     <table class="styled-table">
         <thead>
             <tr>
-                <th>Value</th>
+                <th>Name</th>
                 <th>Description</th>
             </tr>
         </thead>
@@ -500,13 +411,15 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
     <!-- Table for NodeReferenceType Enum -->
+    <div id="NodeReferenceType Enum">
     <h3>NodeReferenceType Enum</h3>
     <table class="styled-table">
         <thead>
             <tr>
-                <th>Value</th>
+                <th>Name</th>
                 <th>Description</th>
             </tr>
         </thead>
@@ -529,6 +442,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
 </main>
 
     </div>

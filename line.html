@@ -44,7 +44,7 @@
 
         <!-- Main content section -->
         <main id="objectDetails">
-            <h2>rfem.structure_core.Line - Object attributes</h2>
+            <h2>rfem.structure_core.Line</h2>
             <table id="attributeTable" class="styled-table">
                 <thead>
                     <tr>
@@ -61,11 +61,11 @@
                     <tr><td>comment</td><td>string</td><td>Comment</td></tr>
                     <tr><td>arc_first_node</td><td>int</td><td>Nodes of arc | P_1</td></tr>
                     <tr><td>arc_second_node</td><td>int</td><td>Nodes of arc | P_2</td></tr>
-                    <tr><td>arc_control_point</td><td>vector_3d</td><td>P_3 - control point | Control point coordinates of arc</td></tr>
+                    <tr><td>arc_control_point</td><td><a href="vector_3d.html">vector_3d</a></td><td>P_3 - control point | Control point coordinates of arc</td></tr>
                     <tr><td>arc_control_point_x</td><td>float</td><td>P_3 - control point | X | Control point coordinates of arc</td></tr>
                     <tr><td>arc_control_point_y</td><td>float</td><td>P_3 - control point | Y | Control point coordinates of arc</td></tr>
                     <tr><td>arc_control_point_z</td><td>float</td><td>P_3 - control point | Z | Control point coordinates of arc</td></tr>
-                    <tr><td>arc_center</td><td>vector_3d</td><td>Center of arc | Center of the arc</td></tr>
+                    <tr><td>arc_center</td><td><a href="vector_3d.html">vector_3d</a></td><td>Center of arc | Center of the arc</td></tr>
                     <tr><td>arc_center_x</td><td>float</td><td>Center of arc | X | Center of the arc</td></tr>
                     <tr><td>arc_center_y</td><td>float</td><td>Center of arc | Y | Center of the arc</td></tr>
                     <tr><td>arc_center_z</td><td>float</td><td>Center of arc | Z | Center of the arc</td></tr>
@@ -73,23 +73,23 @@
                     <tr><td>arc_height</td><td>float</td><td>Arc parameters | h | Height of the arc</td></tr>
                     <tr><td>arc_alpha</td><td>float</td><td>Arc parameters | ? | Central angle of the arc</td></tr>
                     <tr><td>arc_alpha_adjustment_target</td><td><a href="#LineArcAlphaAdjustmentTarget Enum">LineArcAlphaAdjustmentTarget</a></td><td>Subsequent adjustment of ? by displacing node at | Manner in which the arc is deformed when ? is modified</td></tr>
-                    <tr><td>circle_center</td><td>vector_3d</td><td>Center of circle | Center of the circle</td></tr>
+                    <tr><td>circle_center</td><td><a href="vector_3d.html">vector_3d</a></td><td>Center of circle | Center of the circle</td></tr>
                     <tr><td>circle_center_coordinate_1</td><td>float</td><td>Center of circle | X | Center of the circle</td></tr>
                     <tr><td>circle_center_coordinate_2</td><td>float</td><td>Center of circle | Y | Center of the circle</td></tr>
                     <tr><td>circle_center_coordinate_3</td><td>float</td><td>Center of circle | Z | Center of the circle</td></tr>
-                    <tr><td>circle_normal</td><td>vector_3d</td><td>Normal vector of circle plane | Normal of the circle</td></tr>
+                    <tr><td>circle_normal</td><td><a href="vector_3d.html">vector_3d</a></td><td>Normal vector of circle plane | Normal of the circle</td></tr>
                     <tr><td>circle_normal_coordinate_1</td><td>float</td><td>Normal vector of circle plane | X | Normal of the circle</td></tr>
                     <tr><td>circle_normal_coordinate_2</td><td>float</td><td>Normal vector of circle plane | Y | Normal of the circle</td></tr>
                     <tr><td>circle_normal_coordinate_3</td><td>float</td><td>Normal vector of circle plane | Z | Normal of the circle</td></tr>
                     <tr><td>circle_rotation</td><td>float</td><td>Rotation of circle around normal | ? | Rotation of circle around normal</td></tr>
-                    <tr><td>circle_node</td><td>vector_3d</td><td>Circle node | Coordinates of the circle node</td></tr>
+                    <tr><td>circle_node</td><td><a href="vector_3d.html">vector_3d</a></td><td>Circle node | Coordinates of the circle node</td></tr>
                     <tr><td>circle_node_coordinate_1</td><td>float</td><td>Circle node | X | Coordinates of the circle node</td></tr>
                     <tr><td>circle_node_coordinate_2</td><td>float</td><td>Circle node | Y | Coordinates of the circle node</td></tr>
                     <tr><td>circle_node_coordinate_3</td><td>float</td><td>Circle node | Z | Coordinates of the circle node</td></tr>
                     <tr><td>circle_radius</td><td>float</td><td>Circle radius | r</td></tr>
                     <tr><td>ellipse_first_node</td><td>int</td><td>First node of ellipse | P_1</td></tr>
                     <tr><td>ellipse_second_node</td><td>int</td><td>Second node of ellipse | P_2</td></tr>
-                    <tr><td>ellipse_control_point</td><td>vector_3d</td><td>P_3 - control point | Control point coordinates of ellipse</td></tr>
+                    <tr><td>ellipse_control_point</td><td><a href="vector_3d.html">vector_3d</a></td><td>P_3 - control point | Control point coordinates of ellipse</td></tr>
                     <tr><td>ellipse_control_point_x</td><td>float</td><td>P_3 - control point | X | Control point coordinates of ellipse</td></tr>
                     <tr><td>ellipse_control_point_y</td><td>float</td><td>P_3 - control point | Y | Control point coordinates of ellipse</td></tr>
                     <tr><td>ellipse_control_point_z</td><td>float</td><td>P_3 - control point | Z | Control point coordinates of ellipse</td></tr>
@@ -97,45 +97,45 @@
                     <tr><td>elliptical_arc_second_node</td><td>int</td><td>Second node of elliptical arc | P_2</td></tr>
                     <tr><td>elliptical_arc_alpha</td><td>float</td><td>Arc angles | ? | Angle between x-axis of base curve of ellipse and first defining node</td></tr>
                     <tr><td>elliptical_arc_beta</td><td>float</td><td>Arc angles | ? | Angle between definition nodes and center of ellipse</td></tr>
-                    <tr><td>elliptical_arc_normal</td><td>vector_3d</td><td>Normal vector of the base ellipse | Normal of the ellipse</td></tr>
+                    <tr><td>elliptical_arc_normal</td><td><a href="vector_3d.html">vector_3d</a></td><td>Normal vector of the base ellipse | Normal of the ellipse</td></tr>
                     <tr><td>elliptical_arc_normal_x</td><td>float</td><td>Normal vector of the base ellipse | n_X | Normal of the ellipse</td></tr>
                     <tr><td>elliptical_arc_normal_y</td><td>float</td><td>Normal vector of the base ellipse | n_Y | Normal of the ellipse</td></tr>
                     <tr><td>elliptical_arc_normal_z</td><td>float</td><td>Normal vector of the base ellipse | n_Z | Normal of the ellipse</td></tr>
                     <tr><td>elliptical_arc_major_radius</td><td>float</td><td>Radii of elliptical arc | a | Major radius of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_minor_radius</td><td>float</td><td>Radii of elliptical arc | b | Minor radius of the base ellipse</td></tr>
-                    <tr><td>elliptical_arc_center</td><td>vector_3d</td><td>Center point of the base ellipse | Center of the base ellipse</td></tr>
+                    <tr><td>elliptical_arc_center</td><td><a href="vector_3d.html">vector_3d</a></td><td>Center point of the base ellipse | Center of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_center_x</td><td>float</td><td>Center point of the base ellipse | c_X | Center of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_center_y</td><td>float</td><td>Center point of the base ellipse | c_Y | Center of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_center_z</td><td>float</td><td>Center point of the base ellipse | c_Z | Center of the base ellipse</td></tr>
-                    <tr><td>elliptical_arc_focus_1</td><td>vector_3d</td><td>Foci of the base ellipse | Focus of the base ellipse</td></tr>
+                    <tr><td>elliptical_arc_focus_1</td><td><a href="vector_3d.html">vector_3d</a></td><td>Foci of the base ellipse | Focus of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_focus_1_x</td><td>float</td><td>Foci of the base ellipse | F_1,X | Focus of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_focus_1_y</td><td>float</td><td>Foci of the base ellipse | F_1,Y | Focus of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_focus_1_z</td><td>float</td><td>Foci of the base ellipse | F_1,Z | Focus of the base ellipse</td></tr>
-                    <tr><td>elliptical_arc_focus_2</td><td>vector_3d</td><td>Foci of the base ellipse | Focus of the base ellipse</td></tr>
+                    <tr><td>elliptical_arc_focus_2</td><td><a href="vector_3d.html">vector_3d</a></td><td>Foci of the base ellipse | Focus of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_focus_2_x</td><td>float</td><td>Foci of the base ellipse | F_2,X | Focus of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_focus_2_y</td><td>float</td><td>Foci of the base ellipse | F_2,Y | Focus of the base ellipse</td></tr>
                     <tr><td>elliptical_arc_focus_2_z</td><td>float</td><td>Foci of the base ellipse | F_2,Z | Focus of the base ellipse</td></tr>
-                    <tr><td>elliptical_arc_first_control_point</td><td>vector_3d</td><td>P_1 - control point | First control point of elliptical arc</td></tr>
+                    <tr><td>elliptical_arc_first_control_point</td><td><a href="vector_3d.html">vector_3d</a></td><td>P_1 - control point | First control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_first_control_point_x</td><td>float</td><td>P_1 - control point | P_1,X | First control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_first_control_point_y</td><td>float</td><td>P_1 - control point | P_1,Y | First control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_first_control_point_z</td><td>float</td><td>P_1 - control point | P_1,Z | First control point of elliptical arc</td></tr>
-                    <tr><td>elliptical_arc_second_control_point</td><td>vector_3d</td><td>P_2 - control point | Second control point of elliptical arc</td></tr>
+                    <tr><td>elliptical_arc_second_control_point</td><td><a href="vector_3d.html">vector_3d</a></td><td>P_2 - control point | Second control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_second_control_point_x</td><td>float</td><td>P_2 - control point | P_2,X | Second control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_second_control_point_y</td><td>float</td><td>P_2 - control point | P_2,Y | Second control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_second_control_point_z</td><td>float</td><td>P_2 - control point | P_2,Z | Second control point of elliptical arc</td></tr>
-                    <tr><td>elliptical_arc_perimeter_control_point</td><td>vector_3d</td><td>P_3 - control point | Perimeter control point of elliptical arc</td></tr>
+                    <tr><td>elliptical_arc_perimeter_control_point</td><td><a href="vector_3d.html">vector_3d</a></td><td>P_3 - control point | Perimeter control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_perimeter_control_point_x</td><td>float</td><td>P_3 - control point | P_3,X | Perimeter control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_perimeter_control_point_y</td><td>float</td><td>P_3 - control point | P_3,Y | Perimeter control point of elliptical arc</td></tr>
                     <tr><td>elliptical_arc_perimeter_control_point_z</td><td>float</td><td>P_3 - control point | P_3,Z | Perimeter control point of elliptical arc</td></tr>
                     <tr><td>parabola_first_node</td><td>int</td><td>Nodes of parabola | P_1</td></tr>
                     <tr><td>parabola_second_node</td><td>int</td><td>Nodes of parabola | P_2</td></tr>
-                    <tr><td>parabola_control_point</td><td>vector_3d</td><td>P_3 - control point | Control point coordinates of parabola</td></tr>
+                    <tr><td>parabola_control_point</td><td><a href="vector_3d.html">vector_3d</a></td><td>P_3 - control point | Control point coordinates of parabola</td></tr>
                     <tr><td>parabola_control_point_x</td><td>float</td><td>P_3 - control point | X | Control point coordinates of parabola</td></tr>
                     <tr><td>parabola_control_point_y</td><td>float</td><td>P_3 - control point | Y | Control point coordinates of parabola</td></tr>
                     <tr><td>parabola_control_point_z</td><td>float</td><td>P_3 - control point | Z | Control point coordinates of parabola</td></tr>
                     <tr><td>parabola_alpha</td><td>float</td><td>Parameters of parabola | ? | Angle of the parabola</td></tr>
                     <tr><td>parabola_focus_directrix_distance</td><td>float</td><td>Parameters of parabola | p | Distance between focus and directrix</td></tr>
-                    <tr><td>parabola_focus</td><td>vector_3d</td><td>Focus of parabola</td></tr>
+                    <tr><td>parabola_focus</td><td><a href="vector_3d.html">vector_3d</a></td><td>Focus of parabola</td></tr>
                     <tr><td>parabola_focus_x</td><td>float</td><td>Focus of parabola | X_F</td></tr>
                     <tr><td>parabola_focus_y</td><td>float</td><td>Focus of parabola | Y_F</td></tr>
                     <tr><td>parabola_focus_z</td><td>float</td><td>Focus of parabola | Z_F</td></tr>
@@ -170,7 +170,7 @@
 
             <br>
             <hr>
-            <h2>Associated data types</h2>
+            <h2>Associated Data Types</h2>
 
                 <!-- Table for ArrayOfLineNurbsControlPointsByComponents -->
                 <div id="ArrayOfLineNurbsControlPointsByComponents">
@@ -243,8 +243,8 @@
                         <tr><td>no</td><td>int</td><td>Control point number</td></tr>
                         <tr><td>description</td><td>string</td><td>Description of the control point</td></tr>
                         <tr><td>control_point</td><td>int</td><td>Control point ID</td></tr>
-                        <tr><td>global_coordinates</td><td>vector_3d</td><td>Global coordinates of the control point</td></tr>
-                        <tr><td>coordinates</td><td>vector_3d</td><td>Local coordinates of the control point</td></tr>
+                        <tr><td>global_coordinates</td><td><a href="vector_3d.html">vector_3d</a></td><td>Global coordinates of the control point</td></tr>
+                        <tr><td>coordinates</td><td><a href="vector_3d.html">vector_3d</a></td><td>Local coordinates of the control point</td></tr>
                         <tr><td>weight</td><td>float</td><td>Weight of the control point</td></tr>
                     </tbody>
                 </table>
@@ -330,7 +330,7 @@
 
             <br>
             <hr>
-            <h2>Associated enums</h2>
+            <h2>Associated Enums</h2>
 
                 <!-- Table for LineType Enum -->
                 <div id="LineType Enum">
@@ -338,7 +338,7 @@
                 <table class="styled-table">
                     <thead>
                         <tr>
-                            <th>Value</th>
+                            <th>Name</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -364,7 +364,7 @@
                 <table class="styled-table">
                     <thead>
                         <tr>
-                            <th>Value</th>
+                            <th>Name</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -382,7 +382,7 @@
                 <table class="styled-table">
                     <thead>
                         <tr>
-                            <th>Value</th>
+                            <th>Name</th>
                             <th>Description</th>
                         </tr>
                     </thead>
@@ -401,7 +401,7 @@
                 <table class="styled-table">
                     <thead>
                         <tr>
-                            <th>Value</th>
+                            <th>Name</th>
                             <th>Description</th>
                         </tr>
                     </thead>
