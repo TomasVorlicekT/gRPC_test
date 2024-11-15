@@ -56,6 +56,26 @@
                 </tbody>
             </table>
             {% endfor %}
+
+            {% for enum in enums %}
+            <h2>{{ enum.name }}</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for field in enum.fields %}
+                    <tr>
+                        <td>{{ field.name }}</td>
+                        <td>{{ field.description }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endfor %}
         </main>
     </div>
 </body>
