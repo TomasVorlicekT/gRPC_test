@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Types</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px;
+            background-color: #192A80;
+            color: white;
+            text-align: center;
+        }
+
+        /* Layout styling */
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 270px;
+            height: 100vh;
+            padding: 20px;
+            background-color: #e9ecf7;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+            overflow-y: auto;
+
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar h2 {
+            font-size: 18px;
+            color: #192A80;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            display: block;
+            color: #192A80;
+            padding: 1px;
+            text-decoration: none;
+        }
+        
+        .sidebar a:hover {
+            background-color: #192A80;
+            color: white;
+        }
+
+        .version-select-container {
+            margin-top: auto;
+        }
+
+        /* Collapsible tree styling */
+        .collapsible {
+            cursor: pointer;
+            font-weight: bold;
+            color: #192A80;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .content {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .sub-item {
+            margin-left: 10px;
+        }
+
+        /* Main content styling */
+        #objectList {
+            width: calc(100% - 230px); /* Adjusts width to account for the sidebar */
+            margin-left: 230px; /* Offset to align with the fixed sidebar */
+            padding: 20px;
+        }
+        
+        /* Styling for the table */
+        #objectTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+        
+        #objectTable th, #objectTable td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        #objectTable th {
+            background-color: #192A80;
+            color: white;
+        }
+
+        #objectTable tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Section header styling */
+        .section-header {
+            background-color: #e9ecf7;
+            font-weight: bold;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>gRPC Client Functions Database (prototype)</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="main.html">List of Functions</a></div>
+
+            <!-- Collapsible Objects section -->
+            <div class="collapsible">Objects</div>
+            <div class="content">
+                <!-- Loop through folders -->
+                {% for folder in folders %}
+                <div class="collapsible">{{ folder.path }}</div>
+                <div class="content">
+                        <!-- Loop through files in folder -->
+                        {% for file in folder.files %}
+                            <a href="{{ file.url }}" class="sub-item">{{ file.name }}</a>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="collapsible"><a href="misc.html">Miscellaneous</a></div>
+            <div class="collapsible"><a href="api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+            </div>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectList">
+            <h2>Object Types</h2>
+            <table id="objectTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <!-- not needed now, there are no descriptions for objects <th>Description</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop through sections (you could split these into separate categories too) -->
+                    {% for folder in folders %}
+                        <tr class="section-header" id="{{ folder.path }}">
+                            <td colspan="1">{{ folder.path }}</td>
+                        </tr>
+                        {% for file in folder.files %}
+                            <tr id="{{ file.name }}">
+                                <td><strong><a href="{{ file.url }}">{{ file.name }}</a></strong></td>
+                                <!-- not needed now, there are no descriptions for objects <td>{{ file.description }}</td> -->
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript to handle collapsible sidebar items
+        document.addEventListener('DOMContentLoaded', function () {
+            const collapsibles = document.querySelectorAll('.collapsible');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    content.style.display = content.style.display === "block" ? "none" : "block";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
