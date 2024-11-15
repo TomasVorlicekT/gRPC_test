@@ -33,7 +33,7 @@
         <nav class="sidebar">
             <h2>Contents</h2>
             <div class="collapsible"><a href="../main.html">List of Functions</a></div>
-            <div class="collapsible"><a href="../objects.html">Objects</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">Objects</a></div>
             <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
             <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
             <div class="version-select-container">
@@ -67,29 +67,46 @@
                 </tbody>
             </table>
             </div>
+            <br>
+
+            {% if loop.first and title != "rfem.common.common - Object Details" %}
+            <!-- Visually differentiate the main table from the rest of messages -->
+            <br>
+            <h2>Associated Data Types </h2>
+            <hr>
+            {% endif %}
+
             {% endfor %}
+
+
+            {% if title != "rfem.common.common - Object Details" %}
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
 
             {% for enum in enums %}
             <div id={{ enum.name }}>
-            <h2>{{ enum.name }}</h2>
+            <h2>{{ enum.name }} Enum</h2>
             <table class="styled-table">
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Description</th>
+                        <!-- no description for enums available atm  <th>Description</th>-->
                     </tr>
                 </thead>
                 <tbody>
                     {% for field in enum.fields %}
                     <tr>
                         <td>{{ field.name }}</td>
-                        <td>{{ field.description }}</td>
+                        <!-- no description for enums available atm  <td>{{ field.description }}</td>-->
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             </div>
+            <br>
             {% endfor %}
+            {% endif %}
         </main>
     </div>
     

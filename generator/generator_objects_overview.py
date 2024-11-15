@@ -16,14 +16,15 @@ def generate_folders_and_files(source_folder):
             "files": []
         }
         for file in files:
-            # Only consider .proto files, or adjust this as necessary
+            # Only consider .proto files
             if file.endswith(".proto"):
                 name_stripped = file.replace(".proto", "")
                 folder["files"].append({
                     "name": name_stripped,
-                    "url": f'generated_html/{name_stripped}.html")',  # URL relative to root
+                    "url": f'generated_html/{name_stripped}.html")',  # URL defined relative to main folder
                     "description" : ""
                 })
+                
         # If folder has files, add it to the folders list
         if folder["files"]:
             folders.append(folder)
@@ -62,7 +63,7 @@ def process_directory_and_generate_html(source_folder, template_path, output_htm
 # Specify the paths
 source_folder = 'proto'  # Replace with the actual source folder
 template_file = 'generator\\template_objects_overview.html'  # Path to your template file
-output_html_file = 'generator\\generated_objects_overview.html'  # Path where the output will be saved
+output_html_file = 'generator\\objects_overview.html'  # Path where the output will be saved
 
 # Generate HTML
 process_directory_and_generate_html(source_folder, template_file, output_html_file)

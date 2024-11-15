@@ -133,7 +133,7 @@ def process_all_proto_files_in_folder(source_folder, template_path, output_root)
             if file.endswith(".proto"):
                 proto_file = os.path.join(root, file)
                 proto_name = extract_proto_name(proto_file).split("\\")[-1]
-                title = f"{proto_name} - Object Details"
+                title = f"{relative_path.replace("\\", ".")}.{proto_name} - Object Details"
 
                 output_html_file = os.path.join(output_root, f"{proto_name}.html")
                 messages, enums = extract_messages_and_enums_with_attributes(proto_file, output_html_file)
