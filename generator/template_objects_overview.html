@@ -31,7 +31,7 @@
         .container {
             display: flex;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -141,7 +141,7 @@
             <div class="collapsible"><a href="main.html">List of Functions</a></div>
 
             <!-- Collapsible Objects section -->
-            <div class="collapsible">Objects</div>
+            <div class="collapsible">RFEM Objects</div>
             <div class="content">
                 <!-- Loop through folders -->
                 {% for folder in folders %}
@@ -173,19 +173,19 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <!-- not needed now, there are no descriptions for objects <th>Description</th> -->
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Loop through sections (you could split these into separate categories too) -->
                     {% for folder in folders %}
                         <tr class="section-header" id="{{ folder.path }}">
-                            <td colspan="1">{{ folder.path }}</td>
+                            <td colspan="2">{{ folder.path }}</td>
                         </tr>
                         {% for file in folder.files %}
                             <tr id="{{ file.name }}">
                                 <td><strong><a href="{{ file.url }}">{{ file.name }}</a></strong></td>
-                                <!-- not needed now, there are no descriptions for objects <td>{{ file.description }}</td> -->
+                                <td>{{ file.description }}</td>
                             </tr>
                         {% endfor %}
                     {% endfor %}

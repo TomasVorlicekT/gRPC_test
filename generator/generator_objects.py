@@ -26,7 +26,7 @@ def extract_proto_name(proto_file_path):
 
 def extract_messages_and_enums_with_attributes(proto_file_path, output_html_file):
     """
-    Extract message names and their attributes, including descriptions from multi-line comments.
+    Extract message names and their attributes, including descriptions comments.
     """
     with open(proto_file_path, 'r') as file:
         content = file.read()
@@ -49,14 +49,16 @@ def extract_messages_and_enums_with_attributes(proto_file_path, output_html_file
         for line in fields_block.splitlines():
             line = line.strip()
             if line.startswith("//"):
-                # Accumulate comment lines
+                # Accumulate comment lines, this would only be useful if there would be multi-line comments (not present atm)
                 current_comment.append(line.strip("// ").strip())
             elif line:  # Non-empty line that might be a field definition
                 # Match the field definition with optional and/or repeated keyword
+                # the (?:\s*\[.*\])? section in Regex is meant to address specific fields 
+                # (e.g. Thickness contains this section after field number [json_name = "D11"])
                 field_match = re.match(r'(optional\s+)?(repeated\s+)?(\w+)\s+(\w+)\s*=\s*\d+(?:\s*\[.*\])?;', line)
                 if field_match:
                     optional_keyword = field_match.group(1) or ""  # Capture "optional" if it exists, might be useful later
-                    repeated_keyword = field_match.group(2) or "" # I need to catch the repeated so that I can morf it into List[]
+                    repeated_keyword = field_match.group(2) or "" # I need to catch the repeated so that I can convert it into List[]
                     field_type = transform_types(field_match.group(3), output_html_file)
                     field_name = field_match.group(4)
                     description = " ".join(current_comment).strip()
@@ -68,7 +70,7 @@ def extract_messages_and_enums_with_attributes(proto_file_path, output_html_file
                     fields.append({
                         "name": field_name,
                         "type": field_type,
-                        "optional": bool(optional_keyword.strip()),  # True if "optional" is present, might be useful
+                        "optional": bool(optional_keyword.strip()),  # True if "optional" is present, might be useful (?)
                         "description": description
                     })
                     # Clear the current comment after assigning it to the field
@@ -83,19 +85,19 @@ def extract_messages_and_enums_with_attributes(proto_file_path, output_html_file
 
         fields = []
         
-        # Process each line in fields_block to handle comments (not present so far) and fields accurately
+        # Process each line in fields_block to handle comments (not present so far) and fields
         for line in fields_block.splitlines():
             line = line.strip()
             enum_value_match = re.match(r'(?:\/\/[^\n]*\n)*\s*(\w+)\s*=\s*(\d+);', line)
             if enum_value_match:
                 enum_value_name = enum_value_match.group(1)
-                #enum_value_value = enum_value_match.group(2) do not need at this point
+                #enum_value_value = enum_value_match.group(2) do not need this (yet)
                 enum_description = ""
                 fields.append({
                     "name": enum_value_name,
                     "description": enum_description
                 })
-                current_comment = []  # Clear comment after use
+                current_comment = []  # Clear comment after use, redundant since there are no comments for enums (yet?)
 
         enums.append({"name": enum_name, "fields": fields})
 
@@ -109,6 +111,8 @@ def render_html_with_messages(title, messages, enums, template_path, output_path
     with open(template_path, 'r') as file:
         template_content = file.read()
 
+    # The .proto order is such, that the "main" message is always first, 
+    # this is leveraged in the template file.
     template = Template(template_content)
     rendered_html = template.render(
         title=title,
@@ -119,15 +123,14 @@ def render_html_with_messages(title, messages, enums, template_path, output_path
     with open(output_path, 'w') as output_file:
         output_file.write(rendered_html)
 
+    # This line is purely to enjoy the lines being printed to the terminal.
     print(f"HTML file has been generated: {output_path}")
 
 
 def process_all_proto_files_in_folder(source_folder, template_path, output_root):
     for root, _, files in os.walk(source_folder):
-        # Get relative path without including "proto" in the output structure
+        # Get relative path from root to source_folder, e.g. "rfem\\structure_core"
         relative_path = os.path.relpath(root, source_folder)
-        output_folder = os.path.join(output_root, relative_path)
-        os.makedirs(output_folder, exist_ok=True)
 
         for file in files:
             if file.endswith(".proto"):
