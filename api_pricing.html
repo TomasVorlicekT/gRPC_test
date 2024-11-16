@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gRPC Client Functions Database</title>
     <style>
+        :root {
+            --sidebar-width: 300px;
+        }
         /* Basic styling for the page */
         body {
             font-family: Arial, sans-serif;
@@ -21,13 +24,14 @@
             background-color: #192A80;
             color: white;
             text-align: center;
+            margin-left: var(--sidebar-width);
         }
 
         /* Layout styling */
         .container {
             display: flex;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -36,7 +40,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 300px;
+            width: var(--sidebar-width);
             height: 100vh;
             padding: 20px;
             background-color: #e9ecf7;
@@ -86,8 +90,8 @@
         
         /* Main content styling */
         #functionList {
-            width: calc(100% - 220px); /* Adjusts width to account for the sidebar */
-            margin-left: 220px;
+            width: calc(100% - var(--sidebar-width)); /* Adjusts width to account for the sidebar */
+            margin-left: var(--sidebar-width);
             padding: 20px;
         }
         
@@ -127,58 +131,6 @@
             text-align: left;
         }
 
-        /* Detailed function section styling */
-        .function-detail {
-            margin-top: 40px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: white;
-        }
-
-        .function-detail h2 {
-            font-size: 24px;
-            color: #192A80;
-            margin-bottom: 10px;
-        }
-
-        .function-detail h3 {
-            font-size: 16px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .function-detail code {
-            display: block;
-            background-color: #f4f4f9;
-            padding: 10px;
-            border-radius: 4px;
-            color: #333;
-            font-size: 14px;
-        }
-
-        /* Parameters table styling */
-        .parameters-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        .parameters-table td {
-            padding: 5px;
-            vertical-align: top;
-            border: none;
-        }
-
-        .parameters-table .param-name {
-            font-weight: bold;
-            color: #333;
-            width: 150px;
-        }
-
-        .parameters-table .param-detail div {
-            margin: 0;
-        }
     </style>
 </head>
 <body>

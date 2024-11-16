@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object Types</title>
     <style>
-        /* Basic styling for the page */
+        :root {
+            --sidebar-width: 300px;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,6 +24,7 @@
             background-color: #192A80;
             color: white;
             text-align: center;
+            margin-left: var(--sidebar-width);
         }
 
         /* Layout styling */
@@ -36,7 +40,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 300px;
+            width: var(--sidebar-width);
             height: 100vh;
             padding: 20px;
             background-color: #e9ecf7;
@@ -90,8 +94,8 @@
 
         /* Main content styling */
         #objectList {
-            width: calc(100% - 230px); /* Adjusts width to account for the sidebar */
-            margin-left: 230px; /* Offset to align with the fixed sidebar */
+            width: calc(100% - var(--sidebar-width)); /* Adjusts width to account for the sidebar */
+            margin-left: var(--sidebar-width); /* Offset to align with the fixed sidebar */
             padding: 20px;
         }
         

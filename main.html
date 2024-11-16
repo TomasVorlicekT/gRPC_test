@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gRPC Client Functions Database</title>
     <style>
-        /* Basic styling for the page */
+        :root {
+            --sidebar-width: 300px;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,6 +23,7 @@
             background-color: #192A80;
             color: white;
             text-align: center;
+            margin-left: var(--sidebar-width);
         }
 
         /* Layout styling */
@@ -36,7 +39,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 300px;
+            width: var(--sidebar-width);
             height: 100vh;
             padding: 20px;
             background-color: #e9ecf7;
@@ -85,8 +88,8 @@
         
         /* Main content styling */
         #functionList {
-            width: calc(100% - 220px); /* Adjusts width to account for the sidebar */
-            margin-left: 220px;
+            width: calc(100% - var(--sidebar-width)); /* Adjusts width to account for the sidebar */
+            margin-left: var(--sidebar-width);
             padding: 20px;
         }
         
@@ -218,7 +221,7 @@
             <tr>
                 <th>Function Name</th>
                 <th>Description</th>
-                <th>Subjected to charge</th> <!-- New column header for the API Call Costs (Yes/No) -->
+                <th>Subjected to charge</th>
             </tr>
         </thead>
         <tbody>

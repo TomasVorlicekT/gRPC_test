@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miscellaneous</title>
     <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
-        header { padding: 20px; background-color: #192A80; color: white; text-align: center; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
         .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
-        .container h2 { font-size: 24px;}
-        .sidebar { position: fixed; top: 0; left: 0; width: 300px; height: 100vh; padding: 20px; background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
         .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
         .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
         .sidebar a:hover { background-color: #192A80; color: white; }
         .version-select-container { margin-top: auto; }
-        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; margin-left: 0; padding-left: 0; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
         .content { display: none; padding-left: 20px; }
         .sub-item { margin-left: 10px; }
-        #objectDetails { width: calc(100% - 300px); margin-left: 300px; padding: 20px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
         .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
-        .styled-table th, .styled-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
         .styled-table th { background-color: #192A80; color: white; }
         .styled-table tr:hover { background-color: #f1f1f1; }
-        .styled-table th:nth-child(2), .styled-table td:nth-child(2) {
-            min-width: 200px; 
-        }
-        .styled-table th:nth-child(3), .styled-table td:nth-child(3) {
-            min-width: 250px;
-        }
     </style>
+    
 </head>
 <body>
     <header>
