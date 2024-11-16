@@ -53,7 +53,7 @@ def extract_messages_and_enums_with_attributes(proto_file_path, output_html_file
                 current_comment.append(line.strip("// ").strip())
             elif line:  # Non-empty line that might be a field definition
                 # Match the field definition with optional and/or repeated keyword
-                field_match = re.match(r'(optional\s+)?(repeated\s+)?(\w+)\s+(\w+)\s*=\s*\d+;', line)
+                field_match = re.match(r'(optional\s+)?(repeated\s+)?(\w+)\s+(\w+)\s*=\s*\d+(?:\s*\[.*\])?;', line)
                 if field_match:
                     optional_keyword = field_match.group(1) or ""  # Capture "optional" if it exists, might be useful later
                     repeated_keyword = field_match.group(2) or "" # I need to catch the repeated so that I can morf it into List[]

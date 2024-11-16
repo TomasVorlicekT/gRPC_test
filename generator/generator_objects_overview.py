@@ -24,12 +24,27 @@ def generate_folders_and_files(source_folder):
                     "url": f'generated_html/{name_stripped}.html")',  # URL defined relative to main folder
                     "description" : ""
                 })
-                
+
         # If folder has files, add it to the folders list
         if folder["files"]:
             folders.append(folder)
+
+    # Rearrange the two structure folders so that they are in front, more reordering 
+    # will probably be needed but until then this will do
+    folder_names_to_move = ["structure_core", "structure_advanced", "common"]
+    sorted_folders = []
+
+    # Find and insert the above folders at the start
+    for folder_name in folder_names_to_move:
+        for folder in folders:
+            if folder["path"].endswith(folder_name):  # Adjust based on how the name is stored
+                sorted_folders.append(folder)
+                folders.remove(folder)
+
+    # Add remaining folders after the specified ones
+    sorted_folders.extend(folders)
     
-    return folders
+    return sorted_folders
 
 
 
@@ -61,9 +76,9 @@ def process_directory_and_generate_html(source_folder, template_path, output_htm
     render_html_with_template(folders, template_path, output_html_file)
 
 # Specify the paths
-source_folder = 'proto'  # Replace with the actual source folder
-template_file = 'generator\\template_objects_overview.html'  # Path to your template file
-output_html_file = 'generator\\objects_overview.html'  # Path where the output will be saved
+source_folder = 'proto'  # All protos from the proto folder are taken
+template_file = 'generator\\template_objects_overview.html'  # Path to the template file
+output_html_file = 'objects_overview.html'  # Path where the output will be saved, it overwrites the old one by default
 
 # Generate HTML
 process_directory_and_generate_html(source_folder, template_file, output_html_file)
