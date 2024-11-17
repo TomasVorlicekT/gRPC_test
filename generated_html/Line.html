@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_core.Line - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_core.Line - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=Line>
+            <h2>Line</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#LineType">LineType</a></td>
+                        <td>Line Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>definition_nodes</td>
+                        <td>List[int]</td>
+                        <td>Nodes No. | Contains definition nodes (e.g. "3,7" for nodes number 3 and 7, "10-13" for nodes number 10, 11, 12 and 13)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>length</td>
+                        <td>float</td>
+                        <td>Length | L</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_first_node</td>
+                        <td>int</td>
+                        <td>Nodes of arc | P_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_second_node</td>
+                        <td>int</td>
+                        <td>Nodes of arc | P_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_control_point</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>P_3 - control point | Control point coordinates of arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_control_point_x</td>
+                        <td>float</td>
+                        <td>P_3 - control point | X | Control point coordinates of arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_control_point_y</td>
+                        <td>float</td>
+                        <td>P_3 - control point | Y | Control point coordinates of arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_control_point_z</td>
+                        <td>float</td>
+                        <td>P_3 - control point | Z | Control point coordinates of arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_center</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center of arc | Center of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_center_x</td>
+                        <td>float</td>
+                        <td>Center of arc | X | Center of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_center_y</td>
+                        <td>float</td>
+                        <td>Center of arc | Y | Center of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_center_z</td>
+                        <td>float</td>
+                        <td>Center of arc | Z | Center of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_radius</td>
+                        <td>float</td>
+                        <td>Arc parameters | r | Radius of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_height</td>
+                        <td>float</td>
+                        <td>Arc parameters | h | Height of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_alpha</td>
+                        <td>float</td>
+                        <td>Arc parameters | ? | Central angle of the arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_alpha_adjustment_target</td>
+                        <td><a href="#LineArcAlphaAdjustmentTarget">LineArcAlphaAdjustmentTarget</a></td>
+                        <td>Subsequent adjustment of ? by displacing node at | Manner in which the arc is deformed when ? is modified</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_center</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center of circle | Center of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_center_coordinate_1</td>
+                        <td>float</td>
+                        <td>Center of circle | X | Center of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_center_coordinate_2</td>
+                        <td>float</td>
+                        <td>Center of circle | Y | Center of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_center_coordinate_3</td>
+                        <td>float</td>
+                        <td>Center of circle | Z | Center of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_normal</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Normal vector of circle plane | Normal of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_normal_coordinate_1</td>
+                        <td>float</td>
+                        <td>Normal vector of circle plane | X | Normal of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_normal_coordinate_2</td>
+                        <td>float</td>
+                        <td>Normal vector of circle plane | Y | Normal of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_normal_coordinate_3</td>
+                        <td>float</td>
+                        <td>Normal vector of circle plane | Z | Normal of the circle</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_rotation</td>
+                        <td>float</td>
+                        <td>Rotation of circle around normal | ? | Rotation of circle around normal</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_node</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Circle node | Coordinates of the circle node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_node_coordinate_1</td>
+                        <td>float</td>
+                        <td>Circle node | X | Coordinates of the circle node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_node_coordinate_2</td>
+                        <td>float</td>
+                        <td>Circle node | Y | Coordinates of the circle node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_node_coordinate_3</td>
+                        <td>float</td>
+                        <td>Circle node | Z | Coordinates of the circle node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>circle_radius</td>
+                        <td>float</td>
+                        <td>Circle radius | r</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_first_node</td>
+                        <td>int</td>
+                        <td>First node of ellipse | P_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_second_node</td>
+                        <td>int</td>
+                        <td>Second node of ellipse | P_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_control_point</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>P_3 - control point | Control point coordinates of ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_control_point_x</td>
+                        <td>float</td>
+                        <td>P_3 - control point | X | Control point coordinates of ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_control_point_y</td>
+                        <td>float</td>
+                        <td>P_3 - control point | Y | Control point coordinates of ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_control_point_z</td>
+                        <td>float</td>
+                        <td>P_3 - control point | Z | Control point coordinates of ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_first_node</td>
+                        <td>int</td>
+                        <td>First node of elliptical arc | P_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_second_node</td>
+                        <td>int</td>
+                        <td>Second node of elliptical arc | P_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_alpha</td>
+                        <td>float</td>
+                        <td>Arc angles | ? | Angle between x-axis of base curve of ellipse and first defining node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_beta</td>
+                        <td>float</td>
+                        <td>Arc angles | ? | Angle between definition nodes and center of ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_normal</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Normal vector of the base ellipse | Normal of the ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_normal_x</td>
+                        <td>float</td>
+                        <td>Normal vector of the base ellipse | n_X | Normal of the ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_normal_y</td>
+                        <td>float</td>
+                        <td>Normal vector of the base ellipse | n_Y | Normal of the ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_normal_z</td>
+                        <td>float</td>
+                        <td>Normal vector of the base ellipse | n_Z | Normal of the ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_major_radius</td>
+                        <td>float</td>
+                        <td>Radii of elliptical arc | a | Major radius of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_minor_radius</td>
+                        <td>float</td>
+                        <td>Radii of elliptical arc | b | Minor radius of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_center</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center point of the base ellipse | Center of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_center_x</td>
+                        <td>float</td>
+                        <td>Center point of the base ellipse | c_X | Center of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_center_y</td>
+                        <td>float</td>
+                        <td>Center point of the base ellipse | c_Y | Center of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_center_z</td>
+                        <td>float</td>
+                        <td>Center point of the base ellipse | c_Z | Center of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_1</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Foci of the base ellipse | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_1_x</td>
+                        <td>float</td>
+                        <td>Foci of the base ellipse | F_1,X | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_1_y</td>
+                        <td>float</td>
+                        <td>Foci of the base ellipse | F_1,Y | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_1_z</td>
+                        <td>float</td>
+                        <td>Foci of the base ellipse | F_1,Z | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_2</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Foci of the base ellipse | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_2_x</td>
+                        <td>float</td>
+                        <td>Foci of the base ellipse | F_2,X | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_2_y</td>
+                        <td>float</td>
+                        <td>Foci of the base ellipse | F_2,Y | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_focus_2_z</td>
+                        <td>float</td>
+                        <td>Foci of the base ellipse | F_2,Z | Focus of the base ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_first_control_point</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>P_1 - control point | First control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_first_control_point_x</td>
+                        <td>float</td>
+                        <td>P_1 - control point | P_1,X | First control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_first_control_point_y</td>
+                        <td>float</td>
+                        <td>P_1 - control point | P_1,Y | First control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_first_control_point_z</td>
+                        <td>float</td>
+                        <td>P_1 - control point | P_1,Z | First control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_second_control_point</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>P_2 - control point | Second control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_second_control_point_x</td>
+                        <td>float</td>
+                        <td>P_2 - control point | P_2,X | Second control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_second_control_point_y</td>
+                        <td>float</td>
+                        <td>P_2 - control point | P_2,Y | Second control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_second_control_point_z</td>
+                        <td>float</td>
+                        <td>P_2 - control point | P_2,Z | Second control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_perimeter_control_point</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>P_3 - control point | Perimeter control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_perimeter_control_point_x</td>
+                        <td>float</td>
+                        <td>P_3 - control point | P_3,X | Perimeter control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_perimeter_control_point_y</td>
+                        <td>float</td>
+                        <td>P_3 - control point | P_3,Y | Perimeter control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_perimeter_control_point_z</td>
+                        <td>float</td>
+                        <td>P_3 - control point | P_3,Z | Perimeter control point of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_first_node</td>
+                        <td>int</td>
+                        <td>Nodes of parabola | P_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_second_node</td>
+                        <td>int</td>
+                        <td>Nodes of parabola | P_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_control_point</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>P_3 - control point | Control point coordinates of parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_control_point_x</td>
+                        <td>float</td>
+                        <td>P_3 - control point | X | Control point coordinates of parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_control_point_y</td>
+                        <td>float</td>
+                        <td>P_3 - control point | Y | Control point coordinates of parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_control_point_z</td>
+                        <td>float</td>
+                        <td>P_3 - control point | Z | Control point coordinates of parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_alpha</td>
+                        <td>float</td>
+                        <td>Parameters of parabola | ? | Angle of the parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_focus_directrix_distance</td>
+                        <td>float</td>
+                        <td>Parameters of parabola | p | Distance between focus and directrix</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_focus</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Focus of parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_focus_x</td>
+                        <td>float</td>
+                        <td>Focus of parabola | X_F</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_focus_y</td>
+                        <td>float</td>
+                        <td>Focus of parabola | Y_F</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_focus_z</td>
+                        <td>float</td>
+                        <td>Focus of parabola | Z_F</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_order</td>
+                        <td>int</td>
+                        <td>Nodes - Order | n</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_control_points_by_components</td>
+                        <td><a href="#ArrayOfLineNurbsControlPointsByComponents">ArrayOfLineNurbsControlPointsByComponents</a></td>
+                        <td>Control Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_control_points</td>
+                        <td><a href="#ArrayOfLineNurbsControlPoints">ArrayOfLineNurbsControlPoints</a></td>
+                        <td>Control Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_knots</td>
+                        <td><a href="#ArrayOfLineNurbsKnots">ArrayOfLineNurbsKnots</a></td>
+                        <td>Nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotation_specification_type</td>
+                        <td><a href="#LineRotationSpecificationType">LineRotationSpecificationType</a></td>
+                        <td>Line Rotation via</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotation_angle</td>
+                        <td>float</td>
+                        <td>Rotation angle | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotation_help_node</td>
+                        <td>int</td>
+                        <td>Rotation help node No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotation_plane</td>
+                        <td><a href="#LineRotationPlane">LineRotationPlane</a></td>
+                        <td>Rotation plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_rotated</td>
+                        <td>bool</td>
+                        <td>Line is Rotated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member</td>
+                        <td>int</td>
+                        <td>Member</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support</td>
+                        <td>int</td>
+                        <td>Line support</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_refinement</td>
+                        <td>int</td>
+                        <td>Line mesh refinement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>line_weld_assignment</td>
+                        <td><a href="#ArrayOfLineLineWeldAssignment">ArrayOfLineLineWeldAssignment</a></td>
+                        <td>Line weld assignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_line_welds</td>
+                        <td>bool</td>
+                        <td>Has line welds</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>arc_control_point_object</td>
+                        <td>int</td>
+                        <td>P_3 - control point object | Control point object of arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ellipse_control_point_object</td>
+                        <td>int</td>
+                        <td>P_3 - control point object | Control point object of ellipse</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_first_control_point_object</td>
+                        <td>int</td>
+                        <td>P_1 - control point object | First control point object of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_perimeter_control_point_object</td>
+                        <td>int</td>
+                        <td>P_3 - control point object | Perimeter control point object of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elliptical_arc_second_control_point_object</td>
+                        <td>int</td>
+                        <td>P_2 - control point object | Second control point object of elliptical arc</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parabola_control_point_object</td>
+                        <td>int</td>
+                        <td>P_3 - control point object | Control point object of parabola</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfLineNurbsControlPointsByComponents>
+            <h2>ArrayOfLineNurbsControlPointsByComponents</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>rows</td>
+                        <td>List[<a href="#LineNurbsControlPointsByComponentsRow">LineNurbsControlPointsByComponentsRow</a>]</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=LineNurbsControlPointsByComponentsRow>
+            <h2>LineNurbsControlPointsByComponentsRow</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>description</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinate_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinate_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinate_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>weight</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineNurbsControlPoints>
+            <h2>ArrayOfLineNurbsControlPoints</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>rows</td>
+                        <td>List[<a href="#LineNurbsControlPointsRow">LineNurbsControlPointsRow</a>]</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=LineNurbsControlPointsRow>
+            <h2>LineNurbsControlPointsRow</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>description</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>control_point</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinates</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinates</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>weight</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineNurbsKnots>
+            <h2>ArrayOfLineNurbsKnots</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>rows</td>
+                        <td>List[<a href="#LineNurbsKnotsRow">LineNurbsKnotsRow</a>]</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=LineNurbsKnotsRow>
+            <h2>LineNurbsKnotsRow</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>description</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>row</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineLineWeldAssignment>
+            <h2>ArrayOfLineLineWeldAssignment</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>rows</td>
+                        <td>List[<a href="#LineLineWeldAssignmentRow">LineLineWeldAssignmentRow</a>]</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=LineLineWeldAssignmentRow>
+            <h2>LineLineWeldAssignmentRow</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>description</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>weld</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface1</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface2</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface3</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=LineType>
+                <h2>LineType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_ARC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_CIRCLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_CUT_VIA_SECTION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_CUT_VIA_TWO_LINES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_ELLIPSE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_ELLIPTICAL_ARC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_NURBS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_PARABOLA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_POLYLINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_TYPE_SPLINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineArcAlphaAdjustmentTarget>
+                <h2>LineArcAlphaAdjustmentTarget Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_ARC_ALPHA_ADJUSTMENT_TARGET_BEGINNING_OF_ARC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_ARC_ALPHA_ADJUSTMENT_TARGET_ARC_CONTROL_POINT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_ARC_ALPHA_ADJUSTMENT_TARGET_END_OF_ARC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineRotationSpecificationType>
+                <h2>LineRotationSpecificationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_ANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_HELP_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_INSIDE_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineRotationPlane>
+                <h2>LineRotationPlane Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_ROTATION_PLANE_XY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_ROTATION_PLANE_XZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

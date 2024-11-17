@@ -1,0 +1,2632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_core.MemberSetRepresentative - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_core.MemberSetRepresentative - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=MemberSetRepresentative>
+            <h2>MemberSetRepresentative</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_sets</td>
+                        <td>List[int]</td>
+                        <td>Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_member_sets</td>
+                        <td>int</td>
+                        <td>Number of member sets</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_members</td>
+                        <td>int</td>
+                        <td>Number of members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>section_ids</td>
+                        <td>str</td>
+                        <td>Variable Sections</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_length</td>
+                        <td>float</td>
+                        <td>Total length | L_?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_volume</td>
+                        <td>float</td>
+                        <td>Total volume | V_?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_mass</td>
+                        <td>float</td>
+                        <td>Total mass | M_?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_surface_of_coating</td>
+                        <td>float</td>
+                        <td>Total surface of coating | S_?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Total center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Total center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Total center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelType">MemberSetRepresentativeMemberModelType</a></td>
+                        <td>Member Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_is_deactivated_for_calculation</td>
+                        <td>bool</td>
+                        <td>Deactivated for calculation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_line</td>
+                        <td>int</td>
+                        <td>Assigned to Line No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distribution_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelSectionDistributionType">MemberSetRepresentativeMemberModelSectionDistributionType</a></td>
+                        <td>Section distribution</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_reference_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelReferenceType">MemberSetRepresentativeMemberModelReferenceType</a></td>
+                        <td>Reference</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_nodes</td>
+                        <td>List[int]</td>
+                        <td>Nodes No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_node_start</td>
+                        <td>int</td>
+                        <td>Node No. - Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_node_end</td>
+                        <td>int</td>
+                        <td>Node No. - End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_length</td>
+                        <td>float</td>
+                        <td>Analytical length | L</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_volume</td>
+                        <td>float</td>
+                        <td>Analytical volume | V</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_mass</td>
+                        <td>float</td>
+                        <td>Analytical mass | M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_surface_of_coating</td>
+                        <td>float</td>
+                        <td>Analytical surface of coating | S</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_center_of_gravity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Analytical center of gravity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Analytical center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Analytical center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_analytical_center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Analytical center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_length</td>
+                        <td>float</td>
+                        <td>Length | L</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_volume</td>
+                        <td>float</td>
+                        <td>Volume | V</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_mass</td>
+                        <td>float</td>
+                        <td>Mass | M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_surface_of_coating</td>
+                        <td>float</td>
+                        <td>Surface of coating | S</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_center_of_gravity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center of gravity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_position</td>
+                        <td>str</td>
+                        <td>Position</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_position_short</td>
+                        <td>str</td>
+                        <td>Position</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_representative</td>
+                        <td>int</td>
+                        <td>Member Representative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_design_properties_via_member</td>
+                        <td>bool</td>
+                        <td>Design properties via member</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_design_properties_via_parent_member_set</td>
+                        <td>bool</td>
+                        <td>Design properties via parent member set</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_design_properties_parent_member_set</td>
+                        <td>int</td>
+                        <td>Design properties parent member set</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_type_rib_alignment</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelMemberTypeRibAlignment">MemberSetRepresentativeMemberModelMemberTypeRibAlignment</a></td>
+                        <td>Member rib alignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_first_surface</td>
+                        <td>int</td>
+                        <td>Member rib first surface</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_second_surface</td>
+                        <td>int</td>
+                        <td>Member rib second surface</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_surface_assignment_autodetect</td>
+                        <td>bool</td>
+                        <td>Member rib surface assignment autodetect</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_generating_longitudinal_reinforcement_items_from_surfaces_enabled</td>
+                        <td>bool</td>
+                        <td>Ribs of member generate longitudinal reinforcement items of surface reinforcement.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_align_local_z_axis_to_local_z_axis_of_surface</td>
+                        <td>bool</td>
+                        <td>Align local z-axis to local z-axis of surface</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_shear_joint_between_web_and_flange</td>
+                        <td>bool</td>
+                        <td>Shear joint width between web and flange</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_surface_roughness_classification</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelMemberRibSurfaceRoughnessClassification">MemberSetRepresentativeMemberModelMemberRibSurfaceRoughnessClassification</a></td>
+                        <td>Classification of surface roughness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_rib_reduction_of_joint_width</td>
+                        <td>float</td>
+                        <td>Reduction of joint width</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_flange_dimensions</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelFlangeDimensions">ArrayOfMemberSetRepresentativeMemberModelFlangeDimensions</a></td>
+                        <td>Flange dimensions</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_synchronize_width_mode</td>
+                        <td>bool</td>
+                        <td>Synchronize width mode</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_relative_ordinates_mode</td>
+                        <td>bool</td>
+                        <td>Relative ordinate mode</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_type_definable_stiffness</td>
+                        <td>int</td>
+                        <td>Member definable stiffness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_integrate_stresses_and_forces</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelResultBeamIntegrateStressesAndForces">MemberSetRepresentativeMemberModelResultBeamIntegrateStressesAndForces</a></td>
+                        <td>Integrate stresses and forces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_y_z</td>
+                        <td>float</td>
+                        <td>Y_z | Y_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_y_plus</td>
+                        <td>float</td>
+                        <td>Y+ | Y+</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_z_plus</td>
+                        <td>float</td>
+                        <td>Z+ | Z+</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_y_minus</td>
+                        <td>float</td>
+                        <td>Y- | Y-</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_z_minus</td>
+                        <td>float</td>
+                        <td>Z- | Z-</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_radius</td>
+                        <td>float</td>
+                        <td>R | R</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_include_surfaces</td>
+                        <td>List[int]</td>
+                        <td>Include surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_include_all_surfaces</td>
+                        <td>bool</td>
+                        <td>Include all surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_include_solids</td>
+                        <td>List[int]</td>
+                        <td>Include solids</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_include_all_solids</td>
+                        <td>bool</td>
+                        <td>Include all solids</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_include_members</td>
+                        <td>List[int]</td>
+                        <td>Include members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_include_all_members</td>
+                        <td>bool</td>
+                        <td>Include all members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_exclude_surfaces</td>
+                        <td>List[int]</td>
+                        <td>Exclude surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_exclude_solids</td>
+                        <td>List[int]</td>
+                        <td>Exclude solids</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_result_beam_exclude_members</td>
+                        <td>List[int]</td>
+                        <td>Exclude members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_projected_length</td>
+                        <td>float</td>
+                        <td>Member length | L_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distance_from_start_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td>Section distance from start is defined as relative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distance_from_start_absolute</td>
+                        <td>float</td>
+                        <td>Section distribution - distances | L_z,i-k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distance_from_end_relative</td>
+                        <td>float</td>
+                        <td>Section distribution - distances | L_z,k-j</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distance_from_end_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td>Section distance from end is defined as relative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distance_from_end_absolute</td>
+                        <td>float</td>
+                        <td>Section distribution - distances | L_z,k-j</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_distance_from_start_relative</td>
+                        <td>float</td>
+                        <td>Section distribution - distances | L_z,i-k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_alignment</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelSectionAlignment">MemberSetRepresentativeMemberModelSectionAlignment</a></td>
+                        <td>Section alignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_grain_alignment</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelGrainAlignment">MemberSetRepresentativeMemberModelGrainAlignment</a></td>
+                        <td>Grain alignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_is_curved</td>
+                        <td>bool</td>
+                        <td>Special section distribution - one of the curved types</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_curved_member_is_asymmetric_layout</td>
+                        <td>bool</td>
+                        <td>Asymmetric layout</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_curved_member_is_cantilevers</td>
+                        <td>bool</td>
+                        <td>Cantilevers</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_curved_member_cantilevers_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelCurvedMemberCantileversType">MemberSetRepresentativeMemberModelCurvedMemberCantileversType</a></td>
+                        <td>Cantilevers</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_curved_member_is_capped_with_loose_ridge_wedge</td>
+                        <td>bool</td>
+                        <td>Capped with loose ridge wedge</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_curved_member_parameters</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelCurvedMemberParametersAndChildItems">ArrayOfMemberSetRepresentativeMemberModelCurvedMemberParametersAndChildItems</a></td>
+                        <td>Curved distribution parameters</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_rotation_specification_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelRotationSpecificationType">MemberSetRepresentativeMemberModelRotationSpecificationType</a></td>
+                        <td>Member Rotation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_rotation_angle</td>
+                        <td>float</td>
+                        <td>Rotation angle | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_rotation_help_node</td>
+                        <td>int</td>
+                        <td>Rotation help node No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_rotation_plane_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelRotationPlaneType">MemberSetRepresentativeMemberModelRotationPlaneType</a></td>
+                        <td>Rotation plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_rotation_surface</td>
+                        <td>int</td>
+                        <td>Rotation surface No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_rotation_surface_plane_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelRotationSurfacePlaneType">MemberSetRepresentativeMemberModelRotationSurfacePlaneType</a></td>
+                        <td>Rotation surface plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_is_rotated</td>
+                        <td>bool</td>
+                        <td>Member is rotated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_start</td>
+                        <td>int</td>
+                        <td>Section - At member start i</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_end</td>
+                        <td>int</td>
+                        <td>Section - At member end j</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_internal</td>
+                        <td>int</td>
+                        <td>Section - At internal point k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_section_material</td>
+                        <td>int</td>
+                        <td>Material of Section</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_hinge_start</td>
+                        <td>int</td>
+                        <td>Member hinge - At member start i</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_hinge_end</td>
+                        <td>int</td>
+                        <td>Member hinge - At member end j</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_eccentricity_start</td>
+                        <td>int</td>
+                        <td>Member eccentricity - At member start i</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_eccentricity_end</td>
+                        <td>int</td>
+                        <td>Member eccentricity - At member end j</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_support</td>
+                        <td>int</td>
+                        <td>Member support</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_transverse_stiffener</td>
+                        <td>int</td>
+                        <td>Member transverse stiffener</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_openings</td>
+                        <td>int</td>
+                        <td>Member openings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_nonlinearity</td>
+                        <td>int</td>
+                        <td>Member nonlinearity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_result_intermediate_point</td>
+                        <td>int</td>
+                        <td>Member result intermediate point</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_effective_lengths</td>
+                        <td>int</td>
+                        <td>Concrete effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_steel_effective_lengths</td>
+                        <td>int</td>
+                        <td>Steel effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_timber_effective_lengths</td>
+                        <td>int</td>
+                        <td>Timber effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_aluminum_effective_lengths</td>
+                        <td>int</td>
+                        <td>Aluminum | Effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_shear_reinforcement_spans</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelConcreteShearReinforcementSpans">ArrayOfMemberSetRepresentativeMemberModelConcreteShearReinforcementSpans</a></td>
+                        <td>Member shear reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_longitudinal_reinforcement_items</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelConcreteLongitudinalReinforcementItems">ArrayOfMemberSetRepresentativeMemberModelConcreteLongitudinalReinforcementItems</a></td>
+                        <td>Member longitudinal reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_user_defined_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined concrete cover activated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_different_at_section_sides_enabled</td>
+                        <td>bool</td>
+                        <td>Concrete Cover different at section sides activated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover</td>
+                        <td>float</td>
+                        <td>Concrete Cover | c</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_top</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Top | c_-z (top)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Bottom | c_+z (bottom)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_left</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Left | c_-y (left)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_right</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Right | c_+y (right)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_min</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover | c_nom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_min_top</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Top | c_nom,-z (top)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_min_bottom</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Bottom | c_nom,+z (bottom)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_min_left</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Left | c_nom,-y (left)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_cover_min_right</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Right | c_nom,+y (right)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_durability</td>
+                        <td>int</td>
+                        <td>Concrete durability</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_durability_top</td>
+                        <td>int</td>
+                        <td>Concrete durability - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_durability_bottom</td>
+                        <td>int</td>
+                        <td>Concrete durability - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_durability_left</td>
+                        <td>int</td>
+                        <td>Concrete durability - Left</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_concrete_durability_right</td>
+                        <td>int</td>
+                        <td>Concrete durability - Right</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_steel_boundary_conditions</td>
+                        <td>int</td>
+                        <td>Steel boundary conditions</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_steel_member_local_section_reduction</td>
+                        <td>int</td>
+                        <td>Steel member local section reduction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_steel_member_transverse_weld</td>
+                        <td>int</td>
+                        <td>Steel member transverse weld</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_timber_service_class</td>
+                        <td>int</td>
+                        <td>Service class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_timber_moisture_class</td>
+                        <td>int</td>
+                        <td>Moisture class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_timber_service_conditions</td>
+                        <td>int</td>
+                        <td>Service conditions for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_timber_member_local_section_reduction</td>
+                        <td>int</td>
+                        <td>Timber member local section reduction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_aluminum_boundary_conditions</td>
+                        <td>int</td>
+                        <td>Aluminum boundary conditions</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_aluminum_member_local_section_reduction</td>
+                        <td>int</td>
+                        <td>Aluminum member | Local section reduction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_aluminum_member_transverse_weld</td>
+                        <td>int</td>
+                        <td>Aluminum member transverse weld</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_stress_analysis_configuration</td>
+                        <td>int</td>
+                        <td>Configuration of stress-strain analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_aluminum_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member aluminum design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_aluminum_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member aluminum design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_concrete_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_concrete_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_concrete_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_concrete_design_seismic_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Seismic configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_steel_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_steel_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_steel_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_timber_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member timber design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_timber_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member timber design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_member_timber_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Member timber design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_end_modifications_member_start_extension</td>
+                        <td>float</td>
+                        <td>End extension on member start | ?_i</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_end_modifications_member_start_slope_y</td>
+                        <td>float</td>
+                        <td>End slope on member start | ?_i,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_end_modifications_member_start_slope_z</td>
+                        <td>float</td>
+                        <td>End slope on member start | ?_i,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_end_modifications_member_end_extension</td>
+                        <td>float</td>
+                        <td>End extension on member end | ?_j</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_end_modifications_member_end_slope_y</td>
+                        <td>float</td>
+                        <td>End slope on member end | ?_j,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_end_modifications_member_end_slope_z</td>
+                        <td>float</td>
+                        <td>End slope on member end | ?_j,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_has_any_end_modifications</td>
+                        <td>bool</td>
+                        <td>Has end modifications</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_deflection_check_direction</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelDeflectionCheckDirection">MemberSetRepresentativeMemberModelDeflectionCheckDirection</a></td>
+                        <td>Deflection analysis direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_deflection_check_displacement_reference</td>
+                        <td><a href="#MemberSetRepresentativeMemberModelDeflectionCheckDisplacementReference">MemberSetRepresentativeMemberModelDeflectionCheckDisplacementReference</a></td>
+                        <td>Deflection analysis displacement reference</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_design_support_on_member_start</td>
+                        <td>int</td>
+                        <td>Design support at member start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_design_support_on_member_end</td>
+                        <td>int</td>
+                        <td>Design support at member end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_design_supports_on_internal_nodes</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelDesignSupportsOnInternalNodes">ArrayOfMemberSetRepresentativeMemberModelDesignSupportsOnInternalNodes</a></td>
+                        <td>Design supports at internal nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_set_type</td>
+                        <td><a href="#MemberSetRepresentativeMemberSetModelSetType">MemberSetRepresentativeMemberSetModelSetType</a></td>
+                        <td>Member Set Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_members</td>
+                        <td>List[int]</td>
+                        <td>Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_length</td>
+                        <td>float</td>
+                        <td>Length | L</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_center_of_gravity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center of gravity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_volume</td>
+                        <td>float</td>
+                        <td>Volume | V</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_mass</td>
+                        <td>float</td>
+                        <td>Mass | M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_set_representative</td>
+                        <td>int</td>
+                        <td>Member Set Representative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_discontinuous_torsional_warping</td>
+                        <td>bool</td>
+                        <td>Discontinuous torsional warping</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_design_properties_activated</td>
+                        <td>bool</td>
+                        <td>Design properties activated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_steel_effective_lengths</td>
+                        <td>int</td>
+                        <td>Steel effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_steel_boundary_conditions</td>
+                        <td>int</td>
+                        <td>Steel boundary conditions</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_steel_member_local_section_reductions</td>
+                        <td>int</td>
+                        <td>Local section reductions of steel members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_steel_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_steel_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_steel_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_steel_design_seismic_configuration</td>
+                        <td>int</td>
+                        <td>Member steel design | Seismic configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_aluminum_effective_lengths</td>
+                        <td>int</td>
+                        <td>Aluminum effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_aluminum_boundary_conditions</td>
+                        <td>int</td>
+                        <td>Aluminum boundary conditions</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_aluminum_member_local_section_reductions</td>
+                        <td>int</td>
+                        <td>Local section reductions of aluminum members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_aluminum_member_transverse_weld</td>
+                        <td>int</td>
+                        <td>Aluminum member transverse weld</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_aluminum_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member aluminum design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_aluminum_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member aluminum design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_shear_reinforcement_spans</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberSetModelConcreteShearReinforcementSpans">ArrayOfMemberSetRepresentativeMemberSetModelConcreteShearReinforcementSpans</a></td>
+                        <td>Member shear reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_longitudinal_reinforcement_items</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberSetModelConcreteLongitudinalReinforcementItems">ArrayOfMemberSetRepresentativeMemberSetModelConcreteLongitudinalReinforcementItems</a></td>
+                        <td>Member longitudinal reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_user_defined_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined concrete cover activated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_different_at_section_sides_enabled</td>
+                        <td>bool</td>
+                        <td>Concrete Cover different at section sides activated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover</td>
+                        <td>float</td>
+                        <td>Concrete Cover | c</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_top</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Top | c_-z (top)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Bottom | c_+z (bottom)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_left</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Left | c_-y (left)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_right</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Right | c_+y (right)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_min</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover | c_nom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_min_top</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Top | c_nom,-z (top)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_min_bottom</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Bottom | c_nom,+z (bottom)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_min_left</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Left | c_nom,-y (left)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_cover_min_right</td>
+                        <td>List[int]</td>
+                        <td>Concrete Cover - Right | c_nom,+y (right)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_durability</td>
+                        <td>int</td>
+                        <td>Concrete durability</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_durability_top</td>
+                        <td>int</td>
+                        <td>Concrete durability - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_durability_bottom</td>
+                        <td>int</td>
+                        <td>Concrete durability - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_durability_left</td>
+                        <td>int</td>
+                        <td>Concrete durability - Left</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_durability_right</td>
+                        <td>int</td>
+                        <td>Concrete durability - Right</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_concrete_effective_lengths</td>
+                        <td>int</td>
+                        <td>Concrete effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_concrete_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_concrete_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_concrete_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_concrete_design_seismic_configuration</td>
+                        <td>int</td>
+                        <td>Member concrete design | Seismic configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_service_class_timber_design</td>
+                        <td>int</td>
+                        <td>Service class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_moisture_class_timber_design</td>
+                        <td>int</td>
+                        <td>Moisture class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_timber_effective_lengths</td>
+                        <td>int</td>
+                        <td>Timber effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_service_conditions_timber_design</td>
+                        <td>int</td>
+                        <td>Service conditions for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_timber_local_section_reductions</td>
+                        <td>int</td>
+                        <td>Local section reductions of timber members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_timber_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Member timber design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_timber_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Member timber design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_timber_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Member timber design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_support</td>
+                        <td>int</td>
+                        <td>Member support</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_transverse_stiffener</td>
+                        <td>int</td>
+                        <td>Member transverse stiffener</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_openings</td>
+                        <td>int</td>
+                        <td>Member openings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_stress_analysis_configuration</td>
+                        <td>int</td>
+                        <td>Stress-strain analysis configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_deflection_check_direction</td>
+                        <td><a href="#MemberSetRepresentativeMemberSetModelDeflectionCheckDirection">MemberSetRepresentativeMemberSetModelDeflectionCheckDirection</a></td>
+                        <td>Deflection analysis direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_deflection_check_displacement_reference</td>
+                        <td><a href="#MemberSetRepresentativeMemberSetModelDeflectionCheckDisplacementReference">MemberSetRepresentativeMemberSetModelDeflectionCheckDisplacementReference</a></td>
+                        <td>Deflection analysis displacement reference</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_design_support_on_member_set_start</td>
+                        <td>int</td>
+                        <td>Design support at member set start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_design_support_on_member_set_end</td>
+                        <td>int</td>
+                        <td>Design support at member set end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_design_supports_on_internal_nodes</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberSetModelDesignSupportsOnInternalNodes">ArrayOfMemberSetRepresentativeMemberSetModelDesignSupportsOnInternalNodes</a></td>
+                        <td>Design supports at internal nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_member_set_rib_generating_longitudinal_reinforcement_items_from_surfaces_enabled</td>
+                        <td>bool</td>
+                        <td>The member set’s rib generates longitudinal reinforcement items from the surface reinforcement.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_deflection_segments_defined_length_y_axis_enabled</td>
+                        <td>bool</td>
+                        <td>Deflection segments | Defined lengths | y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_deflection_segments_defined_length_z_axis_enabled</td>
+                        <td>bool</td>
+                        <td>Deflection segments | Defined lengths | z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_deflection_segments_y_axis</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsYAxis">ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsYAxis</a></td>
+                        <td>Deflection segments y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_model_deflection_segments_z_axis</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsZAxis">ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsZAxis</a></td>
+                        <td>Deflection segments z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_deflection_segments_defined_length_y_axis_enabled</td>
+                        <td>bool</td>
+                        <td>Deflection segments | Defined lengths | y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_deflection_segments_defined_length_z_axis_enabled</td>
+                        <td>bool</td>
+                        <td>Deflection segments | Defined lengths | z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_deflection_segments_y_axis</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsYAxis">ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsYAxis</a></td>
+                        <td>Deflection segments y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_set_model_deflection_segments_z_axis</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsZAxis">ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsZAxis</a></td>
+                        <td>Deflection segments z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_longitudinal_reinforcement_span</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeConcreteLongitudinalReinforcementSpan">ArrayOfMemberSetRepresentativeConcreteLongitudinalReinforcementSpan</a></td>
+                        <td>Member longitudinal reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_shear_reinforcement_span</td>
+                        <td><a href="#ArrayOfMemberSetRepresentativeConcreteShearReinforcementSpan">ArrayOfMemberSetRepresentativeConcreteShearReinforcementSpan</a></td>
+                        <td>Member shear reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelFlangeDimensions>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelFlangeDimensions</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelCurvedMemberParametersAndChildItems>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelCurvedMemberParametersAndChildItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelConcreteShearReinforcementSpans>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelConcreteShearReinforcementSpans</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelConcreteLongitudinalReinforcementItems>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelConcreteLongitudinalReinforcementItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelDesignSupportsOnInternalNodes>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelDesignSupportsOnInternalNodes</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberSetModelConcreteShearReinforcementSpans>
+            <h2>ArrayOfMemberSetRepresentativeMemberSetModelConcreteShearReinforcementSpans</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberSetModelConcreteLongitudinalReinforcementItems>
+            <h2>ArrayOfMemberSetRepresentativeMemberSetModelConcreteLongitudinalReinforcementItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberSetModelDesignSupportsOnInternalNodes>
+            <h2>ArrayOfMemberSetRepresentativeMemberSetModelDesignSupportsOnInternalNodes</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsYAxis>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsYAxis</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsZAxis>
+            <h2>ArrayOfMemberSetRepresentativeMemberModelDeflectionSegmentsZAxis</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsYAxis>
+            <h2>ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsYAxis</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsZAxis>
+            <h2>ArrayOfMemberSetRepresentativeMemberSetModelDeflectionSegmentsZAxis</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeConcreteLongitudinalReinforcementSpan>
+            <h2>ArrayOfMemberSetRepresentativeConcreteLongitudinalReinforcementSpan</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfMemberSetRepresentativeConcreteShearReinforcementSpan>
+            <h2>ArrayOfMemberSetRepresentativeConcreteShearReinforcementSpan</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=MemberSetRepresentativeMemberModelType>
+                <h2>MemberSetRepresentativeMemberModelType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_BEAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_BUCKLING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_CABLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_COMPRESSION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_COUPLING_HINGE_HINGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_COUPLING_HINGE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_COUPLING_RIGID_HINGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_COUPLING_RIGID_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_DAMPER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_DEFINABLE_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_JOIST</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_PILE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_RESULT_BEAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_RIB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_SPRING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_SURFACE_MODEL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_TENSION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_TRUSS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_TYPE_TYPE_TRUSS_ONLY_N</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelSectionDistributionType>
+                <h2>MemberSetRepresentativeMemberModelSectionDistributionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_UNIFORM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_CURVED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_FISH_BEAM_PARABOLIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_LINEAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_OFFSET_AT_BOTH_SIDES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_OFFSET_AT_END_OF_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_OFFSET_AT_START_OF_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_PITCHED_CAMBERED_BEAM_WITH_CONSTANT_HEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_PITCHED_CAMBERED_BEAM_WITH_VARIABLE_HEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_SADDLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_TAPERED_AT_BOTH_SIDES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_TAPERED_AT_END_OF_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_DISTRIBUTION_TYPE_SECTION_DISTRIBUTION_TYPE_TAPERED_AT_START_OF_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelReferenceType>
+                <h2>MemberSetRepresentativeMemberModelReferenceType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_REFERENCE_TYPE_REFERENCE_TYPE_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_REFERENCE_TYPE_REFERENCE_TYPE_XY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_REFERENCE_TYPE_REFERENCE_TYPE_XZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_REFERENCE_TYPE_REFERENCE_TYPE_YZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelMemberTypeRibAlignment>
+                <h2>MemberSetRepresentativeMemberModelMemberTypeRibAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_TYPE_RIB_ALIGNMENT_ALIGNMENT_ON_Z_SIDE_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_TYPE_RIB_ALIGNMENT_ALIGNMENT_CENTRIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_TYPE_RIB_ALIGNMENT_ALIGNMENT_ON_Z_SIDE_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_TYPE_RIB_ALIGNMENT_ALIGNMENT_USER_DEFINED_VIA_MEMBER_ECCENTRICITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelMemberRibSurfaceRoughnessClassification>
+                <h2>MemberSetRepresentativeMemberModelMemberRibSurfaceRoughnessClassification Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_RIB_SURFACE_ROUGHNESS_CLASSIFICATION_SURFACE_ROUGHNESS_CLASSIFICATION_INDENTED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_RIB_SURFACE_ROUGHNESS_CLASSIFICATION_SURFACE_ROUGHNESS_CLASSIFICATION_ROUGH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_RIB_SURFACE_ROUGHNESS_CLASSIFICATION_SURFACE_ROUGHNESS_CLASSIFICATION_SMOOTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_MEMBER_RIB_SURFACE_ROUGHNESS_CLASSIFICATION_SURFACE_ROUGHNESS_CLASSIFICATION_VERY_SMOOTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelResultBeamIntegrateStressesAndForces>
+                <h2>MemberSetRepresentativeMemberModelResultBeamIntegrateStressesAndForces Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_RESULT_BEAM_INTEGRATE_STRESSES_AND_FORCES_INTEGRATE_WITHIN_CUBOID_QUADRATIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_RESULT_BEAM_INTEGRATE_STRESSES_AND_FORCES_INTEGRATE_FROM_LISTED_OBJECT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_RESULT_BEAM_INTEGRATE_STRESSES_AND_FORCES_INTEGRATE_WITHIN_CUBOID_GENERAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_RESULT_BEAM_INTEGRATE_STRESSES_AND_FORCES_INTEGRATE_WITHIN_CYLINDER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelSectionAlignment>
+                <h2>MemberSetRepresentativeMemberModelSectionAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_ALIGNMENT_SECTION_ALIGNMENT_TOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_ALIGNMENT_SECTION_ALIGNMENT_BOTTOM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_SECTION_ALIGNMENT_SECTION_ALIGNMENT_CENTRIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelGrainAlignment>
+                <h2>MemberSetRepresentativeMemberModelGrainAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_GRAIN_ALIGNMENT_GRAIN_ALIGNMENT_TOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_GRAIN_ALIGNMENT_GRAIN_ALIGNMENT_BOTTOM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_GRAIN_ALIGNMENT_GRAIN_ALIGNMENT_CENTRIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelCurvedMemberCantileversType>
+                <h2>MemberSetRepresentativeMemberModelCurvedMemberCantileversType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_CURVED_MEMBER_CANTILEVERS_TYPE_CANTILEVERS_TYPE_HORIZONTAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_CURVED_MEMBER_CANTILEVERS_TYPE_CANTILEVERS_TYPE_OFFSET</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_CURVED_MEMBER_CANTILEVERS_TYPE_CANTILEVERS_TYPE_PARALLEL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_CURVED_MEMBER_CANTILEVERS_TYPE_CANTILEVERS_TYPE_TAPER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelRotationSpecificationType>
+                <h2>MemberSetRepresentativeMemberModelRotationSpecificationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_ANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_HELP_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_INSIDE_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_SPECIFICATION_TYPE_COORDINATE_SYSTEM_ROTATION_VIA_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelRotationPlaneType>
+                <h2>MemberSetRepresentativeMemberModelRotationPlaneType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_PLANE_TYPE_ROTATION_PLANE_XY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_PLANE_TYPE_ROTATION_PLANE_XZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelRotationSurfacePlaneType>
+                <h2>MemberSetRepresentativeMemberModelRotationSurfacePlaneType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_SURFACE_PLANE_TYPE_ROTATION_PLANE_XY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_ROTATION_SURFACE_PLANE_TYPE_ROTATION_PLANE_XZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelDeflectionCheckDirection>
+                <h2>MemberSetRepresentativeMemberModelDeflectionCheckDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_LOCAL_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_AUXILIARY_LOCAL_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_AUXILIARY_LOCAL_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_AUXILIARY_LOCAL_AXIS_Z_AND_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_LOCAL_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_LOCAL_AXIS_Z_AND_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_RESULTING_AXIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberModelDeflectionCheckDisplacementReference>
+                <h2>MemberSetRepresentativeMemberModelDeflectionCheckDisplacementReference Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFORMED_SEGMENT_ENDS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_MODEL_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFORMED_UNDEFORMED_SYSTEM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberSetModelSetType>
+                <h2>MemberSetRepresentativeMemberSetModelSetType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_SET_TYPE_SET_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_SET_TYPE_SET_TYPE_GROUP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberSetModelDeflectionCheckDirection>
+                <h2>MemberSetRepresentativeMemberSetModelDeflectionCheckDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_LOCAL_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_AUXILIARY_LOCAL_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_AUXILIARY_LOCAL_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_AUXILIARY_LOCAL_AXIS_Z_AND_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_LOCAL_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_LOCAL_AXIS_Z_AND_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DIRECTION_DEFLECTION_CHECK_DIRECTION_RESULTING_AXIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSetRepresentativeMemberSetModelDeflectionCheckDisplacementReference>
+                <h2>MemberSetRepresentativeMemberSetModelDeflectionCheckDisplacementReference Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFORMED_SEGMENT_ENDS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SET_REPRESENTATIVE_MEMBER_SET_MODEL_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFORMED_UNDEFORMED_SYSTEM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

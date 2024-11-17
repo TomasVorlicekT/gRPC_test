@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loads.MemberLoad - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loads.MemberLoad - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=MemberLoad>
+            <h2>MemberLoad</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_type</td>
+                        <td><a href="#MemberLoadLoadType">MemberLoadLoadType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_to_list_of_members</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_case</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_distribution</td>
+                        <td><a href="#MemberLoadLoadDistribution">MemberLoadLoadDistribution</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_direction</td>
+                        <td><a href="#MemberLoadLoadDirection">MemberLoadLoadDirection</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_direction_orientation</td>
+                        <td><a href="#MemberLoadLoadDirectionOrientation">MemberLoadLoadDirectionOrientation</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_definition_type</td>
+                        <td><a href="#MemberLoadFormFindingDefinitionType">MemberLoadFormFindingDefinitionType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_3</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_c</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_c_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_c_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_c_3</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_delta_t</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_delta_t_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_delta_t_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_delta_t_3</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_t</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_t_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_t_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_t_3</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_b</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_b_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_b_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_t_b_3</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>individual_mass_components</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_global</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_a_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_a_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_a_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_b_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_b_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_b_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_c_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_c_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_c_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>count_n</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>varying_load_parameters_are_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>varying_load_parameters</td>
+                        <td><a href="#ArrayOfMemberLoadVaryingLoadParameters">ArrayOfMemberLoadVaryingLoadParameters</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>varying_load_parameters_sorted</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>angular_velocity</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>angular_acceleration</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_type</td>
+                        <td><a href="#MemberLoadAxisDefinitionType">MemberLoadAxisDefinitionType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_axis</td>
+                        <td><a href="#MemberLoadAxisDefinitionAxis">MemberLoadAxisDefinitionAxis</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_axis_orientation</td>
+                        <td><a href="#MemberLoadAxisDefinitionAxisOrientation">MemberLoadAxisDefinitionAxisOrientation</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>filling_height</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_from_member_end</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_is_over_total_length</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_horizontal_alignment</td>
+                        <td><a href="#MemberLoadEccentricityHorizontalAlignment">MemberLoadEccentricityHorizontalAlignment</a></td>
+                        <td>optional bool has_force_eccentricity = 65;</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_vertical_alignment</td>
+                        <td><a href="#MemberLoadEccentricityVerticalAlignment">MemberLoadEccentricityVerticalAlignment</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_section_middle</td>
+                        <td><a href="#MemberLoadEccentricitySectionMiddle">MemberLoadEccentricitySectionMiddle</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_eccentricity_at_end_different_from_start</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_y_at_start</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_z_at_start</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_y_at_end</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_z_at_end</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_internal_force</td>
+                        <td><a href="#MemberLoadFormFindingInternalForce">MemberLoadFormFindingInternalForce</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_geometry_definition</td>
+                        <td><a href="#MemberLoadFormFindingGeometryDefinition">MemberLoadFormFindingGeometryDefinition</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_force_definition</td>
+                        <td><a href="#MemberLoadFormFindingForceDefinition">MemberLoadFormFindingForceDefinition</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_magnitude_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_magnitude_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>form_finding_magnitude_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfMemberLoadVaryingLoadParameters>
+            <h2>ArrayOfMemberLoadVaryingLoadParameters</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=MemberLoadLoadType>
+                <h2>MemberLoadLoadType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_E_TYPE_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_AXIAL_DISPLACEMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_AXIAL_STRAIN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_COATING_CONTOUR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_COATING_POLYGON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_DISPLACEMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_END_PRESTRESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_FORM_FINDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_INITIAL_PRESTRESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_PIPE_CONTENT_FULL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_PIPE_CONTENT_PARTIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_PIPE_INTERNAL_PRESSURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_PRECAMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_ROTARY_MOTION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_ROTATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_TEMPERATURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_TYPE_LOAD_TYPE_TEMPERATURE_CHANGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadLoadDistribution>
+                <h2>MemberLoadLoadDistribution Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_UNIFORM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_CONCENTRATED_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_CONCENTRATED_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_CONCENTRATED_2x2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_CONCENTRATED_N</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_CONCENTRATED_VARYING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_PARABOLIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_TAPERED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_TRAPEZOIDAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_UNIFORM_TOTAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_VARYING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_VARYING_IN_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadLoadDirection>
+                <h2>MemberLoadLoadDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_LOCAL_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_PROJECTED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_PROJECTED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_PROJECTED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_LOCAL_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_LOCAL_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_PRINCIPAL_U</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_PRINCIPAL_V</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadLoadDirectionOrientation>
+                <h2>MemberLoadLoadDirectionOrientation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_ORIENTATION_LOAD_DIRECTION_FORWARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_LOAD_DIRECTION_ORIENTATION_LOAD_DIRECTION_REVERSED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadFormFindingDefinitionType>
+                <h2>MemberLoadFormFindingDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_DEFINITION_TYPE_FORM_FINDING_TYPE_GEOMETRIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_DEFINITION_TYPE_FORM_FINDING_TYPE_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadAxisDefinitionType>
+                <h2>MemberLoadAxisDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_TYPE_AXIS_DEFINITION_TWO_POINTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_TYPE_AXIS_DEFINITION_POINT_AND_AXIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadAxisDefinitionAxis>
+                <h2>MemberLoadAxisDefinitionAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_AXIS_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadAxisDefinitionAxisOrientation>
+                <h2>MemberLoadAxisDefinitionAxisOrientation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_AXIS_ORIENTATION_AXIS_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_AXIS_DEFINITION_AXIS_ORIENTATION_AXIS_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadEccentricityHorizontalAlignment>
+                <h2>MemberLoadEccentricityHorizontalAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_LEFT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_MIDDLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_RIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadEccentricityVerticalAlignment>
+                <h2>MemberLoadEccentricityVerticalAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_TOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_BOTTOM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_MIDDLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadEccentricitySectionMiddle>
+                <h2>MemberLoadEccentricitySectionMiddle Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_SECTION_MIDDLE_LOAD_ECCENTRICITY_SECTION_MIDDLE_CENTER_OF_GRAVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_SECTION_MIDDLE_LOAD_ECCENTRICITY_SECTION_MIDDLE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_ECCENTRICITY_SECTION_MIDDLE_LOAD_ECCENTRICITY_SECTION_MIDDLE_SHEAR_CENTER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadFormFindingInternalForce>
+                <h2>MemberLoadFormFindingInternalForce Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_INTERNAL_FORCE_FORM_FINDING_INTERNAL_FORCE_TENSION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_INTERNAL_FORCE_FORM_FINDING_INTERNAL_FORCE_COMPRESSION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadFormFindingGeometryDefinition>
+                <h2>MemberLoadFormFindingGeometryDefinition Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_GEOMETRY_DEFINITION_FORM_FINDING_GEOMETRIC_INPUT_PARAMETER_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_GEOMETRY_DEFINITION_FORM_FINDING_GEOMETRIC_INPUT_PARAMETER_LOW_POINT_VERTICAL_SAG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_GEOMETRY_DEFINITION_FORM_FINDING_GEOMETRIC_INPUT_PARAMETER_MAXIMUM_VERTICAL_SAG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_GEOMETRY_DEFINITION_FORM_FINDING_GEOMETRIC_INPUT_PARAMETER_SAG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_GEOMETRY_DEFINITION_FORM_FINDING_GEOMETRIC_INPUT_PARAMETER_UNSTRESSED_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberLoadFormFindingForceDefinition>
+                <h2>MemberLoadFormFindingForceDefinition Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_AVERAGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_DENSITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_HORIZONTAL_TENSION_COMPONENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_MAXIMUM_FORCE_IN_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_MINIMAL_TENSION_AT_I_END</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_MINIMAL_TENSION_AT_J_END</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_MINIMUM_FORCE_IN_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_TENSION_AT_I_END</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_LOAD_FORM_FINDING_FORCE_DEFINITION_FORM_FINDING_FORCE_INPUT_PARAMETER_TENSION_AT_J_END</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loads.NodalLoad - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loads.NodalLoad - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=NodalLoad>
+            <h2>NodalLoad</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_type</td>
+                        <td><a href="#NodalLoadLoadType">NodalLoadLoadType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodes</td>
+                        <td>List[int]</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>force_eccentricity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>force_eccentricity_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>force_eccentricity_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>force_eccentricity_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>int</td>
+                        <td>optional bool has_force_eccentricity = 8;</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_specific_direction</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specific_direction_type</td>
+                        <td><a href="#NodalLoadSpecificDirectionType">NodalLoadSpecificDirectionType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axes_sequence</td>
+                        <td><a href="#NodalLoadAxesSequence">NodalLoadAxesSequence</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_3</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>directed_to_node_direction_node</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_first_node</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_second_node</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_line</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_member</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_force</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_force_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_force_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_force_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_moment</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_moment_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_moment_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>components_moment_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>force_magnitude</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_direction</td>
+                        <td><a href="#NodalLoadLoadDirection">NodalLoadLoadDirection</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_magnitude</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>individual_mass_components</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_global</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_moment_of_inertia</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_moment_of_inertia_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_moment_of_inertia_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_moment_of_inertia_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_has_rotational_mass</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_rotational_mass</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_angular_velocity</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_angular_acceleration</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_radius</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_axis_of_rotation</td>
+                        <td><a href="#NodalLoadMassAxisOfRotation">NodalLoadMassAxisOfRotation</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_angle</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_shifted_display</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>size_or_distance</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_case</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=NodalLoadLoadType>
+                <h2>NodalLoadLoadType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_TYPE_LOAD_TYPE_COMPONENTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_TYPE_LOAD_TYPE_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_TYPE_LOAD_TYPE_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_TYPE_LOAD_TYPE_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalLoadSpecificDirectionType>
+                <h2>NodalLoadSpecificDirectionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_ROTATED_VIA_3_ANGLES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_DIRECTED_TO_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_PARALLEL_TO_CS_OF_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_PARALLEL_TO_CS_OF_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_PARALLEL_TO_TWO_NODES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalLoadAxesSequence>
+                <h2>NodalLoadAxesSequence Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_AXES_SEQUENCE_SEQUENCE_XYZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_AXES_SEQUENCE_SEQUENCE_XZY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_AXES_SEQUENCE_SEQUENCE_YXZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_AXES_SEQUENCE_SEQUENCE_YZX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_AXES_SEQUENCE_SEQUENCE_ZXY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_AXES_SEQUENCE_SEQUENCE_ZYX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalLoadLoadDirection>
+                <h2>NodalLoadLoadDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_LOCAL_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_LOCAL_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_LOCAL_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalLoadMassAxisOfRotation>
+                <h2>NodalLoadMassAxisOfRotation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_MASS_AXIS_OF_ROTATION_AXIS_OF_ROTATION_X_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_MASS_AXIS_OF_ROTATION_AXIS_OF_ROTATION_X_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_MASS_AXIS_OF_ROTATION_AXIS_OF_ROTATION_Y_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_MASS_AXIS_OF_ROTATION_AXIS_OF_ROTATION_Y_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_MASS_AXIS_OF_ROTATION_AXIS_OF_ROTATION_Z_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_LOAD_MASS_AXIS_OF_ROTATION_AXIS_OF_ROTATION_Z_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

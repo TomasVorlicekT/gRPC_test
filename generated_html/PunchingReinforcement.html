@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_concrete_design.PunchingReinforcement - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_concrete_design.PunchingReinforcement - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=PunchingReinforcement>
+            <h2>PunchingReinforcement</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#PunchingReinforcementType">PunchingReinforcementType</a></td>
+                        <td>Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodes</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Nodes No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>material</td>
+                        <td>int</td>
+                        <td>Material</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>placement_type</td>
+                        <td><a href="#PunchingReinforcementPlacementType">PunchingReinforcementPlacementType</a></td>
+                        <td>Placement type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_perimeters</td>
+                        <td>int</td>
+                        <td>Number of perimeters | n_p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_perimeters_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Number of perimeters | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_legs_in_each_perimeter</td>
+                        <td>int</td>
+                        <td>Number of legs in each perimeter | n_l</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_legs_in_each_perimeter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Number of legs in each perimeter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>perimeter_spacing_type</td>
+                        <td><a href="#PunchingReinforcementPerimeterSpacingType">PunchingReinforcementPerimeterSpacingType</a></td>
+                        <td>Perimeter spacing type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | k_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between perimeters | k_sr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Multiple static depth spacing between perimeters | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | a_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Absolute spacing between support face and first perimeter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters</td>
+                        <td>float</td>
+                        <td>Absolute spacing between perimeters | s_r</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Absolute spacing between perimeters | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter</td>
+                        <td>float</td>
+                        <td>Bend-up diameter | d_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Bend-up diameter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>perimeter_area</td>
+                        <td>float</td>
+                        <td>Perimeter Area | A_sw,i</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_area</td>
+                        <td>float</td>
+                        <td>Total Area | A_s,t</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>integrated_in_surfaces</td>
+                        <td>List[int]</td>
+                        <td>Integrated in Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_perimeters_auto_maximum</td>
+                        <td>int</td>
+                        <td>Number of perimeters | Maximum | n_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_perimeters_auto_minimum</td>
+                        <td>int</td>
+                        <td>Number of perimeters | Minimum | n_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_perimeters_auto_priority</td>
+                        <td>int</td>
+                        <td>Number of perimeters | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_perimeters_calculated</td>
+                        <td>int</td>
+                        <td>Number of perimeters | Determined | n_p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_legs_in_each_perimeter_auto_maximum</td>
+                        <td>int</td>
+                        <td>Number of legs in each perimeter | Maximum | n_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_legs_in_each_perimeter_auto_minimum</td>
+                        <td>int</td>
+                        <td>Number of legs in each perimeter | Minimum | n_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_legs_in_each_perimeter_auto_priority</td>
+                        <td>int</td>
+                        <td>Number of legs in each perimeter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_legs_in_each_perimeter_calculated</td>
+                        <td>int</td>
+                        <td>Number of legs in each perimeter | Determined | n_l</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter_auto_increment</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | Increment | ?_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter_auto_maximum</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | Maximum | k_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter_auto_minimum</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | Minimum | k_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter_auto_priority</td>
+                        <td>int</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_support_face_and_first_perimeter_calculated</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between support face and first perimeter | Determined | k_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters_auto_increment</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between perimeters | Increment | ?_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters_auto_maximum</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between perimeters | Maximum | k_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters_auto_minimum</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between perimeters | Minimum | k_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters_auto_priority</td>
+                        <td>int</td>
+                        <td>Multiple static depth spacing between perimeters | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>multiple_static_depth_spacing_between_perimeters_calculated</td>
+                        <td>float</td>
+                        <td>Multiple static depth spacing between perimeters | Determined | k_sr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>different_placement_perimeters</td>
+                        <td><a href="#ArrayOfPunchingReinforcementDifferentPlacementPerimeters">ArrayOfPunchingReinforcementDifferentPlacementPerimeters</a></td>
+                        <td>Perimeters</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>different_placement_perimeter_spacing_type</td>
+                        <td><a href="#PunchingReinforcementDifferentPlacementPerimeterSpacingType">PunchingReinforcementDifferentPlacementPerimeterSpacingType</a></td>
+                        <td>Different spacing type of perimeter placement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_auto_maximum</td>
+                        <td>float</td>
+                        <td>Bend-up diameter | Maximum | d_s,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_auto_minimum</td>
+                        <td>float</td>
+                        <td>Bend-up diameter | Minimum | d_s,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_auto_priority</td>
+                        <td>int</td>
+                        <td>Bend-up diameter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_calculated</td>
+                        <td>float</td>
+                        <td>Bend-up diameter | Determined | d_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_size_designation</td>
+                        <td><a href="#PunchingReinforcementBendUpSizeDesignation">PunchingReinforcementBendUpSizeDesignation</a></td>
+                        <td>Bend-up size</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_size_designation_auto_maximum</td>
+                        <td><a href="#PunchingReinforcementBendUpSizeDesignationAutoMaximum">PunchingReinforcementBendUpSizeDesignationAutoMaximum</a></td>
+                        <td>Bend-up size | Maximum</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_size_designation_auto_minimum</td>
+                        <td><a href="#PunchingReinforcementBendUpSizeDesignationAutoMinimum">PunchingReinforcementBendUpSizeDesignationAutoMinimum</a></td>
+                        <td>Bend-up size | Minimum</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_auto_diameters_list</td>
+                        <td>List[int]</td>
+                        <td>Bend-up diameter | Usable diameters</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bend_up_diameter_auto_diameters_list_enabled</td>
+                        <td>bool</td>
+                        <td>Bend-up diameter | Usable diameters enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter_auto_increment</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Increment | ?_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter_auto_maximum</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Maximum | s_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter_auto_minimum</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Minimum | s_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter_auto_priority</td>
+                        <td>int</td>
+                        <td>Absolute spacing between support face and first perimeter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_support_face_and_first_perimeter_calculated</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Determined | a_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters_auto_increment</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Increment | ?_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters_auto_maximum</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Maximum | s_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters_auto_minimum</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Minimum | s_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters_auto_priority</td>
+                        <td>int</td>
+                        <td>Absolute spacing between support face and first perimeter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>absolute_spacing_between_perimeters_calculated</td>
+                        <td>float</td>
+                        <td>Absolute spacing between support face and first perimeter | Determined | s_r</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfPunchingReinforcementDifferentPlacementPerimeters>
+            <h2>ArrayOfPunchingReinforcementDifferentPlacementPerimeters</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=PunchingReinforcementType>
+                <h2>PunchingReinforcementType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_TYPE_TYPE_VERTICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=PunchingReinforcementPlacementType>
+                <h2>PunchingReinforcementPlacementType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_PLACEMENT_TYPE_PLACEMENT_TYPE_RADIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_PLACEMENT_TYPE_PLACEMENT_TYPE_AXIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=PunchingReinforcementPerimeterSpacingType>
+                <h2>PunchingReinforcementPerimeterSpacingType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_PERIMETER_SPACING_TYPE_PERIMETER_SPACING_TYPE_MULTIPLE_STATIC_DEPTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_PERIMETER_SPACING_TYPE_PERIMETER_SPACING_TYPE_ABSOLUTE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=PunchingReinforcementDifferentPlacementPerimeterSpacingType>
+                <h2>PunchingReinforcementDifferentPlacementPerimeterSpacingType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_DIFFERENT_PLACEMENT_PERIMETER_SPACING_TYPE_PERIMETER_SPACING_TYPE_MULTIPLE_STATIC_DEPTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_DIFFERENT_PLACEMENT_PERIMETER_SPACING_TYPE_PERIMETER_SPACING_TYPE_ABSOLUTE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=PunchingReinforcementBendUpSizeDesignation>
+                <h2>PunchingReinforcementBendUpSizeDesignation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_BEND_UP_SIZE_DESIGNATION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=PunchingReinforcementBendUpSizeDesignationAutoMaximum>
+                <h2>PunchingReinforcementBendUpSizeDesignationAutoMaximum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_BEND_UP_SIZE_DESIGNATION_AUTO_MAXIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=PunchingReinforcementBendUpSizeDesignationAutoMinimum>
+                <h2>PunchingReinforcementBendUpSizeDesignationAutoMinimum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>PUNCHING_REINFORCEMENT_BEND_UP_SIZE_DESIGNATION_AUTO_MINIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

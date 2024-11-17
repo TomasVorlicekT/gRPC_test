@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loads.SolidLoad - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loads.SolidLoad - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=SolidLoad>
+            <h2>SolidLoad</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_type</td>
+                        <td><a href="#SolidLoadLoadType">SolidLoadLoadType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids</td>
+                        <td>List[int]</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_case</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_distribution</td>
+                        <td><a href="#SolidLoadLoadDistribution">SolidLoadLoadDistribution</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_direction</td>
+                        <td><a href="#SolidLoadLoadDirection">SolidLoadLoadDirection</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_direction_orientation</td>
+                        <td><a href="#SolidLoadLoadDirectionOrientation">SolidLoadLoadDirectionOrientation</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>uniform_magnitude</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_uniform_magnitude_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_uniform_magnitude_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_uniform_magnitude_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_magnitude_x1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_magnitude_y1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_magnitude_z1</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_magnitude_x2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_magnitude_y2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strain_magnitude_z2</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>node_1</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>node_2</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_density_defined_by_altitude</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>altitude</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>angular_velocity</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>angular_acceleration</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_type</td>
+                        <td><a href="#SolidLoadAxisDefinitionType">SolidLoadAxisDefinitionType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p1_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2_x</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2_y</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_p2_z</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_axis</td>
+                        <td><a href="#SolidLoadAxisDefinitionAxis">SolidLoadAxisDefinitionAxis</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axis_definition_axis_orientation</td>
+                        <td><a href="#SolidLoadAxisDefinitionAxisOrientation">SolidLoadAxisDefinitionAxisOrientation</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>gas_magnitude</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>gas_behaviour</td>
+                        <td><a href="#SolidLoadGasBehaviour">SolidLoadGasBehaviour</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SolidLoadLoadType>
+                <h2>SolidLoadLoadType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_LOAD_TYPE_BUOYANCY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_LOAD_TYPE_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_LOAD_TYPE_GAS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_LOAD_TYPE_ROTARY_MOTION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_LOAD_TYPE_STRAIN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_TYPE_LOAD_TYPE_TEMPERATURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadLoadDistribution>
+                <h2>SolidLoadLoadDistribution Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_UNIFORM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_LINEAR_IN_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_LINEAR_IN_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_LINEAR_IN_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadLoadDirection>
+                <h2>SolidLoadLoadDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DIRECTION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DIRECTION_LOAD_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadLoadDirectionOrientation>
+                <h2>SolidLoadLoadDirectionOrientation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DIRECTION_ORIENTATION_LOAD_DIRECTION_FORWARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_LOAD_DIRECTION_ORIENTATION_LOAD_DIRECTION_REVERSED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadAxisDefinitionType>
+                <h2>SolidLoadAxisDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_TYPE_AXIS_DEFINITION_TWO_POINTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_TYPE_AXIS_DEFINITION_POINT_AND_AXIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadAxisDefinitionAxis>
+                <h2>SolidLoadAxisDefinitionAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_AXIS_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadAxisDefinitionAxisOrientation>
+                <h2>SolidLoadAxisDefinitionAxisOrientation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_AXIS_ORIENTATION_AXIS_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_AXIS_DEFINITION_AXIS_ORIENTATION_AXIS_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SolidLoadGasBehaviour>
+                <h2>SolidLoadGasBehaviour Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_GAS_BEHAVIOUR_GAS_BEHAVIOUR_RESULTING_OVERPRESSURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_GAS_BEHAVIOUR_GAS_BEHAVIOUR_OVERPRESSURE_INCREMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_GAS_BEHAVIOUR_GAS_BEHAVIOUR_RESULTING_VOLUME</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOLID_LOAD_GAS_BEHAVIOUR_GAS_BEHAVIOUR_VOLUME_INCREMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

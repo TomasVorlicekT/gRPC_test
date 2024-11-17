@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.dynamic_loads.ResponseSpectrum - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.dynamic_loads.ResponseSpectrum - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=ResponseSpectrum>
+            <h2>ResponseSpectrum</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>definition_type</td>
+                        <td><a href="#ResponseSpectrumDefinitionType">ResponseSpectrumDefinitionType</a></td>
+                        <td>Definition type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_response_spectrum_step_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined spectrum step enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_response_spectrum_period_step</td>
+                        <td>float</td>
+                        <td>User-defined spectrum period step | ?_T</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_spectrum_sorted</td>
+                        <td>bool</td>
+                        <td>User-defined spectrum sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_response_spectrum</td>
+                        <td><a href="#ArrayOfResponseSpectrumUserDefinedResponseSpectrum">ArrayOfResponseSpectrumUserDefinedResponseSpectrum</a></td>
+                        <td>User-defined spectrum</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>damping</td>
+                        <td>float</td>
+                        <td>Damping | D</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>min_t</td>
+                        <td>float</td>
+                        <td>T_min | T_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>max_t</td>
+                        <td>float</td>
+                        <td>T_max | T_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>direction</td>
+                        <td><a href="#ResponseSpectrumDirection">ResponseSpectrumDirection</a></td>
+                        <td>Direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sample_count</td>
+                        <td>int</td>
+                        <td>Sample Count</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>accelerogram</td>
+                        <td>int</td>
+                        <td>Accelerogram</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfResponseSpectrumUserDefinedResponseSpectrum>
+            <h2>ArrayOfResponseSpectrumUserDefinedResponseSpectrum</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=ResponseSpectrumDefinitionType>
+                <h2>ResponseSpectrumDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DEFINITION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DEFINITION_TYPE_ACCORDING_TO_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DEFINITION_TYPE_GENERATED_FROM_ACCELEROGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DEFINITION_TYPE_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DEFINITION_TYPE_USER_DEFINED_IN_G_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ResponseSpectrumDirection>
+                <h2>ResponseSpectrumDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DIRECTION_DIRECTION_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DIRECTION_DIRECTION_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>RESPONSE_SPECTRUM_DIRECTION_DIRECTION_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

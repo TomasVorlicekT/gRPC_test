@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_advanced.StructureModification - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_advanced.StructureModification - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=StructureModification>
+            <h2>StructureModification</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to</td>
+                        <td>str</td>
+                        <td>Assigned to</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_gamma_m</td>
+                        <td>bool</td>
+                        <td>Partial Safety Factor ?_M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_materials</td>
+                        <td>bool</td>
+                        <td>Materials</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_sections</td>
+                        <td>bool</td>
+                        <td>Sections</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_members</td>
+                        <td>bool</td>
+                        <td>Members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_surfaces</td>
+                        <td>bool</td>
+                        <td>Surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_member_hinges</td>
+                        <td>bool</td>
+                        <td>Member Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_line_hinges</td>
+                        <td>bool</td>
+                        <td>Line Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_nodal_supports</td>
+                        <td>bool</td>
+                        <td>Nodal Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_line_supports</td>
+                        <td>bool</td>
+                        <td>Line Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_member_supports</td>
+                        <td>bool</td>
+                        <td>Member Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_surface_supports</td>
+                        <td>bool</td>
+                        <td>Surface Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffness_member_reinforcement</td>
+                        <td>bool</td>
+                        <td>Member Reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffness_surface_reinforcement</td>
+                        <td>bool</td>
+                        <td>Surface Reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffness_timber_members_due_moisture_class</td>
+                        <td>bool</td>
+                        <td>Timber Members due to Moisture Class</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_material_nonlinearity_models</td>
+                        <td>bool</td>
+                        <td>Material Nonlinearity Models</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_material_temperature_nonlinearities</td>
+                        <td>bool</td>
+                        <td>Temperature Dependencies</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_line_hinges</td>
+                        <td>bool</td>
+                        <td>Line Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_member_types</td>
+                        <td>bool</td>
+                        <td>Member Types</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_member_hinges</td>
+                        <td>bool</td>
+                        <td>Member Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_member_nonlinearities</td>
+                        <td>bool</td>
+                        <td>Member Nonlinearities</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_solid_types_contact_or_surfaces_contact</td>
+                        <td>bool</td>
+                        <td>Surface Contact, Solid Types "Contact"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_nodal_supports</td>
+                        <td>bool</td>
+                        <td>Nodal Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_line_supports</td>
+                        <td>bool</td>
+                        <td>Line Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_member_supports</td>
+                        <td>bool</td>
+                        <td>Member Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearities_disabled_surface_supports</td>
+                        <td>bool</td>
+                        <td>Surface Supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_material_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesMaterialTable">ArrayOfStructureModificationModifyStiffnessesMaterialTable</a></td>
+                        <td>Modify stiffnesses | Material table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_section_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesSectionTable">ArrayOfStructureModificationModifyStiffnessesSectionTable</a></td>
+                        <td>Modify stiffnesses | Section table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_member_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesMemberTable">ArrayOfStructureModificationModifyStiffnessesMemberTable</a></td>
+                        <td>Modify stiffnesses | Member table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_surface_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesSurfaceTable">ArrayOfStructureModificationModifyStiffnessesSurfaceTable</a></td>
+                        <td>Modify stiffnesses | Surface table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_member_hinges_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesMemberHingesTable">ArrayOfStructureModificationModifyStiffnessesMemberHingesTable</a></td>
+                        <td>Modify stiffnesses | Table of Member hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_line_hinges_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesLineHingesTable">ArrayOfStructureModificationModifyStiffnessesLineHingesTable</a></td>
+                        <td>Modify stiffnesses | Table of line hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_nodal_supports_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesNodalSupportsTable">ArrayOfStructureModificationModifyStiffnessesNodalSupportsTable</a></td>
+                        <td>Modify stiffnesses | Table of nodal supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_line_supports_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesLineSupportsTable">ArrayOfStructureModificationModifyStiffnessesLineSupportsTable</a></td>
+                        <td>Modify stiffnesses | Table of line supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_member_supports_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesMemberSupportsTable">ArrayOfStructureModificationModifyStiffnessesMemberSupportsTable</a></td>
+                        <td>Modify stiffnesses | Table of member supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_stiffnesses_surface_supports_table</td>
+                        <td><a href="#ArrayOfStructureModificationModifyStiffnessesSurfaceSupportsTable">ArrayOfStructureModificationModifyStiffnessesSurfaceSupportsTable</a></td>
+                        <td>Modify stiffnesses | Table of surface supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_members_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate members enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_members</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_surfaces_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate surfaces enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_surfaces</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_solids_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate solids enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_solids</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate solids</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_support_on_nodes_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate support on nodes enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_support_on_nodes</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate support on nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_support_on_lines_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate support on lines enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_support_on_lines</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate support on lines</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_support_on_members_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate support on members enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_support_on_members</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate support on members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivate_support_on_surfaces_enabled</td>
+                        <td>bool</td>
+                        <td>Deactivate support on surfaces enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>object_selection_for_deactivate_support_on_surfaces</td>
+                        <td>int</td>
+                        <td>Object selection for deactivate support on surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesMaterialTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesMaterialTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesSectionTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesSectionTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesMemberTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesMemberTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesSurfaceTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesSurfaceTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesMemberHingesTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesMemberHingesTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesLineHingesTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesLineHingesTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesNodalSupportsTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesNodalSupportsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesLineSupportsTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesLineSupportsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesMemberSupportsTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesMemberSupportsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfStructureModificationModifyStiffnessesSurfaceSupportsTable>
+            <h2>ArrayOfStructureModificationModifyStiffnessesSurfaceSupportsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+        </main>
+    </div>
+    
+</body>
+</html>

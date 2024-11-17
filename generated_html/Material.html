@@ -1,0 +1,2872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_core.Material - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_core.Material - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=Material>
+            <h2>Material</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>material_type</td>
+                        <td><a href="#MaterialMaterialType">MaterialMaterialType</a></td>
+                        <td>Material type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>material_model</td>
+                        <td><a href="#MaterialMaterialModel">MaterialMaterialModel</a></td>
+                        <td>Material model</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>application_context</td>
+                        <td><a href="#MaterialApplicationContext">MaterialApplicationContext</a></td>
+                        <td>Application context</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_type</td>
+                        <td><a href="#MaterialDiagramType">MaterialDiagramType</a></td>
+                        <td>Diagram type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined</td>
+                        <td>bool</td>
+                        <td>User-Defined Material</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>definition_type</td>
+                        <td><a href="#MaterialDefinitionType">MaterialDefinitionType</a></td>
+                        <td>Definition type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stress_failure_hypothesis</td>
+                        <td><a href="#MaterialStressFailureHypothesis">MaterialStressFailureHypothesis</a></td>
+                        <td>Stress failure hypothesis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_temperature_dependent</td>
+                        <td>bool</td>
+                        <td>Is temperature-dependent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_dynamic_increase_factor</td>
+                        <td>bool</td>
+                        <td>Has dynamic increase factor</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_cost_estimation</td>
+                        <td>bool</td>
+                        <td>Cost estimation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>optimization</td>
+                        <td>bool</td>
+                        <td>Optimization</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_emissions_estimation</td>
+                        <td>bool</td>
+                        <td>Emission estimation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_temperature</td>
+                        <td>float</td>
+                        <td>Reference temperature | T_ref | The reference temperature is only available if the material is temperature-dependent.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>temperature_properties_sorted</td>
+                        <td>bool</td>
+                        <td>Temperature properties sorted | Temperature-dependent properties sorted by temperature</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>temperature</td>
+                        <td><a href="#ArrayOfMaterialTemperature">ArrayOfMaterialTemperature</a></td>
+                        <td>Parameters that can be defined for multiple temperatures | Temperature dependent properties of material. If material is defined as temperature dependent, all                        properties must be accessed through this attribute. If not, access properties directly through material.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_matrix_editable</td>
+                        <td>bool</td>
+                        <td>Stiffness matrix editable</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_modification</td>
+                        <td>bool</td>
+                        <td>Stiffness modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_modification_type</td>
+                        <td><a href="#MaterialStiffnessModificationType">MaterialStiffnessModificationType</a></td>
+                        <td>Stiffness modification type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_linear_elastic_with_nonlinear_criteria</td>
+                        <td>bool</td>
+                        <td>Linear Elastic with Nonlinear Criteria</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_weight_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | member weight | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_weight_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | member weight | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_weight_unit</td>
+                        <td><a href="#MaterialMembersWeightUnit">MaterialMembersWeightUnit</a></td>
+                        <td>Cost estimation | member weight | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_weight_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | member weight | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_weight_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | member weight | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_volume_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | member volume | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_volume_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | member volume | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_volume_unit</td>
+                        <td><a href="#MaterialMembersVolumeUnit">MaterialMembersVolumeUnit</a></td>
+                        <td>Cost estimation | member volume | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_volume_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | member volume | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_volume_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | member volume | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_surface_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | member surface | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_surface_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | member surface | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_surface_unit</td>
+                        <td><a href="#MaterialMembersSurfaceUnit">MaterialMembersSurfaceUnit</a></td>
+                        <td>Cost estimation | member surface | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_surface_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | member surface | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members_surface_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | member surface | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_weight_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | surface weight | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_weight_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | surface weight | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_weight_unit</td>
+                        <td><a href="#MaterialSurfacesWeightUnit">MaterialSurfacesWeightUnit</a></td>
+                        <td>Cost estimation | surface weight | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_weight_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | surface weight | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_weight_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | surface weight | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_volume_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | surface volume | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_volume_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | surface volume | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_volume_unit</td>
+                        <td><a href="#MaterialSurfacesVolumeUnit">MaterialSurfacesVolumeUnit</a></td>
+                        <td>Cost estimation | surface volume | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_volume_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | surface volume | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_volume_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | surface volume | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_top_face_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | top face of surfaces | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_top_face_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | top face of surfaces | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_top_face_unit</td>
+                        <td><a href="#MaterialSurfacesTopFaceUnit">MaterialSurfacesTopFaceUnit</a></td>
+                        <td>Cost estimation | top face of surfaces | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_top_face_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | top face of surfaces | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_top_face_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | top face of surfaces | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_area_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | area of surfaces | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_area_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | area of surfaces | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_area_unit</td>
+                        <td><a href="#MaterialSurfacesAreaUnit">MaterialSurfacesAreaUnit</a></td>
+                        <td>Cost estimation | area of surfaces | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_area_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | area of surfaces | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_area_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | area of surfaces | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_bottom_face_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | bottom face of surfaces | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_bottom_face_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | bottom face of surfaces | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_bottom_face_unit</td>
+                        <td><a href="#MaterialSurfacesBottomFaceUnit">MaterialSurfacesBottomFaceUnit</a></td>
+                        <td>Cost estimation | bottom face of surfaces | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_bottom_face_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | bottom face of surfaces | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_bottom_face_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | bottom face of surfaces | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_weight_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | weight of solids | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_weight_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | weight of solids | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_weight_unit</td>
+                        <td><a href="#MaterialSolidsWeightUnit">MaterialSolidsWeightUnit</a></td>
+                        <td>Cost estimation | weight of solids | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_weight_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | weight of solids | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_weight_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | weight of solids | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_volume_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | volume of solids | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_volume_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | volume of solids | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_volume_unit</td>
+                        <td><a href="#MaterialSolidsVolumeUnit">MaterialSolidsVolumeUnit</a></td>
+                        <td>Cost estimation | volume of solids | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_volume_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | volume of solids | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_volume_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | volume of solids | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_area_active</td>
+                        <td>bool</td>
+                        <td>Cost estimation | area of solids | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_area_unit_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | area of solids | unit cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_area_unit</td>
+                        <td><a href="#MaterialSolidsAreaUnit">MaterialSolidsAreaUnit</a></td>
+                        <td>Cost estimation | area of solids | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_area_quantity</td>
+                        <td>float</td>
+                        <td>Cost estimation | area of solids | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solids_area_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | area of solids | cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sum_weight</td>
+                        <td>float</td>
+                        <td>Cost estimation | sum weight</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>weight_percentage</td>
+                        <td>float</td>
+                        <td>Cost estimation | weight percentage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>cost_percentage</td>
+                        <td>float</td>
+                        <td>Cost estimation | cost percentage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sum_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | sum cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_cost</td>
+                        <td>float</td>
+                        <td>Cost estimation | total cost</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_weight_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | member weight | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_weight_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | member weight | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_weight_unit</td>
+                        <td><a href="#MaterialEmissionsMembersWeightUnit">MaterialEmissionsMembersWeightUnit</a></td>
+                        <td>Emission estimation | member weight | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_weight_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | member weight | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_weight_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | member weight | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_volume_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | member volume | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_volume_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | member volume | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_volume_unit</td>
+                        <td><a href="#MaterialEmissionsMembersVolumeUnit">MaterialEmissionsMembersVolumeUnit</a></td>
+                        <td>Emission estimation | member volume | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_volume_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | member volume | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_volume_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | member volume | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_surface_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | member surface | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_surface_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | member surface | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_surface_unit</td>
+                        <td><a href="#MaterialEmissionsMembersSurfaceUnit">MaterialEmissionsMembersSurfaceUnit</a></td>
+                        <td>Emission estimation | member surface | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_surface_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | member surface | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_members_surface_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | member surface | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_weight_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | surface weight | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_weight_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | surface weight | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_weight_unit</td>
+                        <td><a href="#MaterialEmissionsSurfacesWeightUnit">MaterialEmissionsSurfacesWeightUnit</a></td>
+                        <td>Emission estimation | surface weight | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_weight_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | surface weight | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_weight_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | surface weight | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_volume_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | surface volume | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_volume_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | surface volume | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_volume_unit</td>
+                        <td><a href="#MaterialEmissionsSurfacesVolumeUnit">MaterialEmissionsSurfacesVolumeUnit</a></td>
+                        <td>Emission estimation | surface volume | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_volume_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | surface volume | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_volume_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | surface volume | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_top_face_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | top face of surfaces | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_top_face_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | top face of surfaces | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_top_face_unit</td>
+                        <td><a href="#MaterialEmissionsSurfacesTopFaceUnit">MaterialEmissionsSurfacesTopFaceUnit</a></td>
+                        <td>Emission estimation | top face of surfaces | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_top_face_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | top face of surfaces | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_top_face_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | top face of surfaces | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_area_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | area of surfaces | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_area_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | area of surfaces | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_area_unit</td>
+                        <td><a href="#MaterialEmissionsSurfacesAreaUnit">MaterialEmissionsSurfacesAreaUnit</a></td>
+                        <td>Emission estimation | area of surfaces | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_area_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | area of surfaces | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_area_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | area of surfaces | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_bottom_face_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | bottom face of surfaces | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_bottom_face_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | bottom face of surfaces | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_bottom_face_unit</td>
+                        <td><a href="#MaterialEmissionsSurfacesBottomFaceUnit">MaterialEmissionsSurfacesBottomFaceUnit</a></td>
+                        <td>Emission estimation | bottom face of surfaces | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_bottom_face_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | bottom face of surfaces | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_surfaces_bottom_face_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | bottom face of surfaces | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_weight_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | weight of solids | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_weight_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | weight of solids | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_weight_unit</td>
+                        <td><a href="#MaterialEmissionsSolidsWeightUnit">MaterialEmissionsSolidsWeightUnit</a></td>
+                        <td>Emission estimation | weight of solids | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_weight_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | weight of solids | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_weight_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | weight of solids | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_volume_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | volume of solids | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_volume_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | volume of solids | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_volume_unit</td>
+                        <td><a href="#MaterialEmissionsSolidsVolumeUnit">MaterialEmissionsSolidsVolumeUnit</a></td>
+                        <td>Emission estimation | volume of solids | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_volume_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | volume of solids | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_volume_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | volume of solids | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_area_active</td>
+                        <td>bool</td>
+                        <td>Emission estimation | area of solids | active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_area_unit_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | area of solids | unit emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_area_unit</td>
+                        <td><a href="#MaterialEmissionsSolidsAreaUnit">MaterialEmissionsSolidsAreaUnit</a></td>
+                        <td>Emission estimation | area of solids | unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_area_quantity</td>
+                        <td>float</td>
+                        <td>Emission estimation | area of solids | quantity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_solids_area_emission</td>
+                        <td>float</td>
+                        <td>Emission estimation | area of solids | emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_percentage</td>
+                        <td>float</td>
+                        <td>Emission estimation | emission percentage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_sum</td>
+                        <td>float</td>
+                        <td>Emission estimation | sum emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>emissions_total</td>
+                        <td>float</td>
+                        <td>Emission estimation | total emission</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>use_of_material_model_orientation</td>
+                        <td><a href="#MaterialUseOfMaterialModelOrientation">MaterialUseOfMaterialModelOrientation</a></td>
+                        <td>Use of material model orientation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>use_of_material_model_alignment</td>
+                        <td><a href="#MaterialUseOfMaterialModelAlignment">MaterialUseOfMaterialModelAlignment</a></td>
+                        <td>Use of material model alignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfMaterialTemperature>
+            <h2>ArrayOfMaterialTemperature</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=MaterialMaterialType>
+                <h2>MaterialMaterialType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_BASIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_ALUMINUM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_CONCRETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_FABRIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_FIBER_CONCRETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_FOIL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_GAS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_GLASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_MASONRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_METAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_REINFORCING_STEEL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_SOIL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_STEEL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_TIMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_TYPE_TYPE_VIRTUAL_JOIST_GIRDER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialMaterialModel>
+                <h2>MaterialMaterialModel Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_LINEAR_ELASTIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_E_MATERIAL_MODEL_ISOTROPIC_SOIL_PLASTIC_MODIFIED_HARDENING_SOIL_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_DAMAGE_2D_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_MASONRY_PLASTIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_NONLINEAR_ELASTIC_1D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_NONLINEAR_ELASTIC_2D_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_PLASTIC_1D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_PLASTIC_2D_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_ROCK_PLASTIC_HOEK_BROWN_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_SOIL_NONLINEAR_ELASTIC_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_SOIL_PLASTIC_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ISOTROPIC_TIMBER_LINEAR_ELASTIC_1D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_FABRIC_NONLINEAR_ELASTIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_MASONRY_PLASTIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_PLASTIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_PLASTIC_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_TIMBER_LINEAR_ELASTIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MATERIAL_MODEL_MODEL_ORTHOTROPIC_WELD_PLASTIC_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialApplicationContext>
+                <h2>MaterialApplicationContext Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_INVALID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_ALUMINUM_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_COMBINATION_WIZARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_CONCRETE_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_CONCRETE_FOUNDATION_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_CRANEWAY_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_DYNAMIC_ANALYSIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_GEOTECHNICAL_ANALYSIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_GLASS_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_LOAD_WIZARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_MASONRY_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_PIPING_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_STEEL_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_STEEL_DESIGN_COLD_FORMED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_STEEL_JOINT_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_TIMBER_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_TIMBER_JOINT_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_APPLICATION_CONTEXT_TOWER_DESIGN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialDiagramType>
+                <h2>MaterialDiagramType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_DIAGRAM_TYPE_DIAGRAM_TYPE_BASIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_DIAGRAM_TYPE_DIAGRAM_TYPE_BILINEAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_DIAGRAM_TYPE_DIAGRAM_TYPE_STRESS_STRAIN_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialDefinitionType>
+                <h2>MaterialDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_DEFINITION_TYPE_DERIVED_NU</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_DEFINITION_TYPE_DERIVED_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_DEFINITION_TYPE_E_G_NO_NU</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_DEFINITION_TYPE_E_G_NU</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_DEFINITION_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialStressFailureHypothesis>
+                <h2>MaterialStressFailureHypothesis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_STRESS_FAILURE_HYPOTHESIS_STRESS_FAILURE_HYPOTHESIS_VON_MISES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_STRESS_FAILURE_HYPOTHESIS_E_STRESS_FAILURE_HYPOTHESIS_OEDOMETRIC_CONDITIONS_WITH_SMALL_STRAIN_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_STRESS_FAILURE_HYPOTHESIS_STRESS_FAILURE_HYPOTHESIS_DRUCKER_PRAGER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_STRESS_FAILURE_HYPOTHESIS_STRESS_FAILURE_HYPOTHESIS_MOHR_COULOMB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_STRESS_FAILURE_HYPOTHESIS_STRESS_FAILURE_HYPOTHESIS_OEDOMETRIC_CONDITIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_STRESS_FAILURE_HYPOTHESIS_STRESS_FAILURE_HYPOTHESIS_TRESCA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialStiffnessModificationType>
+                <h2>MaterialStiffnessModificationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_STIFFNESS_MODIFICATION_TYPE_STIFFNESS_MODIFICATION_TYPE_DIVISION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_STIFFNESS_MODIFICATION_TYPE_STIFFNESS_MODIFICATION_TYPE_MULTIPLICATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialMembersWeightUnit>
+                <h2>MaterialMembersWeightUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_CWT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_KG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_LB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_OZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_SLUG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_T</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_WEIGHT_UNIT_COST_ESTIMATION_TON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialMembersVolumeUnit>
+                <h2>MaterialMembersVolumeUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_CM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_FLOZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_FT3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_IMPGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_IN3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_M3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_MM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_PT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_QT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_USGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_VOLUME_UNIT_COST_ESTIMATION_YD3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialMembersSurfaceUnit>
+                <h2>MaterialMembersSurfaceUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_COST_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_COST_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_COST_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_COST_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_COST_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_MEMBERS_SURFACE_UNIT_COST_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSurfacesWeightUnit>
+                <h2>MaterialSurfacesWeightUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_CWT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_KG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_LB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_OZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_SLUG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_T</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_WEIGHT_UNIT_COST_ESTIMATION_TON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSurfacesVolumeUnit>
+                <h2>MaterialSurfacesVolumeUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_CM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_FLOZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_FT3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_IMPGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_IN3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_M3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_MM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_PT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_QT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_USGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_VOLUME_UNIT_COST_ESTIMATION_YD3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSurfacesTopFaceUnit>
+                <h2>MaterialSurfacesTopFaceUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_COST_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_COST_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_COST_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_COST_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_COST_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_TOP_FACE_UNIT_COST_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSurfacesAreaUnit>
+                <h2>MaterialSurfacesAreaUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_COST_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_COST_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_COST_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_COST_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_COST_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_AREA_UNIT_COST_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSurfacesBottomFaceUnit>
+                <h2>MaterialSurfacesBottomFaceUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_COST_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_COST_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_COST_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_COST_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_COST_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SURFACES_BOTTOM_FACE_UNIT_COST_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSolidsWeightUnit>
+                <h2>MaterialSolidsWeightUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_CWT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_KG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_LB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_OZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_SLUG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_T</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_WEIGHT_UNIT_COST_ESTIMATION_TON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSolidsVolumeUnit>
+                <h2>MaterialSolidsVolumeUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_CM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_FLOZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_FT3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_IMPGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_IN3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_M3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_MM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_PT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_QT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_USGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_VOLUME_UNIT_COST_ESTIMATION_YD3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialSolidsAreaUnit>
+                <h2>MaterialSolidsAreaUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_COST_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_COST_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_COST_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_COST_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_COST_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_SOLIDS_AREA_UNIT_COST_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsMembersWeightUnit>
+                <h2>MaterialEmissionsMembersWeightUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_CWT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_KG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_LB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_OZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_SLUG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_T</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_WEIGHT_UNIT_EMISSION_ESTIMATION_TON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsMembersVolumeUnit>
+                <h2>MaterialEmissionsMembersVolumeUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_CM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_FLOZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_FT3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_IMPGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_IN3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_M3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_MM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_PT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_QT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_USGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_VOLUME_UNIT_EMISSION_ESTIMATION_YD3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsMembersSurfaceUnit>
+                <h2>MaterialEmissionsMembersSurfaceUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_MEMBERS_SURFACE_UNIT_EMISSION_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSurfacesWeightUnit>
+                <h2>MaterialEmissionsSurfacesWeightUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_CWT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_KG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_LB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_OZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_SLUG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_T</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_WEIGHT_UNIT_EMISSION_ESTIMATION_TON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSurfacesVolumeUnit>
+                <h2>MaterialEmissionsSurfacesVolumeUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_CM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_FLOZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_FT3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_IMPGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_IN3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_M3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_MM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_PT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_QT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_USGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_VOLUME_UNIT_EMISSION_ESTIMATION_YD3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSurfacesTopFaceUnit>
+                <h2>MaterialEmissionsSurfacesTopFaceUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_TOP_FACE_UNIT_EMISSION_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSurfacesAreaUnit>
+                <h2>MaterialEmissionsSurfacesAreaUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_EMISSION_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_EMISSION_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_EMISSION_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_EMISSION_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_EMISSION_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_AREA_UNIT_EMISSION_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSurfacesBottomFaceUnit>
+                <h2>MaterialEmissionsSurfacesBottomFaceUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SURFACES_BOTTOM_FACE_UNIT_EMISSION_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSolidsWeightUnit>
+                <h2>MaterialEmissionsSolidsWeightUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_CWT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_G</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_KG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_LB</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_OZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_SLUG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_T</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_WEIGHT_UNIT_EMISSION_ESTIMATION_TON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSolidsVolumeUnit>
+                <h2>MaterialEmissionsSolidsVolumeUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_CM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_FLOZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_FT3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_IMPGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_IN3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_M3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_MM3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_PT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_QT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_USGAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_VOLUME_UNIT_EMISSION_ESTIMATION_YD3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialEmissionsSolidsAreaUnit>
+                <h2>MaterialEmissionsSolidsAreaUnit Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_ESTIMATION_CM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_ESTIMATION_FT2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_ESTIMATION_IN2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_ESTIMATION_M2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_ESTIMATION_MM2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_EMISSIONS_SOLIDS_AREA_UNIT_EMISSION_ESTIMATION_YD2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialUseOfMaterialModelOrientation>
+                <h2>MaterialUseOfMaterialModelOrientation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_USE_OF_MATERIAL_MODEL_ORIENTATION_ORIENTATION_PARALLEL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_USE_OF_MATERIAL_MODEL_ORIENTATION_ORIENTATION_PERPENDICULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MaterialUseOfMaterialModelAlignment>
+                <h2>MaterialUseOfMaterialModelAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MATERIAL_USE_OF_MATERIAL_MODEL_ALIGNMENT_ALIGNMENT_EDGEWISE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MATERIAL_USE_OF_MATERIAL_MODEL_ALIGNMENT_ALIGNMENT_FLATWISE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

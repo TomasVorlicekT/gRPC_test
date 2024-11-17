@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_steel_design.SteelEffectiveLengths - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_steel_design.SteelEffectiveLengths - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=SteelEffectiveLengths>
+            <h2>SteelEffectiveLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td>Assigned to members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to member sets</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>flexural_buckling_about_y</td>
+                        <td>bool</td>
+                        <td>Flexural buckling about y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>flexural_buckling_about_z</td>
+                        <td>bool</td>
+                        <td>Flexural buckling about z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>torsional_buckling</td>
+                        <td>bool</td>
+                        <td>Torsional buckling</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>lateral_torsional_buckling</td>
+                        <td>bool</td>
+                        <td>Lateral-torsional buckling</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>buckling_factor_value_type</td>
+                        <td><a href="#SteelEffectiveLengthsBucklingFactorValueType">SteelEffectiveLengthsBucklingFactorValueType</a></td>
+                        <td>Buckling factor type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>principal_section_axes</td>
+                        <td>bool</td>
+                        <td>Principal section axes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>geometric_section_axes</td>
+                        <td>bool</td>
+                        <td>Geometric section axes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>intermediate_nodes</td>
+                        <td>bool</td>
+                        <td>Intermediate nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>different_properties</td>
+                        <td>bool</td>
+                        <td>Different properties</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>factors_definition_absolute</td>
+                        <td>bool</td>
+                        <td>Absolute factor definition</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>import_from_stability_analysis_enabled</td>
+                        <td>bool</td>
+                        <td>Import from stability analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_factors_definition_absolute</td>
+                        <td>bool</td>
+                        <td>Definition of factors absolute for import of stability data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_member_y</td>
+                        <td>int</td>
+                        <td>Member for import of stability data (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_loading_y</td>
+                        <td>int</td>
+                        <td>Loading for import of stability data (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_mode_number_y</td>
+                        <td>int</td>
+                        <td>Mode number for import of stability data (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_member_z</td>
+                        <td>int</td>
+                        <td>Member for import of stability data (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_loading_z</td>
+                        <td>int</td>
+                        <td>Loading for import of stability data (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_mode_number_z</td>
+                        <td>int</td>
+                        <td>Mode number for import of stability data (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_factors</td>
+                        <td><a href="#ArrayOfSteelEffectiveLengthsStabilityImportDataFactors">ArrayOfSteelEffectiveLengthsStabilityImportDataFactors</a></td>
+                        <td>Factors for import of stability data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_lengths</td>
+                        <td><a href="#ArrayOfSteelEffectiveLengthsStabilityImportDataLengths">ArrayOfSteelEffectiveLengthsStabilityImportDataLengths</a></td>
+                        <td>Lengths for import of stability data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_user_defined_y</td>
+                        <td>bool</td>
+                        <td>User-defined stability data for import (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_user_defined_z</td>
+                        <td>bool</td>
+                        <td>User-defined stability data for import (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_europe</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrEurope">SteelEffectiveLengthsDeterminationMcrEurope</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_is800</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrIs800">SteelEffectiveLengthsDeterminationMcrIs800</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_aisc</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrAisc">SteelEffectiveLengthsDeterminationMcrAisc</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_gb50</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrGb50">SteelEffectiveLengthsDeterminationMcrGb50</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_sia263</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrSia263">SteelEffectiveLengthsDeterminationMcrSia263</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_nbr8800</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrNbr8800">SteelEffectiveLengthsDeterminationMcrNbr8800</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_cb_aisc</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationCbAisc">SteelEffectiveLengthsDeterminationCbAisc</a></td>
+                        <td>Determination of modification factor C_b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>cb_factor_aisc</td>
+                        <td>float</td>
+                        <td>Factor C_b | C_b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_csa</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrCsa">SteelEffectiveLengthsDeterminationMcrCsa</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_cb_csa</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationCbCsa">SteelEffectiveLengthsDeterminationCbCsa</a></td>
+                        <td>Determination of modification factor ?_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>cb_factor_csa</td>
+                        <td>float</td>
+                        <td>Factor ?_2 | ?_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_mcr_bs5</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationMcrBs5">SteelEffectiveLengthsDeterminationMcrBs5</a></td>
+                        <td>Determination of M_cr</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_cb_nbr</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationCbNbr">SteelEffectiveLengthsDeterminationCbNbr</a></td>
+                        <td>Determination of modification factor C_b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>cb_factor_nbr</td>
+                        <td>float</td>
+                        <td>Factor C_b | C_b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_modification_restrained_segments_as</td>
+                        <td><a href="#SteelEffectiveLengthsMomentModificationRestrainedSegmentsAs">SteelEffectiveLengthsMomentModificationRestrainedSegmentsAs</a></td>
+                        <td>Moment modification factor | Restrained ends</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_modification_unrestrained_segments_as</td>
+                        <td><a href="#SteelEffectiveLengthsMomentModificationUnrestrainedSegmentsAs">SteelEffectiveLengthsMomentModificationUnrestrainedSegmentsAs</a></td>
+                        <td>Moment modification factor | Unrestrained end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>slenderness_reduction_restrained_segments_as</td>
+                        <td><a href="#SteelEffectiveLengthsSlendernessReductionRestrainedSegmentsAs">SteelEffectiveLengthsSlendernessReductionRestrainedSegmentsAs</a></td>
+                        <td>Slenderness reduction factor | Restrained ends</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>slenderness_reduction_unrestrained_segments_as</td>
+                        <td><a href="#SteelEffectiveLengthsSlendernessReductionUnrestrainedSegmentsAs">SteelEffectiveLengthsSlendernessReductionUnrestrainedSegmentsAs</a></td>
+                        <td>Slenderness reduction factor | Unrestrained end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modification_factor_alpha_restrained_segments_as</td>
+                        <td>float</td>
+                        <td>?_m | Restrained ends</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modification_factor_alpha_unrestrained_segments_as</td>
+                        <td>float</td>
+                        <td>?_m | Unrestrained end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_type</td>
+                        <td><a href="#SteelEffectiveLengthsMemberType">SteelEffectiveLengthsMemberType</a></td>
+                        <td>Member Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_type_yy</td>
+                        <td><a href="#SteelEffectiveLengthsMemberTypeYy">SteelEffectiveLengthsMemberTypeYy</a></td>
+                        <td>Member Type y-y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_type_zz</td>
+                        <td><a href="#SteelEffectiveLengthsMemberTypeZz">SteelEffectiveLengthsMemberTypeZz</a></td>
+                        <td>Member Type z-z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodal_supports</td>
+                        <td><a href="#ArrayOfSteelEffectiveLengthsNodalSupports">ArrayOfSteelEffectiveLengthsNodalSupports</a></td>
+                        <td>Nodal supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>factors</td>
+                        <td><a href="#ArrayOfSteelEffectiveLengthsFactors">ArrayOfSteelEffectiveLengthsFactors</a></td>
+                        <td>Factors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>lengths</td>
+                        <td><a href="#ArrayOfSteelEffectiveLengthsLengths">ArrayOfSteelEffectiveLengthsLengths</a></td>
+                        <td>Lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>standard_of_effective_lengths</td>
+                        <td><a href="#SteelEffectiveLengthsStandardOfEffectiveLengths">SteelEffectiveLengthsStandardOfEffectiveLengths</a></td>
+                        <td>Standard of effective lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>determination_of_elastic_critical_stress_aisi</td>
+                        <td><a href="#SteelEffectiveLengthsDeterminationOfElasticCriticalStressAisi">SteelEffectiveLengthsDeterminationOfElasticCriticalStressAisi</a></td>
+                        <td>Determination of elastic critical stress F_cre | AISI</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modification_factor_cb_aisi</td>
+                        <td><a href="#SteelEffectiveLengthsModificationFactorCbAisi">SteelEffectiveLengthsModificationFactorCbAisi</a></td>
+                        <td>Modification factor C_b | AISI</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modification_factor_cb_aisi_user_defined_value</td>
+                        <td>float</td>
+                        <td>User-defined value of modification factor C_b | AISI</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfSteelEffectiveLengthsStabilityImportDataFactors>
+            <h2>ArrayOfSteelEffectiveLengthsStabilityImportDataFactors</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSteelEffectiveLengthsStabilityImportDataLengths>
+            <h2>ArrayOfSteelEffectiveLengthsStabilityImportDataLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSteelEffectiveLengthsNodalSupports>
+            <h2>ArrayOfSteelEffectiveLengthsNodalSupports</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSteelEffectiveLengthsFactors>
+            <h2>ArrayOfSteelEffectiveLengthsFactors</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSteelEffectiveLengthsLengths>
+            <h2>ArrayOfSteelEffectiveLengthsLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SteelEffectiveLengthsBucklingFactorValueType>
+                <h2>SteelEffectiveLengthsBucklingFactorValueType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_BUCKLING_FACTOR_VALUE_TYPE_BUCKLING_FACTOR_VALUE_TYPE_THEORETICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_BUCKLING_FACTOR_VALUE_TYPE_BUCKLING_FACTOR_VALUE_TYPE_RECOMMENDED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrEurope>
+                <h2>SteelEffectiveLengthsDeterminationMcrEurope Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_EUROPE_DETERMINATION_EUROPE_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_EUROPE_DETERMINATION_EUROPE_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrIs800>
+                <h2>SteelEffectiveLengthsDeterminationMcrIs800 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_IS800_DETERMINATION_IS800_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_IS800_DETERMINATION_IS800_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrAisc>
+                <h2>SteelEffectiveLengthsDeterminationMcrAisc Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_AISC_DETERMINATION_AISC_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_AISC_DETERMINATION_AISC_ACC_TO_CHAPTER_F</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_AISC_DETERMINATION_AISC_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrGb50>
+                <h2>SteelEffectiveLengthsDeterminationMcrGb50 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_GB50_DETERMINATION_GB50_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_GB50_DETERMINATION_GB50_ANALYTICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_GB50_DETERMINATION_GB50_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrSia263>
+                <h2>SteelEffectiveLengthsDeterminationMcrSia263 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_SIA263_DETERMINATION_SIA263_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_SIA263_DETERMINATION_SIA263_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrNbr8800>
+                <h2>SteelEffectiveLengthsDeterminationMcrNbr8800 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_NBR8800_DETERMINATION_NBR8800_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_NBR8800_DETERMINATION_NBR8800_ACC_TO_TAB_G1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_NBR8800_DETERMINATION_NBR8800_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationCbAisc>
+                <h2>SteelEffectiveLengthsDeterminationCbAisc Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_AISC_DETERMINATION_CB_BASIC_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_AISC_DETERMINATION_CB_ACC_TO_CHAPTER_F</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_AISC_DETERMINATION_CB_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrCsa>
+                <h2>SteelEffectiveLengthsDeterminationMcrCsa Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_CSA_DETERMINATION_CSA_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_CSA_DETERMINATION_CSA_ACC_TO_CHAPTER_13_6</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_CSA_DETERMINATION_CSA_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationCbCsa>
+                <h2>SteelEffectiveLengthsDeterminationCbCsa Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_CSA_DETERMINATION_CB_BASIC_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_CSA_DETERMINATION_CB_ACC_TO_CHAPTER_13_6</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_CSA_DETERMINATION_CB_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationMcrBs5>
+                <h2>SteelEffectiveLengthsDeterminationMcrBs5 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_BS5_DETERMINATION_BS5_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_BS5_DETERMINATION_BS5_ACC_TO_ANNEX_B</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_MCR_BS5_DETERMINATION_BS5_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationCbNbr>
+                <h2>SteelEffectiveLengthsDeterminationCbNbr Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_NBR_DETERMINATION_CB_BASIC_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_NBR_DETERMINATION_CB_ACC_TO_5423</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_CB_NBR_DETERMINATION_CB_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsMomentModificationRestrainedSegmentsAs>
+                <h2>SteelEffectiveLengthsMomentModificationRestrainedSegmentsAs Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_RESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_BASIC_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_RESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_ACC_TO_5611_II</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_RESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_ACC_TO_5611_III</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_RESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_EIGENVALUE_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_RESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsMomentModificationUnrestrainedSegmentsAs>
+                <h2>SteelEffectiveLengthsMomentModificationUnrestrainedSegmentsAs Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_UNRESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_BASIC_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_UNRESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_ACC_TO_5611_II</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MOMENT_MODIFICATION_UNRESTRAINED_SEGMENTS_AS_MOMENT_ALPHA_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsSlendernessReductionRestrainedSegmentsAs>
+                <h2>SteelEffectiveLengthsSlendernessReductionRestrainedSegmentsAs Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_SLENDERNESS_REDUCTION_RESTRAINED_SEGMENTS_AS_SLENDERNESS_RESTRAINED_ALPHA_ACC_TO_5611</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_SLENDERNESS_REDUCTION_RESTRAINED_SEGMENTS_AS_SLENDERNESS_RESTRAINED_ALPHA_EIGENVALUE_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsSlendernessReductionUnrestrainedSegmentsAs>
+                <h2>SteelEffectiveLengthsSlendernessReductionUnrestrainedSegmentsAs Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_SLENDERNESS_REDUCTION_UNRESTRAINED_SEGMENTS_AS_SLENDERNESS_UNRESTRAINED_ALPHA_ACC_TO_5611</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_SLENDERNESS_REDUCTION_UNRESTRAINED_SEGMENTS_AS_SLENDERNESS_UNRESTRAINED_ALPHA_EIGENVALUE_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsMemberType>
+                <h2>SteelEffectiveLengthsMemberType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MEMBER_TYPE_MEMBER_TYPE_BEAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MEMBER_TYPE_MEMBER_TYPE_CANTILEVER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsMemberTypeYy>
+                <h2>SteelEffectiveLengthsMemberTypeYy Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MEMBER_TYPE_YY_MEMBER_TYPE_BEAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MEMBER_TYPE_YY_MEMBER_TYPE_CANTILEVER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsMemberTypeZz>
+                <h2>SteelEffectiveLengthsMemberTypeZz Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MEMBER_TYPE_ZZ_MEMBER_TYPE_BEAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MEMBER_TYPE_ZZ_MEMBER_TYPE_CANTILEVER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsStandardOfEffectiveLengths>
+                <h2>SteelEffectiveLengthsStandardOfEffectiveLengths Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_STANDARD_OF_EFFECTIVE_LENGTHS_STANDARD_OF_EFFECTIVE_LENGTHS_AISC_360</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_STANDARD_OF_EFFECTIVE_LENGTHS_STANDARD_OF_EFFECTIVE_LENGTHS_AISI_S100</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_STANDARD_OF_EFFECTIVE_LENGTHS_STANDARD_OF_EFFECTIVE_LENGTHS_CSA_S16</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsDeterminationOfElasticCriticalStressAisi>
+                <h2>SteelEffectiveLengthsDeterminationOfElasticCriticalStressAisi Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_OF_ELASTIC_CRITICAL_STRESS_AISI_AISI_DETERMINATION_OF_FCRE_FINITE_STRIP_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_DETERMINATION_OF_ELASTIC_CRITICAL_STRESS_AISI_AISI_DETERMINATION_OF_FCRE_ACC_TO_CHAPTERS_E2_F21</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SteelEffectiveLengthsModificationFactorCbAisi>
+                <h2>SteelEffectiveLengthsModificationFactorCbAisi Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MODIFICATION_FACTOR_CB_AISI_AISI_MODIFICATION_FACTOR_CB_BASIC_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MODIFICATION_FACTOR_CB_AISI_AISI_MODIFICATION_FACTOR_AUTOMATICALLY_ACC_TO_EQ_F2112</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STEEL_EFFECTIVE_LENGTHS_MODIFICATION_FACTOR_CB_AISI_AISI_MODIFICATION_FACTOR_CB_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

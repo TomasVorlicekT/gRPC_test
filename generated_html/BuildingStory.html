@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.building_model.BuildingStory - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.building_model.BuildingStory - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=BuildingStory>
+            <h2>BuildingStory</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#BuildingStoryType">BuildingStoryType</a></td>
+                        <td>Building Story Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>story_no</td>
+                        <td>int</td>
+                        <td>Story number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>elevation</td>
+                        <td>float</td>
+                        <td>Elevation | Z_top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bottom_elevation</td>
+                        <td>float</td>
+                        <td>Bottom Elevation | Z_bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>height</td>
+                        <td>float</td>
+                        <td>Height | ?Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modified_height</td>
+                        <td>float</td>
+                        <td>Modified Height | ?Z_0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>thickness</td>
+                        <td>float</td>
+                        <td>Thickness | d</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>info</td>
+                        <td><a href="#ArrayOfBuildingStoryInfoAndChildItems">ArrayOfBuildingStoryInfoAndChildItems</a></td>
+                        <td>Information</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>total_info</td>
+                        <td><a href="#ArrayOfBuildingStoryTotalInfoAndChildItems">ArrayOfBuildingStoryTotalInfoAndChildItems</a></td>
+                        <td>Total</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_geometry_type</td>
+                        <td><a href="#BuildingStoryModifyGeometryType">BuildingStoryModifyGeometryType</a></td>
+                        <td>Action</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>thickness_type</td>
+                        <td><a href="#BuildingStoryThicknessType">BuildingStoryThicknessType</a></td>
+                        <td>Thickness Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>slab_stiffness_type</td>
+                        <td><a href="#BuildingStorySlabStiffnessType">BuildingStorySlabStiffnessType</a></td>
+                        <td>Slab Stiffness Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>floor_stiffness_type</td>
+                        <td><a href="#BuildingStoryFloorStiffnessType">BuildingStoryFloorStiffnessType</a></td>
+                        <td>Floor Stiffness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vertical_result_line_active</td>
+                        <td>bool</td>
+                        <td>Vertical Result Line | Active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vertical_result_line_position_x</td>
+                        <td>float</td>
+                        <td>Vertical Result Line | Position X | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vertical_result_line_position_y</td>
+                        <td>float</td>
+                        <td>Vertical Result Line Position Y | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vertical_result_line_relative</td>
+                        <td>bool</td>
+                        <td>Vertical Result Line | Relative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vertical_result_line_relative_position_x</td>
+                        <td>float</td>
+                        <td>Vertical Result Line | Relative | Position X | ?X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>vertical_result_line_relative_position_y</td>
+                        <td>float</td>
+                        <td>Vertical Result Line | Relative | Position Y | ?Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass</td>
+                        <td>float</td>
+                        <td>Mass</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>X_C | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Y_C | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>line_support_model</td>
+                        <td><a href="#BuildingStoryLineSupportModel">BuildingStoryLineSupportModel</a></td>
+                        <td>Line Support Model</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodal_support_model</td>
+                        <td><a href="#BuildingStoryNodalSupportModel">BuildingStoryNodalSupportModel</a></td>
+                        <td>Nodal Support Model</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>building_stories_zero_value</td>
+                        <td>float</td>
+                        <td>Building Stories | Zero Value | Z_0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfBuildingStoryInfoAndChildItems>
+            <h2>ArrayOfBuildingStoryInfoAndChildItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfBuildingStoryTotalInfoAndChildItems>
+            <h2>ArrayOfBuildingStoryTotalInfoAndChildItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=BuildingStoryType>
+                <h2>BuildingStoryType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_TYPE_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=BuildingStoryModifyGeometryType>
+                <h2>BuildingStoryModifyGeometryType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_MODIFY_GEOMETRY_TYPE_BUILDING_STORY_MODIFY_GEOMETRY_TYPE_DO_NOTHING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_MODIFY_GEOMETRY_TYPE_BUILDING_STORY_MODIFY_GEOMETRY_TYPE_CONST_FROM_STORY_GROUND</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_MODIFY_GEOMETRY_TYPE_BUILDING_STORY_MODIFY_GEOMETRY_TYPE_CONST_FROM_STORY_ROOF</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_MODIFY_GEOMETRY_TYPE_BUILDING_STORY_MODIFY_GEOMETRY_TYPE_PROPORTIONAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=BuildingStoryThicknessType>
+                <h2>BuildingStoryThicknessType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_THICKNESS_TYPE_BUILDING_STORY_THICKNESS_TYPE_EFFECTIVE_HEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_THICKNESS_TYPE_BUILDING_STORY_THICKNESS_TYPE_CLEAR_HEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=BuildingStorySlabStiffnessType>
+                <h2>BuildingStorySlabStiffnessType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_SLAB_STIFFNESS_TYPE_BUILDING_STORY_SLAB_STIFFNESS_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_SLAB_STIFFNESS_TYPE_BUILDING_STORY_SLAB_STIFFNESS_TYPE_RIGID_DIAPHRAGM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=BuildingStoryFloorStiffnessType>
+                <h2>BuildingStoryFloorStiffnessType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_FLOOR_STIFFNESS_TYPE_BUILDING_STORY_FLOOR_STIFFNESS_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_FLOOR_STIFFNESS_TYPE_BUILDING_STORY_FLOOR_STIFFNESS_TYPE_FLEXIBLE_DIAPHRAGM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_FLOOR_STIFFNESS_TYPE_BUILDING_STORY_FLOOR_STIFFNESS_TYPE_RIGID_DIAPHRAGM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_FLOOR_STIFFNESS_TYPE_BUILDING_STORY_FLOOR_STIFFNESS_TYPE_SEMIRIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=BuildingStoryLineSupportModel>
+                <h2>BuildingStoryLineSupportModel Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_LINE_SUPPORT_MODEL_BUILDING_STORY_LINE_SUPPORT_MODEL_HINGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_LINE_SUPPORT_MODEL_BUILDING_STORY_LINE_SUPPORT_MODEL_HINGE_HINGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_LINE_SUPPORT_MODEL_BUILDING_STORY_LINE_SUPPORT_MODEL_HINGE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_LINE_SUPPORT_MODEL_BUILDING_STORY_LINE_SUPPORT_MODEL_RIGID_HINGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_LINE_SUPPORT_MODEL_BUILDING_STORY_LINE_SUPPORT_MODEL_RIGID_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=BuildingStoryNodalSupportModel>
+                <h2>BuildingStoryNodalSupportModel Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_NODAL_SUPPORT_MODEL_BUILDING_STORY_NODAL_SUPPORT_MODEL_HINGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_NODAL_SUPPORT_MODEL_BUILDING_STORY_NODAL_SUPPORT_MODEL_ACCORDING_TO_MEMBER_TYPE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_NODAL_SUPPORT_MODEL_BUILDING_STORY_NODAL_SUPPORT_MODEL_HINGE_HINGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_NODAL_SUPPORT_MODEL_BUILDING_STORY_NODAL_SUPPORT_MODEL_HINGE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_NODAL_SUPPORT_MODEL_BUILDING_STORY_NODAL_SUPPORT_MODEL_RIGID_HINGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>BUILDING_STORY_NODAL_SUPPORT_MODEL_BUILDING_STORY_NODAL_SUPPORT_MODEL_RIGID_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_special_objects.SurfaceReleaseType - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_special_objects.SurfaceReleaseType - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=SurfaceReleaseType>
+            <h2>SurfaceReleaseType</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_releases</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Surface Releases No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>translational_release_u_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>translational_release_u_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>translational_release_u_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>local_axis_system_type</td>
+                        <td><a href="#SurfaceReleaseTypeLocalAxisSystemType">SurfaceReleaseTypeLocalAxisSystemType</a></td>
+                        <td>Type of local axis system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>translational_release_u_x_nonlinearity</td>
+                        <td><a href="#SurfaceReleaseTypeTranslationalReleaseUXNonlinearity">SurfaceReleaseTypeTranslationalReleaseUXNonlinearity</a></td>
+                        <td>Nonlinearity | u_x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>translational_release_u_y_nonlinearity</td>
+                        <td><a href="#SurfaceReleaseTypeTranslationalReleaseUYNonlinearity">SurfaceReleaseTypeTranslationalReleaseUYNonlinearity</a></td>
+                        <td>Nonlinearity | u_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>translational_release_u_z_nonlinearity</td>
+                        <td><a href="#SurfaceReleaseTypeTranslationalReleaseUZNonlinearity">SurfaceReleaseTypeTranslationalReleaseUZNonlinearity</a></td>
+                        <td>Nonlinearity | u_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_table</td>
+                        <td><a href="#ArrayOfSurfaceReleaseTypeDiagramAlongXTable">ArrayOfSurfaceReleaseTypeDiagramAlongXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_table</td>
+                        <td><a href="#ArrayOfSurfaceReleaseTypeDiagramAlongYTable">ArrayOfSurfaceReleaseTypeDiagramAlongYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_table</td>
+                        <td><a href="#ArrayOfSurfaceReleaseTypeDiagramAlongZTable">ArrayOfSurfaceReleaseTypeDiagramAlongZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_start</td>
+                        <td><a href="#SurfaceReleaseTypeDiagramAlongXStart">SurfaceReleaseTypeDiagramAlongXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_start</td>
+                        <td><a href="#SurfaceReleaseTypeDiagramAlongYStart">SurfaceReleaseTypeDiagramAlongYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_start</td>
+                        <td><a href="#SurfaceReleaseTypeDiagramAlongZStart">SurfaceReleaseTypeDiagramAlongZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_end</td>
+                        <td><a href="#SurfaceReleaseTypeDiagramAlongXEnd">SurfaceReleaseTypeDiagramAlongXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_end</td>
+                        <td><a href="#SurfaceReleaseTypeDiagramAlongYEnd">SurfaceReleaseTypeDiagramAlongYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_end</td>
+                        <td><a href="#SurfaceReleaseTypeDiagramAlongZEnd">SurfaceReleaseTypeDiagramAlongZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_x , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_x , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_color_table</td>
+                        <td><a href="#ArrayOfSurfaceReleaseTypeDiagramAlongXColorTable">ArrayOfSurfaceReleaseTypeDiagramAlongXColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_color_table</td>
+                        <td><a href="#ArrayOfSurfaceReleaseTypeDiagramAlongYColorTable">ArrayOfSurfaceReleaseTypeDiagramAlongYColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_color_table</td>
+                        <td><a href="#ArrayOfSurfaceReleaseTypeDiagramAlongZColorTable">ArrayOfSurfaceReleaseTypeDiagramAlongZColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfSurfaceReleaseTypeDiagramAlongXTable>
+            <h2>ArrayOfSurfaceReleaseTypeDiagramAlongXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSurfaceReleaseTypeDiagramAlongYTable>
+            <h2>ArrayOfSurfaceReleaseTypeDiagramAlongYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSurfaceReleaseTypeDiagramAlongZTable>
+            <h2>ArrayOfSurfaceReleaseTypeDiagramAlongZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSurfaceReleaseTypeDiagramAlongXColorTable>
+            <h2>ArrayOfSurfaceReleaseTypeDiagramAlongXColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSurfaceReleaseTypeDiagramAlongYColorTable>
+            <h2>ArrayOfSurfaceReleaseTypeDiagramAlongYColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSurfaceReleaseTypeDiagramAlongZColorTable>
+            <h2>ArrayOfSurfaceReleaseTypeDiagramAlongZColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SurfaceReleaseTypeLocalAxisSystemType>
+                <h2>SurfaceReleaseTypeLocalAxisSystemType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_LOCAL_AXIS_SYSTEM_TYPE_LOCAL_AXIS_SYSTEM_TYPE_SAME_AS_ORIGINAL_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_LOCAL_AXIS_SYSTEM_TYPE_LOCAL_AXIS_SYSTEM_TYPE_REVERSED_TO_ORIGINAL_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeTranslationalReleaseUXNonlinearity>
+                <h2>SurfaceReleaseTypeTranslationalReleaseUXNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_X_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeTranslationalReleaseUYNonlinearity>
+                <h2>SurfaceReleaseTypeTranslationalReleaseUYNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Y_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeTranslationalReleaseUZNonlinearity>
+                <h2>SurfaceReleaseTypeTranslationalReleaseUZNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_TRANSLATIONAL_RELEASE_U_Z_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeDiagramAlongXStart>
+                <h2>SurfaceReleaseTypeDiagramAlongXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeDiagramAlongYStart>
+                <h2>SurfaceReleaseTypeDiagramAlongYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeDiagramAlongZStart>
+                <h2>SurfaceReleaseTypeDiagramAlongZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeDiagramAlongXEnd>
+                <h2>SurfaceReleaseTypeDiagramAlongXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeDiagramAlongYEnd>
+                <h2>SurfaceReleaseTypeDiagramAlongYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReleaseTypeDiagramAlongZEnd>
+                <h2>SurfaceReleaseTypeDiagramAlongZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

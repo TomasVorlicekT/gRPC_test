@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.ImperfectionCase - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.ImperfectionCase - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=ImperfectionCase>
+            <h2>ImperfectionCase</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#ImperfectionCaseType">ImperfectionCaseType</a></td>
+                        <td>Imperfection Case Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_load_cases</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Load Cases</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_load_combinations</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Load Combinations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_active</td>
+                        <td>bool</td>
+                        <td>Is Active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assign_to_combinations_without_assigned_imperfection_case</td>
+                        <td>bool</td>
+                        <td>Assign to all COs without assigned Imperfection Case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>direction</td>
+                        <td><a href="#ImperfectionCaseDirection">ImperfectionCaseDirection</a></td>
+                        <td>Imperfection direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>direction_for_level_direction</td>
+                        <td><a href="#ImperfectionCaseDirectionForLevelDirection">ImperfectionCaseDirectionForLevelDirection</a></td>
+                        <td>Imperfection direction for level direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>int</td>
+                        <td>Coordinate system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_case_for_notional_loads</td>
+                        <td>int</td>
+                        <td>Load Case for Notional Loads</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sway_coefficients_reciprocal</td>
+                        <td>bool</td>
+                        <td>Sway coefficient as reciprocal of 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>level_imperfections</td>
+                        <td><a href="#ArrayOfImperfectionCaseLevelImperfections">ArrayOfImperfectionCaseLevelImperfections</a></td>
+                        <td>Level imperfections</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>source</td>
+                        <td><a href="#ImperfectionCaseSource">ImperfectionCaseSource</a></td>
+                        <td>Source type for imperfection case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>shape_from_load_case</td>
+                        <td>int</td>
+                        <td>Imperfection shape from load case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>shape_from_load_combination</td>
+                        <td>int</td>
+                        <td>Imperfection shape from load combination</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>buckling_shape</td>
+                        <td>int</td>
+                        <td>Buckling shape</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>delta_zero</td>
+                        <td>float</td>
+                        <td>Imperfection magnitude | ?_0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>magnitude_assignment_type</td>
+                        <td><a href="#ImperfectionCaseMagnitudeAssignmentType">ImperfectionCaseMagnitudeAssignmentType</a></td>
+                        <td>Assignment type of imperfection magnitude</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_node</td>
+                        <td>int</td>
+                        <td>Assign imperfection magnitude to node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>amount_of_modes_to_investigate</td>
+                        <td>int</td>
+                        <td>Amount of modes to investigate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eigenmode_automatically</td>
+                        <td>bool</td>
+                        <td>Eigenmode automatically</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_cases_items</td>
+                        <td><a href="#ArrayOfImperfectionCaseImperfectionCasesItems">ArrayOfImperfectionCaseImperfectionCasesItems</a></td>
+                        <td>Items of Imperfection Cases</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfImperfectionCaseLevelImperfections>
+            <h2>ArrayOfImperfectionCaseLevelImperfections</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfImperfectionCaseImperfectionCasesItems>
+            <h2>ArrayOfImperfectionCaseImperfectionCasesItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=ImperfectionCaseType>
+                <h2>ImperfectionCaseType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_BUCKLING_MODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_DYNAMIC_EIGENMODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_IMPERFECTION_CASES_GROUP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_INITIAL_SWAY_VIA_TABLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_LOCAL_IMPERFECTIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_NOTIONAL_LOADS_FROM_LOAD_CASE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_TYPE_IMPERFECTION_TYPE_STATIC_DEFORMATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ImperfectionCaseDirection>
+                <h2>ImperfectionCaseDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_LOCAL_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_LOCAL_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_LOCAL_Y_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_LOCAL_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_LOCAL_Z_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_SPATIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_IMPERFECTION_CASE_DIRECTION_SPATIAL_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ImperfectionCaseDirectionForLevelDirection>
+                <h2>ImperfectionCaseDirectionForLevelDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_FOR_LEVEL_DIRECTION_DIRECTION_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_FOR_LEVEL_DIRECTION_DIRECTION_XY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_FOR_LEVEL_DIRECTION_DIRECTION_XZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_FOR_LEVEL_DIRECTION_DIRECTION_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_FOR_LEVEL_DIRECTION_DIRECTION_YZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_DIRECTION_FOR_LEVEL_DIRECTION_DIRECTION_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ImperfectionCaseSource>
+                <h2>ImperfectionCaseSource Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_SOURCE_SOURCE_TYPE_OWN_LOAD_CASE_OR_COMBINATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_SOURCE_SOURCE_TYPE_AUTOMATICALLY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_SOURCE_SOURCE_TYPE_LOAD_CASE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_SOURCE_SOURCE_TYPE_LOAD_COMBINATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ImperfectionCaseMagnitudeAssignmentType>
+                <h2>ImperfectionCaseMagnitudeAssignmentType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_MAGNITUDE_ASSIGNMENT_TYPE_MAGNITUDE_ASSIGNMENT_LOCATION_WITH_LARGEST_DISPLACEMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>IMPERFECTION_CASE_MAGNITUDE_ASSIGNMENT_TYPE_MAGNITUDE_ASSIGNMENT_SPECIFIC_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

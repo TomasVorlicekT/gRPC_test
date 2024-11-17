@@ -1,0 +1,3895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_nodes.NodalSupport - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_nodes.NodalSupport - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=NodalSupport>
+            <h2>NodalSupport</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_column_enabled</td>
+                        <td>bool</td>
+                        <td>Fictitious column enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specific_direction_enabled</td>
+                        <td>bool</td>
+                        <td>Specific direction enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specific_direction_type</td>
+                        <td><a href="#NodalSupportSpecificDirectionType">NodalSupportSpecificDirectionType</a></td>
+                        <td>Specific direction type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodes</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Nodes No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Spring constant | Spring in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Spring constant | Rotational restraint in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_x_nonlinearity</td>
+                        <td><a href="#NodalSupportSpringXNonlinearity">NodalSupportSpringXNonlinearity</a></td>
+                        <td>Nonlinearity | u_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_y_nonlinearity</td>
+                        <td><a href="#NodalSupportSpringYNonlinearity">NodalSupportSpringYNonlinearity</a></td>
+                        <td>Nonlinearity | u_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_z_nonlinearity</td>
+                        <td><a href="#NodalSupportSpringZNonlinearity">NodalSupportSpringZNonlinearity</a></td>
+                        <td>Nonlinearity | u_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_x_nonlinearity</td>
+                        <td><a href="#NodalSupportRotationalRestraintXNonlinearity">NodalSupportRotationalRestraintXNonlinearity</a></td>
+                        <td>Nonlinearity | ?_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_y_nonlinearity</td>
+                        <td><a href="#NodalSupportRotationalRestraintYNonlinearity">NodalSupportRotationalRestraintYNonlinearity</a></td>
+                        <td>Nonlinearity | ?_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_z_nonlinearity</td>
+                        <td><a href="#NodalSupportRotationalRestraintZNonlinearity">NodalSupportRotationalRestraintZNonlinearity</a></td>
+                        <td>Nonlinearity | ?_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axes_sequence</td>
+                        <td><a href="#NodalSupportAxesSequence">NodalSupportAxesSequence</a></td>
+                        <td>Sequence | Sequence - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_base_semi_rigid</td>
+                        <td>float</td>
+                        <td>Semi-rigid elastic</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_base_support_type</td>
+                        <td><a href="#NodalSupportColumnBaseSupportType">NodalSupportColumnBaseSupportType</a></td>
+                        <td>Column base support type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_head_support_type</td>
+                        <td><a href="#NodalSupportColumnHeadSupportType">NodalSupportColumnHeadSupportType</a></td>
+                        <td>Column head support type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_head_type</td>
+                        <td><a href="#NodalSupportColumnHeadType">NodalSupportColumnHeadType</a></td>
+                        <td>Column head type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_height</td>
+                        <td>float</td>
+                        <td>Column dimension | H</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_section_same_as_head</td>
+                        <td>bool</td>
+                        <td>Column section</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_material</td>
+                        <td>int</td>
+                        <td>Column material</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_rotation</td>
+                        <td>float</td>
+                        <td>Column rotation | ?_Z'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_rotational_restraint_x</td>
+                        <td>float</td>
+                        <td>Column spring constant | C_?,X'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_rotational_restraint_y</td>
+                        <td>float</td>
+                        <td>Column spring constant | C_?,Y'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_section</td>
+                        <td>int</td>
+                        <td>Column section</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_shear_stiffness</td>
+                        <td>bool</td>
+                        <td>Column Shear Stiffness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_spring_x</td>
+                        <td>float</td>
+                        <td>Column spring constant | C_u,X'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_spring_y</td>
+                        <td>float</td>
+                        <td>Column spring constant | C_u,Y'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_spring_z</td>
+                        <td>float</td>
+                        <td>Column spring constant | C_u,Z'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_support_type</td>
+                        <td><a href="#NodalSupportColumnSupportType">NodalSupportColumnSupportType</a></td>
+                        <td>Column support type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_width_x</td>
+                        <td>float</td>
+                        <td>Column dimension | b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_width_y</td>
+                        <td>float</td>
+                        <td>Column dimension | h</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>int</td>
+                        <td>Coordinate System</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_start</td>
+                        <td><a href="#NodalSupportDiagramAlongXStart">NodalSupportDiagramAlongXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_end</td>
+                        <td><a href="#NodalSupportDiagramAlongXEnd">NodalSupportDiagramAlongXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAlongXTable">ArrayOfNodalSupportDiagramAlongXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_start</td>
+                        <td><a href="#NodalSupportDiagramAlongYStart">NodalSupportDiagramAlongYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_end</td>
+                        <td><a href="#NodalSupportDiagramAlongYEnd">NodalSupportDiagramAlongYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAlongYTable">ArrayOfNodalSupportDiagramAlongYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_start</td>
+                        <td><a href="#NodalSupportDiagramAlongZStart">NodalSupportDiagramAlongZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_end</td>
+                        <td><a href="#NodalSupportDiagramAlongZEnd">NodalSupportDiagramAlongZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAlongZTable">ArrayOfNodalSupportDiagramAlongZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_start</td>
+                        <td><a href="#NodalSupportDiagramAroundXStart">NodalSupportDiagramAroundXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_end</td>
+                        <td><a href="#NodalSupportDiagramAroundXEnd">NodalSupportDiagramAroundXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAroundXTable">ArrayOfNodalSupportDiagramAroundXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_start</td>
+                        <td><a href="#NodalSupportDiagramAroundYStart">NodalSupportDiagramAroundYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_end</td>
+                        <td><a href="#NodalSupportDiagramAroundYEnd">NodalSupportDiagramAroundYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAroundYTable">ArrayOfNodalSupportDiagramAroundYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_start</td>
+                        <td><a href="#NodalSupportDiagramAroundZStart">NodalSupportDiagramAroundZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_end</td>
+                        <td><a href="#NodalSupportDiagramAroundZEnd">NodalSupportDiagramAroundZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAroundZTable">ArrayOfNodalSupportDiagramAroundZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>directed_to_node_direction_node</td>
+                        <td>int</td>
+                        <td>Direct to node No. | Direct to node No. - Specific direction type has to be Directed to Node.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>directed_to_node_first_axis</td>
+                        <td><a href="#NodalSupportDirectedToNodeFirstAxis">NodalSupportDirectedToNodeFirstAxis</a></td>
+                        <td>1st axis | 1st axis - Specific direction type has to be Directed to Node.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>directed_to_node_plane_node</td>
+                        <td>int</td>
+                        <td>In plane by node No. | In plane by node No. - Specific direction type has to be Directed to Node.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>directed_to_node_second_axis</td>
+                        <td><a href="#NodalSupportDirectedToNodeSecondAxis">NodalSupportDirectedToNodeSecondAxis</a></td>
+                        <td>2nd axis | 2nd axis - Specific direction type has to be Directed to Node.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_x</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_xy</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_XY</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_xz</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_XZ</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_y</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_yx</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_YX</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_yz</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_YZ</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_z</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_zx</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_ZX</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_zy</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_ZY</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_line</td>
+                        <td>int</td>
+                        <td>Line No. | Line No. - Specific direction type has to be Parallel to CS of Line.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_member</td>
+                        <td>int</td>
+                        <td>Member No. | Member No. - Specific direction type has to be Parallel to CS of Member.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_first_axis</td>
+                        <td><a href="#NodalSupportParallelToTwoNodesFirstAxis">NodalSupportParallelToTwoNodesFirstAxis</a></td>
+                        <td>1st axis | 1st axis - Specific direction type has to be Parallel to Two Nodes.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_first_node</td>
+                        <td>int</td>
+                        <td>First node | First node - Specific direction type has to be Parallel to Two Nodes.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_plane_node</td>
+                        <td>int</td>
+                        <td>In plane by node No. | In plane by node No. - Specific direction type has to be Parallel to Two Nodes.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_second_axis</td>
+                        <td><a href="#NodalSupportParallelToTwoNodesSecondAxis">NodalSupportParallelToTwoNodesSecondAxis</a></td>
+                        <td>2nd axis | 2nd axis - Specific direction type has to be Parallel to Two Nodes.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parallel_to_two_nodes_second_node</td>
+                        <td>int</td>
+                        <td>Second node | Second node - Specific direction type has to be Parallel to Two Nodes.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_type</td>
+                        <td><a href="#NodalSupportPartialActivityAlongXNegativeType">NodalSupportPartialActivityAlongXNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | P_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_type</td>
+                        <td><a href="#NodalSupportPartialActivityAlongXPositiveType">NodalSupportPartialActivityAlongXPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | P_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_type</td>
+                        <td><a href="#NodalSupportPartialActivityAlongYNegativeType">NodalSupportPartialActivityAlongYNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | P_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_type</td>
+                        <td><a href="#NodalSupportPartialActivityAlongYPositiveType">NodalSupportPartialActivityAlongYPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | P_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_type</td>
+                        <td><a href="#NodalSupportPartialActivityAlongZNegativeType">NodalSupportPartialActivityAlongZNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | P_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_type</td>
+                        <td><a href="#NodalSupportPartialActivityAlongZPositiveType">NodalSupportPartialActivityAlongZPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | P_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_type</td>
+                        <td><a href="#NodalSupportPartialActivityAroundXNegativeType">NodalSupportPartialActivityAroundXNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | M_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_type</td>
+                        <td><a href="#NodalSupportPartialActivityAroundXPositiveType">NodalSupportPartialActivityAroundXPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | M_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_type</td>
+                        <td><a href="#NodalSupportPartialActivityAroundYNegativeType">NodalSupportPartialActivityAroundYNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | M_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_type</td>
+                        <td><a href="#NodalSupportPartialActivityAroundYPositiveType">NodalSupportPartialActivityAroundYPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | M_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_type</td>
+                        <td><a href="#NodalSupportPartialActivityAroundZNegativeType">NodalSupportPartialActivityAroundZNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | M_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_type</td>
+                        <td><a href="#NodalSupportPartialActivityAroundZPositiveType">NodalSupportPartialActivityAroundZPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | M_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_1</td>
+                        <td>float</td>
+                        <td>Rotation angle about first axis | ?_X' | Rotation angle about first axis | ?_X' - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_2</td>
+                        <td>float</td>
+                        <td>Rotation angle about second axis | ?_Y' | Rotation angle about second axis | ?_Y' - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_3</td>
+                        <td>float</td>
+                        <td>Rotation angle about third axis | ?_Z' | Rotation angle about third axis | ?_Z' - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_x</td>
+                        <td>float</td>
+                        <td>Rotation angle about X axis | ?_X' | Rotation angle about X axis | ?_X' - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_y</td>
+                        <td>float</td>
+                        <td>Rotation angle about Y axis | ?_Y' | Rotation angle about Y axis | ?_Y' - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_about_angle_z</td>
+                        <td>float</td>
+                        <td>Rotation angle about Z axis | ?_Z' | Rotation angle about Z axis | ?_Z' - Specific direction type has to be Rotated via 3 Angles.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_x_depends_on</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundXDependsOn">NodalSupportStiffnessDiagramAroundXDependsOn</a></td>
+                        <td>Depends on</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_x_end</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundXEnd">NodalSupportStiffnessDiagramAroundXEnd</a></td>
+                        <td>Stiffness diagram ending type at end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_x_start</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundXStart">NodalSupportStiffnessDiagramAroundXStart</a></td>
+                        <td>Stiffness diagram ending type at start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_x_table</td>
+                        <td><a href="#ArrayOfNodalSupportStiffnessDiagramAroundXTable">ArrayOfNodalSupportStiffnessDiagramAroundXTable</a></td>
+                        <td>Stiffness diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_y_depends_on</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundYDependsOn">NodalSupportStiffnessDiagramAroundYDependsOn</a></td>
+                        <td>Depends on</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_y_end</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundYEnd">NodalSupportStiffnessDiagramAroundYEnd</a></td>
+                        <td>Stiffness diagram ending type at end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_y_start</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundYStart">NodalSupportStiffnessDiagramAroundYStart</a></td>
+                        <td>Stiffness diagram ending type at start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_y_table</td>
+                        <td><a href="#ArrayOfNodalSupportStiffnessDiagramAroundYTable">ArrayOfNodalSupportStiffnessDiagramAroundYTable</a></td>
+                        <td>Stiffness diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_z_depends_on</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundZDependsOn">NodalSupportStiffnessDiagramAroundZDependsOn</a></td>
+                        <td>Depends on</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_z_end</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundZEnd">NodalSupportStiffnessDiagramAroundZEnd</a></td>
+                        <td>Stiffness diagram ending type at end</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_z_start</td>
+                        <td><a href="#NodalSupportStiffnessDiagramAroundZStart">NodalSupportStiffnessDiagramAroundZStart</a></td>
+                        <td>Stiffness diagram ending type at start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stiffness_diagram_around_z_table</td>
+                        <td><a href="#ArrayOfNodalSupportStiffnessDiagramAroundZTable">ArrayOfNodalSupportStiffnessDiagramAroundZTable</a></td>
+                        <td>Stiffness diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_diameter_x</td>
+                        <td>float</td>
+                        <td>Support Diameter | d_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_diameter_y</td>
+                        <td>float</td>
+                        <td>Support Diameter | d_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_diameter_z</td>
+                        <td>float</td>
+                        <td>Support Diameter | d_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_height_x</td>
+                        <td>float</td>
+                        <td>Support Dimension | a_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_height_y</td>
+                        <td>float</td>
+                        <td>Support Dimension | a_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_height_z</td>
+                        <td>float</td>
+                        <td>Support Dimension | a_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_type_on_x</td>
+                        <td><a href="#NodalSupportSupportDimensionTypeOnX">NodalSupportSupportDimensionTypeOnX</a></td>
+                        <td>Support Dimension Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_type_on_y</td>
+                        <td><a href="#NodalSupportSupportDimensionTypeOnY">NodalSupportSupportDimensionTypeOnY</a></td>
+                        <td>Support Dimension Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_type_on_z</td>
+                        <td><a href="#NodalSupportSupportDimensionTypeOnZ">NodalSupportSupportDimensionTypeOnZ</a></td>
+                        <td>Support Dimension Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_width_x</td>
+                        <td>float</td>
+                        <td>Support Dimension | b_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_width_y</td>
+                        <td>float</td>
+                        <td>Support Dimension | b_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimension_width_z</td>
+                        <td>float</td>
+                        <td>Support Dimension | b_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimensions_enabled</td>
+                        <td>bool</td>
+                        <td>Support dimensions enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - ?_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - ?_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - ?_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + ?_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + ?_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + ?_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_color_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAlongXColorTable">ArrayOfNodalSupportDiagramAlongXColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_color_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAlongYColorTable">ArrayOfNodalSupportDiagramAlongYColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_color_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAlongZColorTable">ArrayOfNodalSupportDiagramAlongZColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_color_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAroundXColorTable">ArrayOfNodalSupportDiagramAroundXColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_color_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAroundYColorTable">ArrayOfNodalSupportDiagramAroundYColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_color_table</td>
+                        <td><a href="#ArrayOfNodalSupportDiagramAroundZColorTable">ArrayOfNodalSupportDiagramAroundZColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAlongXTable>
+            <h2>ArrayOfNodalSupportDiagramAlongXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAlongYTable>
+            <h2>ArrayOfNodalSupportDiagramAlongYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAlongZTable>
+            <h2>ArrayOfNodalSupportDiagramAlongZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAroundXTable>
+            <h2>ArrayOfNodalSupportDiagramAroundXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAroundYTable>
+            <h2>ArrayOfNodalSupportDiagramAroundYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAroundZTable>
+            <h2>ArrayOfNodalSupportDiagramAroundZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportStiffnessDiagramAroundXTable>
+            <h2>ArrayOfNodalSupportStiffnessDiagramAroundXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportStiffnessDiagramAroundYTable>
+            <h2>ArrayOfNodalSupportStiffnessDiagramAroundYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportStiffnessDiagramAroundZTable>
+            <h2>ArrayOfNodalSupportStiffnessDiagramAroundZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAlongXColorTable>
+            <h2>ArrayOfNodalSupportDiagramAlongXColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAlongYColorTable>
+            <h2>ArrayOfNodalSupportDiagramAlongYColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAlongZColorTable>
+            <h2>ArrayOfNodalSupportDiagramAlongZColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAroundXColorTable>
+            <h2>ArrayOfNodalSupportDiagramAroundXColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAroundYColorTable>
+            <h2>ArrayOfNodalSupportDiagramAroundYColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalSupportDiagramAroundZColorTable>
+            <h2>ArrayOfNodalSupportDiagramAroundZColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=NodalSupportSpecificDirectionType>
+                <h2>NodalSupportSpecificDirectionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_ROTATED_VIA_3_ANGLES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_DIRECTED_TO_NODE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_PARALLEL_TO_CS_OF_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_PARALLEL_TO_CS_OF_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPECIFIC_DIRECTION_TYPE_DIRECTION_TYPE_PARALLEL_TO_TWO_NODES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportSpringXNonlinearity>
+                <h2>NodalSupportSpringXNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportSpringYNonlinearity>
+                <h2>NodalSupportSpringYNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportSpringZNonlinearity>
+                <h2>NodalSupportSpringZNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportRotationalRestraintXNonlinearity>
+                <h2>NodalSupportRotationalRestraintXNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportRotationalRestraintYNonlinearity>
+                <h2>NodalSupportRotationalRestraintYNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportRotationalRestraintZNonlinearity>
+                <h2>NodalSupportRotationalRestraintZNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportAxesSequence>
+                <h2>NodalSupportAxesSequence Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_AXES_SEQUENCE_SEQUENCE_XYZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_AXES_SEQUENCE_SEQUENCE_XZY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_AXES_SEQUENCE_SEQUENCE_YXZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_AXES_SEQUENCE_SEQUENCE_YZX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_AXES_SEQUENCE_SEQUENCE_ZXY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_AXES_SEQUENCE_SEQUENCE_ZYX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportColumnBaseSupportType>
+                <h2>NodalSupportColumnBaseSupportType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_BASE_SUPPORT_TYPE_BASE_SUPPORT_TYPE_HINGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_BASE_SUPPORT_TYPE_BASE_SUPPORT_TYPE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_BASE_SUPPORT_TYPE_BASE_SUPPORT_TYPE_SEMI_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportColumnHeadSupportType>
+                <h2>NodalSupportColumnHeadSupportType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_HEAD_SUPPORT_TYPE_HEAD_SUPPORT_TYPE_HINGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_HEAD_SUPPORT_TYPE_HEAD_SUPPORT_TYPE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportColumnHeadType>
+                <h2>NodalSupportColumnHeadType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_HEAD_TYPE_HEAD_TYPE_RECTANGULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_HEAD_TYPE_HEAD_TYPE_CIRCULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportColumnSupportType>
+                <h2>NodalSupportColumnSupportType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_SUPPORT_TYPE_SUPPORT_TYPE_ELASTIC_SURFACE_FOUNDATIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_SUPPORT_TYPE_SUPPORT_TYPE_ELASTIC_NODAL_SUPPORT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_COLUMN_SUPPORT_TYPE_SUPPORT_TYPE_WITH_ADAPTED_FE_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAlongXStart>
+                <h2>NodalSupportDiagramAlongXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAlongXEnd>
+                <h2>NodalSupportDiagramAlongXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAlongYStart>
+                <h2>NodalSupportDiagramAlongYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAlongYEnd>
+                <h2>NodalSupportDiagramAlongYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAlongZStart>
+                <h2>NodalSupportDiagramAlongZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAlongZEnd>
+                <h2>NodalSupportDiagramAlongZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAroundXStart>
+                <h2>NodalSupportDiagramAroundXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAroundXEnd>
+                <h2>NodalSupportDiagramAroundXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAroundYStart>
+                <h2>NodalSupportDiagramAroundYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAroundYEnd>
+                <h2>NodalSupportDiagramAroundYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAroundZStart>
+                <h2>NodalSupportDiagramAroundZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDiagramAroundZEnd>
+                <h2>NodalSupportDiagramAroundZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDirectedToNodeFirstAxis>
+                <h2>NodalSupportDirectedToNodeFirstAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIRECTED_TO_NODE_FIRST_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIRECTED_TO_NODE_FIRST_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIRECTED_TO_NODE_FIRST_AXIS_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportDirectedToNodeSecondAxis>
+                <h2>NodalSupportDirectedToNodeSecondAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIRECTED_TO_NODE_SECOND_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIRECTED_TO_NODE_SECOND_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_DIRECTED_TO_NODE_SECOND_AXIS_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportParallelToTwoNodesFirstAxis>
+                <h2>NodalSupportParallelToTwoNodesFirstAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARALLEL_TO_TWO_NODES_FIRST_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARALLEL_TO_TWO_NODES_FIRST_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARALLEL_TO_TWO_NODES_FIRST_AXIS_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportParallelToTwoNodesSecondAxis>
+                <h2>NodalSupportParallelToTwoNodesSecondAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARALLEL_TO_TWO_NODES_SECOND_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARALLEL_TO_TWO_NODES_SECOND_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARALLEL_TO_TWO_NODES_SECOND_AXIS_AXIS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAlongXNegativeType>
+                <h2>NodalSupportPartialActivityAlongXNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAlongXPositiveType>
+                <h2>NodalSupportPartialActivityAlongXPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAlongYNegativeType>
+                <h2>NodalSupportPartialActivityAlongYNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAlongYPositiveType>
+                <h2>NodalSupportPartialActivityAlongYPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAlongZNegativeType>
+                <h2>NodalSupportPartialActivityAlongZNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAlongZPositiveType>
+                <h2>NodalSupportPartialActivityAlongZPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAroundXNegativeType>
+                <h2>NodalSupportPartialActivityAroundXNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAroundXPositiveType>
+                <h2>NodalSupportPartialActivityAroundXPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAroundYNegativeType>
+                <h2>NodalSupportPartialActivityAroundYNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAroundYPositiveType>
+                <h2>NodalSupportPartialActivityAroundYPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAroundZNegativeType>
+                <h2>NodalSupportPartialActivityAroundZNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportPartialActivityAroundZPositiveType>
+                <h2>NodalSupportPartialActivityAroundZPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundXDependsOn>
+                <h2>NodalSupportStiffnessDiagramAroundXDependsOn Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_P</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundXEnd>
+                <h2>NodalSupportStiffnessDiagramAroundXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_END_STIFFNESS_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_END_STIFFNESS_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_END_STIFFNESS_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundXStart>
+                <h2>NodalSupportStiffnessDiagramAroundXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_START_STIFFNESS_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_START_STIFFNESS_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_X_START_STIFFNESS_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundYDependsOn>
+                <h2>NodalSupportStiffnessDiagramAroundYDependsOn Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_P</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundYEnd>
+                <h2>NodalSupportStiffnessDiagramAroundYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_END_STIFFNESS_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_END_STIFFNESS_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_END_STIFFNESS_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundYStart>
+                <h2>NodalSupportStiffnessDiagramAroundYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_START_STIFFNESS_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_START_STIFFNESS_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Y_START_STIFFNESS_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundZDependsOn>
+                <h2>NodalSupportStiffnessDiagramAroundZDependsOn Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_P</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_DEPENDS_ON_STIFFNESS_DIAGRAM_DEPENDS_ON_PZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundZEnd>
+                <h2>NodalSupportStiffnessDiagramAroundZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_END_STIFFNESS_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_END_STIFFNESS_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_END_STIFFNESS_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportStiffnessDiagramAroundZStart>
+                <h2>NodalSupportStiffnessDiagramAroundZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_START_STIFFNESS_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_START_STIFFNESS_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_STIFFNESS_DIAGRAM_AROUND_Z_START_STIFFNESS_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportSupportDimensionTypeOnX>
+                <h2>NodalSupportSupportDimensionTypeOnX Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_X_SUPPORT_DIMENSION_TYPE_RECTANGULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_X_SUPPORT_DIMENSION_TYPE_CIRCULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_X_SUPPORT_DIMENSION_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportSupportDimensionTypeOnY>
+                <h2>NodalSupportSupportDimensionTypeOnY Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_Y_SUPPORT_DIMENSION_TYPE_RECTANGULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_Y_SUPPORT_DIMENSION_TYPE_CIRCULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_Y_SUPPORT_DIMENSION_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalSupportSupportDimensionTypeOnZ>
+                <h2>NodalSupportSupportDimensionTypeOnZ Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_Z_SUPPORT_DIMENSION_TYPE_RECTANGULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_Z_SUPPORT_DIMENSION_TYPE_CIRCULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_SUPPORT_SUPPORT_DIMENSION_TYPE_ON_Z_SUPPORT_DIMENSION_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

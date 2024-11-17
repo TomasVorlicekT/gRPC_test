@@ -1,0 +1,2846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_lines.LineSupport - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_lines.LineSupport - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=LineSupport>
+            <h2>LineSupport</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>lines</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td><a href="#LineSupportCoordinateSystem">LineSupportCoordinateSystem</a></td>
+                        <td>Coordinate System</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>x_axis_rotation</td>
+                        <td>float</td>
+                        <td>x Axis Rotation | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Spring | Spring in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Rotational restraint | Rotational restraint in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_x_nonlinearity</td>
+                        <td><a href="#LineSupportSpringXNonlinearity">LineSupportSpringXNonlinearity</a></td>
+                        <td>Nonlinearity | u_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_y_nonlinearity</td>
+                        <td><a href="#LineSupportSpringYNonlinearity">LineSupportSpringYNonlinearity</a></td>
+                        <td>Nonlinearity | u_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_z_nonlinearity</td>
+                        <td><a href="#LineSupportSpringZNonlinearity">LineSupportSpringZNonlinearity</a></td>
+                        <td>Nonlinearity | u_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_x_nonlinearity</td>
+                        <td><a href="#LineSupportRotationalRestraintXNonlinearity">LineSupportRotationalRestraintXNonlinearity</a></td>
+                        <td>Nonlinearity | ?_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_y_nonlinearity</td>
+                        <td><a href="#LineSupportRotationalRestraintYNonlinearity">LineSupportRotationalRestraintYNonlinearity</a></td>
+                        <td>Nonlinearity | ?_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotational_restraint_z_nonlinearity</td>
+                        <td><a href="#LineSupportRotationalRestraintZNonlinearity">LineSupportRotationalRestraintZNonlinearity</a></td>
+                        <td>Nonlinearity | ?_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_end</td>
+                        <td><a href="#LineSupportDiagramAlongXEnd">LineSupportDiagramAlongXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_start</td>
+                        <td><a href="#LineSupportDiagramAlongXStart">LineSupportDiagramAlongXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAlongXTable">ArrayOfLineSupportDiagramAlongXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_end</td>
+                        <td><a href="#LineSupportDiagramAlongYEnd">LineSupportDiagramAlongYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_start</td>
+                        <td><a href="#LineSupportDiagramAlongYStart">LineSupportDiagramAlongYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAlongYTable">ArrayOfLineSupportDiagramAlongYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_end</td>
+                        <td><a href="#LineSupportDiagramAlongZEnd">LineSupportDiagramAlongZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_start</td>
+                        <td><a href="#LineSupportDiagramAlongZStart">LineSupportDiagramAlongZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAlongZTable">ArrayOfLineSupportDiagramAlongZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_end</td>
+                        <td><a href="#LineSupportDiagramAroundXEnd">LineSupportDiagramAroundXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_start</td>
+                        <td><a href="#LineSupportDiagramAroundXStart">LineSupportDiagramAroundXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAroundXTable">ArrayOfLineSupportDiagramAroundXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_end</td>
+                        <td><a href="#LineSupportDiagramAroundYEnd">LineSupportDiagramAroundYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_start</td>
+                        <td><a href="#LineSupportDiagramAroundYStart">LineSupportDiagramAroundYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAroundYTable">ArrayOfLineSupportDiagramAroundYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_end</td>
+                        <td><a href="#LineSupportDiagramAroundZEnd">LineSupportDiagramAroundZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_start</td>
+                        <td><a href="#LineSupportDiagramAroundZStart">LineSupportDiagramAroundZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAroundZTable">ArrayOfLineSupportDiagramAroundZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - u_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - ?_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - ?_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_ac_yield_minus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield minus | - ?_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + u_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + ?_X , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + ?_Y , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_ac_yield_plus</td>
+                        <td>float</td>
+                        <td>Acceptance criteria | Yield plus | + ?_Z , yield</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_acceptance_criteria_active</td>
+                        <td>bool</td>
+                        <td>Acceptance criteria active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_minus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_minus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_plus_color_one</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color one</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_plus_color_two</td>
+                        <td><a href="#Color">Color</a></td>
+                        <td>Color two</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_color_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAlongXColorTable">ArrayOfLineSupportDiagramAlongXColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_color_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAlongYColorTable">ArrayOfLineSupportDiagramAlongYColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_color_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAlongZColorTable">ArrayOfLineSupportDiagramAlongZColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_color_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAroundXColorTable">ArrayOfLineSupportDiagramAroundXColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_color_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAroundYColorTable">ArrayOfLineSupportDiagramAroundYColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_color_table</td>
+                        <td><a href="#ArrayOfLineSupportDiagramAroundZColorTable">ArrayOfLineSupportDiagramAroundZColorTable</a></td>
+                        <td>Diagram color table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_x</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_y</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_z</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_direction_independent_x</td>
+                        <td>bool</td>
+                        <td>Direction independent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_direction_independent_y</td>
+                        <td>bool</td>
+                        <td>Direction independent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_direction_independent_z</td>
+                        <td>bool</td>
+                        <td>Direction independent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | p_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_X,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_type</td>
+                        <td><a href="#LineSupportPartialActivityAlongXNegativeType">LineSupportPartialActivityAlongXNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | p_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_X,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_type</td>
+                        <td><a href="#LineSupportPartialActivityAlongXPositiveType">LineSupportPartialActivityAlongXPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | p_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Y,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_type</td>
+                        <td><a href="#LineSupportPartialActivityAlongYNegativeType">LineSupportPartialActivityAlongYNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | p_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Y,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_type</td>
+                        <td><a href="#LineSupportPartialActivityAlongYPositiveType">LineSupportPartialActivityAlongYPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | p_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Z,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_type</td>
+                        <td><a href="#LineSupportPartialActivityAlongZNegativeType">LineSupportPartialActivityAlongZNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity support displacement | u_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity support force | p_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_Z,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_type</td>
+                        <td><a href="#LineSupportPartialActivityAlongZPositiveType">LineSupportPartialActivityAlongZPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | m_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_X (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_X,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_type</td>
+                        <td><a href="#LineSupportPartialActivityAroundXNegativeType">LineSupportPartialActivityAroundXNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | m_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_X (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_X,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_type</td>
+                        <td><a href="#LineSupportPartialActivityAroundXPositiveType">LineSupportPartialActivityAroundXPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | m_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Y,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_type</td>
+                        <td><a href="#LineSupportPartialActivityAroundYNegativeType">LineSupportPartialActivityAroundYNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | m_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Y,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_type</td>
+                        <td><a href="#LineSupportPartialActivityAroundYPositiveType">LineSupportPartialActivityAroundYPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | m_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Z,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_type</td>
+                        <td><a href="#LineSupportPartialActivityAroundZNegativeType">LineSupportPartialActivityAroundZNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity support moment | m_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity support rotation | ?_Z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_Z,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_type</td>
+                        <td><a href="#LineSupportPartialActivityAroundZPositiveType">LineSupportPartialActivityAroundZPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_enabled</td>
+                        <td>bool</td>
+                        <td>Fictitious wall enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_width</td>
+                        <td>float</td>
+                        <td>Wall width | t</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_height</td>
+                        <td>float</td>
+                        <td>Wall height | H</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_head_support_type</td>
+                        <td><a href="#LineSupportFictitiousWallHeadSupportType">LineSupportFictitiousWallHeadSupportType</a></td>
+                        <td>Wall head support type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_base_support_type</td>
+                        <td><a href="#LineSupportFictitiousWallBaseSupportType">LineSupportFictitiousWallBaseSupportType</a></td>
+                        <td>Wall base support type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_base_elastic</td>
+                        <td>float</td>
+                        <td>Rigid elastic</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_shear_stiffness</td>
+                        <td>bool</td>
+                        <td>Wall shear stiffness active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_material</td>
+                        <td>int</td>
+                        <td>Wall material</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_spring_x</td>
+                        <td>float</td>
+                        <td>Wall spring constant | C_u,X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_spring_y</td>
+                        <td>float</td>
+                        <td>Wall spring constant | C_u,Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_spring_z</td>
+                        <td>float</td>
+                        <td>Wall spring constant | C_u,Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fictitious_wall_rotational_restraint_about_line_axis</td>
+                        <td>float</td>
+                        <td>Wall spring constant | C_?,X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAlongXTable>
+            <h2>ArrayOfLineSupportDiagramAlongXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAlongYTable>
+            <h2>ArrayOfLineSupportDiagramAlongYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAlongZTable>
+            <h2>ArrayOfLineSupportDiagramAlongZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAroundXTable>
+            <h2>ArrayOfLineSupportDiagramAroundXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAroundYTable>
+            <h2>ArrayOfLineSupportDiagramAroundYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAroundZTable>
+            <h2>ArrayOfLineSupportDiagramAroundZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAlongXColorTable>
+            <h2>ArrayOfLineSupportDiagramAlongXColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAlongYColorTable>
+            <h2>ArrayOfLineSupportDiagramAlongYColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAlongZColorTable>
+            <h2>ArrayOfLineSupportDiagramAlongZColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAroundXColorTable>
+            <h2>ArrayOfLineSupportDiagramAroundXColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAroundYColorTable>
+            <h2>ArrayOfLineSupportDiagramAroundYColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLineSupportDiagramAroundZColorTable>
+            <h2>ArrayOfLineSupportDiagramAroundZColorTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=LineSupportCoordinateSystem>
+                <h2>LineSupportCoordinateSystem Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_COORDINATE_SYSTEM_COORDINATE_SYSTEM_LOCAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_COORDINATE_SYSTEM_COORDINATE_SYSTEM_GLOBAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportSpringXNonlinearity>
+                <h2>LineSupportSpringXNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_X_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportSpringYNonlinearity>
+                <h2>LineSupportSpringYNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Y_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportSpringZNonlinearity>
+                <h2>LineSupportSpringZNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_SPRING_Z_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportRotationalRestraintXNonlinearity>
+                <h2>LineSupportRotationalRestraintXNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_X_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportRotationalRestraintYNonlinearity>
+                <h2>LineSupportRotationalRestraintYNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Y_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportRotationalRestraintZNonlinearity>
+                <h2>LineSupportRotationalRestraintZNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_ROTATIONAL_RESTRAINT_Z_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAlongXEnd>
+                <h2>LineSupportDiagramAlongXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAlongXStart>
+                <h2>LineSupportDiagramAlongXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAlongYEnd>
+                <h2>LineSupportDiagramAlongYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAlongYStart>
+                <h2>LineSupportDiagramAlongYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAlongZEnd>
+                <h2>LineSupportDiagramAlongZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAlongZStart>
+                <h2>LineSupportDiagramAlongZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAroundXEnd>
+                <h2>LineSupportDiagramAroundXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAroundXStart>
+                <h2>LineSupportDiagramAroundXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAroundYEnd>
+                <h2>LineSupportDiagramAroundYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAroundYStart>
+                <h2>LineSupportDiagramAroundYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAroundZEnd>
+                <h2>LineSupportDiagramAroundZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportDiagramAroundZStart>
+                <h2>LineSupportDiagramAroundZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAlongXNegativeType>
+                <h2>LineSupportPartialActivityAlongXNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAlongXPositiveType>
+                <h2>LineSupportPartialActivityAlongXPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAlongYNegativeType>
+                <h2>LineSupportPartialActivityAlongYNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAlongYPositiveType>
+                <h2>LineSupportPartialActivityAlongYPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAlongZNegativeType>
+                <h2>LineSupportPartialActivityAlongZNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAlongZPositiveType>
+                <h2>LineSupportPartialActivityAlongZPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAroundXNegativeType>
+                <h2>LineSupportPartialActivityAroundXNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAroundXPositiveType>
+                <h2>LineSupportPartialActivityAroundXPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAroundYNegativeType>
+                <h2>LineSupportPartialActivityAroundYNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAroundYPositiveType>
+                <h2>LineSupportPartialActivityAroundYPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAroundZNegativeType>
+                <h2>LineSupportPartialActivityAroundZNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportPartialActivityAroundZPositiveType>
+                <h2>LineSupportPartialActivityAroundZPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportFictitiousWallHeadSupportType>
+                <h2>LineSupportFictitiousWallHeadSupportType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_FICTITIOUS_WALL_HEAD_SUPPORT_TYPE_HEAD_SUPPORT_TYPE_HINGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_FICTITIOUS_WALL_HEAD_SUPPORT_TYPE_HEAD_SUPPORT_TYPE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LineSupportFictitiousWallBaseSupportType>
+                <h2>LineSupportFictitiousWallBaseSupportType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_FICTITIOUS_WALL_BASE_SUPPORT_TYPE_BASE_SUPPORT_TYPE_HINGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_FICTITIOUS_WALL_BASE_SUPPORT_TYPE_BASE_SUPPORT_TYPE_ELASTIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LINE_SUPPORT_FICTITIOUS_WALL_BASE_SUPPORT_TYPE_BASE_SUPPORT_TYPE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

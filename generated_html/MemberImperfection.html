@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.imperfections.MemberImperfection - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.imperfections.MemberImperfection - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=MemberImperfection>
+            <h2>MemberImperfection</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_type</td>
+                        <td><a href="#MemberImperfectionImperfectionType">MemberImperfectionImperfectionType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_case</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>definition_type</td>
+                        <td><a href="#MemberImperfectionDefinitionType">MemberImperfectionDefinitionType</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_direction</td>
+                        <td><a href="#MemberImperfectionImperfectionDirection">MemberImperfectionImperfectionDirection</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>basic_value_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>basic_value_coefficient</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>basic_value_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>basic_value_force</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>section_design</td>
+                        <td><a href="#MemberImperfectionSectionDesign">MemberImperfectionSectionDesign</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_criterion</td>
+                        <td><a href="#MemberImperfectionActiveCriterion">MemberImperfectionActiveCriterion</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_bow</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>standard_factor_enumeration</td>
+                        <td><a href="#MemberImperfectionStandardFactorEnumeration">MemberImperfectionStandardFactorEnumeration</a></td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>standard_factor_number</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>height</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>column_in_row</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_floors</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>case_object</td>
+                        <td>int</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reduction_factor_h</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reduction_factor_h_limit</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reduction_factor_m</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_sway</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_sway_inverted</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>delta</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>parameters</td>
+                        <td>List[int]</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_to_list_of_members</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>refer_distance_from_objects_to_assign</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_over_total_length_of_objects_to_assign</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_a_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_b_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_a_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_b_relative</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_a_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_b_absolute</td>
+                        <td>float</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=MemberImperfectionImperfectionType>
+                <h2>MemberImperfectionImperfectionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_TYPE_IMPERFECTION_TYPE_INITIAL_BOW</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_TYPE_IMPERFECTION_TYPE_INITIAL_BOW_AND_CRITERION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_TYPE_IMPERFECTION_TYPE_INITIAL_SWAY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberImperfectionDefinitionType>
+                <h2>MemberImperfectionDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_RELATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_ABSOLUTE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_AISI_S100_16_CURRENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_AISI_S100_16_GRAVITY_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_ANSI_CURRENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_ANSI_GRAVITY_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_CSA_136_16_CURRENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_CSA_136_16_GRAVITY_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_CSA_CURRENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_CSA_GRAVITY_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_EN_1992_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_EN_1993_1_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_EN_1995_1_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_EN_1999_1_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_GB_50017_2017</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_GB_50017_2017_CURRENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_GB_50017_2017_GRAVITY_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_GB_50429_2007_GRAVITY_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_DEFINITION_TYPE_DEFINITION_TYPE_NOTIONAL_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberImperfectionImperfectionDirection>
+                <h2>MemberImperfectionImperfectionDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_GLOBAL_X_OR_USER_DEFINED_U_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_GLOBAL_Y_OR_USER_DEFINED_V_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_GLOBAL_Z_OR_USER_DEFINED_W_TRUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_LOCAL_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_LOCAL_Y_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_LOCAL_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_LOCAL_Z_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_PRINCIPAL_U</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_PRINCIPAL_U_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_PRINCIPAL_V</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_IMPERFECTION_DIRECTION_IMPERFECTION_DIRECTION_PRINCIPAL_V_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberImperfectionSectionDesign>
+                <h2>MemberImperfectionSectionDesign Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_SECTION_DESIGN_SECTION_DESIGN_ELASTIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_SECTION_DESIGN_SECTION_DESIGN_PLASTIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberImperfectionActiveCriterion>
+                <h2>MemberImperfectionActiveCriterion Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_ACTIVE_CRITERION_ACTIVITY_CRITERION_ALWAYS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_ACTIVE_CRITERION_ACTIVITY_CRITERION_DEFINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_ACTIVE_CRITERION_ACTIVITY_CRITERION_DIN_18800</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_ACTIVE_CRITERION_ACTIVITY_CRITERION_EN_1993</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_ACTIVE_CRITERION_ACTIVITY_CRITERION_EN_1999</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberImperfectionStandardFactorEnumeration>
+                <h2>MemberImperfectionStandardFactorEnumeration Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_STANDARD_FACTOR_ENUMERATION_STANDARD_FACTOR_LRFD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_IMPERFECTION_STANDARD_FACTOR_ENUMERATION_STANDARD_FACTOR_ASD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

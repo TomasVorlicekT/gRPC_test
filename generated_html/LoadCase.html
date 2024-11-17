@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loading.LoadCase - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loading.LoadCase - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=LoadCase>
+            <h2>LoadCase</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analysis_type</td>
+                        <td><a href="#LoadCaseAnalysisType">LoadCaseAnalysisType</a></td>
+                        <td>Analysis type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Load Case Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>calculate_critical_load</td>
+                        <td>bool</td>
+                        <td>Calculate critical load</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>static_analysis_settings</td>
+                        <td>int</td>
+                        <td>Static analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_analysis_settings</td>
+                        <td>int</td>
+                        <td>Stability analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modal_analysis_settings</td>
+                        <td>int</td>
+                        <td>Modal analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spectral_analysis_settings</td>
+                        <td>int</td>
+                        <td>Spectral analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_imperfection</td>
+                        <td>bool</td>
+                        <td>Consider imperfection</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_case</td>
+                        <td>int</td>
+                        <td>Imperfection case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_initial_state</td>
+                        <td>bool</td>
+                        <td>Consider initial state</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_state_case</td>
+                        <td>int</td>
+                        <td>Initial state case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_state_definition_type</td>
+                        <td><a href="#LoadCaseInitialStateDefinitionType">LoadCaseInitialStateDefinitionType</a></td>
+                        <td>Definition type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>individual_factors_of_selected_objects_table</td>
+                        <td><a href="#ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable">ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable</a></td>
+                        <td>'Individual Factors of Selected Objects' table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_construction_stage</td>
+                        <td>bool</td>
+                        <td>Consider construction stage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>construction_stage_case</td>
+                        <td>int</td>
+                        <td>Construction stage case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>to_solve</td>
+                        <td>bool</td>
+                        <td>To solve</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>action_category</td>
+                        <td>str</td>
+                        <td>Action category</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>self_weight_active</td>
+                        <td>bool</td>
+                        <td>Self-weight active</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>self_weight_factors</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Self-weight factors | Self-weight factors in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>self_weight_factor_x</td>
+                        <td>float</td>
+                        <td>Self-weight - Factor in direction X | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>self_weight_factor_y</td>
+                        <td>float</td>
+                        <td>Self-weight - Factor in direction Y | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>self_weight_factor_z</td>
+                        <td>float</td>
+                        <td>Self-weight - Factor in direction Z | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>factor_phi</td>
+                        <td><a href="#LoadCaseFactorPhi">LoadCaseFactorPhi</a></td>
+                        <td>Factor Phi</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_duration</td>
+                        <td>str</td>
+                        <td>Load duration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loading_start</td>
+                        <td>float</td>
+                        <td>Loading start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>time_being_investigated</td>
+                        <td>float</td>
+                        <td>Start/end of analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>import_masses_from</td>
+                        <td>int</td>
+                        <td>Import masses from</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>import_modal_analysis_from</td>
+                        <td>int</td>
+                        <td>Import modal analysis from</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_is_enabled_in_any_direction</td>
+                        <td>bool</td>
+                        <td>Is response spectrum enabled in any direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_is_enabled_in_direction_x</td>
+                        <td>bool</td>
+                        <td>Is response spectrum enabled in direction X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_is_enabled_in_direction_y</td>
+                        <td>bool</td>
+                        <td>Is response spectrum enabled in direction Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_is_enabled_in_direction_z</td>
+                        <td>bool</td>
+                        <td>Is response spectrum enabled in direction Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_in_direction_x</td>
+                        <td>int</td>
+                        <td>Response spectrum in direction X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_in_direction_y</td>
+                        <td>int</td>
+                        <td>Response spectrum in direction Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_in_direction_z</td>
+                        <td>int</td>
+                        <td>Response spectrum in direction Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_scale_factor_in_direction_x</td>
+                        <td>float</td>
+                        <td>Scaling factor of response spectrum in direction X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_scale_factor_in_direction_y</td>
+                        <td>float</td>
+                        <td>Scaling factor of response spectrum in direction Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_scale_factor_in_direction_z</td>
+                        <td>float</td>
+                        <td>Scaling factor of response spectrum in direction Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_rotation_angle</td>
+                        <td>float</td>
+                        <td>Rotation angle of response spectrum | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_consider_accidental_torsion</td>
+                        <td>bool</td>
+                        <td>Consider accidental torsion</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_eccentricity_for_x_direction_absolute</td>
+                        <td>float</td>
+                        <td>Eccentricity for X direction absolute | e_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_eccentricity_for_y_direction_absolute</td>
+                        <td>float</td>
+                        <td>Eccentricity for Y direction absolute | e_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_eccentricity_for_x_direction_relative</td>
+                        <td>float</td>
+                        <td>Eccentricity for X direction relative | e_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_eccentricity_for_y_direction_relative</td>
+                        <td>float</td>
+                        <td>Eccentricity for Y direction relative | e_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_building_length_in_x</td>
+                        <td>float</td>
+                        <td>Building length in X | ?_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_building_length_in_y</td>
+                        <td>float</td>
+                        <td>Building length in Y | ?_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_eccentricity_for_x_direction_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td>Eccentricity for X direction defined as relative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_eccentricity_for_y_direction_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td>Eccentricity for Y direction defined as relative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>response_spectrum_user_defined_building_lengths</td>
+                        <td>bool</td>
+                        <td>User-defined building lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>selection_of_modes_mode_activation_table</td>
+                        <td><a href="#ArrayOfLoadCaseSelectionOfModesModeActivationTable">ArrayOfLoadCaseSelectionOfModesModeActivationTable</a></td>
+                        <td>Mode activation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>selection_of_modes_deselect_modes_according_to_criterion_is_enabled</td>
+                        <td>bool</td>
+                        <td>Deselect modes with</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>selection_of_modes_deselect_modes_modes_according_to_criterion_value</td>
+                        <td>float</td>
+                        <td>Deselect modes according to criterion | M_eff. i / ? M <</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>selection_of_modes_total_effective_modal_mass_factor_f_mex</td>
+                        <td>float</td>
+                        <td>Total effective modal mass factor f_meX | f_meX</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>selection_of_modes_total_effective_modal_mass_factor_f_mey</td>
+                        <td>float</td>
+                        <td>Total effective modal mass factor f_meY | f_meY</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>selection_of_modes_total_effective_modal_mass_factor_f_mez</td>
+                        <td>float</td>
+                        <td>Total effective modal mass factor f_meZ | f_meZ</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_modification_enabled</td>
+                        <td>bool</td>
+                        <td>Consider structure modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_modification</td>
+                        <td>int</td>
+                        <td>Structure Modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>possibility_of_crowds</td>
+                        <td>bool</td>
+                        <td>Possibility of crowd of people (escape routes, staircases)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specification_for_load_case_gr1a</td>
+                        <td><a href="#LoadCaseSpecificationForLoadCaseGr1a">LoadCaseSpecificationForLoadCaseGr1a</a></td>
+                        <td>Specification for Load Cases in gr1a</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specification_for_load_case_gr2</td>
+                        <td><a href="#LoadCaseSpecificationForLoadCaseGr2">LoadCaseSpecificationForLoadCaseGr2</a></td>
+                        <td>Specification for Load Cases in gr2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specification_for_load_case_gr5</td>
+                        <td><a href="#LoadCaseSpecificationForLoadCaseGr5">LoadCaseSpecificationForLoadCaseGr5</a></td>
+                        <td>Specification for Load Cases in gr5</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specification_for_load_case_gr6</td>
+                        <td><a href="#LoadCaseSpecificationForLoadCaseGr6">LoadCaseSpecificationForLoadCaseGr6</a></td>
+                        <td>Specification for Load Cases in gr6</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_less_equal_100</td>
+                        <td>bool</td>
+                        <td>Live load is less than or equal to 100 psf</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_check</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_combo</td>
+                        <td><a href="#LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo">LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo</a></td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_CYTHYE_check</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_CYTHYE_combo</td>
+                        <td><a href="#LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo">LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo</a></td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_seismic_weight_check</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_seismic_weight_combo</td>
+                        <td><a href="#LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo">LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo</a></td>
+                        <td>Consider in design situation "Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_seismic_mass_check</td>
+                        <td>bool</td>
+                        <td>Consider in design situation 'Seismic/Mass Combination'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_seismic_mass_combo</td>
+                        <td><a href="#LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo">LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo</a></td>
+                        <td>Consider in design situation 'Seismic/Mass Combination'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_design_situation_effective_seismic_weight</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_less_equal_48</td>
+                        <td>bool</td>
+                        <td>Live load is less than or equal to 4.8 kN/m^2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_aci_check</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_aci_combo</td>
+                        <td><a href="#LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo">LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo</a></td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_less_equal_100_ibc</td>
+                        <td>bool</td>
+                        <td>Live load is less than or equal to 100 psf</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_ibc_check</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_consider_design_situation_effective_seismic_weight_ibc_combo</td>
+                        <td><a href="#LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo">LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo</a></td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>cranehookload_nocombined_roofliveload</td>
+                        <td>bool</td>
+                        <td>Crane hook load not to be combined with roof live load or with more than three-fourths of the snow load or one-half of the wind load according to 1605.3.1, Exception 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>roof_configurations_that_do_not_shed_snow</td>
+                        <td>bool</td>
+                        <td>Flat roof configurations that do not shed snow off the structure according to 1605.2 (f2 = 0.7, otherwise f2 = 0.2 in Equation 16-5)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>flat_roof_snow_load</td>
+                        <td>bool</td>
+                        <td>Flat roof snow load according to 1605.3.1, Exception 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>flat_roof_snow_load_category</td>
+                        <td><a href="#LoadCaseFlatRoofSnowLoadCategory">LoadCaseFlatRoofSnowLoadCategory</a></td>
+                        <td>Flat roof snow load according to 1605.3.1, Exception 2 Category</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deadload_factor_shall_be_increased</td>
+                        <td>bool</td>
+                        <td>Load factor 1.25 for dead load shall be increased to 1.50 acc. to 4.1.3.2(8)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deadload_factor_shall_be_increased1</td>
+                        <td>bool</td>
+                        <td>Load factor 1.25 for dead load shall be increased to 1.50 acc. to 4.1.3.2(8)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deadload_factor_shall_be_increased2</td>
+                        <td>bool</td>
+                        <td>Principal-load factor 1.4 for dead load shall be increased to 1.5 acc. to 4.1.3.2 (9)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dead_no_effective_seismic_weight_NBC05</td>
+                        <td>bool</td>
+                        <td>Partition load does not exceed 0.5 kPa. Do not consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dead_no_effective_seismic_weight_NBC15</td>
+                        <td>bool</td>
+                        <td>Partition load does not exceed 0.5 kPa. Do not consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_principal_factor_may_be_reduced1</td>
+                        <td>bool</td>
+                        <td>Principal-load factor 1.5 for live load may be reduced to 1.25 acc. to 4.1.3.2(5)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_companion_factor_may_be_increased1</td>
+                        <td>bool</td>
+                        <td>Companion-load factor 0.5 for live load shall be increased to 1.0 acc. to 4.1.3.2(6)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_principal_factor_may_be_reduced2</td>
+                        <td>bool</td>
+                        <td>Principal-load factor 1.5 for live load may be reduced to 1.25 acc. to 4.1.3.2(6)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>liveload_companion_factor_may_be_increased2</td>
+                        <td>bool</td>
+                        <td>Companion-load factor 0.5 for live load shall be increased to 1.0 acc. to 4.1.3.2(7)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_design_situation_effective_seismic_weight_NBC05</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_design_situation_effective_seismic_weight_NBC15</td>
+                        <td>bool</td>
+                        <td>Consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>dead_no_effective_seismic_weight</td>
+                        <td>bool</td>
+                        <td>Partition load does not exceed 0.5 kPa. Do not consider in design situation "Effective Seismic Weight"</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>longtermload_tp_considered_in_limit_state_of_serviceability</td>
+                        <td>bool</td>
+                        <td>Long-term loading T_p considered in Limit State of Serviceability, Case 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>greater_intensity_than_4</td>
+                        <td>bool</td>
+                        <td>Greater intensity than 4 kN/m^2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distinguish_different_overstrength_factor_in_direction_xy_check</td>
+                        <td>bool</td>
+                        <td>Distinguish different overstrength factors in directions X and Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distinguish_different_overstrength_factor_in_direction_xy_combo</td>
+                        <td><a href="#LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo">LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo</a></td>
+                        <td>Distinguish different overstrength factors in directions X and Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_duration_sp</td>
+                        <td><a href="#LoadCaseLoadDurationSp">LoadCaseLoadDurationSp</a></td>
+                        <td>Load Duration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ground_water_elevation</td>
+                        <td><a href="#LoadCaseGroundWaterElevation">LoadCaseGroundWaterElevation</a></td>
+                        <td>Ground water elevation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>direction_x_check</td>
+                        <td>bool</td>
+                        <td>Direction X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>direction_y_check</td>
+                        <td>bool</td>
+                        <td>Direction Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_inclusive_load_case</td>
+                        <td>bool</td>
+                        <td>Consider Inclusive Load Case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>inclusive_load_case</td>
+                        <td>int</td>
+                        <td>Inclusive Load Case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_design_situation_seismic_mass_combination</td>
+                        <td>bool</td>
+                        <td>Consider in design situation 'Seismic/Mass Combination'</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type_of_imposed_actions</td>
+                        <td><a href="#LoadCaseTypeOfImposedActions">LoadCaseTypeOfImposedActions</a></td>
+                        <td>Type of imposed actions</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_direction_angle</td>
+                        <td>float</td>
+                        <td>Wind direction around Z-axis (clockwise) | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_depth_minus_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel depth minus coefficient</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_depth_plus_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel depth plus coefficient</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_width_minus_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel width minus coefficient</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_width_plus_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel width plus coefficient</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_height_plus_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel height plus coefficient</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_construction_bounding_box_depth_coefficient</td>
+                        <td>float</td>
+                        <td>Coefficient of depth of construction bounding box</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_construction_bounding_box_height_coefficient</td>
+                        <td>float</td>
+                        <td>Coefficient of height of construction bounding box</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_construction_bounding_box_width_coefficient</td>
+                        <td>float</td>
+                        <td>Coefficient of width of construction bounding box</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_depth_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel depth coefficient | ?_d</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_width_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel width coefficient | ?_w</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_height_coefficient</td>
+                        <td>float</td>
+                        <td>Wind tunnel height coefficient | ?_h</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_profile</td>
+                        <td>int</td>
+                        <td>Wind profile</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_analysis_settings</td>
+                        <td>int</td>
+                        <td>Wind simulation analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_depth_minus_length</td>
+                        <td>float</td>
+                        <td>Wind tunnel depth minus length</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_depth_plus_length</td>
+                        <td>float</td>
+                        <td>Wind tunnel depth plus length</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_width_minus_length</td>
+                        <td>float</td>
+                        <td>Wind tunnel width minus length</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_width_plus_length</td>
+                        <td>float</td>
+                        <td>Wind tunnel width plus length</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_height_plus_length</td>
+                        <td>float</td>
+                        <td>Wind tunnel height plus length</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_construction_bounding_box_depth</td>
+                        <td>float</td>
+                        <td>Depth of construction bounding box</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_construction_bounding_box_height</td>
+                        <td>float</td>
+                        <td>Height of construction bounding box</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_construction_bounding_box_width</td>
+                        <td>float</td>
+                        <td>Width of construction bounding box</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_depth</td>
+                        <td>float</td>
+                        <td>Wind tunnel depth | ?_d</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_width</td>
+                        <td>float</td>
+                        <td>Wind tunnel width | ?_w</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>wind_simulation_wind_tunnel_height</td>
+                        <td>float</td>
+                        <td>Wind tunnel height | ?_h</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>geotechnical_analysis_reset_small_strain_history</td>
+                        <td>bool</td>
+                        <td>Reset small strain history</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable>
+            <h2>ArrayOfLoadCaseIndividualFactorsOfSelectedObjectsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLoadCaseSelectionOfModesModeActivationTable>
+            <h2>ArrayOfLoadCaseSelectionOfModesModeActivationTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=LoadCaseAnalysisType>
+                <h2>LoadCaseAnalysisType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_CREEP_AND_SHRINKAGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_CUTTING_PATTERN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_MODAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_RESPONSE_SPECTRUM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_STATIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_TIME_DEPENDENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_TIME_HISTORY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_TIME_HISTORY_TIME_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_ANALYSIS_TYPE_ANALYSIS_TYPE_WIND_SIMULATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseInitialStateDefinitionType>
+                <h2>LoadCaseInitialStateDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_FINAL_STATE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_STRAINS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_STRAINS_WITH_USER_DEFINED_FACTORS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseFactorPhi>
+                <h2>LoadCaseFactorPhi Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_FACTOR_PHI_FACTOR_PHI_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_FACTOR_PHI_FACTOR_PHI_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_FACTOR_PHI_FACTOR_PHI_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseSpecificationForLoadCaseGr1a>
+                <h2>LoadCaseSpecificationForLoadCaseGr1a Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_SPECIFICATION_GR1A_TS1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_SPECIFICATION_GR1A_PEDESTRIAN_AND_CYCLE_TRACK</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR1A_SPECIFICATION_GR1A_UDL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseSpecificationForLoadCaseGr2>
+                <h2>LoadCaseSpecificationForLoadCaseGr2 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR2_SPECIFICATION_GR2_HORIZONTAL_FORCES_BRAKING_AND_ACCELERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR2_SPECIFICATION_GR2_HORIZONTAL_FORCES_CENTRIFUGAL_FORCES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseSpecificationForLoadCaseGr5>
+                <h2>LoadCaseSpecificationForLoadCaseGr5 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_SPECIFICATION_GR5_SPECIAL_VEHICLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_SPECIFICATION_GR5_TS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR5_SPECIFICATION_GR5_UDL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseSpecificationForLoadCaseGr6>
+                <h2>LoadCaseSpecificationForLoadCaseGr6 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_SPECIFICATION_GR6_TS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_SPECIFICATION_GR6_HORIZONTAL_FORCES_BRAKING_AND_ACCELERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_SPECIFICATION_GR6_HORIZONTAL_FORCES_CENTRIFUGAL_FORCES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_SPECIFICATION_GR6_PEDESTRIAN_AND_CYCLE_TRACK</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_SPECIFICATION_FOR_LOAD_CASE_GR6_SPECIFICATION_GR6_UDL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo>
+                <h2>LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_FLOOR_LIVE_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_PARTITIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo>
+                <h2>LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightCYTHYECombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_FLOOR_LIVE_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_CYTHYE_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_PARTITIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo>
+                <h2>LoadCaseLiveloadConsiderDesignSituationSeismicWeightCombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_ESEISMIC_WEIGHT_FLOOR_LOADS_UP_TO_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_WEIGHT_COMBO_ESEISMIC_WEIGHT_FLOOR_LOADS_ABOVE_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo>
+                <h2>LoadCaseLiveloadConsiderDesignSituationSeismicMassCombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_ESEISMIC_MASS_LOAD_CALCULATED_ACCORDING_ACTUAL_CONDITIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_ESEISMIC_MASS_LOAD_CALCULATED_ACCORDING_EQUIVALENT_UNIFORM_LIBRARY_ARCHIVES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_SEISMIC_MASS_COMBO_ESEISMIC_MASS_LOAD_CALCULATED_ACCORDING_EQUIVALENT_UNIFORM_OTHER_CIVIL_BUILDINGS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo>
+                <h2>LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightAciCombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_FLOOR_LIVE_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_ACI_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_PARTITIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo>
+                <h2>LoadCaseLiveloadConsiderDesignSituationEffectiveSeismicWeightIbcCombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_FLOOR_LIVE_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_OPERATING_WEIGHT_OF_PERMANENT_EQUIPMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LIVELOAD_CONSIDER_DESIGN_SITUATION_EFFECTIVE_SEISMIC_WEIGHT_IBC_COMBO_EEFFECTIVE_SEISMIC_WEIGHT_PARTITIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseFlatRoofSnowLoadCategory>
+                <h2>LoadCaseFlatRoofSnowLoadCategory Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_FLAT_ROOF_SNOW_LOAD_CATEGORY_ROOF_CAT_SNOW_LOADS_OF_30PSF_OR_LESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_FLAT_ROOF_SNOW_LOAD_CATEGORY_ROOF_CAT_SNOW_LOADS_EXCEEDING_30PSF</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo>
+                <h2>LoadCaseDistinguishDifferentOverstrengthFactorInDirectionXyCombo Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_EOVERSTRENGTH_FACTOR_DIRECTION_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_DISTINGUISH_DIFFERENT_OVERSTRENGTH_FACTOR_IN_DIRECTION_XY_COMBO_EOVERSTRENGTH_FACTOR_DIRECTION_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseLoadDurationSp>
+                <h2>LoadCaseLoadDurationSp Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LOAD_DURATION_SP_LOAD_DURATION_SP_LONG</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_LOAD_DURATION_SP_LOAD_DURATION_SP_SHORT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseGroundWaterElevation>
+                <h2>LoadCaseGroundWaterElevation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_GROUND_WATER_ELEVATION_MAXIMUM_GROUND_WATER_ELEVATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_GROUND_WATER_ELEVATION_MINIMUM_GROUND_WATER_ELEVATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCaseTypeOfImposedActions>
+                <h2>LoadCaseTypeOfImposedActions Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_FLOORS_RESIDENTIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_BALUSTRADES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_DOMESTIC_HOUSING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_FLOORS_OFFICES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_MACHINERY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_OTHER_ROOFS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_ROOFS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_CONCENTRACED_STORAGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_FLOORS_OFFICES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_FLOORS_OTHER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_FLOORS_PARKING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_FLOORS_RETAIL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_FLOORS_STORAGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_OTHER_ROOFS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_CASE_TYPE_OF_IMPOSED_ACTIONS_TYPE_DISTRIBUTED_ROOFS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

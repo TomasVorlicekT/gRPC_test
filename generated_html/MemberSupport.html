@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_members.MemberSupport - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_members.MemberSupport - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=MemberSupport>
+            <h2>MemberSupport</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Member Sets No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_translation</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>| Translation spring in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_rotation</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_translation_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_translation_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>minimal_and_maximal_spring_translation_y</td>
+                        <td>List[int]</td>
+                        <td>Spring constant | C_u,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_translation_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_shear</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>| Shear spring in directions X, Y, Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_shear_x</td>
+                        <td>float</td>
+                        <td>Spring constant | C_s,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_shear_y</td>
+                        <td>float</td>
+                        <td>Spring constant | C_s,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>spring_shear_z</td>
+                        <td>float</td>
+                        <td>Spring constant | C_s,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>minimal_and_maximal_spring_rotation</td>
+                        <td>List[int]</td>
+                        <td>Spring constant | C_?,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearity_translational_z</td>
+                        <td><a href="#MemberSupportNonlinearityTranslationalZ">MemberSupportNonlinearityTranslationalZ</a></td>
+                        <td>Nonlinearity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_dimensions_enabled</td>
+                        <td>bool</td>
+                        <td>Support dimensions enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_enabled</td>
+                        <td>bool</td>
+                        <td>Eccentricity enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_width_y</td>
+                        <td>float</td>
+                        <td>Support Width | a_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_width_z</td>
+                        <td>float</td>
+                        <td>Support Width | a_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_offset_y</td>
+                        <td>float</td>
+                        <td>Eccentricity | e_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_offset_z</td>
+                        <td>float</td>
+                        <td>Eccentricity | e_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_shear_panel_z</td>
+                        <td>int</td>
+                        <td>Member shear panel</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearity_rotational_x</td>
+                        <td><a href="#MemberSupportNonlinearityRotationalX">MemberSupportNonlinearityRotationalX</a></td>
+                        <td>Nonlinearity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_rotational_restraint</td>
+                        <td>int</td>
+                        <td>Member rotational restraint</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_center</td>
+                        <td><a href="#MemberSupportEccentricityCenter">MemberSupportEccentricityCenter</a></td>
+                        <td>Eccentricity - Center</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_horizontal_alignment</td>
+                        <td><a href="#MemberSupportEccentricityHorizontalAlignment">MemberSupportEccentricityHorizontalAlignment</a></td>
+                        <td>Horizontal alignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity_vertical_alignment</td>
+                        <td><a href="#MemberSupportEccentricityVerticalAlignment">MemberSupportEccentricityVerticalAlignment</a></td>
+                        <td>Vertical alignment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_shear_panel_y</td>
+                        <td>int</td>
+                        <td>Member shear panel</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>minimal_and_maximal_spring_translation_z</td>
+                        <td>List[int]</td>
+                        <td>Spring constant | C_u,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonlinearity_translational_y</td>
+                        <td><a href="#MemberSupportNonlinearityTranslationalY">MemberSupportNonlinearityTranslationalY</a></td>
+                        <td>Nonlinearity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=MemberSupportNonlinearityTranslationalZ>
+                <h2>MemberSupportNonlinearityTranslationalZ Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Z_NONLINEARITY_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Z_NONLINEARITY_FAILURE_IF_NEGATIVE_CONTACT_STRESS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Z_NONLINEARITY_FAILURE_IF_POSITIVE_CONTACT_STRESS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Z_NONLINEARITY_ROTATION_RESTRAINT_ABOUT_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Z_NONLINEARITY_SHEAR_PANEL_IN_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Z_NONLINEARITY_SHEAR_PANEL_IN_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSupportNonlinearityRotationalX>
+                <h2>MemberSupportNonlinearityRotationalX Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_ROTATIONAL_X_NONLINEARITY_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_ROTATIONAL_X_NONLINEARITY_FAILURE_IF_NEGATIVE_CONTACT_STRESS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_ROTATIONAL_X_NONLINEARITY_FAILURE_IF_POSITIVE_CONTACT_STRESS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_ROTATIONAL_X_NONLINEARITY_ROTATION_RESTRAINT_ABOUT_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_ROTATIONAL_X_NONLINEARITY_SHEAR_PANEL_IN_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_ROTATIONAL_X_NONLINEARITY_SHEAR_PANEL_IN_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSupportEccentricityCenter>
+                <h2>MemberSupportEccentricityCenter Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_CENTER_CENTER_OF_GRAVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_CENTER_ECCENTRICITY_CENTER_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_CENTER_SHEAR_CENTER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSupportEccentricityHorizontalAlignment>
+                <h2>MemberSupportEccentricityHorizontalAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_LEFT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_MIDDLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_HORIZONTAL_ALIGNMENT_ALIGN_RIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSupportEccentricityVerticalAlignment>
+                <h2>MemberSupportEccentricityVerticalAlignment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_TOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_BOTTOM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_MIDDLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_ECCENTRICITY_VERTICAL_ALIGNMENT_ALIGN_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=MemberSupportNonlinearityTranslationalY>
+                <h2>MemberSupportNonlinearityTranslationalY Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Y_NONLINEARITY_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Y_NONLINEARITY_FAILURE_IF_NEGATIVE_CONTACT_STRESS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Y_NONLINEARITY_FAILURE_IF_POSITIVE_CONTACT_STRESS_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Y_NONLINEARITY_ROTATION_RESTRAINT_ABOUT_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Y_NONLINEARITY_SHEAR_PANEL_IN_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MEMBER_SUPPORT_NONLINEARITY_TRANSLATIONAL_Y_NONLINEARITY_SHEAR_PANEL_IN_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

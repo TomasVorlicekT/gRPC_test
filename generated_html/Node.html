@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_core.Node - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_core.Node - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=Node>
+            <h2>Node</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#NodeType">NodeType</a></td>
+                        <td>Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_node</td>
+                        <td>int</td>
+                        <td>Reference node No. | Number of reference node - node type has to be Standard</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>int</td>
+                        <td>Coordinate system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system_type</td>
+                        <td><a href="#NodeCoordinateSystemType">NodeCoordinateSystemType</a></td>
+                        <td>Coordinate type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinates</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Coordinates | Coordinates of the node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_1</td>
+                        <td>float</td>
+                        <td>Coordinates | X | <strong>Depends on coordinate system type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_2</td>
+                        <td>float</td>
+                        <td>Coordinates | Y | <strong>Depends on coordinate system type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_3</td>
+                        <td>float</td>
+                        <td>Coordinates | Z | <strong>Depends on coordinate system type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinates</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Global coordinates</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinate_1</td>
+                        <td>float</td>
+                        <td>Global coordinates | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinate_2</td>
+                        <td>float</td>
+                        <td>Global coordinates | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>global_coordinate_3</td>
+                        <td>float</td>
+                        <td>Global coordinates | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_nodes_start_node</td>
+                        <td>int</td>
+                        <td>Start node i No. | Number of start node - node type has to be Between Two Nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_start_point_coordinates</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Start point i | Coordinates of start point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_start_point_coordinate_1</td>
+                        <td>float</td>
+                        <td>Start point i | X_i | First coordinate of start point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_start_point_coordinate_2</td>
+                        <td>float</td>
+                        <td>Start point i | Y_i | Second coordinate of start point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_start_point_coordinate_3</td>
+                        <td>float</td>
+                        <td>Start point i | Z_i | Third coordinate of start point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_nodes_end_node</td>
+                        <td>int</td>
+                        <td>End node j No. | Number of end node - node type has to be Between Two Nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_end_point_coordinates</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>End point j | Coordinates of end point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_end_point_coordinate_1</td>
+                        <td>float</td>
+                        <td>End point j | X_j | First coordinate of end point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_end_point_coordinate_2</td>
+                        <td>float</td>
+                        <td>End point j | Y_j | Second coordinate of end point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>between_two_points_end_point_coordinate_3</td>
+                        <td>float</td>
+                        <td>End point j | Z_j | Third coordinate of end point - node type has to be Between Two Points</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>on_line_reference_line</td>
+                        <td>int</td>
+                        <td>Line No. | Number of reference line - node type has to be On Line</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>on_member_reference_member</td>
+                        <td>int</td>
+                        <td>Member No. | Number of reference member - node type has to be On Member</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_type</td>
+                        <td><a href="#NodeReferenceType">NodeReferenceType</a></td>
+                        <td>Reference</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reference_object_projected_length</td>
+                        <td>float</td>
+                        <td>Length | L</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_from_start_is_defined_as_relative</td>
+                        <td>bool</td>
+                        <td>Distance from start is defined as relative</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_from_start_relative</td>
+                        <td>float</td>
+                        <td>Distance between node k and start node i | x_i-k | Relative distance from start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>distance_from_start_absolute</td>
+                        <td>float</td>
+                        <td>Distance between node k and start node i | x_i-k | Absolute distance from start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_in_local_direction_y</td>
+                        <td>float</td>
+                        <td>Offset (local coordinates) | y_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_in_local_direction_z</td>
+                        <td>float</td>
+                        <td>Offset (local coordinates) | z_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_in_global_direction_x</td>
+                        <td>float</td>
+                        <td>Offset (in global direction X) | X_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_in_global_direction_y</td>
+                        <td>float</td>
+                        <td>Offset (in global direction Y) | Y_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>offset_in_global_direction_z</td>
+                        <td>float</td>
+                        <td>Offset (in global direction Z) | Z_k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support</td>
+                        <td>int</td>
+                        <td>Nodal support | Support number of the node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_refinement</td>
+                        <td>int</td>
+                        <td>Nodal mesh refinement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_design_ultimate_configuration</td>
+                        <td>int</td>
+                        <td>Concrete Design - Ultimate Configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_design_fire_configuration</td>
+                        <td>int</td>
+                        <td>Concrete Design - Fire Configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_design_seismicity_configuration</td>
+                        <td>int</td>
+                        <td>Concrete Design - Seismic Configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>punching_design</td>
+                        <td>bool</td>
+                        <td>Punching Design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>punching_reinforcement</td>
+                        <td>int</td>
+                        <td>Punching Reinforcement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment | Comment value</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=NodeType>
+                <h2>NodeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODE_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_TYPE_TYPE_BETWEEN_TWO_NODES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_TYPE_TYPE_BETWEEN_TWO_POINTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_TYPE_TYPE_ON_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_TYPE_TYPE_ON_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_TYPE_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodeCoordinateSystemType>
+                <h2>NodeCoordinateSystemType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_CARTESIAN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_POLAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_X_CYLINDRICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_Y_CYLINDRICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_COORDINATE_SYSTEM_TYPE_COORDINATE_SYSTEM_Z_CYLINDRICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodeReferenceType>
+                <h2>NodeReferenceType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODE_REFERENCE_TYPE_REFERENCE_TYPE_L</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_REFERENCE_TYPE_REFERENCE_TYPE_XY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_REFERENCE_TYPE_REFERENCE_TYPE_XZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODE_REFERENCE_TYPE_REFERENCE_TYPE_YZ</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

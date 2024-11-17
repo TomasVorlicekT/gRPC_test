@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loading.StabilityAnalysisSettings - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loading.StabilityAnalysisSettings - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=StabilityAnalysisSettings>
+            <h2>StabilityAnalysisSettings</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to</td>
+                        <td>str</td>
+                        <td>Assigned to</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analysis_type</td>
+                        <td><a href="#StabilityAnalysisSettingsAnalysisType">StabilityAnalysisSettingsAnalysisType</a></td>
+                        <td>Analysis type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_lowest_eigenvalues</td>
+                        <td>int</td>
+                        <td>Number of lowest eigenvalues</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>considered_favored_effect</td>
+                        <td>bool</td>
+                        <td>Considered favorable effect</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eigenvalue_method</td>
+                        <td><a href="#StabilityAnalysisSettingsEigenvalueMethod">StabilityAnalysisSettingsEigenvalueMethod</a></td>
+                        <td>Eigenvalue method</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>find_eigenvectors_beyond_critical_load_factor</td>
+                        <td>bool</td>
+                        <td>Find eigenvectors beyond critical load factor</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>critical_load_factor</td>
+                        <td>float</td>
+                        <td>Critical load factor | f_0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>calculate_without_loading_for_instability</td>
+                        <td>bool</td>
+                        <td>Calculate without loading for instability</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>activate_minimum_initial_prestress</td>
+                        <td>bool</td>
+                        <td>Activate minimum initial prestress</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>minimum_initial_strain</td>
+                        <td>float</td>
+                        <td>Minimum initial strain | ?_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>display_local_torsional_rotations</td>
+                        <td>bool</td>
+                        <td>Display local torsional rotations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>local_torsional_rotations</td>
+                        <td>float</td>
+                        <td>Local torsional rotations | ?_x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>matrix_type</td>
+                        <td><a href="#StabilityAnalysisSettingsMatrixType">StabilityAnalysisSettingsMatrixType</a></td>
+                        <td>Matrix type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_load_factor</td>
+                        <td>float</td>
+                        <td>Initial load factor | k_0</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_factor_increment</td>
+                        <td>float</td>
+                        <td>Load factor increment | ?k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>refinement_of_the_last_load_increment</td>
+                        <td>int</td>
+                        <td>Refinement of the last load factor</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>maximum_number_of_load_increments</td>
+                        <td>int</td>
+                        <td>Maximum number of load increments</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>activate_stopping_of_load_increasing</td>
+                        <td>bool</td>
+                        <td>Stop load-increasing</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stopping_of_load_increasing_result</td>
+                        <td><a href="#StabilityAnalysisSettingsStoppingOfLoadIncreasingResult">StabilityAnalysisSettingsStoppingOfLoadIncreasingResult</a></td>
+                        <td>Result</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stopping_of_load_increasing_limit_result_displacement</td>
+                        <td>float</td>
+                        <td>Stopping of load increasing limit result displacement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stopping_of_load_increasing_limit_result_rotation</td>
+                        <td>float</td>
+                        <td>Limit rotation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stopping_of_load_increasing_limit_node</td>
+                        <td>int</td>
+                        <td>Node</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>save_results_of_all_increments</td>
+                        <td>bool</td>
+                        <td>Save results of all load increments</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=StabilityAnalysisSettingsAnalysisType>
+                <h2>StabilityAnalysisSettingsAnalysisType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_ANALYSIS_TYPE_EIGENVALUE_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_ANALYSIS_TYPE_INCREMENTALY_METHOD_WITHOUT_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_ANALYSIS_TYPE_INCREMENTALY_METHOD_WITH_EIGENVALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_ANALYSIS_TYPE_MATERIAL_PARAMETERS_REDUCTION_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StabilityAnalysisSettingsEigenvalueMethod>
+                <h2>StabilityAnalysisSettingsEigenvalueMethod Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_EIGENVALUE_METHOD_EIGENVALUE_METHOD_LANCZOS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_EIGENVALUE_METHOD_EIGENVALUE_METHOD_ICG_ITERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_EIGENVALUE_METHOD_EIGENVALUE_METHOD_ROOTS_OF_CHARACTERISTIC_POLYNOMIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_EIGENVALUE_METHOD_EIGENVALUE_METHOD_SHIFTED_INVERSE_POWER_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_EIGENVALUE_METHOD_EIGENVALUE_METHOD_SUBSPACE_ITERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StabilityAnalysisSettingsMatrixType>
+                <h2>StabilityAnalysisSettingsMatrixType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_MATRIX_TYPE_MATRIX_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_MATRIX_TYPE_MATRIX_TYPE_UNIT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StabilityAnalysisSettingsStoppingOfLoadIncreasingResult>
+                <h2>StabilityAnalysisSettingsStoppingOfLoadIncreasingResult Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_DISPLACEMENT_U</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_DISPLACEMENT_U_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_DISPLACEMENT_U_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_DISPLACEMENT_U_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_ROTATION_PHI</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_ROTATION_PHI_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_ROTATION_PHI_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STABILITY_ANALYSIS_SETTINGS_STOPPING_OF_LOAD_INCREASING_RESULT_RESULT_TYPE_ROTATION_PHI_Z</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

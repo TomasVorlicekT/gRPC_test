@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.global_parameters.GlobalParameter - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.global_parameters.GlobalParameter - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=GlobalParameter>
+            <h2>GlobalParameter</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>attribute_always_editable</td>
+                        <td>str</td>
+                        <td>Name always editable</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>symbol</td>
+                        <td>str</td>
+                        <td>Symbol</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>unit_group</td>
+                        <td><a href="#GlobalParameterUnitGroup">GlobalParameterUnitGroup</a></td>
+                        <td>Unit Group</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>definition_type</td>
+                        <td><a href="#GlobalParameterDefinitionType">GlobalParameterDefinitionType</a></td>
+                        <td>Definition Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>value</td>
+                        <td>float</td>
+                        <td>Value</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>unit</td>
+                        <td>str</td>
+                        <td>Unit</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>formula</td>
+                        <td>str</td>
+                        <td>Formula</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>min</td>
+                        <td>float</td>
+                        <td>Min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>max</td>
+                        <td>float</td>
+                        <td>Max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>increment</td>
+                        <td>float</td>
+                        <td>Increment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>steps</td>
+                        <td>int</td>
+                        <td>Steps</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=GlobalParameterUnitGroup>
+                <h2>GlobalParameterUnitGroup Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_EG_MODULE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_ANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_COATING_DIMENSIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_COATING_ROTATIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_DAMPING_COEFFICIENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_DENSITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_DIMENSIONLESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_DYNAMIC_INCREASE_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_FRICTION_COEFFICIENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_GEOGRAPHIC_COORDINATES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_GRAVITATIONAL_ACCELERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LINE_SPRING_CONSTANT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LINE_SPRING_ROTATIONAL_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADING_COATING_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_AMOUNT_PRECIPITATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_ANGULAR_ACCELERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_ANGULAR_VELOCITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_AREA_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_AXIAL_STRAIN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_CUTTING_PATTERN_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_DENSITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_DISPLACEMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_DISPLACEMENT_PER_UNIT_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_FORCE_PER_UNIT_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_IMPOSED_DISPLACEMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_IMPOSED_ROTATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_KINEMATIC_VISCOSITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_KINETIC_ENERGY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_MOMENT_PER_UNIT_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_PRECAMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_PRESSURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_RELATIVE_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_ROTATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_ROTATION_PER_UNIT_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_SOLID_TYPE_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_SPECIFIC_ENERGY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_SPECIFIC_WEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_SURFACE_TYPE_LOAD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_TEMPERATURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_TEMPERATURE_CHANGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_TURBULENCE_DISSIPATION_RATE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_LOADS_VELOCITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MASS_MOMENT_PER_UNIT_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MASS_PER_UNIT_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MASS_PER_UNIT_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MATERIAL_ANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MATERIAL_DEFORMATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MATERIAL_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MATERIAL_QUANTITY_INTEGER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MATERIAL_SPECIFIC_WEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_MATERIAL_THICKNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_ORTHOTROPY_BENDING_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_ORTHOTROPY_LINE_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_PARTIAL_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_POISSONS_RATIO</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_PRECISION_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_QUANTITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_QUANTITY_INTEGER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_RATIO</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_RELATIVE_LENGTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_ANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_BIMOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_COMPLIANCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_DIMENSION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_EFFECTIVE_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_EFFECTIVE_SECOND_MOMENT_OF_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_LIMIT_FOR_REINFORCEMENT_PLACEMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_MOMENT_OF_INERTIA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_NORMALIZED_WARPING_CONSTANT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_PERIMETER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_QUANTITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_SECTION_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_SECTION_MODULUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_STATICAL_MOMENT_OF_AREA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_TEMPERATURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_TENSION_FIELD_COEFFICIENT_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_TENSION_FIELD_COEFFICIENT_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_UNIT_STRESSES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_UNIT_WARPING_FUNCTION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_VOLUME</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_WARPING_CONSTANT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_WARPING_STATICAL_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SECTION_WEIGHT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SELF_WEIGHT_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SELF_WEIGHT_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SHEAR_SPRING_CONSTANT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SOLID_SHEAR_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SPRING_ROTATIONAL_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SPRING_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_STIFFNESS_MULTIPLICATION_FACTOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_STRAIN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_STRAIN_RATE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_STRESSES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SURFACES_CONTACT_TYPE_SHEAR_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_SURFACE_SPRING_CONSTANT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_THERMAL_EXPANSION_COEFFICIENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_THICKNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_TIME</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_VOLUME</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_UNIT_GROUP_WEIGHT_AND_KNOT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=GlobalParameterDefinitionType>
+                <h2>GlobalParameterDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_DEFINITION_TYPE_DEFINITION_TYPE_VALUE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_DEFINITION_TYPE_DEFINITION_TYPE_FORMULA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_DEFINITION_TYPE_DEFINITION_TYPE_OPTIMIZATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_DEFINITION_TYPE_DEFINITION_TYPE_OPTIMIZATION_ASCENDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>GLOBAL_PARAMETER_DEFINITION_TYPE_DEFINITION_TYPE_OPTIMIZATION_DESCENDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

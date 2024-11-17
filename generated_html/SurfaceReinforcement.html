@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_concrete_design.SurfaceReinforcement - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_concrete_design.SurfaceReinforcement - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=SurfaceReinforcement>
+            <h2>SurfaceReinforcement</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_type</td>
+                        <td><a href="#SurfaceReinforcementLocationType">SurfaceReinforcementLocationType</a></td>
+                        <td>Location type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>material</td>
+                        <td>int</td>
+                        <td>Material</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_type</td>
+                        <td><a href="#SurfaceReinforcementReinforcementType">SurfaceReinforcementReinforcementType</a></td>
+                        <td>Reinforcement type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter</td>
+                        <td>float</td>
+                        <td>Rebar diameter | d_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Rebar diameter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_auto_minimum</td>
+                        <td>float</td>
+                        <td>Rebar diameter | Minimum | d_s,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_auto_maximum</td>
+                        <td>float</td>
+                        <td>Rebar diameter | Maximum | d_s,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_auto_diameters_enabled</td>
+                        <td>bool</td>
+                        <td>Rebar diameter | Usable diameters enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_auto_diameters</td>
+                        <td>List[int]</td>
+                        <td>Rebar diameter | Usable diameters | d_s,p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_auto_priority</td>
+                        <td>int</td>
+                        <td>Rebar diameter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_diameter_calculated</td>
+                        <td>float</td>
+                        <td>Rebar diameter | Determined | d_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_size</td>
+                        <td>float</td>
+                        <td>Bar size | Bar No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing</td>
+                        <td>float</td>
+                        <td>Rebar spacing | s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Rebar spacing | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing_auto_minimum</td>
+                        <td>float</td>
+                        <td>Rebar spacing | Minimum | s_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing_auto_maximum</td>
+                        <td>float</td>
+                        <td>Rebar spacing | Maximum | s_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing_auto_increment</td>
+                        <td>float</td>
+                        <td>Rebar spacing | Increment | ?_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing_auto_priority</td>
+                        <td>int</td>
+                        <td>Rebar spacing | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_spacing_calculated</td>
+                        <td>float</td>
+                        <td>Rebar spacing | Determined | s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter</td>
+                        <td>float</td>
+                        <td>Stirrup diameter | d_s,st</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Stirrup diameter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_auto_minimum</td>
+                        <td>float</td>
+                        <td>Stirrup diameter | Minimum | d_s,st,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_auto_maximum</td>
+                        <td>float</td>
+                        <td>Stirrup diameter | Maximum | d_s,st,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_auto_diameters_enabled</td>
+                        <td>bool</td>
+                        <td>Stirrup diameter | Usable diameters enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_auto_diameters</td>
+                        <td>List[int]</td>
+                        <td>Stirrup diameter | Usable diameters | d_s,p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_auto_priority</td>
+                        <td>int</td>
+                        <td>Stirrup diameter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_diameter_calculated</td>
+                        <td>float</td>
+                        <td>Stirrup diameter | Determined | d_s,st</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_size</td>
+                        <td>float</td>
+                        <td>Stirrup size | Bar No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing</td>
+                        <td>float</td>
+                        <td>Stirrup spacing | s_st</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Stirrup spacing | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing_auto_minimum</td>
+                        <td>float</td>
+                        <td>Stirrup spacing | Minimum | s_st,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing_auto_maximum</td>
+                        <td>float</td>
+                        <td>Stirrup spacing | Maximum | s_st,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing_auto_increment</td>
+                        <td>float</td>
+                        <td>Stirrup spacing | Increment | ?_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing_auto_priority</td>
+                        <td>int</td>
+                        <td>Stirrup spacing | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_spacing_calculated</td>
+                        <td>float</td>
+                        <td>Stirrup spacing | Determined | s_st</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_product_range</td>
+                        <td><a href="#SurfaceReinforcementMeshProductRange">SurfaceReinforcementMeshProductRange</a></td>
+                        <td>Mesh product range</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_shape</td>
+                        <td><a href="#SurfaceReinforcementMeshShape">SurfaceReinforcementMeshShape</a></td>
+                        <td>Mesh shape</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_name</td>
+                        <td>str</td>
+                        <td>Mesh name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_transverse_reinforcement_enabled</td>
+                        <td>bool</td>
+                        <td>Additional transverse reinforcement enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter</td>
+                        <td>float</td>
+                        <td>Additional rebar diameter | d_s,90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Additional rebar diameter | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_auto_minimum</td>
+                        <td>float</td>
+                        <td>Additional rebar diameter | Minimum | d_s,90°,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_auto_maximum</td>
+                        <td>float</td>
+                        <td>Additional rebar diameter | Maximum | d_s,90°,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_auto_diameters_enabled</td>
+                        <td>bool</td>
+                        <td>Additional rebar diameter | Usable diameters enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_auto_diameters</td>
+                        <td>List[int]</td>
+                        <td>Additional rebar diameter | Usable diameters | d_s,p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_auto_priority</td>
+                        <td>int</td>
+                        <td>Additional rebar diameter | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_diameter_calculated</td>
+                        <td>float</td>
+                        <td>Additional rebar diameter | Determined | d_s,90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_size</td>
+                        <td>float</td>
+                        <td>Additional bar size | Bar No._90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing</td>
+                        <td>float</td>
+                        <td>Additional rebar spacing | s_90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing_auto_enabled</td>
+                        <td>bool</td>
+                        <td>Additional rebar spacing | Auto</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing_auto_minimum</td>
+                        <td>float</td>
+                        <td>Additional rebar spacing | Minimum | s_90°,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing_auto_maximum</td>
+                        <td>float</td>
+                        <td>Additional rebar spacing | Maximum | s_90°,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing_auto_increment</td>
+                        <td>float</td>
+                        <td>Additional rebar spacing | Increment | ?_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing_auto_priority</td>
+                        <td>int</td>
+                        <td>Additional rebar spacing | Priority | p</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_spacing_calculated</td>
+                        <td>float</td>
+                        <td>Additional rebar spacing | Determined | s_90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>alignment_top_enabled</td>
+                        <td>bool</td>
+                        <td>Top alignment enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>alignment_bottom_enabled</td>
+                        <td>bool</td>
+                        <td>Bottom alignment enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_offset_to_concrete_cover_top</td>
+                        <td>float</td>
+                        <td>Top additional offset to concrete cover | e_t</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_offset_to_concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>Bottom additional offset to concrete cover | e_b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_direction_type</td>
+                        <td><a href="#SurfaceReinforcementReinforcementDirectionType">SurfaceReinforcementReinforcementDirectionType</a></td>
+                        <td>Reinforcement direction type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_reinforcement_direction</td>
+                        <td><a href="#SurfaceReinforcementDesignReinforcementDirection">SurfaceReinforcementDesignReinforcementDirection</a></td>
+                        <td>In reinforcement direction of design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>first_direction_point_1</td>
+                        <td>float</td>
+                        <td>First direction point</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>first_direction_point_2</td>
+                        <td>float</td>
+                        <td>First direction point</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>second_direction_point_1</td>
+                        <td>float</td>
+                        <td>Second direction point</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>second_direction_point_2</td>
+                        <td>float</td>
+                        <td>Second direction point</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>projection_coordinate_system</td>
+                        <td>int</td>
+                        <td>Projection coordinate system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>projection_plane</td>
+                        <td><a href="#SurfaceReinforcementProjectionPlane">SurfaceReinforcementProjectionPlane</a></td>
+                        <td>Projection plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as1</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as2</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as1_top</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,1,-z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as2_top</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,2,-z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as1_bottom</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,1,+z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as2_bottom</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,2,+z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as_i</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,i</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as_i_plus_90</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,i+90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as_i_top</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,i,-z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as_i_bottom</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,i,+z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as_i_plus_90_top</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,i+90°,-z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_area_as_i_plus_90_bottom</td>
+                        <td>float</td>
+                        <td>Reinforcement area | a_s,i+90°,+z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_reinforcement_area_asw</td>
+                        <td>float</td>
+                        <td>Stirrup Reinforcement area | a_s,w</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_region_from</td>
+                        <td>float</td>
+                        <td>Reinforcement Acting Region | From</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_region_to</td>
+                        <td>float</td>
+                        <td>Reinforcement Acting Region | To</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_rectangle_type</td>
+                        <td><a href="#SurfaceReinforcementLocationRectangleType">SurfaceReinforcementLocationRectangleType</a></td>
+                        <td>Location | Rectangular | Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_first_x</td>
+                        <td>float</td>
+                        <td>Location | First | Coordinate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_first_y</td>
+                        <td>float</td>
+                        <td>Location | First | Coordinate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_second_x</td>
+                        <td>float</td>
+                        <td>Location | Second | Coordinate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_second_y</td>
+                        <td>float</td>
+                        <td>Location | Second | Coordinate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_center_x</td>
+                        <td>float</td>
+                        <td>Location | Center</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_center_y</td>
+                        <td>float</td>
+                        <td>Location | Center</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_center_side_a</td>
+                        <td>float</td>
+                        <td>Location | Center | Side | a</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_center_side_b</td>
+                        <td>float</td>
+                        <td>Location | Center | Side | b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_rotation</td>
+                        <td>float</td>
+                        <td>Rectangle rotation about Z | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>location_radius</td>
+                        <td>float</td>
+                        <td>Radius | R</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>polygon_points</td>
+                        <td><a href="#ArrayOfSurfaceReinforcementPolygonPoints">ArrayOfSurfaceReinforcementPolygonPoints</a></td>
+                        <td>Reinforcement Location</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_size_calculated</td>
+                        <td><a href="#SurfaceReinforcementStirrupSizeCalculated">SurfaceReinforcementStirrupSizeCalculated</a></td>
+                        <td>Stirrup size | Determined | Bar No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_size_auto_minimum</td>
+                        <td><a href="#SurfaceReinforcementStirrupSizeAutoMinimum">SurfaceReinforcementStirrupSizeAutoMinimum</a></td>
+                        <td>Stirrup size | Minimum | Bar No._min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stirrup_size_auto_maximum</td>
+                        <td><a href="#SurfaceReinforcementStirrupSizeAutoMaximum">SurfaceReinforcementStirrupSizeAutoMaximum</a></td>
+                        <td>Stirrup size | Maximum | Bar No._max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_size_calculated</td>
+                        <td><a href="#SurfaceReinforcementRebarSizeCalculated">SurfaceReinforcementRebarSizeCalculated</a></td>
+                        <td>Bar size | Determined | Bar No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_size_auto_minimum</td>
+                        <td><a href="#SurfaceReinforcementRebarSizeAutoMinimum">SurfaceReinforcementRebarSizeAutoMinimum</a></td>
+                        <td>Bar size | Minimum | Bar No._min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rebar_size_auto_maximum</td>
+                        <td><a href="#SurfaceReinforcementRebarSizeAutoMaximum">SurfaceReinforcementRebarSizeAutoMaximum</a></td>
+                        <td>Bar size | Maximum | Bar No._max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_size_calculated</td>
+                        <td><a href="#SurfaceReinforcementAdditionalRebarSizeCalculated">SurfaceReinforcementAdditionalRebarSizeCalculated</a></td>
+                        <td>Additional bar size | Determined | Bar No._90°</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_size_auto_minimum</td>
+                        <td><a href="#SurfaceReinforcementAdditionalRebarSizeAutoMinimum">SurfaceReinforcementAdditionalRebarSizeAutoMinimum</a></td>
+                        <td>Additional bar size | Minimum | Bar No._90°,min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_rebar_size_auto_maximum</td>
+                        <td><a href="#SurfaceReinforcementAdditionalRebarSizeAutoMaximum">SurfaceReinforcementAdditionalRebarSizeAutoMaximum</a></td>
+                        <td>Additional bar size | Maximum | Bar No._90°,max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfSurfaceReinforcementPolygonPoints>
+            <h2>ArrayOfSurfaceReinforcementPolygonPoints</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SurfaceReinforcementLocationType>
+                <h2>SurfaceReinforcementLocationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_TYPE_LOCATION_TYPE_FREE_CIRCULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_TYPE_LOCATION_TYPE_FREE_POLYGON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_TYPE_LOCATION_TYPE_FREE_RECTANGULAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_TYPE_LOCATION_TYPE_ON_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementReinforcementType>
+                <h2>SurfaceReinforcementReinforcementType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REINFORCEMENT_TYPE_REINFORCEMENT_TYPE_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REINFORCEMENT_TYPE_REINFORCEMENT_TYPE_REBAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REINFORCEMENT_TYPE_REINFORCEMENT_TYPE_STIRRUPS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementMeshProductRange>
+                <h2>SurfaceReinforcementMeshProductRange Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_AUSTRIA_2002_01_01</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_CZECH_REPUBLIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_FRANCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_GERMANY_1997_01_01</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_GERMANY_2001_10_01</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_GERMANY_2008_01_01</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_NETHERLANDS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_PRODUCT_RANGE_MESHSTANDARD_UNITED_STATES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementMeshShape>
+                <h2>SurfaceReinforcementMeshShape Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_AQS_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_AQ_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_AS_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_A_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_B_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_CQS_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_CS_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_E_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_G_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_KA_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_KD_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_KH_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_KY_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_K_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_L_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_PAF</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_P_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_Q_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_ROLLS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_R_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_SHEETS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_ST</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_W_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_MESH_SHAPE_MESHSHAPE_Z_MESH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementReinforcementDirectionType>
+                <h2>SurfaceReinforcementReinforcementDirectionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REINFORCEMENT_DIRECTION_TYPE_REINFORCEMENT_DIRECTION_TYPE_IN_DESIGN_REINFORCEMENT_DIRECTION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REINFORCEMENT_DIRECTION_TYPE_REINFORCEMENT_DIRECTION_TYPE_PARALLEL_TO_TWO_POINTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementDesignReinforcementDirection>
+                <h2>SurfaceReinforcementDesignReinforcementDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_DESIGN_REINFORCEMENT_DIRECTION_DESIGN_REINFORCEMENT_DIRECTION_A_S_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_DESIGN_REINFORCEMENT_DIRECTION_DESIGN_REINFORCEMENT_DIRECTION_A_S_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementProjectionPlane>
+                <h2>SurfaceReinforcementProjectionPlane Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_PROJECTION_PLANE_PROJECTION_PLANE_XY_OR_UV</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_PROJECTION_PLANE_PROJECTION_PLANE_XZ_OR_UW</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_PROJECTION_PLANE_PROJECTION_PLANE_YZ_OR_VW</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementLocationRectangleType>
+                <h2>SurfaceReinforcementLocationRectangleType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_RECTANGLE_TYPE_RECTANGLE_TYPE_CORNER_POINTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_LOCATION_RECTANGLE_TYPE_RECTANGLE_TYPE_CENTER_AND_SIDES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementStirrupSizeCalculated>
+                <h2>SurfaceReinforcementStirrupSizeCalculated Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_10</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_11</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_12</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_14</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_16</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_18</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_1P5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_2P5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_4</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_6</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_7</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_8</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_9</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_10</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_15</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_20</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_25</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_30</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_35</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_45</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_55</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementStirrupSizeAutoMinimum>
+                <h2>SurfaceReinforcementStirrupSizeAutoMinimum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_AUTO_MINIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementStirrupSizeAutoMaximum>
+                <h2>SurfaceReinforcementStirrupSizeAutoMaximum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_STIRRUP_SIZE_AUTO_MAXIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementRebarSizeCalculated>
+                <h2>SurfaceReinforcementRebarSizeCalculated Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_10</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_11</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_12</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_14</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_16</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_18</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_1P5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_2P5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_4</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_6</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_7</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_8</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_9</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_10</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_15</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_20</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_25</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_30</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_35</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_45</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_55</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementRebarSizeAutoMinimum>
+                <h2>SurfaceReinforcementRebarSizeAutoMinimum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_AUTO_MINIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementRebarSizeAutoMaximum>
+                <h2>SurfaceReinforcementRebarSizeAutoMaximum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_REBAR_SIZE_AUTO_MAXIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementAdditionalRebarSizeCalculated>
+                <h2>SurfaceReinforcementAdditionalRebarSizeCalculated Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_10</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_11</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_12</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_14</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_16</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_18</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_1P5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_2P5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_4</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_6</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_7</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_8</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_ACI_9</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_10</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_15</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_20</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_25</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_30</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_35</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_45</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_CALCULATED_REBAR_SIZE_DESIGNATION_CSA_55</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementAdditionalRebarSizeAutoMinimum>
+                <h2>SurfaceReinforcementAdditionalRebarSizeAutoMinimum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_AUTO_MINIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceReinforcementAdditionalRebarSizeAutoMaximum>
+                <h2>SurfaceReinforcementAdditionalRebarSizeAutoMaximum Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_REINFORCEMENT_ADDITIONAL_REBAR_SIZE_AUTO_MAXIMUM_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

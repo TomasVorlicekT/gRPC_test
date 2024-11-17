@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_timber_design.TimberServiceConditions - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_timber_design.TimberServiceConditions - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=TimberServiceConditions>
+            <h2>TimberServiceConditions</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Member Sets No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Surface Sets No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_objects</td>
+                        <td>str</td>
+                        <td>Assigned to</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moisture_service_condition</td>
+                        <td><a href="#TimberServiceConditionsMoistureServiceCondition">TimberServiceConditionsMoistureServiceCondition</a></td>
+                        <td>Moisture Service Condition</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>treatment</td>
+                        <td><a href="#TimberServiceConditionsTreatment">TimberServiceConditionsTreatment</a></td>
+                        <td>Treatment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>temperature</td>
+                        <td><a href="#TimberServiceConditionsTemperature">TimberServiceConditionsTemperature</a></td>
+                        <td>Temperature</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>outdoor_environment</td>
+                        <td>bool</td>
+                        <td>3 - Outdoor environment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>long_term_high_temperature_of_surface</td>
+                        <td>bool</td>
+                        <td>4 - Long-term high temperature of surface (40°C ~ 50°C)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>permanent_load_design_situation</td>
+                        <td>bool</td>
+                        <td>5 - Permanent load</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_structures</td>
+                        <td>bool</td>
+                        <td>6 - Timber temporary structures</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>short_term_construction_or_maintenance</td>
+                        <td>bool</td>
+                        <td>7 - Short-term or construction or maintenance</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_is_point_impregnated</td>
+                        <td>bool</td>
+                        <td>Timber is point-impregnated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_pressure_treated</td>
+                        <td>bool</td>
+                        <td>6 - Member is pressure-treated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>equilibrium_moisture_content</td>
+                        <td>float</td>
+                        <td>Equilibrium moisture content</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_temperature</td>
+                        <td>float</td>
+                        <td>5 - Temperature</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>impregnation_with_flame_retardant_under_pressure</td>
+                        <td>bool</td>
+                        <td>Impregnation with flame retardant under pressure</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=TimberServiceConditionsMoistureServiceCondition>
+                <h2>TimberServiceConditionsMoistureServiceCondition Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TIMBER_MOISTURE_SERVICE_CONDITION_TYPE_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TIMBER_MOISTURE_SERVICE_CONDITION_TYPE_MOIST</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TIMBER_MOISTURE_SERVICE_CONDITION_TYPE_RATHER_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TIMBER_MOISTURE_SERVICE_CONDITION_TYPE_RATHER_WET</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TIMBER_MOISTURE_SERVICE_CONDITION_TYPE_VERY_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_MOISTURE_SERVICE_CONDITION_TIMBER_MOISTURE_SERVICE_CONDITION_TYPE_WET</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=TimberServiceConditionsTreatment>
+                <h2>TimberServiceConditionsTreatment Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TREATMENT_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TREATMENT_TREATMENT_TYPE_FIRE_RETARDANT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TREATMENT_TREATMENT_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TREATMENT_TREATMENT_TYPE_PRESERVATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=TimberServiceConditionsTemperature>
+                <h2>TimberServiceConditionsTemperature Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_EQUAL_TO_50</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_LESS_OR_EQUAL_100</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_LESS_OR_EQUAL_35</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_RANGE_100_125</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_RANGE_125_150</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_RANGE_35_50</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_TEMPERATURE_ZONE_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_TEMPERATURE_ZONE_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>TIMBER_SERVICE_CONDITIONS_TEMPERATURE_TEMPERATURE_TYPE_TEMPERATURE_ZONE_3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

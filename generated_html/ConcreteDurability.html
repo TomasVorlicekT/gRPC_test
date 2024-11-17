@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_concrete_design.ConcreteDurability - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_concrete_design.ConcreteDurability - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=ConcreteDurability>
+            <h2>ConcreteDurability</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Member Sets No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>no_risk_of_corrosion_or_attack_enabled</td>
+                        <td>bool</td>
+                        <td>No risk of corrosion or attack enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>no_risk_of_corrosion_or_attack</td>
+                        <td><a href="#ConcreteDurabilityNoRiskOfCorrosionOrAttack">ConcreteDurabilityNoRiskOfCorrosionOrAttack</a></td>
+                        <td>No risk of corrosion or attack</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>corrosion_induced_by_carbonation_enabled</td>
+                        <td>bool</td>
+                        <td>Corrosion induced by carbonation enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>corrosion_induced_by_carbonation</td>
+                        <td><a href="#ConcreteDurabilityCorrosionInducedByCarbonation">ConcreteDurabilityCorrosionInducedByCarbonation</a></td>
+                        <td>Corrosion induced by carbonation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>corrosion_induced_by_chlorides_enabled</td>
+                        <td>bool</td>
+                        <td>Corrosion induced by chlorides enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>corrosion_induced_by_chlorides</td>
+                        <td><a href="#ConcreteDurabilityCorrosionInducedByChlorides">ConcreteDurabilityCorrosionInducedByChlorides</a></td>
+                        <td>Corrosion induced by chlorides</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>corrosion_induced_by_chlorides_from_sea_water_enabled</td>
+                        <td>bool</td>
+                        <td>Corrosion induced by chlorides from sea water enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>corrosion_induced_by_chlorides_from_sea_water</td>
+                        <td><a href="#ConcreteDurabilityCorrosionInducedByChloridesFromSeaWater">ConcreteDurabilityCorrosionInducedByChloridesFromSeaWater</a></td>
+                        <td>Corrosion induced by chlorides from sea water</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>freeze_thaw_attack_enabled</td>
+                        <td>bool</td>
+                        <td>Freeze / thaw attack enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>freeze_thaw_attack</td>
+                        <td><a href="#ConcreteDurabilityFreezeThawAttack">ConcreteDurabilityFreezeThawAttack</a></td>
+                        <td>Freeze / thaw attack</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>chemical_attack_enabled</td>
+                        <td>bool</td>
+                        <td>Chemical attack enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>chemical_attack</td>
+                        <td><a href="#ConcreteDurabilityChemicalAttack">ConcreteDurabilityChemicalAttack</a></td>
+                        <td>Chemical attack</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_corrosion_induced_by_wear_enabled</td>
+                        <td>bool</td>
+                        <td>Concrete corrosion induced by wear enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_corrosion_induced_by_wear</td>
+                        <td><a href="#ConcreteDurabilityConcreteCorrosionInducedByWear">ConcreteDurabilityConcreteCorrosionInducedByWear</a></td>
+                        <td>Concrete corrosion induced by wear</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structural_class_type</td>
+                        <td><a href="#ConcreteDurabilityStructuralClassType">ConcreteDurabilityStructuralClassType</a></td>
+                        <td>Structural class type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>userdefined_structural_class</td>
+                        <td><a href="#ConcreteDurabilityUserdefinedStructuralClass">ConcreteDurabilityUserdefinedStructuralClass</a></td>
+                        <td>User-defined structural class</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_working_life</td>
+                        <td><a href="#ConcreteDurabilityDesignWorkingLife">ConcreteDurabilityDesignWorkingLife</a></td>
+                        <td>Design working life</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>increase_design_working_life_from_50_to_100_years_enabled</td>
+                        <td>bool</td>
+                        <td>Increase design working life from 50 to 100 years enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>position_of_reinforcement_not_affected_by_construction_process_enabled</td>
+                        <td>bool</td>
+                        <td>Position of reinforcement not affected by construction process enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>special_quality_control_of_production_enabled</td>
+                        <td>bool</td>
+                        <td>Special quality control of production enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nature_of_binder_without_fly_ash_enabled</td>
+                        <td>bool</td>
+                        <td>Nature of the binder based on CEN without fly ash enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>air_entrainment_of_more_than_4_percent_enabled</td>
+                        <td>bool</td>
+                        <td>Air entrainment of more than 4% enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>compact_coating_enabled</td>
+                        <td>bool</td>
+                        <td>Compact coating enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>adequate_cement_enabled</td>
+                        <td>bool</td>
+                        <td>Adequate cement enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>maximum_equivalent_water_to_cement_ratio</td>
+                        <td><a href="#ConcreteDurabilityMaximumEquivalentWaterToCementRatio">ConcreteDurabilityMaximumEquivalentWaterToCementRatio</a></td>
+                        <td>Maximum equivalent water-to-cement ratio | vct_ekv</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>strength_class_of_the_concrete_enabled</td>
+                        <td>bool</td>
+                        <td>The strength class of the concrete is at least two classes above the indicative strength class</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>increase_of_minimum_concrete_cover_type</td>
+                        <td><a href="#ConcreteDurabilityIncreaseOfMinimumConcreteCoverType">ConcreteDurabilityIncreaseOfMinimumConcreteCoverType</a></td>
+                        <td>Increase of minimum concrete cover type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>increase_of_minimum_concrete_cover_factor</td>
+                        <td>float</td>
+                        <td>Increase of minimum concrete cover factor | ?c_dur,?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stainless_steel_enabled</td>
+                        <td>bool</td>
+                        <td>Stainless steel enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stainless_steel_type</td>
+                        <td><a href="#ConcreteDurabilityStainlessSteelType">ConcreteDurabilityStainlessSteelType</a></td>
+                        <td>Stainless steel type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stainless_steel_factor</td>
+                        <td>float</td>
+                        <td>Stainless steel factor | ?c_dur,st</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_protection_enabled</td>
+                        <td>bool</td>
+                        <td>Additional protection enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_protection_type</td>
+                        <td><a href="#ConcreteDurabilityAdditionalProtectionType">ConcreteDurabilityAdditionalProtectionType</a></td>
+                        <td>Additional protection type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>additional_protection_factor</td>
+                        <td>float</td>
+                        <td>Additional protection factor | ?c_dur,add</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>allowance_of_deviation_type</td>
+                        <td><a href="#ConcreteDurabilityAllowanceOfDeviationType">ConcreteDurabilityAllowanceOfDeviationType</a></td>
+                        <td>Allowance for deviation type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>userdefined_allowance_of_deviation_factor</td>
+                        <td>float</td>
+                        <td>User-defined allowance for deviation factor | ?c_dev</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>relaxed_quality_control_enabled</td>
+                        <td>bool</td>
+                        <td>Reduced inspection level acc. to 4.4.1.3(1) enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_cast_enabled</td>
+                        <td>bool</td>
+                        <td>Concrete cast enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_cast</td>
+                        <td><a href="#ConcreteDurabilityConcreteCast">ConcreteDurabilityConcreteCast</a></td>
+                        <td>Concrete cast</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=ConcreteDurabilityNoRiskOfCorrosionOrAttack>
+                <h2>ConcreteDurabilityNoRiskOfCorrosionOrAttack Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_NO_RISK_OF_CORROSION_OR_ATTACK_VERY_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityCorrosionInducedByCarbonation>
+                <h2>ConcreteDurabilityCorrosionInducedByCarbonation Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CARBONATION_CORROSION_INDUCED_BY_CARBONATION_TYPE_DRY_OR_PERMANENTLY_WET</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CARBONATION_CORROSION_INDUCED_BY_CARBONATION_TYPE_CYCLIC_WET_AND_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CARBONATION_CORROSION_INDUCED_BY_CARBONATION_TYPE_MODERATE_HUMIDITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CARBONATION_CORROSION_INDUCED_BY_CARBONATION_TYPE_WET_RARELY_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityCorrosionInducedByChlorides>
+                <h2>ConcreteDurabilityCorrosionInducedByChlorides Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CHLORIDES_CORROSION_INDUCED_BY_CHLORIDES_TYPE_MODERATE_HUMIDITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CHLORIDES_CORROSION_INDUCED_BY_CHLORIDES_TYPE_CYCLIC_WET_AND_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CHLORIDES_CORROSION_INDUCED_BY_CHLORIDES_TYPE_WET_RARELY_DRY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityCorrosionInducedByChloridesFromSeaWater>
+                <h2>ConcreteDurabilityCorrosionInducedByChloridesFromSeaWater Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CHLORIDES_FROM_SEA_WATER_CORROSION_INDUCED_BY_CHLORIDES_FROM_SEA_WATER_TYPE_AIRBORNE_SALT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CHLORIDES_FROM_SEA_WATER_CORROSION_INDUCED_BY_CHLORIDES_FROM_SEA_WATER_TYPE_PERMANENTLY_SUBMERGED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CORROSION_INDUCED_BY_CHLORIDES_FROM_SEA_WATER_CORROSION_INDUCED_BY_CHLORIDES_FROM_SEA_WATER_TYPE_SPLASH_AND_SPRAY_ZONES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityFreezeThawAttack>
+                <h2>ConcreteDurabilityFreezeThawAttack Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_FREEZE_THAW_ATTACK_FREEZE_THAW_ATTACK_TYPE_MODERATE_SATURATION_NO_DEICING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_FREEZE_THAW_ATTACK_FREEZE_THAW_ATTACK_TYPE_HIGH_SATURATION_DEICING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_FREEZE_THAW_ATTACK_FREEZE_THAW_ATTACK_TYPE_HIGH_SATURATION_NO_DEICING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_FREEZE_THAW_ATTACK_FREEZE_THAW_ATTACK_TYPE_MODERATE_SATURATION_DEICING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityChemicalAttack>
+                <h2>ConcreteDurabilityChemicalAttack Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CHEMICAL_ATTACK_CHEMICAL_ATTACK_TYPE_SLIGHTLY_AGGRESSIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CHEMICAL_ATTACK_CHEMICAL_ATTACK_TYPE_HIGHLY_AGGRESSIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CHEMICAL_ATTACK_CHEMICAL_ATTACK_TYPE_MODERATELY_AGGRESSIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityConcreteCorrosionInducedByWear>
+                <h2>ConcreteDurabilityConcreteCorrosionInducedByWear Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CONCRETE_CORROSION_INDUCED_BY_WEAR_CONCRETE_CORROSION_INDUCED_BY_WEAR_TYPE_MODERATE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CONCRETE_CORROSION_INDUCED_BY_WEAR_CONCRETE_CORROSION_INDUCED_BY_WEAR_TYPE_HIGH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CONCRETE_CORROSION_INDUCED_BY_WEAR_CONCRETE_CORROSION_INDUCED_BY_WEAR_TYPE_VERY_HIGH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityStructuralClassType>
+                <h2>ConcreteDurabilityStructuralClassType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_STRUCTURAL_CLASS_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_STRUCTURAL_CLASS_TYPE_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityUserdefinedStructuralClass>
+                <h2>ConcreteDurabilityUserdefinedStructuralClass Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_S1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_S2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_S3</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_S4</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_S5</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_USERDEFINED_STRUCTURAL_CLASS_S6</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityDesignWorkingLife>
+                <h2>ConcreteDurabilityDesignWorkingLife Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_FIFTY_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_EIGHTY_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_HUNDRED_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_SEVENTY_FIVE_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_THIRTY_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_TWENTY_FIVE_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_DESIGN_WORKING_LIFE_TWENTY_YEARS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityMaximumEquivalentWaterToCementRatio>
+                <h2>ConcreteDurabilityMaximumEquivalentWaterToCementRatio Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_THREE_FIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_FIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_FIVE_FIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_FOUR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_FOUR_FIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_NINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_MAXIMUM_EQUIVALENT_WATER_TO_CEMENT_RATIO_ZERO_POINT_SIX</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityIncreaseOfMinimumConcreteCoverType>
+                <h2>ConcreteDurabilityIncreaseOfMinimumConcreteCoverType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_INCREASE_OF_MINIMUM_CONCRETE_COVER_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_INCREASE_OF_MINIMUM_CONCRETE_COVER_TYPE_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityStainlessSteelType>
+                <h2>ConcreteDurabilityStainlessSteelType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_STAINLESS_STEEL_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_STAINLESS_STEEL_TYPE_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityAdditionalProtectionType>
+                <h2>ConcreteDurabilityAdditionalProtectionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_ADDITIONAL_PROTECTION_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_ADDITIONAL_PROTECTION_TYPE_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityAllowanceOfDeviationType>
+                <h2>ConcreteDurabilityAllowanceOfDeviationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_ALLOWANCE_OF_DEVIATION_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_ALLOWANCE_OF_DEVIATION_TYPE_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteDurabilityConcreteCast>
+                <h2>ConcreteDurabilityConcreteCast Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CONCRETE_CAST_AGAINST_PREPARED_GROUND</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_DURABILITY_CONCRETE_CAST_DIRECTLY_AGAINST_SOIL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

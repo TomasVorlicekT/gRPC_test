@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.construction_stages.ConstructionStage - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.construction_stages.ConstructionStage - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=ConstructionStage>
+            <h2>ConstructionStage</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>to_solve</td>
+                        <td>bool</td>
+                        <td>To Solve</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>continue_on_construction_stage</td>
+                        <td>int</td>
+                        <td>Continue at Construction Stage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>start_time</td>
+                        <td>float</td>
+                        <td>Start time | t_s</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>start_date</td>
+                        <td>str</td>
+                        <td>Start date</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>end_time</td>
+                        <td>float</td>
+                        <td>End time | t_e</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>end_date</td>
+                        <td>str</td>
+                        <td>End date</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>duration</td>
+                        <td>float</td>
+                        <td>Duration | ?t</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loading</td>
+                        <td><a href="#ArrayOfConstructionStageLoading">ArrayOfConstructionStageLoading</a></td>
+                        <td>Loading</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generate_combinations</td>
+                        <td><a href="#ConstructionStageGenerateCombinations">ConstructionStageGenerateCombinations</a></td>
+                        <td>Analysis of construction stages via</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>static_analysis_settings</td>
+                        <td>int</td>
+                        <td>Static analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_imperfection</td>
+                        <td>bool</td>
+                        <td>Consider imperfection</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_case</td>
+                        <td>int</td>
+                        <td>Imperfection case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_modification_enabled</td>
+                        <td>bool</td>
+                        <td>Consider structure modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_modification</td>
+                        <td>int</td>
+                        <td>Structure modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_analysis_enabled</td>
+                        <td>bool</td>
+                        <td>Consider stability analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_analysis</td>
+                        <td>int</td>
+                        <td>Stability analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_duration</td>
+                        <td>str</td>
+                        <td>Load duration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_members_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Members enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_members_active</td>
+                        <td>bool</td>
+                        <td>All</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>added_members</td>
+                        <td>List[int]</td>
+                        <td>Add - Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_members</td>
+                        <td>List[int]</td>
+                        <td>Deactivate - Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_members</td>
+                        <td>List[int]</td>
+                        <td>Active - Members No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_property_modifications</td>
+                        <td><a href="#ArrayOfConstructionStageMemberPropertyModifications">ArrayOfConstructionStageMemberPropertyModifications</a></td>
+                        <td>Modify Properties of Members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_surfaces_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Surfaces enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_surfaces_active</td>
+                        <td>bool</td>
+                        <td>All</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>added_surfaces</td>
+                        <td>List[int]</td>
+                        <td>Add - Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_surfaces</td>
+                        <td>List[int]</td>
+                        <td>Deactivate - Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_surfaces</td>
+                        <td>List[int]</td>
+                        <td>Active - Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_property_modifications</td>
+                        <td><a href="#ArrayOfConstructionStageSurfacePropertyModifications">ArrayOfConstructionStageSurfacePropertyModifications</a></td>
+                        <td>Modify Properties of Surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_solids_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Solids enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_solids_active</td>
+                        <td>bool</td>
+                        <td>All</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>added_solids</td>
+                        <td>List[int]</td>
+                        <td>Add - Solids No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_solids</td>
+                        <td>List[int]</td>
+                        <td>Deactivate - Solids No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_solids</td>
+                        <td>List[int]</td>
+                        <td>Active - Solids No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solid_property_modifications</td>
+                        <td><a href="#ArrayOfConstructionStageSolidPropertyModifications">ArrayOfConstructionStageSolidPropertyModifications</a></td>
+                        <td>Modify Properties of Solids</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_nodes_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Nodes enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_surface_contacts_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Surface Contacts enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_surface_contacts_active</td>
+                        <td>bool</td>
+                        <td>All</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>added_surface_contacts</td>
+                        <td>List[int]</td>
+                        <td>Added Surface Contacts</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_surface_contacts</td>
+                        <td>List[int]</td>
+                        <td>Deactivated Surface Contacts</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_surface_contacts</td>
+                        <td>List[int]</td>
+                        <td>Active Surface Contacts</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_rigid_links_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Rigid Links enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_rigid_links_active</td>
+                        <td>bool</td>
+                        <td>All</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>added_rigid_links</td>
+                        <td>List[int]</td>
+                        <td>Added Rigid Links</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_rigid_links</td>
+                        <td>List[int]</td>
+                        <td>Deactivated Rigid Links</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>active_rigid_links</td>
+                        <td>List[int]</td>
+                        <td>Active Rigid Links</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_all_nodes_with_support</td>
+                        <td>bool</td>
+                        <td>All nodes with support</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>add_nodes_to_support</td>
+                        <td>List[int]</td>
+                        <td>Assign Support to Nodes No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_nodes_for_support</td>
+                        <td>List[int]</td>
+                        <td>Unassign Support from Nodes No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>currently_supported_nodes</td>
+                        <td>List[int]</td>
+                        <td>Supported Nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_line_supports_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Line Supports enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support_all_lines_with_support</td>
+                        <td>bool</td>
+                        <td>All Lines supported</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>add_lines_to_support</td>
+                        <td>List[int]</td>
+                        <td>Assign Support to Lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_lines_for_support</td>
+                        <td>List[int]</td>
+                        <td>Unassign support from Lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>currently_supported_lines</td>
+                        <td>List[int]</td>
+                        <td>Supported Lines</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_line_hinges_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Line Hinges enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_hinges_assigned</td>
+                        <td>bool</td>
+                        <td>All Line Hinges assigned</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>add_line_hinges</td>
+                        <td>str</td>
+                        <td>Assign Line Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_line_hinges</td>
+                        <td>str</td>
+                        <td>Unassign Line Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>current_line_hinges</td>
+                        <td>str</td>
+                        <td>Line Hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_line_welded_joints_enabled_to_modify</td>
+                        <td>bool</td>
+                        <td>Line Welded Joints enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>are_all_welds_assigned</td>
+                        <td>bool</td>
+                        <td>All Line Welded Joints assigned</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>add_line_welded_joints</td>
+                        <td>str</td>
+                        <td>Assign Line Welded Joints</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deactivated_line_welded_joints</td>
+                        <td>str</td>
+                        <td>Unassign Line Welded Joints</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>current_line_welded_joints</td>
+                        <td>str</td>
+                        <td>Line Welded Joints</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>geotechnical_analysis_reset_small_strain_history</td>
+                        <td>bool</td>
+                        <td>Reset small strain history</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfConstructionStageLoading>
+            <h2>ArrayOfConstructionStageLoading</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConstructionStageMemberPropertyModifications>
+            <h2>ArrayOfConstructionStageMemberPropertyModifications</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConstructionStageSurfacePropertyModifications>
+            <h2>ArrayOfConstructionStageSurfacePropertyModifications</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConstructionStageSolidPropertyModifications>
+            <h2>ArrayOfConstructionStageSolidPropertyModifications</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=ConstructionStageGenerateCombinations>
+                <h2>ConstructionStageGenerateCombinations Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONSTRUCTION_STAGE_GENERATE_COMBINATIONS_GENERATE_LOAD_COMBINATIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

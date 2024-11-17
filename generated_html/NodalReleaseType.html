@@ -1,0 +1,2339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_special_objects.NodalReleaseType - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_special_objects.NodalReleaseType - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=NodalReleaseType>
+            <h2>NodalReleaseType</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodal_releases</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Nodal Releases No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>coordinate_system</td>
+                        <td>str</td>
+                        <td>Coordinate System</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axial_release_n</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axial_release_vy</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axial_release_vz</td>
+                        <td>float</td>
+                        <td>Spring constant | C_u,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_release_mt</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_release_my</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_release_mz</td>
+                        <td>float</td>
+                        <td>Spring constant | C_?,z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axial_release_n_nonlinearity</td>
+                        <td><a href="#NodalReleaseTypeAxialReleaseNNonlinearity">NodalReleaseTypeAxialReleaseNNonlinearity</a></td>
+                        <td>Nonlinearity | u_x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axial_release_vy_nonlinearity</td>
+                        <td><a href="#NodalReleaseTypeAxialReleaseVyNonlinearity">NodalReleaseTypeAxialReleaseVyNonlinearity</a></td>
+                        <td>Nonlinearity | u_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>axial_release_vz_nonlinearity</td>
+                        <td><a href="#NodalReleaseTypeAxialReleaseVzNonlinearity">NodalReleaseTypeAxialReleaseVzNonlinearity</a></td>
+                        <td>Nonlinearity | u_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_release_mt_nonlinearity</td>
+                        <td><a href="#NodalReleaseTypeMomentReleaseMtNonlinearity">NodalReleaseTypeMomentReleaseMtNonlinearity</a></td>
+                        <td>Nonlinearity | ?_x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_release_my_nonlinearity</td>
+                        <td><a href="#NodalReleaseTypeMomentReleaseMyNonlinearity">NodalReleaseTypeMomentReleaseMyNonlinearity</a></td>
+                        <td>Nonlinearity | ?_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>moment_release_mz_nonlinearity</td>
+                        <td><a href="#NodalReleaseTypeMomentReleaseMzNonlinearity">NodalReleaseTypeMomentReleaseMzNonlinearity</a></td>
+                        <td>Nonlinearity | ?_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAlongXNegativeType">NodalReleaseTypePartialActivityAlongXNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAlongXPositiveType">NodalReleaseTypePartialActivityAlongXPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAlongYNegativeType">NodalReleaseTypePartialActivityAlongYNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAlongYPositiveType">NodalReleaseTypePartialActivityAlongYPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAlongZNegativeType">NodalReleaseTypePartialActivityAlongZNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAlongZPositiveType">NodalReleaseTypePartialActivityAlongZPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAroundXNegativeType">NodalReleaseTypePartialActivityAroundXNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAroundXPositiveType">NodalReleaseTypePartialActivityAroundXPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAroundYNegativeType">NodalReleaseTypePartialActivityAroundYNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAroundYPositiveType">NodalReleaseTypePartialActivityAroundYPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAroundZNegativeType">NodalReleaseTypePartialActivityAroundZNegativeType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_type</td>
+                        <td><a href="#NodalReleaseTypePartialActivityAroundZPositiveType">NodalReleaseTypePartialActivityAroundZPositiveType</a></td>
+                        <td>Partial activity type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity release displacement | u_x (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity release displacement | u_x (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity release displacement | u_y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity release displacement | u_y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity release displacement | u_z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_displacement</td>
+                        <td>float</td>
+                        <td>Partial activity release displacement | u_z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity release moment | M_t (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity release moment | M_t (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity release moment | M_y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity release moment | M_y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_moment</td>
+                        <td>float</td>
+                        <td>Partial activity release moment | M_z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_moment</td>
+                        <td>float</td>
+                        <td>Partial activity release moment | M_z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity release force | N (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity release force | N (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity release force | V_y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity release force | V_y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_force</td>
+                        <td>float</td>
+                        <td>Partial activity release force | V_z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_force</td>
+                        <td>float</td>
+                        <td>Partial activity release force | V_z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity release rotation | ?_x (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity release rotation | ?_x (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity release rotation | ?_y (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity release rotation | ?_y (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity release rotation | ?_z (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_rotation</td>
+                        <td>float</td>
+                        <td>Partial activity release rotation | ?_z (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_x,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_x_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_x,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_y,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_y_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_y,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_z,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_along_z_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | u_z,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_x,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_x_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_x,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_y,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_y_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_y,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_negative_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_z,s (-)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>partial_activity_around_z_positive_slippage</td>
+                        <td>float</td>
+                        <td>Partial activity slippage | ?_z,s (+)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_table</td>
+                        <td><a href="#ArrayOfNodalReleaseTypeDiagramAlongXTable">ArrayOfNodalReleaseTypeDiagramAlongXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_table</td>
+                        <td><a href="#ArrayOfNodalReleaseTypeDiagramAlongYTable">ArrayOfNodalReleaseTypeDiagramAlongYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_table</td>
+                        <td><a href="#ArrayOfNodalReleaseTypeDiagramAlongZTable">ArrayOfNodalReleaseTypeDiagramAlongZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_table</td>
+                        <td><a href="#ArrayOfNodalReleaseTypeDiagramAroundXTable">ArrayOfNodalReleaseTypeDiagramAroundXTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_table</td>
+                        <td><a href="#ArrayOfNodalReleaseTypeDiagramAroundYTable">ArrayOfNodalReleaseTypeDiagramAroundYTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_table</td>
+                        <td><a href="#ArrayOfNodalReleaseTypeDiagramAroundZTable">ArrayOfNodalReleaseTypeDiagramAroundZTable</a></td>
+                        <td>Diagram table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_symmetric</td>
+                        <td>bool</td>
+                        <td>Symmetric</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_is_sorted</td>
+                        <td>bool</td>
+                        <td>Is sorted</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_start</td>
+                        <td><a href="#NodalReleaseTypeDiagramAlongXStart">NodalReleaseTypeDiagramAlongXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_start</td>
+                        <td><a href="#NodalReleaseTypeDiagramAlongYStart">NodalReleaseTypeDiagramAlongYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_start</td>
+                        <td><a href="#NodalReleaseTypeDiagramAlongZStart">NodalReleaseTypeDiagramAlongZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_start</td>
+                        <td><a href="#NodalReleaseTypeDiagramAroundXStart">NodalReleaseTypeDiagramAroundXStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_start</td>
+                        <td><a href="#NodalReleaseTypeDiagramAroundYStart">NodalReleaseTypeDiagramAroundYStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_start</td>
+                        <td><a href="#NodalReleaseTypeDiagramAroundZStart">NodalReleaseTypeDiagramAroundZStart</a></td>
+                        <td>Diagram ending type at Start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_x_end</td>
+                        <td><a href="#NodalReleaseTypeDiagramAlongXEnd">NodalReleaseTypeDiagramAlongXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_y_end</td>
+                        <td><a href="#NodalReleaseTypeDiagramAlongYEnd">NodalReleaseTypeDiagramAlongYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_along_z_end</td>
+                        <td><a href="#NodalReleaseTypeDiagramAlongZEnd">NodalReleaseTypeDiagramAlongZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_x_end</td>
+                        <td><a href="#NodalReleaseTypeDiagramAroundXEnd">NodalReleaseTypeDiagramAroundXEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_y_end</td>
+                        <td><a href="#NodalReleaseTypeDiagramAroundYEnd">NodalReleaseTypeDiagramAroundYEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diagram_around_z_end</td>
+                        <td><a href="#NodalReleaseTypeDiagramAroundZEnd">NodalReleaseTypeDiagramAroundZEnd</a></td>
+                        <td>Diagram ending type at End</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_x</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_xy</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_xy</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_xz</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_xz</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_y</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_yx</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_yx</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_yz</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_yz</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_z</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_zx</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_zx</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_coefficient_zy</td>
+                        <td>float</td>
+                        <td>Friction coefficient | µ_zy</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_direction_independent_x</td>
+                        <td>bool</td>
+                        <td>Direction independent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_direction_independent_y</td>
+                        <td>bool</td>
+                        <td>Direction independent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>friction_direction_independent_z</td>
+                        <td>bool</td>
+                        <td>Direction independent</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>local_axis_system_object_type</td>
+                        <td><a href="#NodalReleaseTypeLocalAxisSystemObjectType">NodalReleaseTypeLocalAxisSystemObjectType</a></td>
+                        <td>Object type of local axis system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>local_axis_system_reference_object</td>
+                        <td>int</td>
+                        <td>Reference object of local axis system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfNodalReleaseTypeDiagramAlongXTable>
+            <h2>ArrayOfNodalReleaseTypeDiagramAlongXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalReleaseTypeDiagramAlongYTable>
+            <h2>ArrayOfNodalReleaseTypeDiagramAlongYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalReleaseTypeDiagramAlongZTable>
+            <h2>ArrayOfNodalReleaseTypeDiagramAlongZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalReleaseTypeDiagramAroundXTable>
+            <h2>ArrayOfNodalReleaseTypeDiagramAroundXTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalReleaseTypeDiagramAroundYTable>
+            <h2>ArrayOfNodalReleaseTypeDiagramAroundYTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfNodalReleaseTypeDiagramAroundZTable>
+            <h2>ArrayOfNodalReleaseTypeDiagramAroundZTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=NodalReleaseTypeAxialReleaseNNonlinearity>
+                <h2>NodalReleaseTypeAxialReleaseNNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_N_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeAxialReleaseVyNonlinearity>
+                <h2>NodalReleaseTypeAxialReleaseVyNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VY_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeAxialReleaseVzNonlinearity>
+                <h2>NodalReleaseTypeAxialReleaseVzNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_AXIAL_RELEASE_VZ_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeMomentReleaseMtNonlinearity>
+                <h2>NodalReleaseTypeMomentReleaseMtNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MT_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeMomentReleaseMyNonlinearity>
+                <h2>NodalReleaseTypeMomentReleaseMyNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MY_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeMomentReleaseMzNonlinearity>
+                <h2>NodalReleaseTypeMomentReleaseMzNonlinearity Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_NONE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_ALL_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_NEGATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FAILURE_IF_POSITIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FORCE_MOMENT_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_1_PLUS_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_FRICTION_DIRECTION_2</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_PARTIAL_ACTIVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_MOMENT_RELEASE_MZ_NONLINEARITY_NONLINEARITY_TYPE_STIFFNESS_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAlongXNegativeType>
+                <h2>NodalReleaseTypePartialActivityAlongXNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAlongXPositiveType>
+                <h2>NodalReleaseTypePartialActivityAlongXPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAlongYNegativeType>
+                <h2>NodalReleaseTypePartialActivityAlongYNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAlongYPositiveType>
+                <h2>NodalReleaseTypePartialActivityAlongYPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAlongZNegativeType>
+                <h2>NodalReleaseTypePartialActivityAlongZNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAlongZPositiveType>
+                <h2>NodalReleaseTypePartialActivityAlongZPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_ALONG_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_FORCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAroundXNegativeType>
+                <h2>NodalReleaseTypePartialActivityAroundXNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAroundXPositiveType>
+                <h2>NodalReleaseTypePartialActivityAroundXPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_X_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAroundYNegativeType>
+                <h2>NodalReleaseTypePartialActivityAroundYNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAroundYPositiveType>
+                <h2>NodalReleaseTypePartialActivityAroundYPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Y_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAroundZNegativeType>
+                <h2>NodalReleaseTypePartialActivityAroundZNegativeType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_NEGATIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypePartialActivityAroundZPositiveType>
+                <h2>NodalReleaseTypePartialActivityAroundZPositiveType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_COMPLETE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FAILURE_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_FIXED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_INEFFECTIVNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_PARTIAL_ACTIVITY_AROUND_Z_POSITIVE_TYPE_PARTIAL_ACTIVITY_TYPE_YIELDING_FROM_MOMENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAlongXStart>
+                <h2>NodalReleaseTypeDiagramAlongXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAlongYStart>
+                <h2>NodalReleaseTypeDiagramAlongYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAlongZStart>
+                <h2>NodalReleaseTypeDiagramAlongZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAroundXStart>
+                <h2>NodalReleaseTypeDiagramAroundXStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAroundYStart>
+                <h2>NodalReleaseTypeDiagramAroundYStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAroundZStart>
+                <h2>NodalReleaseTypeDiagramAroundZStart Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_START_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAlongXEnd>
+                <h2>NodalReleaseTypeDiagramAlongXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAlongYEnd>
+                <h2>NodalReleaseTypeDiagramAlongYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAlongZEnd>
+                <h2>NodalReleaseTypeDiagramAlongZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_ALONG_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAroundXEnd>
+                <h2>NodalReleaseTypeDiagramAroundXEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_X_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAroundYEnd>
+                <h2>NodalReleaseTypeDiagramAroundYEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Y_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeDiagramAroundZEnd>
+                <h2>NodalReleaseTypeDiagramAroundZEnd Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_FAILURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_STOP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_DIAGRAM_AROUND_Z_END_DIAGRAM_ENDING_TYPE_YIELDING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=NodalReleaseTypeLocalAxisSystemObjectType>
+                <h2>NodalReleaseTypeLocalAxisSystemObjectType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_LOCAL_AXIS_SYSTEM_OBJECT_TYPE_LOCAL_AXIS_SYSTEM_OBJECT_TYPE_MEMBER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>NODAL_RELEASE_TYPE_LOCAL_AXIS_SYSTEM_OBJECT_TYPE_LOCAL_AXIS_SYSTEM_OBJECT_TYPE_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

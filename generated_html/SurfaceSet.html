@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_core.SurfaceSet - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_core.SurfaceSet - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=SurfaceSet>
+            <h2>SurfaceSet</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>set_type</td>
+                        <td><a href="#SurfaceSetSetType">SurfaceSetSetType</a></td>
+                        <td>Surface Set Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces</td>
+                        <td>List[int]</td>
+                        <td>Surfaces No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_area</td>
+                        <td>float</td>
+                        <td>Area | A</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>volume</td>
+                        <td>float</td>
+                        <td>Volume | V</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass</td>
+                        <td>float</td>
+                        <td>Mass | M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center of gravity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>position</td>
+                        <td>str</td>
+                        <td>Position</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>position_short</td>
+                        <td>str</td>
+                        <td>Position</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stress_analysis_configuration</td>
+                        <td>int</td>
+                        <td>Stress-strain analysis configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_properties_activated</td>
+                        <td>bool</td>
+                        <td>Design properties activated</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_service_class</td>
+                        <td>int</td>
+                        <td>Service class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_moisture_class</td>
+                        <td>int</td>
+                        <td>Moisture class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_service_conditions</td>
+                        <td>int</td>
+                        <td>Service conditions for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_user_defined_concrete_cover_enabled</td>
+                        <td>bool</td>
+                        <td>User-Defined Concrete Cover</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_cover_top</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_concrete_cover_top</td>
+                        <td>float</td>
+                        <td>User-Defined Concrete Cover - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>User-Defined Concrete Cover - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_durability_top</td>
+                        <td>int</td>
+                        <td>Concrete durability - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_durability_bottom</td>
+                        <td>int</td>
+                        <td>Concrete durability - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_direction_top</td>
+                        <td>int</td>
+                        <td>Reinforcement direction - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_direction_bottom</td>
+                        <td>int</td>
+                        <td>Reinforcement direction - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_reinforcements</td>
+                        <td>List[int]</td>
+                        <td>Surface reinforcements</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_reinforcement_table</td>
+                        <td><a href="#ArrayOfSurfaceSetSurfaceReinforcementTable">ArrayOfSurfaceSetSurfaceReinforcementTable</a></td>
+                        <td>List of Surface Reinforcements</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Surface concrete design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Surface concrete design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Surface concrete design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_seismic_configuration</td>
+                        <td>int</td>
+                        <td>Surface concrete design | Seismic configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_surface_type</td>
+                        <td><a href="#SurfaceSetDeflectionCheckSurfaceType">SurfaceSetDeflectionCheckSurfaceType</a></td>
+                        <td>Deflection analysis | Surface type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_displacement_reference</td>
+                        <td><a href="#SurfaceSetDeflectionCheckDisplacementReference">SurfaceSetDeflectionCheckDisplacementReference</a></td>
+                        <td>Deflection analysis | Displacement reference</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_length_z</td>
+                        <td>float</td>
+                        <td>Deflection analysis | Reference length L_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_length_z_definition_type</td>
+                        <td><a href="#SurfaceSetDeflectionCheckReferenceLengthZDefinitionType">SurfaceSetDeflectionCheckReferenceLengthZDefinitionType</a></td>
+                        <td>Deflection analysis for reference length L_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Point 1 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1_x</td>
+                        <td>float</td>
+                        <td>Coordinate of point 1 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1_y</td>
+                        <td>float</td>
+                        <td>Coordinate of point 1 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1_z</td>
+                        <td>float</td>
+                        <td>Coordinate of point 1 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Point 2 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2_x</td>
+                        <td>float</td>
+                        <td>Coordinate of point 2 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2_y</td>
+                        <td>float</td>
+                        <td>Coordinate of point 2 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2_z</td>
+                        <td>float</td>
+                        <td>Coordinate of point 2 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Point 3 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3_x</td>
+                        <td>float</td>
+                        <td>Coordinate of point 3 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3_y</td>
+                        <td>float</td>
+                        <td>Coordinate of point 3 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3_z</td>
+                        <td>float</td>
+                        <td>Coordinate of point 3 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_timber_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Surface timber design | Ultimate configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_timber_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Surface timber design | Serviceability configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_timber_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Surface timber design | Fire resistance configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfSurfaceSetSurfaceReinforcementTable>
+            <h2>ArrayOfSurfaceSetSurfaceReinforcementTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SurfaceSetSetType>
+                <h2>SurfaceSetSetType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_SET_SET_TYPE_SET_TYPE_CONTINUOUS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_SET_SET_TYPE_SET_TYPE_GROUP</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceSetDeflectionCheckSurfaceType>
+                <h2>SurfaceSetDeflectionCheckSurfaceType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_SURFACE_TYPE_DEFLECTION_CHECK_SURFACE_TYPE_DOUBLE_SUPPORTED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_SURFACE_TYPE_DEFLECTION_CHECK_SURFACE_TYPE_CANTILEVER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceSetDeflectionCheckDisplacementReference>
+                <h2>SurfaceSetDeflectionCheckDisplacementReference Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFORMED_USER_DEFINED_REFERENCE_PLANE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_PARALLEL_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_UNDEFORMED_SYSTEM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceSetDeflectionCheckReferenceLengthZDefinitionType>
+                <h2>SurfaceSetDeflectionCheckReferenceLengthZDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_REFERENCE_LENGTH_Z_DEFINITION_TYPE_DEFLECTION_CHECK_REFERENCE_LENGTH_DEFINITION_TYPE_MANUALLY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_REFERENCE_LENGTH_Z_DEFINITION_TYPE_DEFLECTION_CHECK_REFERENCE_LENGTH_DEFINITION_TYPE_BY_MAXIMUM_BOUNDARY_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_SET_DEFLECTION_CHECK_REFERENCE_LENGTH_Z_DEFINITION_TYPE_DEFLECTION_CHECK_REFERENCE_LENGTH_DEFINITION_TYPE_BY_MINIMUM_BOUNDARY_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

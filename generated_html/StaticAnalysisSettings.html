@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loading.StaticAnalysisSettings - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loading.StaticAnalysisSettings - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=StaticAnalysisSettings>
+            <h2>StaticAnalysisSettings</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analysis_type</td>
+                        <td><a href="#StaticAnalysisSettingsAnalysisType">StaticAnalysisSettingsAnalysisType</a></td>
+                        <td>Analysis type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>iterative_method_for_nonlinear_analysis</td>
+                        <td><a href="#StaticAnalysisSettingsIterativeMethodForNonlinearAnalysis">StaticAnalysisSettingsIterativeMethodForNonlinearAnalysis</a></td>
+                        <td>Iterative method for nonlinear analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>max_number_of_iterations</td>
+                        <td>int</td>
+                        <td>Maximum number of iterations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_load_increments</td>
+                        <td>int</td>
+                        <td>Number of load increments</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>method_of_equation_system</td>
+                        <td><a href="#StaticAnalysisSettingsMethodOfEquationSystem">StaticAnalysisSettingsMethodOfEquationSystem</a></td>
+                        <td>Method for equation system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>plate_bending_theory</td>
+                        <td><a href="#StaticAnalysisSettingsPlateBendingTheory">StaticAnalysisSettingsPlateBendingTheory</a></td>
+                        <td>Plate bending theory</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>standard_precision_and_tolerance_settings_enabled</td>
+                        <td>bool</td>
+                        <td>Modify standard precision and tolerance settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ignore_all_nonlinearities_enabled</td>
+                        <td>bool</td>
+                        <td>Ignore all nonlinearities</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>precision_of_convergence_criteria_for_nonlinear_calculation</td>
+                        <td>float</td>
+                        <td>Precision of convergence criteria for nonlinear calculation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>instability_detection_tolerance</td>
+                        <td>float</td>
+                        <td>Tolerance for detection of instability</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>relative_setting_of_time_step_for_dynamic_relaxation</td>
+                        <td>float</td>
+                        <td>Relative setting of time step for dynamic relaxation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>iterative_calculation_robustness</td>
+                        <td>float</td>
+                        <td>Robustness of iterative calculation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>modify_loading_by_multiplier_factor</td>
+                        <td>bool</td>
+                        <td>Modify loading by multiplier factor</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loading_multiplier_factor</td>
+                        <td>float</td>
+                        <td>Loading multiplier factor | k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>divide_results_by_loading_factor</td>
+                        <td>bool</td>
+                        <td>Divide results by load factor</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_favorable_effect_due_to_tension_in_members</td>
+                        <td>bool</td>
+                        <td>Consider favorable effect due to tension in members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>check_of_stability_based_on_rate_of_deformation</td>
+                        <td>bool</td>
+                        <td>Stability check based on deformation rate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>try_to_calculate_instabil_structure</td>
+                        <td>bool</td>
+                        <td>Try to calculate unstable structure</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>displacements_due_to_bourdon_effect</td>
+                        <td>bool</td>
+                        <td>Displacements due to member load of type 'Pipe internal pressure' (Bourdon effect)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>save_results_of_all_load_increments</td>
+                        <td>bool</td>
+                        <td>Save results of all load increments</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nonsymmetric_direct_solver</td>
+                        <td>bool</td>
+                        <td>Asymmetric direct solver</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>equilibrium_for_undeformed_structure</td>
+                        <td>bool</td>
+                        <td>Equilibrium for undeformed structure</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>percentage_of_iteration</td>
+                        <td>int</td>
+                        <td>Percentage of iterations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>refer_internal_forces_to_deformed_structure</td>
+                        <td>bool</td>
+                        <td>Refer internal forces to deformed structure</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>refer_internal_forces_to_deformed_structure_for_normal_forces</td>
+                        <td>bool</td>
+                        <td>Refer internal forces to deformed structure for axial forces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>refer_internal_forces_to_deformed_structure_for_shear_forces</td>
+                        <td>bool</td>
+                        <td>Refer internal forces to deformed structure for shear forces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>refer_internal_forces_to_deformed_structure_for_moments</td>
+                        <td>bool</td>
+                        <td>Refer internal forces to deformed structure for moments</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_enabled</td>
+                        <td>bool</td>
+                        <td>Activate mass conversion to load</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_defined_as_acceleration</td>
+                        <td>bool</td>
+                        <td>Mass conversion defined as accelerations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_factor_in_direction_x</td>
+                        <td>float</td>
+                        <td>Mass conversion factor in X direction | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_acceleration_in_direction_x</td>
+                        <td>float</td>
+                        <td>Mass conversion acceleration in X direction | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_factor_in_direction_y</td>
+                        <td>float</td>
+                        <td>Mass conversion factor in Y direction | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_acceleration_in_direction_y</td>
+                        <td>float</td>
+                        <td>Mass conversion acceleration in Y direction | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_factor_in_direction_z</td>
+                        <td>float</td>
+                        <td>Mass conversion factor in Z direction | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_acceleration_in_direction_z</td>
+                        <td>float</td>
+                        <td>Mass conversion acceleration in Z direction | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deformation_of_failing_members_and_reactivation_enabled</td>
+                        <td>bool</td>
+                        <td>Deformation of failing members and reactivation where appropriate</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>maximum_number_of_reactivations</td>
+                        <td>int</td>
+                        <td>Maximum number of reactivations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>exceptional_handling_enabled</td>
+                        <td>bool</td>
+                        <td>Exceptional handling enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assign_reduce_stiffness_enabled</td>
+                        <td><a href="#StaticAnalysisSettingsAssignReduceStiffnessEnabled">StaticAnalysisSettingsAssignReduceStiffnessEnabled</a></td>
+                        <td>Assign reduced stiffness to failing members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reduction_factor_of_stiffness</td>
+                        <td>int</td>
+                        <td>Reduction factor of stiffness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_iterations_for_loading_prestress</td>
+                        <td>int</td>
+                        <td>Number of iterations for loading prestress</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>integrate_preliminary_form_finding_enabled</td>
+                        <td>bool</td>
+                        <td>Integrate preliminary form-finding</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>speed_of_convergence</td>
+                        <td>float</td>
+                        <td>Speed of convergence</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>cutting_patterns_settings</td>
+                        <td>bool</td>
+                        <td>Cutting pattern settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>smoothness_of_boundary_lines</td>
+                        <td>float</td>
+                        <td>Smoothness of boundary lines</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>ratio_of_distance_of_cutting_lines_node_to_mesh</td>
+                        <td>float</td>
+                        <td>Ratio of distance of cutting line node to the FE mesh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=StaticAnalysisSettingsAnalysisType>
+                <h2>StaticAnalysisSettingsAnalysisType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ANALYSIS_TYPE_GEOMETRICALLY_LINEAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ANALYSIS_TYPE_LARGE_DEFORMATIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ANALYSIS_TYPE_SECOND_ORDER_P_DELTA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StaticAnalysisSettingsIterativeMethodForNonlinearAnalysis>
+                <h2>StaticAnalysisSettingsIterativeMethodForNonlinearAnalysis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ITERATIVE_METHOD_FOR_NONLINEAR_ANALYSIS_NEWTON_RAPHSON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ITERATIVE_METHOD_FOR_NONLINEAR_ANALYSIS_DYNAMIC_RELAXATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ITERATIVE_METHOD_FOR_NONLINEAR_ANALYSIS_NEWTON_RAPHSON_COMBINED_WITH_PICARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ITERATIVE_METHOD_FOR_NONLINEAR_ANALYSIS_NEWTON_RAPHSON_WITH_CONSTANT_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ITERATIVE_METHOD_FOR_NONLINEAR_ANALYSIS_NEWTON_RAPHSON_WITH_POSTCRITICAL_ANALYSIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ITERATIVE_METHOD_FOR_NONLINEAR_ANALYSIS_PICARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StaticAnalysisSettingsMethodOfEquationSystem>
+                <h2>StaticAnalysisSettingsMethodOfEquationSystem Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_METHOD_OF_EQUATION_SYSTEM_METHOD_OF_EQUATION_SYSTEM_DIRECT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_METHOD_OF_EQUATION_SYSTEM_METHOD_OF_EQUATION_SYSTEM_ITERATIVE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StaticAnalysisSettingsPlateBendingTheory>
+                <h2>StaticAnalysisSettingsPlateBendingTheory Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_PLATE_BENDING_THEORY_PLATE_BENDING_THEORY_MINDLIN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_PLATE_BENDING_THEORY_PLATE_BENDING_THEORY_KIRCHHOFF</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=StaticAnalysisSettingsAssignReduceStiffnessEnabled>
+                <h2>StaticAnalysisSettingsAssignReduceStiffnessEnabled Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ASSIGN_REDUCE_STIFFNESS_ENABLED_FAIILING_MEMBERS_TO_BE_REMOVED_INDIVIDUALY_DURING_SUCCESSIVE_ITERATIONS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>STATIC_ANALYSIS_SETTINGS_ASSIGN_REDUCE_STIFFNESS_ENABLED_ASSIGN_REDUCED_STIFFNESS_TO_FAILING_MEMBERS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

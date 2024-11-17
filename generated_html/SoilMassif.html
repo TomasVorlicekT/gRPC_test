@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.geotechnical_analysis.SoilMassif - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.geotechnical_analysis.SoilMassif - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=SoilMassif>
+            <h2>SoilMassif</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#SoilMassifType">SoilMassifType</a></td>
+                        <td>Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_type</td>
+                        <td><a href="#SoilMassifAssignedToType">SoilMassifAssignedToType</a></td>
+                        <td>Assigned to Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_boreholes</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Boreholes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_solids</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Solids</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_solid_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to Solid Sets</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to_solids_and_solid_sets</td>
+                        <td>str</td>
+                        <td>Assigned to Solids and Solid Sets</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>topology_type</td>
+                        <td><a href="#SoilMassifTopologyType">SoilMassifTopologyType</a></td>
+                        <td>Topology type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>depth_according_to_boreholes</td>
+                        <td>bool</td>
+                        <td>Depth according to boreholes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>diameter_for_circle_topology</td>
+                        <td>float</td>
+                        <td>Diameter for circle topology | D</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>boundary_lines_for_polygon_topology</td>
+                        <td>List[int]</td>
+                        <td>Boundary lines for polygon topology</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_x</td>
+                        <td>float</td>
+                        <td>Center X | X_c</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_y</td>
+                        <td>float</td>
+                        <td>Center Y | Y_c</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>size</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Size</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>size_x</td>
+                        <td>float</td>
+                        <td>Size X | a</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>size_y</td>
+                        <td>float</td>
+                        <td>Size Y | b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>size_z</td>
+                        <td>float</td>
+                        <td>Size Z | ?Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotation_about_z</td>
+                        <td>float</td>
+                        <td>Rotation about Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>groundwater</td>
+                        <td>bool</td>
+                        <td>Groundwater</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>groundwater_surface</td>
+                        <td>int</td>
+                        <td>Groundwater Surface</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analysis_type</td>
+                        <td><a href="#SoilMassifAnalysisType">SoilMassifAnalysisType</a></td>
+                        <td>Analysis type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mapped_mesh_under_surfaces</td>
+                        <td>bool</td>
+                        <td>Mapped mesh under surfaces</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surfaces_for_mapped_mesh</td>
+                        <td>List[int]</td>
+                        <td>Surfaces for mapped mesh</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_gradient_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined gradient enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>gradient_of_size_increase_in_depth</td>
+                        <td>float</td>
+                        <td>Gradient of size increase in depth</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rock_beneath_last_layer</td>
+                        <td>bool</td>
+                        <td>Rock beneath the last layer</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>depth_of_influence_zone_type</td>
+                        <td><a href="#SoilMassifDepthOfInfluenceZoneType">SoilMassifDepthOfInfluenceZoneType</a></td>
+                        <td>Type of depth of influence zone</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>depth_of_influence_zone</td>
+                        <td>float</td>
+                        <td>Depth of influence zone | h</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SoilMassifType>
+                <h2>SoilMassifType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_TYPE_TYPE_PHANTOM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_TYPE_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SoilMassifAssignedToType>
+                <h2>SoilMassifAssignedToType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_ASSIGNED_TO_TYPE_ASSIGNED_TO_TYPE_BOREHOLES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_ASSIGNED_TO_TYPE_ASSIGNED_TO_TYPE_SOIL_SOLIDS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SoilMassifTopologyType>
+                <h2>SoilMassifTopologyType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_TOPOLOGY_TYPE_TOPOLOGY_TYPE_RECTANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_TOPOLOGY_TYPE_TOPOLOGY_TYPE_CIRCLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_TOPOLOGY_TYPE_TOPOLOGY_TYPE_POLYGON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_TOPOLOGY_TYPE_TOPOLOGY_TYPE_POLYGON_FROM_POINTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SoilMassifAnalysisType>
+                <h2>SoilMassifAnalysisType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_ANALYSIS_TYPE_ANALYSIS_TYPE_NONLINEAR_SOIL_3D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_ANALYSIS_TYPE_ANALYSIS_TYPE_PASTERNAK_SUBSOIL_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_ANALYSIS_TYPE_ANALYSIS_TYPE_SOILIN_2D</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SoilMassifDepthOfInfluenceZoneType>
+                <h2>SoilMassifDepthOfInfluenceZoneType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_DEPTH_OF_INFLUENCE_ZONE_TYPE_DEPTH_OF_INFLUENCE_ZONE_MANUALLY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SOIL_MASSIF_DEPTH_OF_INFLUENCE_ZONE_TYPE_DEPTH_OF_INFLUENCE_ZONE_AUTOMATICALLY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

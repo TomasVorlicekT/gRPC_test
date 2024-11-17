@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.types_for_concrete_design.ConcreteEffectiveLengths - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.types_for_concrete_design.ConcreteEffectiveLengths - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=ConcreteEffectiveLengths>
+            <h2>ConcreteEffectiveLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>members</td>
+                        <td>List[int]</td>
+                        <td>Assigned to members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_sets</td>
+                        <td>List[int]</td>
+                        <td>Assigned to member sets</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>lateral_torsional_buckling</td>
+                        <td>bool</td>
+                        <td>Lateral-torsional buckling</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>buckling_factor_value_type</td>
+                        <td><a href="#ConcreteEffectiveLengthsBucklingFactorValueType">ConcreteEffectiveLengthsBucklingFactorValueType</a></td>
+                        <td>Buckling factor type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>intermediate_nodes</td>
+                        <td>bool</td>
+                        <td>Intermediate nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>different_properties</td>
+                        <td>bool</td>
+                        <td>Different properties</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>factors_definition_absolute</td>
+                        <td>bool</td>
+                        <td>Absolute factor definition</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_nodal_supports</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsFireDesignNodalSupports">ArrayOfConcreteEffectiveLengthsFireDesignNodalSupports</a></td>
+                        <td>Nodal supports for fire design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_factors</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsFireDesignFactors">ArrayOfConcreteEffectiveLengthsFireDesignFactors</a></td>
+                        <td>Fire design - factors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_lengths</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsFireDesignLengths">ArrayOfConcreteEffectiveLengthsFireDesignLengths</a></td>
+                        <td>Fire design - lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_intermediate_nodes</td>
+                        <td>bool</td>
+                        <td>Fire design - intermediate nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_different_properties</td>
+                        <td>bool</td>
+                        <td>Fire design - different properties</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_factors_definition_absolute</td>
+                        <td>bool</td>
+                        <td>Fire design - absolute factor definition</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>fire_design_different_buckling_factors</td>
+                        <td>bool</td>
+                        <td>Fire design - different buckling factors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>import_from_stability_analysis_enabled</td>
+                        <td>bool</td>
+                        <td>Import from stability analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_factors_definition_absolute</td>
+                        <td>bool</td>
+                        <td>Definition of factors absolute for import of stability data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_member_y</td>
+                        <td>int</td>
+                        <td>Member for import of stability data (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_loading_y</td>
+                        <td>int</td>
+                        <td>Loading for import of stability data (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_mode_number_y</td>
+                        <td>int</td>
+                        <td>Mode number for import of stability data (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_member_z</td>
+                        <td>int</td>
+                        <td>Member for import of stability data (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_loading_z</td>
+                        <td>int</td>
+                        <td>Loading for import of stability data (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_mode_number_z</td>
+                        <td>int</td>
+                        <td>Mode number for import of stability data (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_factors</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsStabilityImportDataFactors">ArrayOfConcreteEffectiveLengthsStabilityImportDataFactors</a></td>
+                        <td>Factors for import of stability data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_lengths</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsStabilityImportDataLengths">ArrayOfConcreteEffectiveLengthsStabilityImportDataLengths</a></td>
+                        <td>Lengths for import of stability data</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_user_defined_y</td>
+                        <td>bool</td>
+                        <td>User-defined stability data for import (y-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_import_data_user_defined_z</td>
+                        <td>bool</td>
+                        <td>User-defined stability data for import (z-axis)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_type_about_axis_y</td>
+                        <td><a href="#ConcreteEffectiveLengthsStructureTypeAboutAxisY">ConcreteEffectiveLengthsStructureTypeAboutAxisY</a></td>
+                        <td>Structure type about y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_type_about_axis_z</td>
+                        <td><a href="#ConcreteEffectiveLengthsStructureTypeAboutAxisZ">ConcreteEffectiveLengthsStructureTypeAboutAxisZ</a></td>
+                        <td>Structure type about z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structural_scheme_about_axis_y</td>
+                        <td><a href="#ConcreteEffectiveLengthsStructuralSchemeAboutAxisY">ConcreteEffectiveLengthsStructuralSchemeAboutAxisY</a></td>
+                        <td>Structural scheme about y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structural_scheme_about_axis_z</td>
+                        <td><a href="#ConcreteEffectiveLengthsStructuralSchemeAboutAxisZ">ConcreteEffectiveLengthsStructuralSchemeAboutAxisZ</a></td>
+                        <td>Structural scheme about z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>flexural_buckling_about_y</td>
+                        <td>bool</td>
+                        <td>Flexural buckling about y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>flexural_buckling_about_z</td>
+                        <td>bool</td>
+                        <td>Flexural buckling about z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nodal_supports</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsNodalSupports">ArrayOfConcreteEffectiveLengthsNodalSupports</a></td>
+                        <td>Nodal supports</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>factors</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsFactors">ArrayOfConcreteEffectiveLengthsFactors</a></td>
+                        <td>Factors</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>lengths</td>
+                        <td><a href="#ArrayOfConcreteEffectiveLengthsLengths">ArrayOfConcreteEffectiveLengthsLengths</a></td>
+                        <td>Lengths</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_type_about_axis_y_sp63</td>
+                        <td><a href="#ConcreteEffectiveLengthsStructureTypeAboutAxisYSp63">ConcreteEffectiveLengthsStructureTypeAboutAxisYSp63</a></td>
+                        <td>Structure type about y-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_type_about_axis_z_sp63</td>
+                        <td><a href="#ConcreteEffectiveLengthsStructureTypeAboutAxisZSp63">ConcreteEffectiveLengthsStructureTypeAboutAxisZSp63</a></td>
+                        <td>Structure type about z-axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsFireDesignNodalSupports>
+            <h2>ArrayOfConcreteEffectiveLengthsFireDesignNodalSupports</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsFireDesignFactors>
+            <h2>ArrayOfConcreteEffectiveLengthsFireDesignFactors</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsFireDesignLengths>
+            <h2>ArrayOfConcreteEffectiveLengthsFireDesignLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsStabilityImportDataFactors>
+            <h2>ArrayOfConcreteEffectiveLengthsStabilityImportDataFactors</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsStabilityImportDataLengths>
+            <h2>ArrayOfConcreteEffectiveLengthsStabilityImportDataLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsNodalSupports>
+            <h2>ArrayOfConcreteEffectiveLengthsNodalSupports</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsFactors>
+            <h2>ArrayOfConcreteEffectiveLengthsFactors</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfConcreteEffectiveLengthsLengths>
+            <h2>ArrayOfConcreteEffectiveLengthsLengths</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=ConcreteEffectiveLengthsBucklingFactorValueType>
+                <h2>ConcreteEffectiveLengthsBucklingFactorValueType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_BUCKLING_FACTOR_VALUE_TYPE_BUCKLING_FACTOR_VALUE_TYPE_THEORETICAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_BUCKLING_FACTOR_VALUE_TYPE_BUCKLING_FACTOR_VALUE_TYPE_RECOMMENDED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteEffectiveLengthsStructureTypeAboutAxisY>
+                <h2>ConcreteEffectiveLengthsStructureTypeAboutAxisY Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Y_STRUCTURE_TYPE_UNBRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Y_STRUCTURE_TYPE_BRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteEffectiveLengthsStructureTypeAboutAxisZ>
+                <h2>ConcreteEffectiveLengthsStructureTypeAboutAxisZ Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Z_STRUCTURE_TYPE_UNBRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Z_STRUCTURE_TYPE_BRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteEffectiveLengthsStructuralSchemeAboutAxisY>
+                <h2>ConcreteEffectiveLengthsStructuralSchemeAboutAxisY Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURAL_SCHEME_ABOUT_AXIS_Y_STRUCTURAL_SCHEME_DETERMINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURAL_SCHEME_ABOUT_AXIS_Y_STRUCTURAL_SCHEME_NON_DETERMINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteEffectiveLengthsStructuralSchemeAboutAxisZ>
+                <h2>ConcreteEffectiveLengthsStructuralSchemeAboutAxisZ Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURAL_SCHEME_ABOUT_AXIS_Z_STRUCTURAL_SCHEME_DETERMINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURAL_SCHEME_ABOUT_AXIS_Z_STRUCTURAL_SCHEME_NON_DETERMINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteEffectiveLengthsStructureTypeAboutAxisYSp63>
+                <h2>ConcreteEffectiveLengthsStructureTypeAboutAxisYSp63 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Y_SP63_STRUCTURE_TYPE_UNBRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Y_SP63_STRUCTURE_TYPE_BRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Y_SP63_STRUCTURE_TYPE_COMBINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ConcreteEffectiveLengthsStructureTypeAboutAxisZSp63>
+                <h2>ConcreteEffectiveLengthsStructureTypeAboutAxisZSp63 Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Z_SP63_STRUCTURE_TYPE_UNBRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Z_SP63_STRUCTURE_TYPE_BRACED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>CONCRETE_EFFECTIVE_LENGTHS_STRUCTURE_TYPE_ABOUT_AXIS_Z_SP63_STRUCTURE_TYPE_COMBINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

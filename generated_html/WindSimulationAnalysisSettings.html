@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loading.WindSimulationAnalysisSettings - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loading.WindSimulationAnalysisSettings - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=WindSimulationAnalysisSettings>
+            <h2>WindSimulationAnalysisSettings</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>simulation_type</td>
+                        <td><a href="#WindSimulationAnalysisSettingsSimulationType">WindSimulationAnalysisSettingsSimulationType</a></td>
+                        <td>Simulation type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to</td>
+                        <td>str</td>
+                        <td>Assigned to</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>density</td>
+                        <td>float</td>
+                        <td>Density | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>kinematic_viscosity</td>
+                        <td>float</td>
+                        <td>Kinematic viscosity | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>numerical_solver</td>
+                        <td><a href="#WindSimulationAnalysisSettingsNumericalSolver">WindSimulationAnalysisSettingsNumericalSolver</a></td>
+                        <td>Numerical solver</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>finite_volume_mesh_density</td>
+                        <td>float</td>
+                        <td>Finite volume mesh density</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>maximum_number_of_iterations</td>
+                        <td>int</td>
+                        <td>Maximum number of iterations</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_refinement_type</td>
+                        <td><a href="#WindSimulationAnalysisSettingsMeshRefinementType">WindSimulationAnalysisSettingsMeshRefinementType</a></td>
+                        <td>Mesh refinement type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>snap_to_model_edges</td>
+                        <td>bool</td>
+                        <td>Snap to model edges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>boundary_layers_checked</td>
+                        <td>bool</td>
+                        <td>Boundary layers checked</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>boundary_layers_value</td>
+                        <td>int</td>
+                        <td>Value of boundary layers | NL</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_turbulence</td>
+                        <td>bool</td>
+                        <td>Consider turbulence...</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>slip_boundary_condition_on_bottom_boundary</td>
+                        <td>bool</td>
+                        <td>'Slip' boundary condition on bottom boundary</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>use_second_order_numerical_scheme</td>
+                        <td>bool</td>
+                        <td>Use second-order numerical scheme</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_dimensions_of_wind_tunnel</td>
+                        <td>bool</td>
+                        <td>User-defined dimensions of wind tunnel</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>member_load_distribution</td>
+                        <td><a href="#WindSimulationAnalysisSettingsMemberLoadDistribution">WindSimulationAnalysisSettingsMemberLoadDistribution</a></td>
+                        <td>Member load distribution</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_model_type</td>
+                        <td><a href="#WindSimulationAnalysisSettingsTurbulenceModelType">WindSimulationAnalysisSettingsTurbulenceModelType</a></td>
+                        <td>Turbulence model type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sand_grain_roughness_height</td>
+                        <td>float</td>
+                        <td>Height of sand-grain roughness | Ks</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>roughness_constant</td>
+                        <td>float</td>
+                        <td>Roughness constant | Cs</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_simulation_time</td>
+                        <td>bool</td>
+                        <td>User-defined simulation time</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>velocity_field</td>
+                        <td>float</td>
+                        <td>Velocity field | U</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>velocity_x_component</td>
+                        <td>float</td>
+                        <td>Velocity x-component | U_x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>velocity_y_component</td>
+                        <td>float</td>
+                        <td>Velocity y-component | U_y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>velocity_z_component</td>
+                        <td>float</td>
+                        <td>Velocity z-component | U_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>specific_turbulence_dissipation_rate</td>
+                        <td>float</td>
+                        <td>Specific turbulence dissipation rate | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>start_time_for_saving_transient_results</td>
+                        <td>float</td>
+                        <td>Start time for saving transient results</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>steady_flow_from_solver</td>
+                        <td>bool</td>
+                        <td>Steady flow from solver</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_model_type_for_initial_condition</td>
+                        <td><a href="#WindSimulationAnalysisSettingsTurbulenceModelTypeForInitialCondition">WindSimulationAnalysisSettingsTurbulenceModelTypeForInitialCondition</a></td>
+                        <td>Turbulence model type for initial condition</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_dissipation_rate</td>
+                        <td>float</td>
+                        <td>Turbulence dissipation rate | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_intermittency</td>
+                        <td>float</td>
+                        <td>Turbulence intermittency | ?_int</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_kinetic_energy</td>
+                        <td>float</td>
+                        <td>Turbulence kinetic energy | k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_kinetic_energy_residue_monitors</td>
+                        <td>float</td>
+                        <td>Turbulence kinetic energy | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>turbulence_kinetic_viscosity</td>
+                        <td>float</td>
+                        <td>Modified turbulence kinetic viscosity | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>save_solver_data_to_continue_calculation</td>
+                        <td>bool</td>
+                        <td>Save solver data to continue calculation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>simulation_time</td>
+                        <td>float</td>
+                        <td>Simulation time</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pressure_field</td>
+                        <td>float</td>
+                        <td>Pressure field | P</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>residual_pressure</td>
+                        <td>float</td>
+                        <td>Residual pressure | P</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>momentum_thickness_reynolds_number</td>
+                        <td>float</td>
+                        <td>Momentum thickness Reynolds number | Re_?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>data_compression_error_tolerance</td>
+                        <td>float</td>
+                        <td>Data compression error tolerance</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_surface_roughness</td>
+                        <td>bool</td>
+                        <td>Consider surface roughness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>use_potential_flow_solver_for_initial_condition</td>
+                        <td>bool</td>
+                        <td>Use potential flow solver to calculate initial condition</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=WindSimulationAnalysisSettingsSimulationType>
+                <h2>WindSimulationAnalysisSettingsSimulationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_SIMULATION_TYPE_STEADY_FLOW</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_SIMULATION_TYPE_TRANSIENT_FLOW</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=WindSimulationAnalysisSettingsNumericalSolver>
+                <h2>WindSimulationAnalysisSettingsNumericalSolver Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_NUMERICAL_SOLVER_OPEN_FOAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=WindSimulationAnalysisSettingsMeshRefinementType>
+                <h2>WindSimulationAnalysisSettingsMeshRefinementType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_MESH_REFINEMENT_TYPE_DISTANCE_FROM_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_MESH_REFINEMENT_TYPE_SURFACE_CURVATURE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=WindSimulationAnalysisSettingsMemberLoadDistribution>
+                <h2>WindSimulationAnalysisSettingsMemberLoadDistribution Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_MEMBER_LOAD_DISTRIBUTION_UNIFORM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_MEMBER_LOAD_DISTRIBUTION_CONCENTRATED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_MEMBER_LOAD_DISTRIBUTION_TRAPEZOIDAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=WindSimulationAnalysisSettingsTurbulenceModelType>
+                <h2>WindSimulationAnalysisSettingsTurbulenceModelType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_TURBULENCE_MODEL_TYPE_TURBULENCE_TYPE_OMEGA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_TURBULENCE_MODEL_TYPE_TURBULENCE_TYPE_EPSILON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_TURBULENCE_MODEL_TYPE_TURBULENCE_TYPE_LES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=WindSimulationAnalysisSettingsTurbulenceModelTypeForInitialCondition>
+                <h2>WindSimulationAnalysisSettingsTurbulenceModelTypeForInitialCondition Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_TURBULENCE_MODEL_TYPE_FOR_INITIAL_CONDITION_TURBULENCE_TYPE_OMEGA</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_TURBULENCE_MODEL_TYPE_FOR_INITIAL_CONDITION_TURBULENCE_TYPE_EPSILON</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>WIND_SIMULATION_ANALYSIS_SETTINGS_TURBULENCE_MODEL_TYPE_FOR_INITIAL_CONDITION_TURBULENCE_TYPE_LES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

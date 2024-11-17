@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loading.LoadCombination - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loading.LoadCombination - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=LoadCombination>
+            <h2>LoadCombination</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analysis_type</td>
+                        <td><a href="#LoadCombinationAnalysisType">LoadCombinationAnalysisType</a></td>
+                        <td>Analysis type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_situation</td>
+                        <td>int</td>
+                        <td>Design Situation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Load Combination Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>static_analysis_settings</td>
+                        <td>int</td>
+                        <td>Static analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>import_modal_analysis_load_case</td>
+                        <td>int</td>
+                        <td>Import load case of modal analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>calculate_critical_load</td>
+                        <td>bool</td>
+                        <td>Calculate critical load</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stability_analysis_settings</td>
+                        <td>int</td>
+                        <td>Stability analysis settings</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_imperfection</td>
+                        <td>bool</td>
+                        <td>Consider imperfection</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>imperfection_case</td>
+                        <td>int</td>
+                        <td>Imperfection case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_initial_state</td>
+                        <td>bool</td>
+                        <td>Consider initial state</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_state_case</td>
+                        <td>int</td>
+                        <td>Initial state case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_construction_stage</td>
+                        <td>bool</td>
+                        <td>Consider construction stage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>construction_stage</td>
+                        <td>int</td>
+                        <td>Construction stage</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>creep_loading_case</td>
+                        <td>int</td>
+                        <td>Creep loading case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sustained_load_enabled</td>
+                        <td>bool</td>
+                        <td>Sustained load enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sustained_load</td>
+                        <td>int</td>
+                        <td>Sustained load</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sway_load_enabled</td>
+                        <td>bool</td>
+                        <td>Sway load enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sway_load</td>
+                        <td>int</td>
+                        <td>Sway load</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_modification_enabled</td>
+                        <td>bool</td>
+                        <td>Consider structure modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>structure_modification</td>
+                        <td>int</td>
+                        <td>Structure modification</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>to_solve</td>
+                        <td>bool</td>
+                        <td>To Solve</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_duration</td>
+                        <td>str</td>
+                        <td>Load duration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>items</td>
+                        <td><a href="#ArrayOfLoadCombinationItems">ArrayOfLoadCombinationItems</a></td>
+                        <td>Items</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loading_start</td>
+                        <td>float</td>
+                        <td>Loading start</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>time_being_investigated</td>
+                        <td>float</td>
+                        <td>Start/end of analysis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>initial_state_definition_type</td>
+                        <td><a href="#LoadCombinationInitialStateDefinitionType">LoadCombinationInitialStateDefinitionType</a></td>
+                        <td>Definition type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>individual_factors_of_selected_objects_table</td>
+                        <td><a href="#ArrayOfLoadCombinationIndividualFactorsOfSelectedObjectsTable">ArrayOfLoadCombinationIndividualFactorsOfSelectedObjectsTable</a></td>
+                        <td>'Individual Factors of Selected Objects' table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>geotechnical_analysis_reset_small_strain_history</td>
+                        <td>bool</td>
+                        <td>Reset small strain history</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_vertical_loads_case</td>
+                        <td>int</td>
+                        <td>Case of vertical loads</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_modal_analysis_from_load_case</td>
+                        <td>int</td>
+                        <td>Modal analysis from load case</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_direction</td>
+                        <td><a href="#LoadCombinationPushoverDirection">LoadCombinationPushoverDirection</a></td>
+                        <td>Direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_normalized_displacements</td>
+                        <td><a href="#LoadCombinationPushoverNormalizedDisplacements">LoadCombinationPushoverNormalizedDisplacements</a></td>
+                        <td>Normalized displacements</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_mode_shape_number</td>
+                        <td>int</td>
+                        <td>Mode shape number | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_response_spectrum</td>
+                        <td>int</td>
+                        <td>Response spectrum</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pushover_response_spectrum_scale_factor</td>
+                        <td>float</td>
+                        <td>Scale factor of response spectrum</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfLoadCombinationItems>
+            <h2>ArrayOfLoadCombinationItems</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfLoadCombinationIndividualFactorsOfSelectedObjectsTable>
+            <h2>ArrayOfLoadCombinationIndividualFactorsOfSelectedObjectsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=LoadCombinationAnalysisType>
+                <h2>LoadCombinationAnalysisType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_ANALYSIS_TYPE_HARMONIC_RESPONSE_ANALYSIS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_ANALYSIS_TYPE_PUSHOVER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_ANALYSIS_TYPE_STATIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_ANALYSIS_TYPE_STATIC_CREEP_AND_SHRINKAGE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_ANALYSIS_TYPE_STATIC_TIME_DEPENDENCE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_ANALYSIS_TYPE_ANALYSIS_TYPE_TIME_HISTORY_TIME_DIAGRAM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCombinationInitialStateDefinitionType>
+                <h2>LoadCombinationInitialStateDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_FINAL_STATE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_STIFFNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_STRAINS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_INITIAL_STATE_DEFINITION_TYPE_DEFINITION_TYPE_STRAINS_WITH_USER_DEFINED_FACTORS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCombinationPushoverDirection>
+                <h2>LoadCombinationPushoverDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_DIRECTION_DIRECTION_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_DIRECTION_DIRECTION_MINUS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_DIRECTION_DIRECTION_MINUS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_DIRECTION_DIRECTION_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=LoadCombinationPushoverNormalizedDisplacements>
+                <h2>LoadCombinationPushoverNormalizedDisplacements Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_NORMALIZED_DISPLACEMENTS_NORMALIZED_DISPLACEMENT_UNIFORM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_NORMALIZED_DISPLACEMENTS_NORMALIZED_DISPLACEMENT_MODAL_AUTOMATIC_SHAPE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>LOAD_COMBINATION_PUSHOVER_NORMALIZED_DISPLACEMENTS_NORMALIZED_DISPLACEMENT_MODAL_USER_SHAPE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

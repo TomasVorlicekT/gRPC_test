@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.structure_core.Surface - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.structure_core.Surface - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=Surface>
+            <h2>Surface</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>geometry</td>
+                        <td><a href="#SurfaceGeometry">SurfaceGeometry</a></td>
+                        <td>Geometry Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>type</td>
+                        <td><a href="#SurfaceType">SurfaceType</a></td>
+                        <td>Stiffness Type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>boundary_lines</td>
+                        <td>List[int]</td>
+                        <td>Boundary Lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>thickness</td>
+                        <td>int</td>
+                        <td>Thickness with Material</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>material</td>
+                        <td>int</td>
+                        <td>Material of Thickness</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_area</td>
+                        <td>float</td>
+                        <td>Analytical area | A</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_volume</td>
+                        <td>float</td>
+                        <td>Analytical volume | V</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_mass</td>
+                        <td>float</td>
+                        <td>Analytical mass | M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_center_of_gravity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Analytical center of gravity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Analytical center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Analytical center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>analytical_center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Analytical center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>area</td>
+                        <td>float</td>
+                        <td>Area | A</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>volume</td>
+                        <td>float</td>
+                        <td>Volume | V</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass</td>
+                        <td>float</td>
+                        <td>Mass | M</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Center of gravity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_x</td>
+                        <td>float</td>
+                        <td>Center of gravity | X_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_y</td>
+                        <td>float</td>
+                        <td>Center of gravity | Y_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>center_of_gravity_z</td>
+                        <td>float</td>
+                        <td>Center of gravity | Z_C</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>position</td>
+                        <td>str</td>
+                        <td>Position</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>position_short</td>
+                        <td>str</td>
+                        <td>Position</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_enabled</td>
+                        <td>bool</td>
+                        <td>Grid enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_deactivated_for_calculation</td>
+                        <td>bool</td>
+                        <td>Deactivated for calculation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_properties_via_surface</td>
+                        <td>bool</td>
+                        <td>Design properties via surface</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_properties_via_parent_surface_set</td>
+                        <td>bool</td>
+                        <td>Design properties via parent surface set</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>design_properties_parent_surface_set</td>
+                        <td>int</td>
+                        <td>Design properties | Parent surface set</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_transfer_direction</td>
+                        <td><a href="#SurfaceLoadTransferDirection">SurfaceLoadTransferDirection</a></td>
+                        <td>Load distribution direction</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_surface_weight_enabled</td>
+                        <td>bool</td>
+                        <td>Surface weight enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_advanced_distribution_settings_enabled</td>
+                        <td>bool</td>
+                        <td>Advanced distribution settings enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_weight</td>
+                        <td>float</td>
+                        <td>Surface weight | g</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>sampling_factor</td>
+                        <td>float</td>
+                        <td>Sampling factor | k</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stripe_width</td>
+                        <td>float</td>
+                        <td>Stripe width | b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_member_eccentricity</td>
+                        <td>bool</td>
+                        <td>Consider member eccentricity</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>consider_section_distribution</td>
+                        <td>bool</td>
+                        <td>Consider section distribution</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>load_distribution</td>
+                        <td><a href="#SurfaceLoadDistribution">SurfaceLoadDistribution</a></td>
+                        <td>Load distribution</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>neglect_equilibrium_of_moments</td>
+                        <td>bool</td>
+                        <td>Neglect equilibrium of moments</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>excluded_members</td>
+                        <td>List[int]</td>
+                        <td>Excluded members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>excluded_parallel_to_members</td>
+                        <td>List[int]</td>
+                        <td>Members with excluded parallel objects</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>excluded_lines</td>
+                        <td>List[int]</td>
+                        <td>Excluded lines</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>excluded_parallel_to_lines</td>
+                        <td>List[int]</td>
+                        <td>Lines with excluded parallel objects</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>excluded_nodes</td>
+                        <td>List[int]</td>
+                        <td>Excluded nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loaded_members</td>
+                        <td>List[int]</td>
+                        <td>Loaded members</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loaded_lines</td>
+                        <td>List[int]</td>
+                        <td>Loaded lines</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>loaded_nodes</td>
+                        <td>List[int]</td>
+                        <td>Loaded nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_control_point_count_in_direction_u</td>
+                        <td>int</td>
+                        <td>Number of control points in direction u</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_control_point_count_in_direction_v</td>
+                        <td>int</td>
+                        <td>Number of control points in direction v</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_order_in_direction_u</td>
+                        <td>int</td>
+                        <td>Order in direction u</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_order_in_direction_v</td>
+                        <td>int</td>
+                        <td>Order in direction v</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>nurbs_control_points</td>
+                        <td><a href="#ArrayOfSurfaceNurbsControlPointsRows">ArrayOfSurfaceNurbsControlPointsRows</a></td>
+                        <td>Coordinates - Control Point | <p>2D matrix of NURBS control points.</p><p>Each point is defined by its attributes: <strong>Coordinates</strong> (as a vector) and <strong>Weight</strong>.</p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>quadrangle_corner_nodes</td>
+                        <td>List[int]</td>
+                        <td>Corner nodes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>quadrangle_corner_node_1</td>
+                        <td>int</td>
+                        <td>Corner node 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>quadrangle_corner_node_2</td>
+                        <td>int</td>
+                        <td>Corner node 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>quadrangle_corner_node_3</td>
+                        <td>int</td>
+                        <td>Corner node 3</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>quadrangle_corner_node_4</td>
+                        <td>int</td>
+                        <td>Corner node 4</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>quadrangle_preferable_shape</td>
+                        <td><a href="#SurfaceQuadranglePreferableShape">SurfaceQuadranglePreferableShape</a></td>
+                        <td>Preferable shape</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pipe_radius</td>
+                        <td>float</td>
+                        <td>Radius | r_1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pipe_use_radius_end</td>
+                        <td>bool</td>
+                        <td>Use end radius</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pipe_radius_end</td>
+                        <td>float</td>
+                        <td>End radius | r_2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pipe_center_line</td>
+                        <td>int</td>
+                        <td>Center line</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pipe_generated_lines</td>
+                        <td>List[int]</td>
+                        <td>Generated lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_line_hinges</td>
+                        <td>bool</td>
+                        <td>Has line hinges</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>support</td>
+                        <td>int</td>
+                        <td>Surface support</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>eccentricity</td>
+                        <td>int</td>
+                        <td>Surface eccentricity | e_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mesh_refinement</td>
+                        <td>int</td>
+                        <td>Surface mesh refinement</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>meshing_type</td>
+                        <td><a href="#SurfaceMeshingType">SurfaceMeshingType</a></td>
+                        <td>Meshing type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_rotation_specification_type</td>
+                        <td><a href="#SurfaceInputAxesRotationSpecificationType">SurfaceInputAxesRotationSpecificationType</a></td>
+                        <td>Input axes category</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_angular_rotation</td>
+                        <td>float</td>
+                        <td>Angular rotation | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_axis</td>
+                        <td><a href="#SurfaceInputAxesAxis">SurfaceInputAxesAxis</a></td>
+                        <td>Axis</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_lines</td>
+                        <td>List[int]</td>
+                        <td>Parallel to lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_1</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Direct to point 1</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_1_x</td>
+                        <td>float</td>
+                        <td>Direct to point 1 | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_1_y</td>
+                        <td>float</td>
+                        <td>Direct to point 1 | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_1_z</td>
+                        <td>float</td>
+                        <td>Direct to point 1 | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_2</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Direct to point 2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_2_x</td>
+                        <td>float</td>
+                        <td>Direct to point 2 | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_2_y</td>
+                        <td>float</td>
+                        <td>Direct to point 2 | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_point_2_z</td>
+                        <td>float</td>
+                        <td>Direct to point 2 | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>input_axes_coordinate_system</td>
+                        <td>int</td>
+                        <td>Coordinate system</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>result_axes_rotation_specification_type</td>
+                        <td><a href="#SurfaceResultAxesRotationSpecificationType">SurfaceResultAxesRotationSpecificationType</a></td>
+                        <td>Result axes category</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reversed_normal</td>
+                        <td>bool</td>
+                        <td>Reversed normal</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_type</td>
+                        <td><a href="#SurfaceGridType">SurfaceGridType</a></td>
+                        <td>Grid type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_origin</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Grid origin</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_origin_x</td>
+                        <td>float</td>
+                        <td>Grid origin | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_origin_y</td>
+                        <td>float</td>
+                        <td>Grid origin | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_origin_z</td>
+                        <td>float</td>
+                        <td>Grid origin | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_adapt_automatically</td>
+                        <td>bool</td>
+                        <td>Adapt grid automatically</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_point_count_negative_x</td>
+                        <td>int</td>
+                        <td>Grid point count | n_-x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_point_count_positive_x</td>
+                        <td>int</td>
+                        <td>Grid point count | n_+x</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_point_count_negative_y</td>
+                        <td>int</td>
+                        <td>Grid point count | n_-y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_point_count_positive_y</td>
+                        <td>int</td>
+                        <td>Grid point count | n_+y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_numbering_increment</td>
+                        <td>int</td>
+                        <td>Grid numbering increment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_point_count_r</td>
+                        <td>int</td>
+                        <td>Grid point count | n_+r</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_distance_x</td>
+                        <td>float</td>
+                        <td>Grid distances | b</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_distance_y</td>
+                        <td>float</td>
+                        <td>Grid distances | h</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_distance_r</td>
+                        <td>float</td>
+                        <td>Grid distances | R</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_rotation_alpha</td>
+                        <td>float</td>
+                        <td>Grid rotation | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_rotation_beta</td>
+                        <td>float</td>
+                        <td>Grid rotation | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>grid_angle_gamma</td>
+                        <td>float</td>
+                        <td>Grid distances | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>auto_detection_of_integrated_objects</td>
+                        <td>bool</td>
+                        <td>Automatic detection of integrated objects</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>integrated_nodes</td>
+                        <td>List[int]</td>
+                        <td>Nodes No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>integrated_lines</td>
+                        <td>List[int]</td>
+                        <td>Lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>integrated_openings</td>
+                        <td>List[int]</td>
+                        <td>Openings No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_integrated_objects</td>
+                        <td>bool</td>
+                        <td>Has integrated objects</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_input_axes_rotation</td>
+                        <td>bool</td>
+                        <td>Has input axes rotation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>has_result_axes_rotation</td>
+                        <td>bool</td>
+                        <td>Has result axes rotation</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_timber_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Ultimate configuration for timber surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_timber_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Serviceability configuration for timber surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_timber_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Fire resistance configuration for timber surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_service_class</td>
+                        <td>int</td>
+                        <td>Service class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_moisture_class</td>
+                        <td>int</td>
+                        <td>Moisture class for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>timber_service_conditions</td>
+                        <td>int</td>
+                        <td>Service conditions for timber design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_reinforcements</td>
+                        <td>List[int]</td>
+                        <td>Surface reinforcements</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_user_defined_concrete_cover_enabled</td>
+                        <td>bool</td>
+                        <td>User-Defined Concrete Cover</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_cover_top</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Top | c_nom,-z (top)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>Concrete Cover - Bottom | c_nom,+z (bottom)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_concrete_cover_top</td>
+                        <td>float</td>
+                        <td>User-Defined Concrete Cover - Top | c_-z (top)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_concrete_cover_bottom</td>
+                        <td>float</td>
+                        <td>User-Defined Concrete Cover - Bottom | c_+z (bottom)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_durability_top</td>
+                        <td>int</td>
+                        <td>Concrete durability - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>concrete_durability_bottom</td>
+                        <td>int</td>
+                        <td>Concrete durability - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_direction_top</td>
+                        <td>int</td>
+                        <td>Reinforcement direction - Top</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>reinforcement_direction_bottom</td>
+                        <td>int</td>
+                        <td>Reinforcement direction - Bottom</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_surface_type</td>
+                        <td><a href="#SurfaceDeflectionCheckSurfaceType">SurfaceDeflectionCheckSurfaceType</a></td>
+                        <td>Deflection analysis surface type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_displacement_reference</td>
+                        <td><a href="#SurfaceDeflectionCheckDisplacementReference">SurfaceDeflectionCheckDisplacementReference</a></td>
+                        <td>Deflection analysis displacement reference</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_length_z</td>
+                        <td>float</td>
+                        <td>Deflection analysis reference length L_z | L_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_length_z_definition_type</td>
+                        <td><a href="#SurfaceDeflectionCheckReferenceLengthZDefinitionType">SurfaceDeflectionCheckReferenceLengthZDefinitionType</a></td>
+                        <td>Deflection analysis for reference length L_z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Point 1 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1_x</td>
+                        <td>float</td>
+                        <td>Coordinate of point 1 of reference plane | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1_y</td>
+                        <td>float</td>
+                        <td>Coordinate of point 1 of reference plane | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_1_z</td>
+                        <td>float</td>
+                        <td>Coordinate of point 1 of reference plane | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Point 2 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2_x</td>
+                        <td>float</td>
+                        <td>Coordinate of point 2 of reference plane | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2_y</td>
+                        <td>float</td>
+                        <td>Coordinate of point 2 of reference plane | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_2_z</td>
+                        <td>float</td>
+                        <td>Coordinate of point 2 of reference plane | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Point 3 of reference plane</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3_x</td>
+                        <td>float</td>
+                        <td>Coordinate of point 3 of reference plane | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3_y</td>
+                        <td>float</td>
+                        <td>Coordinate of point 3 of reference plane | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>deflection_check_reference_plane_point_3_z</td>
+                        <td>float</td>
+                        <td>Coordinate of point 3 of reference plane | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_reinforcement_table</td>
+                        <td><a href="#ArrayOfSurfaceSurfaceReinforcementTable">ArrayOfSurfaceSurfaceReinforcementTable</a></td>
+                        <td>List of Surface Reinforcements</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_uls_configuration</td>
+                        <td>int</td>
+                        <td>Ultimate configuration for concrete surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_sls_configuration</td>
+                        <td>int</td>
+                        <td>Serviceability configuration for concrete surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_fr_configuration</td>
+                        <td>int</td>
+                        <td>Fire resistance configuration for concrete surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>surface_concrete_design_seismic_configuration</td>
+                        <td>int</td>
+                        <td>Seismic configuration for concrete surface design</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_boundary_line</td>
+                        <td>int</td>
+                        <td>Boundary line No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_angle_of_rotation</td>
+                        <td>float</td>
+                        <td>Angle of rotation | ?</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_p</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Rotation axis point P</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_p_x</td>
+                        <td>float</td>
+                        <td>Rotation axis point P | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_p_y</td>
+                        <td>float</td>
+                        <td>Rotation axis point P | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_p_z</td>
+                        <td>float</td>
+                        <td>Rotation axis point P | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_r</td>
+                        <td><a href="../generated_html/common.html">vector_3d</a></td>
+                        <td>Rotation axis point R</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_r_x</td>
+                        <td>float</td>
+                        <td>Rotation axis point R | X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_r_y</td>
+                        <td>float</td>
+                        <td>Rotation axis point R | Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_point_r_z</td>
+                        <td>float</td>
+                        <td>Rotation axis point R | Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>rotated_generated_lines</td>
+                        <td>List[int]</td>
+                        <td>Generated lines No.</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>stress_analysis_configuration</td>
+                        <td>int</td>
+                        <td>Stress-strain analysis configuration</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>is_generated</td>
+                        <td>bool</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>generating_object_info</td>
+                        <td>str</td>
+                        <td>Generated by</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfSurfaceNurbsControlPointsRows>
+            <h2>ArrayOfSurfaceNurbsControlPointsRows</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+            <div id=ArrayOfSurfaceSurfaceReinforcementTable>
+            <h2>ArrayOfSurfaceSurfaceReinforcementTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=SurfaceGeometry>
+                <h2>SurfaceGeometry Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_TYPE_UNKNOWN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_MINIMUM_CURVATURE_SPLINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_NURBS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_PIPE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_PLANE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_QUADRANGLE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_ROTATED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GEOMETRY_GEOMETRY_TRIMMED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceType>
+                <h2>SurfaceType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_STANDARD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_FLOOR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_FLOOR_DIAPHRAGM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_FLOOR_FLEXIBLE_DIAPHRAGM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_FLOOR_SEMIRIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_GROUNDWATER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_LOAD_TRANSFER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_MEMBRANE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_RIGID</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_WITHOUT_MEMBRANE_TENSION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_TYPE_TYPE_WITHOUT_THICKNESS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceLoadTransferDirection>
+                <h2>SurfaceLoadTransferDirection Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_LOAD_TRANSFER_DIRECTION_LOAD_TRANSFER_DIRECTION_IN_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_LOAD_TRANSFER_DIRECTION_LOAD_TRANSFER_DIRECTION_IN_BOTH</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_LOAD_TRANSFER_DIRECTION_LOAD_TRANSFER_DIRECTION_IN_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_LOAD_TRANSFER_DIRECTION_LOAD_TRANSFER_DIRECTION_ISOTROPIC</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceLoadDistribution>
+                <h2>SurfaceLoadDistribution Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_UNIFORM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_LOAD_DISTRIBUTION_LOAD_DISTRIBUTION_VARYING</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceQuadranglePreferableShape>
+                <h2>SurfaceQuadranglePreferableShape Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_QUADRANGLE_PREFERABLE_SHAPE_PREFERABLE_SHAPE_ROTATED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_QUADRANGLE_PREFERABLE_SHAPE_PREFERABLE_SHAPE_PIPE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceMeshingType>
+                <h2>SurfaceMeshingType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_MESHING_TYPE_MESHING_TYPE_USE_GLOBAL_SETTINGS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_MESHING_TYPE_MESHING_TYPE_FREE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_MESHING_TYPE_MESHING_TYPE_MAPPED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceInputAxesRotationSpecificationType>
+                <h2>SurfaceInputAxesRotationSpecificationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_ANGULAR_ROTATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_DIRECT_TO_POINT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_PARALLEL_TO_COORDINATE_SYSTEM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_INPUT_AXES_ROTATION_SPECIFICATION_TYPE_PARALLEL_TO_LINES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceInputAxesAxis>
+                <h2>SurfaceInputAxesAxis Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_INPUT_AXES_AXIS_AXIS_X</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_INPUT_AXES_AXIS_AXIS_Y</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceResultAxesRotationSpecificationType>
+                <h2>SurfaceResultAxesRotationSpecificationType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_RESULT_AXES_ROTATION_SPECIFICATION_TYPE_RESULT_AXES_ROTATION_SPECIFICATION_TYPE_IDENTICAL_TO_INPUT_AXES</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceGridType>
+                <h2>SurfaceGridType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_GRID_TYPE_GRID_TYPE_CARTESIAN</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_GRID_TYPE_GRID_TYPE_POLAR</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceDeflectionCheckSurfaceType>
+                <h2>SurfaceDeflectionCheckSurfaceType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_SURFACE_TYPE_DEFLECTION_CHECK_SURFACE_TYPE_DOUBLE_SUPPORTED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_SURFACE_TYPE_DEFLECTION_CHECK_SURFACE_TYPE_CANTILEVER</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceDeflectionCheckDisplacementReference>
+                <h2>SurfaceDeflectionCheckDisplacementReference Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFORMED_USER_DEFINED_REFERENCE_PLANE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_PARALLEL_SURFACE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_DEFLECTION_CHECK_DISPLACEMENT_REFERENCE_UNDEFORMED_SYSTEM</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=SurfaceDeflectionCheckReferenceLengthZDefinitionType>
+                <h2>SurfaceDeflectionCheckReferenceLengthZDefinitionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_REFERENCE_LENGTH_Z_DEFINITION_TYPE_DEFLECTION_CHECK_REFERENCE_LENGTH_DEFINITION_TYPE_MANUALLY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_REFERENCE_LENGTH_Z_DEFINITION_TYPE_DEFLECTION_CHECK_REFERENCE_LENGTH_DEFINITION_TYPE_BY_MAXIMUM_BOUNDARY_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>SURFACE_DEFLECTION_CHECK_REFERENCE_LENGTH_Z_DEFINITION_TYPE_DEFLECTION_CHECK_REFERENCE_LENGTH_DEFINITION_TYPE_BY_MINIMUM_BOUNDARY_LINE</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>

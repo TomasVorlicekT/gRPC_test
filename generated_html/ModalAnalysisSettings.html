@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rfem.loading.ModalAnalysisSettings - Object Details</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+        }
+
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; display: flex; flex-direction: column; min-height: 100vh; }
+        header { padding: 20px; background-color: #192A80; color: white; text-align: center; margin-left: var(--sidebar-width);}
+        .container { display: flex; width: 100%; max-width: 1400px; margin: 0 auto; }
+        .container h2 { font-size: 24px; }
+        .sidebar { 
+            position: fixed; top: 0; left: 0; width: var(--sidebar-width); height: 100vh; padding: 20px; 
+            background-color: #e9ecf7; border-right: 1px solid #ddd; box-sizing: border-box; 
+            overflow-y: auto; display: flex; flex-direction: column;
+        }
+        .sidebar h2 { font-size: 18px; color: #192A80; margin-bottom: 10px; }
+        .sidebar a { display: block; color: #192A80; padding: 1px; text-decoration: none; }
+        .sidebar a:hover { background-color: #192A80; color: white; }
+        .version-select-container { margin-top: auto; }
+        .collapsible { cursor: pointer; font-weight: bold; color: #192A80; padding-left: 0; }
+        .content { display: none; padding-left: 20px; }
+        .sub-item { margin-left: 10px; }
+        #objectDetails { width: calc(100% - var(--sidebar-width)); margin-left: var(--sidebar-width); padding: 20px; }
+        .styled-table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; }
+        .styled-table th, .styled-table td { 
+            border: 1px solid #ddd; padding: 12px; text-align: left; 
+            max-width: 250px; overflow-wrap: break-word; /* applies word wrap to all cells */ 
+        }
+        .styled-table th { background-color: #192A80; color: white; }
+        .styled-table tr:hover { background-color: #f1f1f1; }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>rfem.loading.ModalAnalysisSettings - Object Details</h1>
+    </header>
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Contents</h2>
+            <div class="collapsible"><a href="../main.html">List of Functions</a></div>
+            <div class="collapsible"><a href="../objects_overview.html">RFEM Objects</a></div>
+            <div class="collapsible"><a href="../api_pricing.html">Credit Costs</a></div>
+            <div class="collapsible"><a href="../version_control.html">Client Versions</a></div>
+            <div class="version-select-container">
+                <select id="versionSelect" style="width: 50%; padding: 8px; font-size: 12px;">
+                    <option value="6.01.0019">6.01.0019</option>
+                    <option value="6.07.0014">6.07.0014</option>
+                </select>
+        </nav>
+
+        <!-- Main content section -->
+        <main id="objectDetails">
+            
+            <div id=ModalAnalysisSettings>
+            <h2>ModalAnalysisSettings</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>no</td>
+                        <td>int</td>
+                        <td>Object number</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_masses_about_axis_x_enabled</td>
+                        <td>bool</td>
+                        <td>Acting masses about X-axis enabled | ?_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_masses_about_axis_y_enabled</td>
+                        <td>bool</td>
+                        <td>Acting masses about Y-axis enabled | ?_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_masses_about_axis_z_enabled</td>
+                        <td>bool</td>
+                        <td>Acting masses about Z-axis enabled | ?_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_masses_in_direction_x_enabled</td>
+                        <td>bool</td>
+                        <td>Acting masses in X-direction enabled | u_X</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_masses_in_direction_y_enabled</td>
+                        <td>bool</td>
+                        <td>Acting masses in Y-direction enabled | u_Y</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>acting_masses_in_direction_z_enabled</td>
+                        <td>bool</td>
+                        <td>Acting masses in Z-direction enabled | u_Z</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>activate_minimum_initial_prestress</td>
+                        <td>bool</td>
+                        <td>Activate minimum initial prestress</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>minimum_initial_strain</td>
+                        <td>float</td>
+                        <td>Minimum initial strain | e_min</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>assigned_to</td>
+                        <td>str</td>
+                        <td>Assigned to</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>comment</td>
+                        <td>str</td>
+                        <td>Comment</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>solution_method</td>
+                        <td><a href="#ModalAnalysisSettingsSolutionMethod">ModalAnalysisSettingsSolutionMethod</a></td>
+                        <td>Solution method</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>find_eigenvectors_beyond_frequency</td>
+                        <td>bool</td>
+                        <td>Find eigenvectors beyond frequency</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>frequency</td>
+                        <td>float</td>
+                        <td>Frequency | f</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_conversion_type</td>
+                        <td><a href="#ModalAnalysisSettingsMassConversionType">ModalAnalysisSettingsMassConversionType</a></td>
+                        <td>Mass conversion type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mass_matrix_type</td>
+                        <td><a href="#ModalAnalysisSettingsMassMatrixType">ModalAnalysisSettingsMassMatrixType</a></td>
+                        <td>Mass matrix type</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_modes_method</td>
+                        <td><a href="#ModalAnalysisSettingsNumberOfModesMethod">ModalAnalysisSettingsNumberOfModesMethod</a></td>
+                        <td>Number of modes method</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>maxmimum_natural_frequency</td>
+                        <td>float</td>
+                        <td>Maximum natural frequency | f_max</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>effective_modal_mass_factor</td>
+                        <td>float</td>
+                        <td>Effective modal mass factor | f_me</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>number_of_modes</td>
+                        <td>int</td>
+                        <td>Number of modes</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>user_defined_name_enabled</td>
+                        <td>bool</td>
+                        <td>User-defined name enabled</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>name</td>
+                        <td>str</td>
+                        <td>Name</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>neglect_masses</td>
+                        <td><a href="#ModalAnalysisSettingsNeglectMasses">ModalAnalysisSettingsNeglectMasses</a></td>
+                        <td>Neglect masses</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>neglect_masses_of_selected_objects_table</td>
+                        <td><a href="#ArrayOfModalAnalysisSettingsNeglectMassesOfSelectedObjectsTable">ArrayOfModalAnalysisSettingsNeglectMassesOfSelectedObjectsTable</a></td>
+                        <td>Neglect masses of selected objects table</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>id_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>metadata_for_export_import</td>
+                        <td>str</td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+                <!-- Visually differentiate the main table from the rest of messages -->
+                <br>
+                <h2>Associated Data Types </h2>
+                <hr>
+                
+
+            
+            <div id=ArrayOfModalAnalysisSettingsNeglectMassesOfSelectedObjectsTable>
+            <h2>ArrayOfModalAnalysisSettingsNeglectMassesOfSelectedObjectsTable</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Attribute Name</th>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            </div>
+            <br>
+
+                
+
+            
+
+
+            
+            <br>
+            <h2>Associated Enums</h2>
+            <hr>
+
+                
+                <div id=ModalAnalysisSettingsSolutionMethod>
+                <h2>ModalAnalysisSettingsSolutionMethod Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_SOLUTION_METHOD_METHOD_LANCZOS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_SOLUTION_METHOD_METHOD_ROOT_OF_CHARACTERISTIC_POLYNOMIAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_SOLUTION_METHOD_METHOD_SHIFTED_INVERSE_POWER_METHOD</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_SOLUTION_METHOD_METHOD_SUBSPACE_ITERATION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ModalAnalysisSettingsMassConversionType>
+                <h2>ModalAnalysisSettingsMassConversionType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_CONVERSION_TYPE_MASS_CONVERSION_TYPE_Z_COMPONENTS_OF_LOADS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_CONVERSION_TYPE_MASS_CONVERSION_TYPE_FULL_LOADS_AS_MASS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_CONVERSION_TYPE_MASS_CONVERSION_TYPE_Z_COMPONENTS_OF_LOADS_IN_DIRECTION_OF_GRAVITY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ModalAnalysisSettingsMassMatrixType>
+                <h2>ModalAnalysisSettingsMassMatrixType Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_MATRIX_TYPE_MASS_MATRIX_TYPE_DIAGONAL</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_MATRIX_TYPE_MASS_MATRIX_TYPE_CONSISTENT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_MATRIX_TYPE_MASS_MATRIX_TYPE_DIAGONAL_WITH_TORSIONAL_ELEMENTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_MASS_MATRIX_TYPE_MASS_MATRIX_TYPE_UNIT</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ModalAnalysisSettingsNumberOfModesMethod>
+                <h2>ModalAnalysisSettingsNumberOfModesMethod Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_NUMBER_OF_MODES_METHOD_NUMBER_OF_MODES_METHOD_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_NUMBER_OF_MODES_METHOD_NUMBER_OF_MODES_METHOD_EFFECTIVE_MASS_FACTORS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_NUMBER_OF_MODES_METHOD_NUMBER_OF_MODES_METHOD_MAXIMUM_FREQUENCY</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+                <div id=ModalAnalysisSettingsNeglectMasses>
+                <h2>ModalAnalysisSettingsNeglectMasses Enum</h2>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <!-- no description for enums available atm  <th>Description</th>-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_NEGLECT_MASSES_E_NEGLECT_MASSES_IN_ALL_FIXED_SUPPORTS</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_NEGLECT_MASSES_E_NEGLECT_MASSES_NO_NEGLECTION</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                        <tr>
+                            <td>MODAL_ANALYSIS_SETTINGS_NEGLECT_MASSES_E_NEGLECT_MASSES_USER_DEFINED</td>
+                            <!-- no description for enums available atm  <td></td>-->
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                </div>
+                <br>
+                
+            
+        </main>
+    </div>
+    
+</body>
+</html>
